@@ -1,2 +1,2 @@
-# -xbasic-symbols
+# xbasic-symbols
 Alpha Anywhere Xbasic Symbol Loader
