@@ -1,0 +1,981 @@
+{
+    "document": {
+        "__functions__": {
+            "enumeratefonts": {
+                "name": "EnumerateFonts",
+                "description": "Return the font faces used by the html",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    }
+                ]
+            },
+            "preprocesshtml": {
+                "name": "PreprocessHTML",
+                "description": "Returns the preprocessed HTML (changes to complete tags etc for HTMLayout)",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "busyflag": {
+                "name": "BusyFlag",
+                "description": "Returns if the HTML is busy."
+            },
+            "changedviadom": {
+                "name": "ChangedViaDom",
+                "description": "Returns true if html was altered via the dom."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "createbindings": {
+                "name": "CreateBindings",
+                "description": "Walk the definition to get all the bindings, use handler interface to get/set bound data."
+            },
+            "drophandler": {
+                "name": "DropHandler",
+                "description": "The handler (i.e. window) associated with the html object is going away."
+            },
+            "dropinstance": {
+                "name": "DropInstance",
+                "description": "Drop a layout plan instance (if it exists).",
+                "arguments": [
+                    {
+                        "name": "instance",
+                        "type": "C"
+                    }
+                ]
+            },
+            "editbuttonhittest": {
+                "name": "EditButtonHitTest",
+                "description": "Returns true if position is over the edit button.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            },
+            "editcopy": {
+                "name": "EditCopy",
+                "description": "Copy to the clipboard."
+            },
+            "editdelete": {
+                "name": "EditDelete",
+                "description": "Delete the text."
+            },
+            "editpaste": {
+                "name": "EditPaste",
+                "description": "Paste from the clipboard."
+            },
+            "editselect": {
+                "name": "EditSelect",
+                "description": "Select text in the current editor.",
+                "arguments": [
+                    {
+                        "name": "start_char",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "end_char",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "editsupportsmultiline": {
+                "name": "EditSupportsMultiLine",
+                "description": "Does editor support multi-line (i.e. send returns & paging to control)."
+            },
+            "forcemeasure": {
+                "name": "ForceMeasure",
+                "description": "Force a measure of the pages in a device context.",
+                "arguments": [
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getattribute": {
+                "name": "GetAttribute",
+                "description": "Get an attribute value from a element.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attrib",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getchecked": {
+                "name": "GetChecked",
+                "description": "Get the elements checked state.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getdependencies": {
+                "name": "GetDependencies",
+                "description": "Returns a cr-lf delimited list of dependent fields."
+            },
+            "getelemrect": {
+                "name": "GetElemRect",
+                "description": "Returns rectangle for id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getfocus": {
+                "name": "GetFocus",
+                "description": "Return the id of the element that has focus."
+            },
+            "getheight": {
+                "name": "GetHeight",
+                "description": "Get the document height."
+            },
+            "getidfrompoint": {
+                "name": "GetIdFromPoint",
+                "description": "Gets first object with an Id, returns the id.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getinnerhtml": {
+                "name": "GetInnerHtml",
+                "description": "Sets inner HTML for control.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getinstancetotalheight": {
+                "name": "GetInstanceTotalHeight",
+                "description": "Get total height of layout - returns 0 if never saved.",
+                "arguments": [
+                    {
+                        "name": "instance",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getminwidth": {
+                "name": "GetMinWidth",
+                "description": "Get the minimum width on the HTML document."
+            },
+            "getouterhtml": {
+                "name": "GetOuterHtml",
+                "description": "Sets outer HTML for control.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getpages": {
+                "name": "GetPages",
+                "description": "Get number of pages."
+            },
+            "getrememberedattributes": {
+                "name": "GetRememberedAttributes",
+                "description": "Returns cl-lf delimited list of remembered attributes & their values."
+            },
+            "gettooltip": {
+                "name": "GetTooltip",
+                "description": "Get tooltip (do after mouse hover)."
+            },
+            "getvalue": {
+                "name": "GetValue",
+                "description": "Returns value from a control.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hastooltip": {
+                "name": "HasTooltip",
+                "description": "Has tooltip (do after mouse hover)."
+            },
+            "hittest": {
+                "name": "HitTest",
+                "description": "If element under x,y location has an 'a5:target', return the a5:target value - if alternate attribute specified, look for it (i.e. a5:autohelp).",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "attrib",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "invalidate": {
+                "name": "Invalidate",
+                "description": "Repaint a control.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "load": {
+                "name": "Load",
+                "description": "load HTML into the html renderer.",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "instance",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "loadfromfile": {
+                "name": "LoadFromFile",
+                "description": "load HTML from file into the html renderer.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "makevisible": {
+                "name": "MakeVisible",
+                "description": "Make control with id visible.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "navigatefirst": {
+                "name": "NavigateFirst",
+                "description": "Navigate to first element (return true if succeeded)."
+            },
+            "navigatelast": {
+                "name": "NavigateLast",
+                "description": "Navigate to last element (return true if succeeded)."
+            },
+            "navigatenext": {
+                "name": "NavigateNext",
+                "description": "Navigate to the next element in the html (return true if succeeded)."
+            },
+            "navigateprev": {
+                "name": "NavigatePrev",
+                "description": "Navigate to the previous element in the html (return true if succeeded)."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "onautosizecomplete": {
+                "name": "OnAutoSizeComplete",
+                "description": "Called after view was resized."
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Key char event (from host).",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Key down event (from host).",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Key up event (from host).",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onlbuttondoubleclick": {
+                "name": "OnLButtonDoubleClick",
+                "description": "Mouse Double-click over area (from host).",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Mouse Down over area (from host).",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Mouse Up over area (from host).",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onmouseleave": {
+                "name": "OnMouseLeave",
+                "description": "Mouse has left the control (i.e. dismiss flyovers for example)."
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Mouse Move over area (from host).",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onmousewheel": {
+                "name": "OnMouseWheel",
+                "description": "Mouse wheel over area.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "zdelta",
+                        "type": "N"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Mouse Right Down over area (from host).",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "N"
+                    }
+                ]
+            },
+            "popupeditor": {
+                "name": "PopupEditor",
+                "description": "Invoke the popup editor code."
+            },
+            "refreshbindings": {
+                "name": "RefreshBindings",
+                "description": "Refresh bindings - if targets defined, limit to the named targets.",
+                "arguments": [
+                    {
+                        "name": "targets",
+                        "type": "C"
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render loaded HTML.",
+                "arguments": [
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "page",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "renderplanned": {
+                "name": "RenderPlanned",
+                "description": "Render a planned page (variable page size).",
+                "arguments": [
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "instance",
+                        "type": "C"
+                    },
+                    {
+                        "name": "used",
+                        "type": "N"
+                    },
+                    {
+                        "name": "pgno",
+                        "type": "N"
+                    }
+                ]
+            },
+            "reportplan": {
+                "name": "ReportPlan",
+                "description": "Plan report usage - returns if there is more space required - (adjusts height if last on page).",
+                "arguments": [
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "instance",
+                        "type": "C"
+                    },
+                    {
+                        "name": "used",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "pgno",
+                        "type": "N"
+                    }
+                ]
+            },
+            "scrollfixup": {
+                "name": "ScrollFixup",
+                "description": "Returns 'true' if view was scrolled too far.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "scrollremainheight": {
+                "name": "ScrollRemainHeight",
+                "description": "Returns the height of scrolling area.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "scrollremainwidth": {
+                "name": "ScrollRemainWidth",
+                "description": "Returns the width of scrolling area.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "scrolltotop": {
+                "name": "ScrollToTop",
+                "description": "Returns 'true' if view was scrolled (top if empty).",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setattribute": {
+                "name": "SetAttribute",
+                "description": "Set an attribute value for a element.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attrib",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setchecked": {
+                "name": "SetChecked",
+                "description": "Set the element as checked.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "checked",
+                        "type": "L"
+                    }
+                ]
+            },
+            "setfocus": {
+                "name": "SetFocus",
+                "description": "Sets focus to object of given id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sethandler": {
+                "name": "SetHandler",
+                "description": "Treat renderer as interactive (i.e. support mouse clicks, timer events, keyboard input - navigation ).",
+                "arguments": [
+                    {
+                        "name": "handler",
+                        "type": "P"
+                    }
+                ]
+            },
+            "setinnerhtml": {
+                "name": "SetInnerHtml",
+                "description": "Sets inner HTML for control.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "html",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setinstancetotalheight": {
+                "name": "SetInstanceTotalHeight",
+                "description": "Set total height of layout - set on first ReportPlanned.",
+                "arguments": [
+                    {
+                        "name": "instance",
+                        "type": "C"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setouterhtml": {
+                "name": "SetOuterHtml",
+                "description": "Sets outer HTML for control.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "html",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setreferencehdc": {
+                "name": "SetReferenceHDC",
+                "description": "Sets a reference HDC for the HTML instance (should be done before load).",
+                "arguments": [
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setrememberedattributes": {
+                "name": "SetRememberedAttributes",
+                "description": "Pass in an previously saved list of attributes that we want to restore.",
+                "arguments": [
+                    {
+                        "name": "rememberlist",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setscrollbar": {
+                "name": "SetScrollBar",
+                "description": "Initialize a scrollbar control.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "N"
+                    },
+                    {
+                        "name": "min_val",
+                        "type": "N"
+                    },
+                    {
+                        "name": "max_val",
+                        "type": "N"
+                    },
+                    {
+                        "name": "page_size",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "step_value",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "settargetstyles": {
+                "name": "SetTargetStyles",
+                "description": "Sets a styles for elements tagged with 'a5:style' - list is cllf delimited, tab separated <a5:style id>\t<style string>.",
+                "arguments": [
+                    {
+                        "name": "targetstylelist",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setvalue": {
+                "name": "SetValue",
+                "description": "Sets value to a control.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "timerset": {
+                "name": "TimerSet",
+                "description": "Returns true if the timer was set (waiting for event to complete)."
+            },
+            "transactionexecute": {
+                "name": "TransactionExecute",
+                "description": "Use simple command language to set/get elements of attributes.",
+                "arguments": [
+                    {
+                        "name": "commands",
+                        "type": "C"
+                    }
+                ]
+            },
+            "update": {
+                "name": "Update",
+                "description": "Update (starting at an element) - if blank, update from root.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "wherecontrolmap": {
+                "name": "WhereControlMap",
+                "description": "Generate a 'where' map of controls, screen rectangels adjusted for top left dx, dy supplied.",
+                "arguments": [
+                    {
+                        "name": "dx",
+                        "type": "N"
+                    },
+                    {
+                        "name": "dy",
+                        "type": "N"
+                    }
+                ]
+            },
+            "xdialoghost": {
+                "name": "XDialogHost",
+                "description": "Returns cl-lf delimited list of xdialog snippets to host in html (prefixed with v(x,y,width,height): - visible + position, h: - control is hidden."
+            }
+        },
+        "__name__": "Document"
+    },
+    "handler": {
+        "__methods__": {
+            "changedelement": {
+                "name": "ChangedElement",
+                "description": "Notify that element has been repopulated.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "outer",
+                        "type": "L"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "data": {
+                "name": "Data",
+                "description": "Gets data from the environment.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "drawbackground": {
+                "name": "DrawBackground",
+                "description": "Draw background (allow host's background to shine through).",
+                "arguments": [
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "emitcontrol": {
+                "name": "EmitControl",
+                "description": "Emit the 'content' for a control.",
+                "arguments": [
+                    {
+                        "name": "htmlnode",
+                        "type": "C"
+                    }
+                ]
+            },
+            "evaluate": {
+                "name": "Evaluate",
+                "description": "Evaluate expression in context (a5xbasic: tags).",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "invalidate": {
+                "name": "Invalidate",
+                "description": "Invalidate region of document.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "onscroll": {
+                "name": "OnScroll",
+                "description": "Hook Scroll bar event handler.",
+                "arguments": [
+                    {
+                        "name": "idname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "targetidname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "event",
+                        "type": "C"
+                    },
+                    {
+                        "name": "pos",
+                        "type": "N"
+                    },
+                    {
+                        "name": "vertical",
+                        "type": "L"
+                    }
+                ]
+            },
+            "popupmenu": {
+                "name": "PopupMenu",
+                "description": "Popup menu - if PopupMenu returns .t., we close the menu group (else we continue auto-popup).",
+                "arguments": [
+                    {
+                        "name": "menuexpression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setcursor": {
+                "name": "SetCursor",
+                "description": "Set cursor for embedded html area.",
+                "arguments": [
+                    {
+                        "name": "cursorname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setdata": {
+                "name": "SetData",
+                "description": "Sets data in the environment (from binding).",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "update": {
+                "name": "Update",
+                "description": "Cause display to update."
+            }
+        },
+        "__name__": "Handler"
+    },
+    "__name__": "HTMLRender"
+}

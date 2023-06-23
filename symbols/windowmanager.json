@@ -1,0 +1,727 @@
+{
+    "uxapplication": {
+        "__functions__": {
+            "afterapplicationcloses": {
+                "name": "AfterApplicationCloses",
+                "description": "Set optional expression to run *after* the Application has closed (no UI).",
+                "arguments": [
+                    {
+                        "name": "expr",
+                        "type": "C"
+                    }
+                ]
+            },
+            "afterlastviewclosed": {
+                "name": "AfterLastViewClosed",
+                "description": "Register code to run after last child window is closed, but before the hidden keep alive window is closed.",
+                "arguments": [
+                    {
+                        "name": "code",
+                        "type": "C"
+                    }
+                ]
+            },
+            "command": {
+                "name": "Command",
+                "description": "Top Level Command Handler.",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "commandenum": {
+                "name": "CommandEnum",
+                "description": "Top Level Command Enumerator."
+            },
+            "commandquery": {
+                "name": "CommandQuery",
+                "description": "Top Level Command Query Handler.",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "open": {
+                "name": "Open",
+                "description": "Open a project (i.e. an ADB file).",
+                "arguments": [
+                    {
+                        "name": "project",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sethandler": {
+                "name": "SetHandler",
+                "description": "Define Handler for Open, Command etc for this application.",
+                "arguments": [
+                    {
+                        "name": "handler",
+                        "type": "P"
+                    }
+                ]
+            },
+            "setreturncode": {
+                "name": "SetReturnCode",
+                "description": "Sets the code that will be returned to the caller of the currently running alpha anywhere process.",
+                "arguments": [
+                    {
+                        "name": "code",
+                        "type": "N"
+                    }
+                ]
+            },
+            "windowlessloop": {
+                "name": "WindowlessLoop",
+                "description": "Do a Loop until condition is met.",
+                "arguments": [
+                    {
+                        "name": "expr",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "UxApplication"
+    },
+    "uxautomation": {
+        "__functions__": {
+            "beginrecording": {
+                "name": "BeginRecording",
+                "description": "Start Recording Actions."
+            },
+            "endrecording": {
+                "name": "EndRecording",
+                "description": "Stop Recording Actions."
+            },
+            "endtutorial": {
+                "name": "EndTutorial",
+                "description": "Abort a running tutorial."
+            },
+            "getrecordscreenshotlocation": {
+                "name": "GetRecordScreenShotLocation",
+                "description": "Set the path to read screens shots from."
+            },
+            "getrecording": {
+                "name": "GetRecording",
+                "description": "Gets recorded actions (json)."
+            },
+            "hasrecording": {
+                "name": "HasRecording",
+                "description": "Returns true if any actions have been recorded."
+            },
+            "isplaying": {
+                "name": "IsPlaying",
+                "description": "Returns true if automation is being played."
+            },
+            "isplayingorrecording": {
+                "name": "IsPlayingOrRecording",
+                "description": "Returns true if automation is being played or recorded."
+            },
+            "isrecording": {
+                "name": "IsRecording",
+                "description": "Returns true if automation is being recorded."
+            },
+            "playfrom": {
+                "name": "PlayFrom",
+                "description": "Change tutorial to play from a step (random access) - requires tutorial be running.",
+                "arguments": [
+                    {
+                        "name": "stepnumber",
+                        "type": "N"
+                    }
+                ]
+            },
+            "playgetcurrentstep": {
+                "name": "PlayGetCurrentStep",
+                "description": "Gets the definition for the current tutorial step (json Array of actions)."
+            },
+            "playgetfilename": {
+                "name": "PlayGetFilename",
+                "description": "Returns what file we are playing (if it was supplied)."
+            },
+            "playgetpage": {
+                "name": "PlayGetPage",
+                "description": "Get 'page' of tutorial, if unspecified (-1) then the current page is returned.",
+                "arguments": [
+                    {
+                        "name": "pagenum",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "playgetpagecount": {
+                "name": "PlayGetPageCount",
+                "description": "Return the pages in the tutorial."
+            },
+            "playgetrelativestepinpage": {
+                "name": "PlayGetRelativeStepInPage",
+                "description": "Returns the relative step number in the page (returns 1 if its the first step, 2 if it second step etc)."
+            },
+            "playgetstepnumber": {
+                "name": "PlayGetStepNumber",
+                "description": "Returns the step number."
+            },
+            "playoverridecurrentstep": {
+                "name": "PlayOverrideCurrentStep",
+                "description": "Change defintion for step in current tutorial.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "raiseevent": {
+                "name": "RaiseEvent",
+                "description": "Raise event - if JSON, the event as 'name' as well as optional 'arguments' up to the caller.",
+                "arguments": [
+                    {
+                        "name": "event",
+                        "type": "C"
+                    }
+                ]
+            },
+            "recordscreenshots": {
+                "name": "RecordScreenShots",
+                "description": "When recording, take snapshots of windows that own the event along with metadata for overlay - these will add image references in the recording.",
+                "arguments": [
+                    {
+                        "name": "screenshots",
+                        "type": "L"
+                    }
+                ]
+            },
+            "replacementmap": {
+                "name": "ReplacementMap",
+                "description": "Define a cr-lf delimited list search and replacement pairs, separated by a separator string.",
+                "arguments": [
+                    {
+                        "name": "replacements",
+                        "type": "C"
+                    },
+                    {
+                        "name": "separator",
+                        "type": "C"
+                    }
+                ]
+            },
+            "resumerecording": {
+                "name": "ResumeRecording",
+                "description": "Begin recording without clearing prior commands."
+            },
+            "runtutorial": {
+                "name": "RunTutorial",
+                "description": "Run a tutorial, strict mode true prevents staying from the 'script', false means passive tutorial that can be abandoned at any point.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "strictmode",
+                        "type": "L"
+                    },
+                    {
+                        "name": "filename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "setrecordscreenshotlocation": {
+                "name": "SetRecordScreenShotLocation",
+                "description": "Set the path to save screen shots to.",
+                "arguments": [
+                    {
+                        "name": "path",
+                        "type": "C"
+                    }
+                ]
+            },
+            "trackcontrolaction": {
+                "name": "TrackControlAction",
+                "description": "Track event action for meta control.",
+                "arguments": [
+                    {
+                        "name": "event",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "where",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    },
+                    {
+                        "name": "valuewhere",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "tracknextaction": {
+                "name": "TrackNextAction",
+                "description": "Track explicit 'next' action (i.e. user clicked on the 'Next' button in the tutorial)."
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "UxAutomation"
+    },
+    "uxclient": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "UxClient"
+    },
+    "uxhost": {
+        "__functions__": {
+            "createmdi": {
+                "name": "CreateMdi",
+                "description": "Create a new MDI host.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "title",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "icon",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "windowstyle",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "stickyname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "get": {
+                "name": "Get",
+                "description": "Get a Ux host (from name).",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "closeallchildren": {
+                "name": "CloseAllChildren",
+                "description": "Attempt to close all child windows - returns true if no windows are open after the call (.t. if you want to include the keep alive window).",
+                "arguments": [
+                    {
+                        "name": "closekeepalive",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "command": {
+                "name": "Command",
+                "description": "Arrange and tile commands.",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "countchildren": {
+                "name": "CountChildren",
+                "description": "Returns the number of children."
+            },
+            "getchild": {
+                "name": "GetChild",
+                "description": "Return a UX Child window.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setcurrent": {
+                "name": "SetCurrent",
+                "description": "Sets the MDI Host."
+            },
+            "setkeepalivexdialog": {
+                "name": "SetKeepAliveXdialog",
+                "description": "Keep this MDI window open if any other windows are open.",
+                "arguments": [
+                    {
+                        "name": "xdialogname",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "UxHost"
+    },
+    "uxoverlay": {
+        "__methods__": {
+            "animationoscillation": {
+                "name": "AnimationOscillation",
+                "description": "When overlay is visible, oscillate in dx,dy at freqency dt.",
+                "arguments": [
+                    {
+                        "name": "dx",
+                        "type": "N"
+                    },
+                    {
+                        "name": "dy",
+                        "type": "N"
+                    },
+                    {
+                        "name": "dt",
+                        "type": "N"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "UxOverlay"
+    },
+    "uxoverlays": {
+        "__functions__": {
+            "getoverlays": {
+                "name": "GetOverlays",
+                "description": "Returns crlf delimited list of overlays ."
+            },
+            "hasoverlay": {
+                "name": "HasOverlay",
+                "description": "Return true if overlay exists.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "iscached": {
+                "name": "IsCached",
+                "description": "Returns true if image for overlay is already cached.",
+                "arguments": [
+                    {
+                        "name": "cachename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "preloadcache": {
+                "name": "PreloadCache",
+                "description": "Preload the overlay image cache with a previously rendered bitmap.",
+                "arguments": [
+                    {
+                        "name": "bitmapdata",
+                        "type": "B"
+                    },
+                    {
+                        "name": "cachename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "removeoverlay": {
+                "name": "RemoveOverlay",
+                "description": "Remove an overlay (using id).",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "rendertobitmap": {
+                "name": "RenderToBitmap",
+                "description": "Saves HTML render to a bitmap (for later preloading).",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "transparentcolor",
+                        "type": "C"
+                    }
+                ]
+            },
+            "stickyposition": {
+                "name": "StickyPosition",
+                "description": "Set the sticky flag - if true and if the window exists, this keeps the old position. If false, SetOverlay* calls will move the window.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sticky",
+                        "type": "L"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "defineoverlayroute": {
+                "name": "DefineOverlayRoute",
+                "description": "CR-LF delimited list of overlay route - steps to take to a final destination.",
+                "arguments": [
+                    {
+                        "name": "annotations",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getchild": {
+                "name": "GetChild",
+                "description": "Return a UX Overlay window for a given id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "moveoverlay": {
+                "name": "MoveOverlay",
+                "description": "Move overlay to a new location.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setoverlay": {
+                "name": "SetOverlay",
+                "description": "Add of change a HTML display overlay (using id).",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "transparentcolor",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setoverlayclickable": {
+                "name": "SetOverlayClickable",
+                "description": "Creates clickable HTML overlay (fields clicks on targets / allows grab-move) - if altHTml exists, hover content for clickable area is taken from the alt html.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "mapids",
+                        "type": "C"
+                    },
+                    {
+                        "name": "althtml",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "transparentcolor",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "UxOverlays"
+    },
+    "window": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close the MDI host."
+            },
+            "exists": {
+                "name": "Exists",
+                "description": "Does MDI Host exists."
+            },
+            "hide": {
+                "name": "Hide",
+                "description": "Hide the window."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setfocus": {
+                "name": "SetFocus",
+                "description": "Set Focus."
+            },
+            "show": {
+                "name": "Show",
+                "description": "Show the window."
+            }
+        },
+        "__name__": "Window"
+    },
+    "windowmodalstate": {
+        "__methods__": {
+            "begin": {
+                "name": "Begin",
+                "description": "Remember window focus 'state', returns 'parent' window to use."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "end": {
+                "name": "End",
+                "description": "Restore window focus 'state'."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setmodal": {
+                "name": "SetModal",
+                "description": "Enable a new modal window.",
+                "arguments": [
+                    {
+                        "name": "hwnd",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "WindowModalState"
+    },
+    "__name__": "WindowManager"
+}

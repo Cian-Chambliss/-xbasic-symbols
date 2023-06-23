@@ -1,0 +1,3963 @@
+{
+    "diagnostics": {
+        "process": {
+            "__functions__": {
+                "enterdebugmode": {
+                    "name": "EnterDebugMode",
+                    "description": "EnterDebugMode"
+                },
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "getcurrentprocess": {
+                    "name": "GetCurrentProcess",
+                    "description": "GetCurrentProcess"
+                },
+                "getprocessbyid": {
+                    "name": "GetProcessById",
+                    "description": "GetProcessById",
+                    "arguments": [
+                        {
+                            "name": "processid",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "getprocessbyid": {
+                    "name": "GetProcessById",
+                    "description": "GetProcessById",
+                    "arguments": [
+                        {
+                            "name": "processid",
+                            "type": "N"
+                        },
+                        {
+                            "name": "machinename",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "getprocesses": {
+                    "name": "GetProcesses",
+                    "description": "GetProcesses"
+                },
+                "getprocesses": {
+                    "name": "GetProcesses",
+                    "description": "GetProcesses",
+                    "arguments": [
+                        {
+                            "name": "machinename",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "getprocessesbyname": {
+                    "name": "GetProcessesByName",
+                    "description": "GetProcessesByName",
+                    "arguments": [
+                        {
+                            "name": "processname",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "getprocessesbyname": {
+                    "name": "GetProcessesByName",
+                    "description": "GetProcessesByName",
+                    "arguments": [
+                        {
+                            "name": "processname",
+                            "type": "C"
+                        },
+                        {
+                            "name": "machinename",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "leavedebugmode": {
+                    "name": "LeaveDebugMode",
+                    "description": "LeaveDebugMode"
+                },
+                "referenceequals": {
+                    "name": "ReferenceEquals",
+                    "description": "ReferenceEquals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "start": {
+                    "name": "Start",
+                    "description": "Start",
+                    "arguments": [
+                        {
+                            "name": "filename",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "start": {
+                    "name": "Start",
+                    "description": "Start",
+                    "arguments": [
+                        {
+                            "name": "filename",
+                            "type": "C"
+                        },
+                        {
+                            "name": "arguments",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "start": {
+                    "name": "Start",
+                    "description": "Start",
+                    "arguments": [
+                        {
+                            "name": "filename",
+                            "type": "C"
+                        },
+                        {
+                            "name": "arguments",
+                            "type": "C"
+                        },
+                        {
+                            "name": "username",
+                            "type": "C"
+                        },
+                        {
+                            "name": "password",
+                            "type": "System::Security::SecureString"
+                        },
+                        {
+                            "name": "domain",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "start": {
+                    "name": "Start",
+                    "description": "Start",
+                    "arguments": [
+                        {
+                            "name": "filename",
+                            "type": "C"
+                        },
+                        {
+                            "name": "username",
+                            "type": "C"
+                        },
+                        {
+                            "name": "password",
+                            "type": "System::Security::SecureString"
+                        },
+                        {
+                            "name": "domain",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "start": {
+                    "name": "Start",
+                    "description": "Start",
+                    "arguments": [
+                        {
+                            "name": "startinfo",
+                            "type": "System::Diagnostics::ProcessStartInfo"
+                        }
+                    ]
+                }
+            },
+            "__methods__": {
+                "process": {
+                    "name": "Process",
+                    "description": "Constructor"
+                },
+                "process": {
+                    "name": "Process",
+                    "description": "Constructor"
+                },
+                "beginerrorreadline": {
+                    "name": "BeginErrorReadLine",
+                    "description": "BeginErrorReadLine"
+                },
+                "beginoutputreadline": {
+                    "name": "BeginOutputReadLine",
+                    "description": "BeginOutputReadLine"
+                },
+                "cancelerrorread": {
+                    "name": "CancelErrorRead",
+                    "description": "CancelErrorRead"
+                },
+                "canceloutputread": {
+                    "name": "CancelOutputRead",
+                    "description": "CancelOutputRead"
+                },
+                "close": {
+                    "name": "Close",
+                    "description": "Close"
+                },
+                "closemainwindow": {
+                    "name": "CloseMainWindow",
+                    "description": "CloseMainWindow"
+                },
+                "createobjref": {
+                    "name": "CreateObjRef",
+                    "description": "CreateObjRef",
+                    "arguments": [
+                        {
+                            "name": "requestedtype",
+                            "type": "System::Type"
+                        }
+                    ]
+                },
+                "dispose": {
+                    "name": "Dispose",
+                    "description": "Dispose"
+                },
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obj",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "gethashcode": {
+                    "name": "GetHashCode",
+                    "description": "GetHashCode"
+                },
+                "getlifetimeservice": {
+                    "name": "GetLifetimeService",
+                    "description": "GetLifetimeService"
+                },
+                "gettype": {
+                    "name": "GetType",
+                    "description": "GetType"
+                },
+                "initializelifetimeservice": {
+                    "name": "InitializeLifetimeService",
+                    "description": "InitializeLifetimeService"
+                },
+                "kill": {
+                    "name": "Kill",
+                    "description": "Kill"
+                },
+                "refresh": {
+                    "name": "Refresh",
+                    "description": "Refresh"
+                },
+                "start": {
+                    "name": "Start",
+                    "description": "Start"
+                },
+                "tostring": {
+                    "name": "ToString",
+                    "description": "ToString"
+                },
+                "waitforexit": {
+                    "name": "WaitForExit",
+                    "description": "WaitForExit"
+                },
+                "waitforexit": {
+                    "name": "WaitForExit",
+                    "description": "WaitForExit",
+                    "arguments": [
+                        {
+                            "name": "milliseconds",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "waitforinputidle": {
+                    "name": "WaitForInputIdle",
+                    "description": "WaitForInputIdle"
+                },
+                "waitforinputidle": {
+                    "name": "WaitForInputIdle",
+                    "description": "WaitForInputIdle",
+                    "arguments": [
+                        {
+                            "name": "milliseconds",
+                            "type": "N"
+                        }
+                    ]
+                }
+            },
+            "__name__": "Process"
+        },
+        "processstartinfo": {
+            "__functions__": {
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "referenceequals": {
+                    "name": "ReferenceEquals",
+                    "description": "ReferenceEquals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                }
+            },
+            "__methods__": {
+                "processstartinfo": {
+                    "name": "ProcessStartInfo",
+                    "description": "Constructor"
+                },
+                "processstartinfo": {
+                    "name": "ProcessStartInfo",
+                    "description": "Constructor",
+                    "arguments": [
+                        {
+                            "name": "filename",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "processstartinfo": {
+                    "name": "ProcessStartInfo",
+                    "description": "Constructor",
+                    "arguments": [
+                        {
+                            "name": "filename",
+                            "type": "C"
+                        },
+                        {
+                            "name": "arguments",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "processstartinfo": {
+                    "name": "ProcessStartInfo",
+                    "description": "Constructor"
+                },
+                "processstartinfo": {
+                    "name": "ProcessStartInfo",
+                    "description": "Constructor",
+                    "arguments": [
+                        {
+                            "name": "filename",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "processstartinfo": {
+                    "name": "ProcessStartInfo",
+                    "description": "Constructor",
+                    "arguments": [
+                        {
+                            "name": "filename",
+                            "type": "C"
+                        },
+                        {
+                            "name": "arguments",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obj",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "gethashcode": {
+                    "name": "GetHashCode",
+                    "description": "GetHashCode"
+                },
+                "gettype": {
+                    "name": "GetType",
+                    "description": "GetType"
+                },
+                "tostring": {
+                    "name": "ToString",
+                    "description": "ToString"
+                }
+            },
+            "__name__": "ProcessStartInfo"
+        },
+        "__name__": "Diagnostics"
+    },
+    "diagnostics": {
+        "remoting": {
+            "objref": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "objref": {
+                        "name": "ObjRef",
+                        "description": "Constructor"
+                    },
+                    "objref": {
+                        "name": "ObjRef",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "o",
+                                "type": "System::MarshalByRefObject"
+                            },
+                            {
+                                "name": "requestedtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "objref": {
+                        "name": "ObjRef",
+                        "description": "Constructor"
+                    },
+                    "objref": {
+                        "name": "ObjRef",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "o",
+                                "type": "System::MarshalByRefObject"
+                            },
+                            {
+                                "name": "requestedtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "getobjectdata": {
+                        "name": "GetObjectData",
+                        "description": "GetObjectData",
+                        "arguments": [
+                            {
+                                "name": "info",
+                                "type": "System::Runtime::Serialization::SerializationInfo"
+                            },
+                            {
+                                "name": "context",
+                                "type": "System::Runtime::Serialization::StreamingContext"
+                            }
+                        ]
+                    },
+                    "getrealobject": {
+                        "name": "GetRealObject",
+                        "description": "GetRealObject",
+                        "arguments": [
+                            {
+                                "name": "context",
+                                "type": "System::Runtime::Serialization::StreamingContext"
+                            }
+                        ]
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "isfromthisappdomain": {
+                        "name": "IsFromThisAppDomain",
+                        "description": "IsFromThisAppDomain"
+                    },
+                    "isfromthisprocess": {
+                        "name": "IsFromThisProcess",
+                        "description": "IsFromThisProcess"
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    }
+                },
+                "__name__": "ObjRef"
+            },
+            "__name__": "Remoting"
+        },
+        "serialization": {
+            "iformatterconverter": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            }
+                        ]
+                    },
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            },
+                            {
+                                "name": "requiresametokeninpartialtrust",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            }
+                        ]
+                    },
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            },
+                            {
+                                "name": "requiresametokeninpartialtrust",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            },
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "N"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "T"
+                            }
+                        ]
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "getboolean": {
+                        "name": "GetBoolean",
+                        "description": "GetBoolean",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getbyte": {
+                        "name": "GetByte",
+                        "description": "GetByte",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getchar": {
+                        "name": "GetChar",
+                        "description": "GetChar",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getdatetime": {
+                        "name": "GetDateTime",
+                        "description": "GetDateTime",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getdecimal": {
+                        "name": "GetDecimal",
+                        "description": "GetDecimal",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getdouble": {
+                        "name": "GetDouble",
+                        "description": "GetDouble",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getenumerator": {
+                        "name": "GetEnumerator",
+                        "description": "GetEnumerator"
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "getint16": {
+                        "name": "GetInt16",
+                        "description": "GetInt16",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getint32": {
+                        "name": "GetInt32",
+                        "description": "GetInt32",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getint64": {
+                        "name": "GetInt64",
+                        "description": "GetInt64",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getsbyte": {
+                        "name": "GetSByte",
+                        "description": "GetSByte",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getsingle": {
+                        "name": "GetSingle",
+                        "description": "GetSingle",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getstring": {
+                        "name": "GetString",
+                        "description": "GetString",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "getuint16": {
+                        "name": "GetUInt16",
+                        "description": "GetUInt16",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getuint32": {
+                        "name": "GetUInt32",
+                        "description": "GetUInt32",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getuint64": {
+                        "name": "GetUInt64",
+                        "description": "GetUInt64",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getvalue": {
+                        "name": "GetValue",
+                        "description": "GetValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "settype": {
+                        "name": "SetType",
+                        "description": "SetType",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    }
+                },
+                "__name__": "SerializationInfo"
+            },
+            "serializationinfo": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            }
+                        ]
+                    },
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            },
+                            {
+                                "name": "requiresametokeninpartialtrust",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            }
+                        ]
+                    },
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            },
+                            {
+                                "name": "requiresametokeninpartialtrust",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            },
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "N"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "T"
+                            }
+                        ]
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "getboolean": {
+                        "name": "GetBoolean",
+                        "description": "GetBoolean",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getbyte": {
+                        "name": "GetByte",
+                        "description": "GetByte",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getchar": {
+                        "name": "GetChar",
+                        "description": "GetChar",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getdatetime": {
+                        "name": "GetDateTime",
+                        "description": "GetDateTime",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getdecimal": {
+                        "name": "GetDecimal",
+                        "description": "GetDecimal",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getdouble": {
+                        "name": "GetDouble",
+                        "description": "GetDouble",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getenumerator": {
+                        "name": "GetEnumerator",
+                        "description": "GetEnumerator"
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "getint16": {
+                        "name": "GetInt16",
+                        "description": "GetInt16",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getint32": {
+                        "name": "GetInt32",
+                        "description": "GetInt32",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getint64": {
+                        "name": "GetInt64",
+                        "description": "GetInt64",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getsbyte": {
+                        "name": "GetSByte",
+                        "description": "GetSByte",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getsingle": {
+                        "name": "GetSingle",
+                        "description": "GetSingle",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getstring": {
+                        "name": "GetString",
+                        "description": "GetString",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "getuint16": {
+                        "name": "GetUInt16",
+                        "description": "GetUInt16",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getuint32": {
+                        "name": "GetUInt32",
+                        "description": "GetUInt32",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getuint64": {
+                        "name": "GetUInt64",
+                        "description": "GetUInt64",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getvalue": {
+                        "name": "GetValue",
+                        "description": "GetValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "settype": {
+                        "name": "SetType",
+                        "description": "SetType",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    }
+                },
+                "__name__": "SerializationInfo"
+            },
+            "serializationinfoenumerator": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "serializationinfoenumerator": {
+                        "name": "SerializationInfoEnumerator",
+                        "description": "Public Constructor"
+                    },
+                    "serializationinfoenumerator": {
+                        "name": "SerializationInfoEnumerator",
+                        "description": "Public Constructor"
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "movenext": {
+                        "name": "MoveNext",
+                        "description": "MoveNext"
+                    },
+                    "reset": {
+                        "name": "Reset",
+                        "description": "Reset"
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    }
+                },
+                "__name__": "SerializationInfoEnumerator"
+            },
+            "streamingcontext": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "streamingcontext": {
+                        "name": "StreamingContext",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "System::Runtime::Serialization::StreamingContextStates"
+                            }
+                        ]
+                    },
+                    "streamingcontext": {
+                        "name": "StreamingContext",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "System::Runtime::Serialization::StreamingContextStates"
+                            },
+                            {
+                                "name": "additional",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "streamingcontext": {
+                        "name": "StreamingContext",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "System::Runtime::Serialization::StreamingContextStates"
+                            }
+                        ]
+                    },
+                    "streamingcontext": {
+                        "name": "StreamingContext",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "System::Runtime::Serialization::StreamingContextStates"
+                            },
+                            {
+                                "name": "additional",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    }
+                },
+                "__name__": "StreamingContext"
+            },
+            "streamingcontextstates": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "format": {
+                        "name": "Format",
+                        "description": "Format",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            },
+                            {
+                                "name": "format",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getname": {
+                        "name": "GetName",
+                        "description": "GetName",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "getnames": {
+                        "name": "GetNames",
+                        "description": "GetNames",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "getunderlyingtype": {
+                        "name": "GetUnderlyingType",
+                        "description": "GetUnderlyingType",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "getvalues": {
+                        "name": "GetValues",
+                        "description": "GetValues",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "isdefined": {
+                        "name": "IsDefined",
+                        "description": "IsDefined",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "parse": {
+                        "name": "Parse",
+                        "description": "Parse",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "parse": {
+                        "name": "Parse",
+                        "description": "Parse",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "C"
+                            },
+                            {
+                                "name": "ignorecase",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "toobject": {
+                        "name": "ToObject",
+                        "description": "ToObject",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "toobject": {
+                        "name": "ToObject",
+                        "description": "ToObject",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "N"
+                            }
+                        ]
+                    },
+                    "tryparse": {
+                        "name": "TryParse",
+                        "description": "TryParse",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "C"
+                            },
+                            {
+                                "name": "ignorecase",
+                                "type": "L"
+                            },
+                            {
+                                "name": "result",
+                                "type": "P"
+                            }
+                        ]
+                    },
+                    "tryparse": {
+                        "name": "TryParse",
+                        "description": "TryParse",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "C"
+                            },
+                            {
+                                "name": "result",
+                                "type": "P"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "streamingcontextstates": {
+                        "name": "StreamingContextStates",
+                        "description": "Public Constructor"
+                    },
+                    "streamingcontextstates": {
+                        "name": "StreamingContextStates",
+                        "description": "Public Constructor"
+                    },
+                    "compareto": {
+                        "name": "CompareTo",
+                        "description": "CompareTo",
+                        "arguments": [
+                            {
+                                "name": "target",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "gettypecode": {
+                        "name": "GetTypeCode",
+                        "description": "GetTypeCode"
+                    },
+                    "hasflag": {
+                        "name": "HasFlag",
+                        "description": "HasFlag",
+                        "arguments": [
+                            {
+                                "name": "flag",
+                                "type": "System::Enum"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString",
+                        "arguments": [
+                            {
+                                "name": "format",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString",
+                        "arguments": [
+                            {
+                                "name": "format",
+                                "type": "C"
+                            },
+                            {
+                                "name": "provider",
+                                "type": "System::IFormatProvider"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString",
+                        "arguments": [
+                            {
+                                "name": "provider",
+                                "type": "System::IFormatProvider"
+                            }
+                        ]
+                    }
+                },
+                "__name__": "StreamingContextStates"
+            },
+            "__name__": "Serialization"
+        },
+        "__name__": "Runtime"
+    },
+    "enum": {
+        "__functions__": {
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "format": {
+                "name": "Format",
+                "description": "Format",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getname": {
+                "name": "GetName",
+                "description": "GetName",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "getnames": {
+                "name": "GetNames",
+                "description": "GetNames",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    }
+                ]
+            },
+            "getunderlyingtype": {
+                "name": "GetUnderlyingType",
+                "description": "GetUnderlyingType",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    }
+                ]
+            },
+            "getvalues": {
+                "name": "GetValues",
+                "description": "GetValues",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    }
+                ]
+            },
+            "isdefined": {
+                "name": "IsDefined",
+                "description": "IsDefined",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Parse",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Parse",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    },
+                    {
+                        "name": "ignorecase",
+                        "type": "L"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "toobject": {
+                "name": "ToObject",
+                "description": "ToObject",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "toobject": {
+                "name": "ToObject",
+                "description": "ToObject",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "N"
+                    }
+                ]
+            },
+            "tryparse": {
+                "name": "TryParse",
+                "description": "TryParse",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "C"
+                    },
+                    {
+                        "name": "ignorecase",
+                        "type": "L"
+                    },
+                    {
+                        "name": "result",
+                        "type": "P"
+                    }
+                ]
+            },
+            "tryparse": {
+                "name": "TryParse",
+                "description": "TryParse",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "C"
+                    },
+                    {
+                        "name": "result",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "enum": {
+                "name": "Enum",
+                "description": "Public Constructor"
+            },
+            "enum": {
+                "name": "Enum",
+                "description": "Public Constructor"
+            },
+            "compareto": {
+                "name": "CompareTo",
+                "description": "CompareTo",
+                "arguments": [
+                    {
+                        "name": "target",
+                        "type": "A"
+                    }
+                ]
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "gettypecode": {
+                "name": "GetTypeCode",
+                "description": "GetTypeCode"
+            },
+            "hasflag": {
+                "name": "HasFlag",
+                "description": "HasFlag",
+                "arguments": [
+                    {
+                        "name": "flag",
+                        "type": "System::Enum"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    },
+                    {
+                        "name": "provider",
+                        "type": "System::IFormatProvider"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString",
+                "arguments": [
+                    {
+                        "name": "provider",
+                        "type": "System::IFormatProvider"
+                    }
+                ]
+            }
+        },
+        "__name__": "Enum"
+    },
+    "iformatprovider": {
+        "__methods__": {
+            "iformatprovider": {
+                "name": "IFormatProvider",
+                "description": "Public Constructor"
+            },
+            "iformatprovider": {
+                "name": "IFormatProvider",
+                "description": "Public Constructor"
+            },
+            "getformat": {
+                "name": "GetFormat",
+                "description": "GetFormat",
+                "arguments": [
+                    {
+                        "name": "formattype",
+                        "type": "System::Type"
+                    }
+                ]
+            }
+        },
+        "__name__": "IFormatProvider"
+    },
+    "marshalbyrefobject": {
+        "__functions__": {
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "marshalbyrefobject": {
+                "name": "MarshalByRefObject",
+                "description": "Public Constructor"
+            },
+            "marshalbyrefobject": {
+                "name": "MarshalByRefObject",
+                "description": "Public Constructor"
+            },
+            "createobjref": {
+                "name": "CreateObjRef",
+                "description": "CreateObjRef",
+                "arguments": [
+                    {
+                        "name": "requestedtype",
+                        "type": "System::Type"
+                    }
+                ]
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "getlifetimeservice": {
+                "name": "GetLifetimeService",
+                "description": "GetLifetimeService"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "initializelifetimeservice": {
+                "name": "InitializeLifetimeService",
+                "description": "InitializeLifetimeService"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "MarshalByRefObject"
+    },
+    "runtime": {
+        "remoting": {
+            "objref": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "objref": {
+                        "name": "ObjRef",
+                        "description": "Constructor"
+                    },
+                    "objref": {
+                        "name": "ObjRef",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "o",
+                                "type": "System::MarshalByRefObject"
+                            },
+                            {
+                                "name": "requestedtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "objref": {
+                        "name": "ObjRef",
+                        "description": "Constructor"
+                    },
+                    "objref": {
+                        "name": "ObjRef",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "o",
+                                "type": "System::MarshalByRefObject"
+                            },
+                            {
+                                "name": "requestedtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "getobjectdata": {
+                        "name": "GetObjectData",
+                        "description": "GetObjectData",
+                        "arguments": [
+                            {
+                                "name": "info",
+                                "type": "System::Runtime::Serialization::SerializationInfo"
+                            },
+                            {
+                                "name": "context",
+                                "type": "System::Runtime::Serialization::StreamingContext"
+                            }
+                        ]
+                    },
+                    "getrealobject": {
+                        "name": "GetRealObject",
+                        "description": "GetRealObject",
+                        "arguments": [
+                            {
+                                "name": "context",
+                                "type": "System::Runtime::Serialization::StreamingContext"
+                            }
+                        ]
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "isfromthisappdomain": {
+                        "name": "IsFromThisAppDomain",
+                        "description": "IsFromThisAppDomain"
+                    },
+                    "isfromthisprocess": {
+                        "name": "IsFromThisProcess",
+                        "description": "IsFromThisProcess"
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    }
+                },
+                "__name__": "ObjRef"
+            },
+            "__name__": "Remoting"
+        },
+        "serialization": {
+            "iformatterconverter": {
+                "__methods__": {
+                    "iformatterconverter": {
+                        "name": "IFormatterConverter",
+                        "description": "Public Constructor"
+                    },
+                    "iformatterconverter": {
+                        "name": "IFormatterConverter",
+                        "description": "Public Constructor"
+                    },
+                    "convert": {
+                        "name": "Convert",
+                        "description": "Convert",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            },
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "toboolean": {
+                        "name": "ToBoolean",
+                        "description": "ToBoolean",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "tobyte": {
+                        "name": "ToByte",
+                        "description": "ToByte",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "tochar": {
+                        "name": "ToChar",
+                        "description": "ToChar",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "todatetime": {
+                        "name": "ToDateTime",
+                        "description": "ToDateTime",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "todecimal": {
+                        "name": "ToDecimal",
+                        "description": "ToDecimal",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "todouble": {
+                        "name": "ToDouble",
+                        "description": "ToDouble",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "toint16": {
+                        "name": "ToInt16",
+                        "description": "ToInt16",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "toint32": {
+                        "name": "ToInt32",
+                        "description": "ToInt32",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "toint64": {
+                        "name": "ToInt64",
+                        "description": "ToInt64",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "tosbyte": {
+                        "name": "ToSByte",
+                        "description": "ToSByte",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "tosingle": {
+                        "name": "ToSingle",
+                        "description": "ToSingle",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "touint16": {
+                        "name": "ToUInt16",
+                        "description": "ToUInt16",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "touint32": {
+                        "name": "ToUInt32",
+                        "description": "ToUInt32",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "touint64": {
+                        "name": "ToUInt64",
+                        "description": "ToUInt64",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__name__": "IFormatterConverter"
+            },
+            "serializationinfo": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            }
+                        ]
+                    },
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            },
+                            {
+                                "name": "requiresametokeninpartialtrust",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            }
+                        ]
+                    },
+                    "serializationinfo": {
+                        "name": "SerializationInfo",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "converter",
+                                "type": "System::Runtime::Serialization::IFormatterConverter"
+                            },
+                            {
+                                "name": "requiresametokeninpartialtrust",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            },
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "N"
+                            }
+                        ]
+                    },
+                    "addvalue": {
+                        "name": "AddValue",
+                        "description": "AddValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "value",
+                                "type": "T"
+                            }
+                        ]
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "getboolean": {
+                        "name": "GetBoolean",
+                        "description": "GetBoolean",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getbyte": {
+                        "name": "GetByte",
+                        "description": "GetByte",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getchar": {
+                        "name": "GetChar",
+                        "description": "GetChar",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getdatetime": {
+                        "name": "GetDateTime",
+                        "description": "GetDateTime",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getdecimal": {
+                        "name": "GetDecimal",
+                        "description": "GetDecimal",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getdouble": {
+                        "name": "GetDouble",
+                        "description": "GetDouble",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getenumerator": {
+                        "name": "GetEnumerator",
+                        "description": "GetEnumerator"
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "getint16": {
+                        "name": "GetInt16",
+                        "description": "GetInt16",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getint32": {
+                        "name": "GetInt32",
+                        "description": "GetInt32",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getint64": {
+                        "name": "GetInt64",
+                        "description": "GetInt64",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getsbyte": {
+                        "name": "GetSByte",
+                        "description": "GetSByte",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getsingle": {
+                        "name": "GetSingle",
+                        "description": "GetSingle",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getstring": {
+                        "name": "GetString",
+                        "description": "GetString",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "getuint16": {
+                        "name": "GetUInt16",
+                        "description": "GetUInt16",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getuint32": {
+                        "name": "GetUInt32",
+                        "description": "GetUInt32",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getuint64": {
+                        "name": "GetUInt64",
+                        "description": "GetUInt64",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getvalue": {
+                        "name": "GetValue",
+                        "description": "GetValue",
+                        "arguments": [
+                            {
+                                "name": "name",
+                                "type": "C"
+                            },
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "settype": {
+                        "name": "SetType",
+                        "description": "SetType",
+                        "arguments": [
+                            {
+                                "name": "type",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    }
+                },
+                "__name__": "SerializationInfo"
+            },
+            "serializationinfoenumerator": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "serializationinfoenumerator": {
+                        "name": "SerializationInfoEnumerator",
+                        "description": "Public Constructor"
+                    },
+                    "serializationinfoenumerator": {
+                        "name": "SerializationInfoEnumerator",
+                        "description": "Public Constructor"
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "movenext": {
+                        "name": "MoveNext",
+                        "description": "MoveNext"
+                    },
+                    "reset": {
+                        "name": "Reset",
+                        "description": "Reset"
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    }
+                },
+                "__name__": "SerializationInfoEnumerator"
+            },
+            "streamingcontext": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "streamingcontext": {
+                        "name": "StreamingContext",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "System::Runtime::Serialization::StreamingContextStates"
+                            }
+                        ]
+                    },
+                    "streamingcontext": {
+                        "name": "StreamingContext",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "System::Runtime::Serialization::StreamingContextStates"
+                            },
+                            {
+                                "name": "additional",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "streamingcontext": {
+                        "name": "StreamingContext",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "System::Runtime::Serialization::StreamingContextStates"
+                            }
+                        ]
+                    },
+                    "streamingcontext": {
+                        "name": "StreamingContext",
+                        "description": "Constructor",
+                        "arguments": [
+                            {
+                                "name": "state",
+                                "type": "System::Runtime::Serialization::StreamingContextStates"
+                            },
+                            {
+                                "name": "additional",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    }
+                },
+                "__name__": "StreamingContext"
+            },
+            "streamingcontextstates": {
+                "__functions__": {
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "format": {
+                        "name": "Format",
+                        "description": "Format",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            },
+                            {
+                                "name": "format",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "getname": {
+                        "name": "GetName",
+                        "description": "GetName",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "getnames": {
+                        "name": "GetNames",
+                        "description": "GetNames",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "getunderlyingtype": {
+                        "name": "GetUnderlyingType",
+                        "description": "GetUnderlyingType",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "getvalues": {
+                        "name": "GetValues",
+                        "description": "GetValues",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            }
+                        ]
+                    },
+                    "isdefined": {
+                        "name": "IsDefined",
+                        "description": "IsDefined",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "parse": {
+                        "name": "Parse",
+                        "description": "Parse",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "parse": {
+                        "name": "Parse",
+                        "description": "Parse",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "C"
+                            },
+                            {
+                                "name": "ignorecase",
+                                "type": "L"
+                            }
+                        ]
+                    },
+                    "referenceequals": {
+                        "name": "ReferenceEquals",
+                        "description": "ReferenceEquals",
+                        "arguments": [
+                            {
+                                "name": "obja",
+                                "type": "A"
+                            },
+                            {
+                                "name": "objb",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "toobject": {
+                        "name": "ToObject",
+                        "description": "ToObject",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "toobject": {
+                        "name": "ToObject",
+                        "description": "ToObject",
+                        "arguments": [
+                            {
+                                "name": "enumtype",
+                                "type": "System::Type"
+                            },
+                            {
+                                "name": "value",
+                                "type": "N"
+                            }
+                        ]
+                    },
+                    "tryparse": {
+                        "name": "TryParse",
+                        "description": "TryParse",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "C"
+                            },
+                            {
+                                "name": "ignorecase",
+                                "type": "L"
+                            },
+                            {
+                                "name": "result",
+                                "type": "P"
+                            }
+                        ]
+                    },
+                    "tryparse": {
+                        "name": "TryParse",
+                        "description": "TryParse",
+                        "arguments": [
+                            {
+                                "name": "value",
+                                "type": "C"
+                            },
+                            {
+                                "name": "result",
+                                "type": "P"
+                            }
+                        ]
+                    }
+                },
+                "__methods__": {
+                    "streamingcontextstates": {
+                        "name": "StreamingContextStates",
+                        "description": "Public Constructor"
+                    },
+                    "streamingcontextstates": {
+                        "name": "StreamingContextStates",
+                        "description": "Public Constructor"
+                    },
+                    "compareto": {
+                        "name": "CompareTo",
+                        "description": "CompareTo",
+                        "arguments": [
+                            {
+                                "name": "target",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "equals": {
+                        "name": "Equals",
+                        "description": "Equals",
+                        "arguments": [
+                            {
+                                "name": "obj",
+                                "type": "A"
+                            }
+                        ]
+                    },
+                    "gethashcode": {
+                        "name": "GetHashCode",
+                        "description": "GetHashCode"
+                    },
+                    "gettype": {
+                        "name": "GetType",
+                        "description": "GetType"
+                    },
+                    "gettypecode": {
+                        "name": "GetTypeCode",
+                        "description": "GetTypeCode"
+                    },
+                    "hasflag": {
+                        "name": "HasFlag",
+                        "description": "HasFlag",
+                        "arguments": [
+                            {
+                                "name": "flag",
+                                "type": "System::Enum"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString"
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString",
+                        "arguments": [
+                            {
+                                "name": "format",
+                                "type": "C"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString",
+                        "arguments": [
+                            {
+                                "name": "format",
+                                "type": "C"
+                            },
+                            {
+                                "name": "provider",
+                                "type": "System::IFormatProvider"
+                            }
+                        ]
+                    },
+                    "tostring": {
+                        "name": "ToString",
+                        "description": "ToString",
+                        "arguments": [
+                            {
+                                "name": "provider",
+                                "type": "System::IFormatProvider"
+                            }
+                        ]
+                    }
+                },
+                "__name__": "StreamingContextStates"
+            },
+            "__name__": "Serialization"
+        },
+        "__name__": "Runtime"
+    },
+    "security": {
+        "securestring": {
+            "__functions__": {
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "referenceequals": {
+                    "name": "ReferenceEquals",
+                    "description": "ReferenceEquals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                }
+            },
+            "__methods__": {
+                "securestring": {
+                    "name": "SecureString",
+                    "description": "Constructor"
+                },
+                "securestring": {
+                    "name": "SecureString",
+                    "description": "Constructor",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "C",
+                            "byref": true
+                        },
+                        {
+                            "name": "length",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "securestring": {
+                    "name": "SecureString",
+                    "description": "Constructor"
+                },
+                "securestring": {
+                    "name": "SecureString",
+                    "description": "Constructor",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "C",
+                            "byref": true
+                        },
+                        {
+                            "name": "length",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "appendchar": {
+                    "name": "AppendChar",
+                    "description": "AppendChar",
+                    "arguments": [
+                        {
+                            "name": "c",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "clear": {
+                    "name": "Clear",
+                    "description": "Clear"
+                },
+                "copy": {
+                    "name": "Copy",
+                    "description": "Copy"
+                },
+                "dispose": {
+                    "name": "Dispose",
+                    "description": "Dispose"
+                },
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obj",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "gethashcode": {
+                    "name": "GetHashCode",
+                    "description": "GetHashCode"
+                },
+                "gettype": {
+                    "name": "GetType",
+                    "description": "GetType"
+                },
+                "insertat": {
+                    "name": "InsertAt",
+                    "description": "InsertAt",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        },
+                        {
+                            "name": "c",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "isreadonly": {
+                    "name": "IsReadOnly",
+                    "description": "IsReadOnly"
+                },
+                "makereadonly": {
+                    "name": "MakeReadOnly",
+                    "description": "MakeReadOnly"
+                },
+                "removeat": {
+                    "name": "RemoveAt",
+                    "description": "RemoveAt",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "setat": {
+                    "name": "SetAt",
+                    "description": "SetAt",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        },
+                        {
+                            "name": "c",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "tostring": {
+                    "name": "ToString",
+                    "description": "ToString"
+                }
+            },
+            "__name__": "SecureString"
+        },
+        "__name__": "Security"
+    },
+    "type": {
+        "__enumeration__": [
+            "AssemblyQualifiedName",
+            "Attributes",
+            "BaseType",
+            "ContainsGenericParameters",
+            "CustomAttributes",
+            "DeclaringMethod",
+            "DeclaringType",
+            "DefaultBinder",
+            "Delimiter",
+            "EmptyTypes",
+            "FilterAttribute",
+            "FilterName",
+            "FilterNameIgnoreCase",
+            "FullName",
+            "GUID",
+            "GenericParameterAttributes",
+            "GenericParameterPosition",
+            "GenericTypeArguments",
+            "HasElementType",
+            "IsAbstract",
+            "IsAnsiClass",
+            "IsArray",
+            "IsAutoClass",
+            "IsAutoLayout",
+            "IsByRef",
+            "IsCOMObject",
+            "IsClass",
+            "IsConstructedGenericType",
+            "IsContextful",
+            "IsEnum",
+            "IsExplicitLayout",
+            "IsGenericParameter",
+            "IsGenericType",
+            "IsGenericTypeDefinition",
+            "IsImport",
+            "IsInterface",
+            "IsLayoutSequential",
+            "IsMarshalByRef",
+            "IsNested",
+            "IsNestedAssembly",
+            "IsNestedFamANDAssem",
+            "IsNestedFamORAssem",
+            "IsNestedFamily",
+            "IsNestedPrivate",
+            "IsNestedPublic",
+            "IsNotPublic",
+            "IsPointer",
+            "IsPrimitive",
+            "IsPublic",
+            "IsSealed",
+            "IsSecurityCritical",
+            "IsSecuritySafeCritical",
+            "IsSecurityTransparent",
+            "IsSerializable",
+            "IsSpecialName",
+            "IsUnicodeClass",
+            "IsValueType",
+            "IsVisible",
+            "MemberType",
+            "MetadataToken",
+            "Missing",
+            "Module",
+            "Name",
+            "Namespace",
+            "ReflectedType",
+            "StructLayoutAttribute",
+            "TypeHandle",
+            "TypeInitializer",
+            "UnderlyingSystemType"
+        ],
+        "__name__": "Type"
+    },
+    "typecode": {
+        "__functions__": {
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "format": {
+                "name": "Format",
+                "description": "Format",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getname": {
+                "name": "GetName",
+                "description": "GetName",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "getnames": {
+                "name": "GetNames",
+                "description": "GetNames",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    }
+                ]
+            },
+            "getunderlyingtype": {
+                "name": "GetUnderlyingType",
+                "description": "GetUnderlyingType",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    }
+                ]
+            },
+            "getvalues": {
+                "name": "GetValues",
+                "description": "GetValues",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    }
+                ]
+            },
+            "isdefined": {
+                "name": "IsDefined",
+                "description": "IsDefined",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Parse",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Parse",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    },
+                    {
+                        "name": "ignorecase",
+                        "type": "L"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "toobject": {
+                "name": "ToObject",
+                "description": "ToObject",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "toobject": {
+                "name": "ToObject",
+                "description": "ToObject",
+                "arguments": [
+                    {
+                        "name": "enumtype",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "value",
+                        "type": "N"
+                    }
+                ]
+            },
+            "tryparse": {
+                "name": "TryParse",
+                "description": "TryParse",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "C"
+                    },
+                    {
+                        "name": "ignorecase",
+                        "type": "L"
+                    },
+                    {
+                        "name": "result",
+                        "type": "P"
+                    }
+                ]
+            },
+            "tryparse": {
+                "name": "TryParse",
+                "description": "TryParse",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "C"
+                    },
+                    {
+                        "name": "result",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "typecode": {
+                "name": "TypeCode",
+                "description": "Public Constructor"
+            },
+            "typecode": {
+                "name": "TypeCode",
+                "description": "Public Constructor"
+            },
+            "compareto": {
+                "name": "CompareTo",
+                "description": "CompareTo",
+                "arguments": [
+                    {
+                        "name": "target",
+                        "type": "A"
+                    }
+                ]
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "gettypecode": {
+                "name": "GetTypeCode",
+                "description": "GetTypeCode"
+            },
+            "hasflag": {
+                "name": "HasFlag",
+                "description": "HasFlag",
+                "arguments": [
+                    {
+                        "name": "flag",
+                        "type": "System::Enum"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    },
+                    {
+                        "name": "provider",
+                        "type": "System::IFormatProvider"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString",
+                "arguments": [
+                    {
+                        "name": "provider",
+                        "type": "System::IFormatProvider"
+                    }
+                ]
+            }
+        },
+        "__name__": "TypeCode"
+    },
+    "void": {
+        "__functions__": {
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "void": {
+                "name": "Void",
+                "description": "Public Constructor"
+            },
+            "void": {
+                "name": "Void",
+                "description": "Public Constructor"
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "Void"
+    },
+    "__name__": "System"
+}

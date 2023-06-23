@@ -1,0 +1,1433 @@
+{
+    "reportchart": {
+        "__functions__": {
+            "mergedefinition": {
+                "name": "MergeDefinition",
+                "description": "Load definition, and apply changes from another definition, return merged result.",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    },
+                    {
+                        "name": "override",
+                        "type": "C"
+                    }
+                ]
+            },
+            "reportchartexprregister": {
+                "name": "ReportChartExprRegister",
+                "description": "Return expressions that register enum report data.",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    },
+                    {
+                        "name": "obj",
+                        "type": "P"
+                    }
+                ]
+            },
+            "reportchartgenerateurl": {
+                "name": "ReportChartGenerateURL",
+                "description": "Load and run a report object in one go, returns chart URL.",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    },
+                    {
+                        "name": "obj",
+                        "type": "P"
+                    }
+                ]
+            },
+            "reportchartsampleurl": {
+                "name": "ReportChartSampleURL",
+                "description": "Load and run a report object in one go, returns sample chart URL.",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "bindvariables": {
+                "name": "BindVariables",
+                "description": "Set properties of chart to variables based on uxBindings.",
+                "arguments": [
+                    {
+                        "name": "vars",
+                        "type": "P"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "generateformat": {
+                "name": "GenerateFormat",
+                "description": "Generate Format given class definition, pass in pointer to 'binding' environment (i.e. report).",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "P"
+                    }
+                ]
+            },
+            "generatesampleurl": {
+                "name": "GenerateSampleURL",
+                "description": "Generate sample URL given class definition, for design-time representation of graph.  options 'd' - show data point labels.",
+                "arguments": [
+                    {
+                        "name": "nseries",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "generateurl": {
+                "name": "GenerateURL",
+                "description": "Generate URL given class definition, pass in pointer to 'binding' environment (i.e. report).",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "load": {
+                "name": "Load",
+                "description": "Create a new report chart object (meta data for a chart).",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "save": {
+                "name": "Save",
+                "description": "Create a chart object definition that can be embedded into an html report."
+            }
+        },
+        "__name__": "ReportChart"
+    },
+    "reportcontext": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "eval": {
+                "name": "Eval",
+                "description": "Evaluate in parent report context.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "expand": {
+                "name": "Expand",
+                "description": "Expand chart members.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "name": {
+                "name": "Name",
+                "description": "Reflects the object name."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "sessionhandle": {
+                "name": "SessionHandle",
+                "description": "Reflects the object session."
+            },
+            "setobject": {
+                "name": "SetObject",
+                "description": "Set report evaluation context.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "ReportContext"
+    },
+    "reportdataelement": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportDataElement"
+    },
+    "reportdatagenerate": {
+        "__methods__": {
+            "addsubreport": {
+                "name": "AddSubReport",
+                "description": "Add JSON Subreport Definition (json objects should reference these for linked subreports).",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "applyorder": {
+                "name": "ApplyOrder",
+                "description": "Apply an order (modify definition to include added order at detail level).",
+                "arguments": [
+                    {
+                        "name": "order",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "generateexcel": {
+                "name": "GenerateExcel",
+                "description": "Generate data to an excel spreadsheet.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "parameters",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "start",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "generatejson": {
+                "name": "GenerateJson",
+                "description": "Generate Data data for defined report.",
+                "arguments": [
+                    {
+                        "name": "parameters",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "start",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "generaterawdata": {
+                "name": "GenerateRawData",
+                "description": "Emits the raw data of the report."
+            },
+            "getcurrentfilter": {
+                "name": "GetCurrentFilter",
+                "description": "Expand the current filter for the report object."
+            },
+            "getdefinition": {
+                "name": "GetDefinition",
+                "description": "Get JSON for definition of report generation object."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "populate": {
+                "name": "Populate",
+                "description": "Populate using a JSON definition.",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setparentsession": {
+                "name": "SetParentSession",
+                "description": "Sets the parent session  so that global context can be shared with generated reports.",
+                "arguments": [
+                    {
+                        "name": "parentsession",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "ReportDataGenerate"
+    },
+    "reportdatagroup": {
+        "__methods__": {
+            "addgroup": {
+                "name": "AddGroup",
+                "description": "Add a child group to the section.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "break_expression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "order_expression",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "filter_expression",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "addchildren": {
+                "name": "Addchildren",
+                "description": "Add a children.",
+                "arguments": [
+                    {
+                        "name": "children",
+                        "type": "Reporting::ReportDataGroup"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletechildren": {
+                "name": "Deletechildren",
+                "description": "Delete a children.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "findgroup": {
+                "name": "FindGroup",
+                "description": "Find group by name.",
+                "arguments": [
+                    {
+                        "name": "grpname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertchildren": {
+                "name": "Insertchildren",
+                "description": "Insert a new children.",
+                "arguments": [
+                    {
+                        "name": "children",
+                        "type": "Reporting::ReportDataGroup"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movechildren": {
+                "name": "Movechildren",
+                "description": "Move a block of children items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportDataGroup"
+    },
+    "reportdatasection": {
+        "__methods__": {
+            "adddata": {
+                "name": "AddData",
+                "description": "Add data to the section.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletedata": {
+                "name": "Deletedata",
+                "description": "Delete a data.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertdata": {
+                "name": "Insertdata",
+                "description": "Insert a new data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "Reporting::ReportDataElement"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movedata": {
+                "name": "Movedata",
+                "description": "Move a block of data items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportDataSection"
+    },
+    "reportdef": {
+        "__methods__": {
+            "addgroup": {
+                "name": "AddGroup",
+                "description": "Add a Group.",
+                "arguments": [
+                    {
+                        "name": "group",
+                        "type": "Reporting::ReportGroupDef"
+                    }
+                ]
+            },
+            "addsubreport": {
+                "name": "AddSubReport",
+                "description": "Add a new subreport definition.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "create": {
+                "name": "Create",
+                "description": "Create Report definition from text.",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "deletegroup": {
+                "name": "DeleteGroup",
+                "description": "Delete a Group.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "enumarguments": {
+                "name": "EnumArguments",
+                "description": "Return a cr-lf delimited list of arguments passed (from parent contexts) to this report."
+            },
+            "enumgroups": {
+                "name": "EnumGroups",
+                "description": "Return a cr-lf delimited list of groups."
+            },
+            "enumparameters": {
+                "name": "EnumParameters",
+                "description": "Return a cr-lf delimited list of parameters defined AND arguments from parent contexts."
+            },
+            "enumsubreport": {
+                "name": "EnumSubReport",
+                "description": "Return a cr-lf delimited list of subreports - if recurseSeparator is provided, returns the hierarchy.",
+                "arguments": [
+                    {
+                        "name": "recurseseparator",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getgroup": {
+                "name": "GetGroup",
+                "description": "Return group from name (includes grand and detail).",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getsubreport": {
+                "name": "GetSubReport",
+                "description": "Retrieve a subreport definition by name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "groupnumber": {
+                "name": "GroupNumber",
+                "description": "Get the index of a Group from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertgroup": {
+                "name": "InsertGroup",
+                "description": "Insert a new Group.",
+                "arguments": [
+                    {
+                        "name": "group",
+                        "type": "Reporting::ReportGroupDef"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movegroup": {
+                "name": "MoveGroup",
+                "description": "Move a block of Group items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportDef"
+    },
+    "reportexcelband": {
+        "__functions__": {
+            "fromstring": {
+                "name": "FromString",
+                "description": "Create excel band from a string.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addcondition": {
+                "name": "AddCondition",
+                "description": "Add a Condition.",
+                "arguments": [
+                    {
+                        "name": "condition",
+                        "type": "Reporting::ReportExcelCondition"
+                    }
+                ]
+            },
+            "addelement": {
+                "name": "AddElement",
+                "description": "Add a Element.",
+                "arguments": [
+                    {
+                        "name": "element",
+                        "type": "Reporting::ReportExcelElement"
+                    }
+                ]
+            },
+            "append": {
+                "name": "Append",
+                "description": "Append elements from another band.",
+                "arguments": [
+                    {
+                        "name": "other",
+                        "type": "P"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletecondition": {
+                "name": "DeleteCondition",
+                "description": "Delete a Condition.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteelement": {
+                "name": "DeleteElement",
+                "description": "Delete a Element.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertcondition": {
+                "name": "InsertCondition",
+                "description": "Insert a new Condition.",
+                "arguments": [
+                    {
+                        "name": "condition",
+                        "type": "Reporting::ReportExcelCondition"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertelement": {
+                "name": "InsertElement",
+                "description": "Insert a new Element.",
+                "arguments": [
+                    {
+                        "name": "element",
+                        "type": "Reporting::ReportExcelElement"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movecondition": {
+                "name": "MoveCondition",
+                "description": "Move a block of Condition items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moveelement": {
+                "name": "MoveElement",
+                "description": "Move a block of Element items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Convert band to String."
+            }
+        },
+        "__name__": "ReportExcelBand"
+    },
+    "reportexcelcolumn": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportExcelColumn"
+    },
+    "reportexcelcondition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportExcelCondition"
+    },
+    "reportexcelelement": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportExcelElement"
+    },
+    "reportexceltemplate": {
+        "__methods__": {
+            "addband": {
+                "name": "AddBand",
+                "description": "Add a Band.",
+                "arguments": [
+                    {
+                        "name": "band",
+                        "type": "Reporting::ReportExcelBand"
+                    }
+                ]
+            },
+            "addcolumn": {
+                "name": "AddColumn",
+                "description": "Add a Column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "Reporting::ReportExcelColumn"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "columnsfromstring": {
+                "name": "ColumnsFromString",
+                "description": "Populate columns from a string.",
+                "arguments": [
+                    {
+                        "name": "columns",
+                        "type": "C"
+                    }
+                ]
+            },
+            "columnstostring": {
+                "name": "ColumnsToString",
+                "description": "Dump columns to string."
+            },
+            "columnswidth": {
+                "name": "ColumnsWidth",
+                "description": "Returns the cumulative width of the columns.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteband": {
+                "name": "DeleteBand",
+                "description": "Delete a Band.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletecolumn": {
+                "name": "DeleteColumn",
+                "description": "Delete a Column.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Populate entire report excel template (stylesheet/bands/columns) from a single definition string.",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertband": {
+                "name": "InsertBand",
+                "description": "Insert a new Band.",
+                "arguments": [
+                    {
+                        "name": "band",
+                        "type": "Reporting::ReportExcelBand"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertcolumn": {
+                "name": "InsertColumn",
+                "description": "Insert a new Column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "Reporting::ReportExcelColumn"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveband": {
+                "name": "MoveBand",
+                "description": "Move a block of Band items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movecolumn": {
+                "name": "MoveColumn",
+                "description": "Move a block of Column items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "pagefromstring": {
+                "name": "PageFromString",
+                "description": "Populate page properties from a string.",
+                "arguments": [
+                    {
+                        "name": "page",
+                        "type": "C"
+                    }
+                ]
+            },
+            "pagetostring": {
+                "name": "PageToString",
+                "description": "Dump page to string."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output representation of report excel template to a single definition string."
+            }
+        },
+        "__name__": "ReportExcelTemplate"
+    },
+    "reportgenerator": {
+        "__functions__": {
+            "get": {
+                "name": "Get",
+                "description": "Get a report object pointer using a name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "applyfilter": {
+                "name": "ApplyFilter",
+                "description": "Apply a filter (modify definition to include added filter).",
+                "arguments": [
+                    {
+                        "name": "filter",
+                        "type": "C"
+                    }
+                ]
+            },
+            "applyorder": {
+                "name": "ApplyOrder",
+                "description": "Apply an order (modify definition to include added order at detail level).",
+                "arguments": [
+                    {
+                        "name": "order",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Force close for persisted reports."
+            },
+            "continuefromprevious": {
+                "name": "ContinueFromPrevious",
+                "description": "Internal context for a header - continued from pervious page."
+            },
+            "continueonnext": {
+                "name": "ContinueOnNext",
+                "description": "Internal context for a footer - continued on next page."
+            },
+            "definitionfromlayout": {
+                "name": "DefinitionFromLayout",
+                "description": "Return report definition for the named layout.",
+                "arguments": [
+                    {
+                        "name": "layoutname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "importoptions",
+                        "type": "P"
+                    }
+                ]
+            },
+            "definitionfromreportdef": {
+                "name": "DefinitionFromReportDef",
+                "description": "Given a report definition (instance), create an HTML definition.",
+                "arguments": [
+                    {
+                        "name": "layout",
+                        "type": "P"
+                    },
+                    {
+                        "name": "importoptions",
+                        "type": "P"
+                    }
+                ]
+            },
+            "emitparameters": {
+                "name": "EmitParameters",
+                "description": "For the current context, emit the parameters required to re-construct the report.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "emitresource": {
+                "name": "EmitResource",
+                "description": "Adds a named resource object, and return the name that was passed in.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "content",
+                        "type": "B"
+                    }
+                ]
+            },
+            "generate": {
+                "name": "Generate",
+                "description": "Generate report as text, using a report definition.",
+                "arguments": [
+                    {
+                        "name": "parameters",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "start",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "generatefromopentable": {
+                "name": "GenerateFromOpenTable",
+                "description": "Generate a report from an already open table.",
+                "arguments": [
+                    {
+                        "name": "tableptr",
+                        "type": "A"
+                    },
+                    {
+                        "name": "parameters",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "start",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "generatetofile": {
+                "name": "GenerateToFile",
+                "description": "Generate report as file, using a report definition (employs streaming, this can be used for *very* big reports.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "parameters",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "start",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "generatetomemory": {
+                "name": "GenerateToMemory",
+                "description": "Generate report as new in-memory table, use first grouping as record - keycolumns specifies column/expression pair, returns name of table."
+            },
+            "generatetotable": {
+                "name": "GenerateToTable",
+                "description": "Generate report as new table, use first grouping as record - keycolumns specifies column/expression pair, returns name of table.",
+                "arguments": [
+                    {
+                        "name": "tablename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getarguments": {
+                "name": "GetArguments",
+                "description": "Returns a list of arguments the report expects."
+            },
+            "getcurrentfilter": {
+                "name": "GetCurrentFilter",
+                "description": "Get Current Filter."
+            },
+            "getimports": {
+                "name": "GetImports",
+                "description": "Return a list of arguments the report and children of the report use."
+            },
+            "getname": {
+                "name": "GetName",
+                "description": "Return a name that can be used to retrieve the report later."
+            },
+            "load": {
+                "name": "Load",
+                "description": "Create a new report generator.",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "saveresources": {
+                "name": "SaveResources",
+                "description": "Save resources as files to path.",
+                "arguments": [
+                    {
+                        "name": "basepath",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setbookmarktemplate": {
+                "name": "SetBookmarkTemplate",
+                "description": "Sets the bookmark template.",
+                "arguments": [
+                    {
+                        "name": "emittemplate",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setindextemplate": {
+                "name": "SetIndexTemplate",
+                "description": "Sets the index template.",
+                "arguments": [
+                    {
+                        "name": "emittemplate",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setparentsession": {
+                "name": "SetParentSession",
+                "description": "Sets the parent session  so that global context can be shared with generated reports.",
+                "arguments": [
+                    {
+                        "name": "parentsession",
+                        "type": "N"
+                    }
+                ]
+            },
+            "settoctemplate": {
+                "name": "SetTocTemplate",
+                "description": "Sets the toc template.",
+                "arguments": [
+                    {
+                        "name": "emittemplate",
+                        "type": "C"
+                    }
+                ]
+            },
+            "subreportcollapse": {
+                "name": "SubreportCollapse",
+                "description": "Generate an expanded subreport inside a current report context.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "parameters",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "subreportexpand": {
+                "name": "SubreportExpand",
+                "description": "Generate an expanded subreport inside a current report context.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "parameters",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "subreportgenerate": {
+                "name": "SubreportGenerate",
+                "description": "Generate a subreport inside a current report context.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "parameters",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "usememoryoptimization": {
+                "name": "UseMemoryOptimization",
+                "description": "Set memory override."
+            }
+        },
+        "__name__": "ReportGenerator"
+    },
+    "reportgeneratormemtable": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Force the memory table to close (dispose)."
+            },
+            "detachhandle": {
+                "name": "DetachHandle",
+                "description": "Detach the memory table handle to direct access."
+            },
+            "gethandle": {
+                "name": "GetHandle",
+                "description": "Get handle (but do not detatch)."
+            },
+            "lookupreport": {
+                "name": "LookupReport",
+                "description": "Return report that matches a key.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "A"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportGeneratorMemTable"
+    },
+    "reportgroupdef": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportGroupDef"
+    },
+    "reportobjectresource": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportObjectResource"
+    },
+    "reportobjectresources": {
+        "__methods__": {
+            "addresource": {
+                "name": "AddResource",
+                "description": "Add a Resource.",
+                "arguments": [
+                    {
+                        "name": "resource",
+                        "type": "Reporting::ReportObjectResource"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteresource": {
+                "name": "DeleteResource",
+                "description": "Delete a Resource.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "emitresource": {
+                "name": "EmitResource",
+                "description": "Adds a named resource object, and return the name that was passed in.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "content",
+                        "type": "B"
+                    },
+                    {
+                        "name": "extension",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "metatag",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "generateuniquename": {
+                "name": "GenerateUniqueName",
+                "description": "Given a suggested name, return a name that is not currently in use.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "resourcefrommetatag": {
+                "name": "ResourceFromMetatag",
+                "description": "Given a metatag, find a resource by name.",
+                "arguments": [
+                    {
+                        "name": "metatag",
+                        "type": "C"
+                    }
+                ]
+            },
+            "resourcenumber": {
+                "name": "ResourceNumber",
+                "description": "Get the index of a Resource from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "saveresources": {
+                "name": "SaveResources",
+                "description": "Save resources as files to path.",
+                "arguments": [
+                    {
+                        "name": "basepath",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "ReportObjectResources"
+    },
+    "__name__": "Reporting"
+}

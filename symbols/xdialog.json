@@ -1,0 +1,1197 @@
+{
+    "common": {
+        "p_current": {
+            "p_position": {
+                "__enumeration__": [
+                    "X",
+                    "Y",
+                    "XI",
+                    "YI"
+                ],
+                "__name__": "P_Position"
+            },
+            "p_size": {
+                "__enumeration__": [
+                    "X",
+                    "Y",
+                    "XI",
+                    "YI"
+                ],
+                "__name__": "P_Size"
+            },
+            "__name__": "P_Current"
+        },
+        "p_initial": {
+            "p_position": {
+                "__enumeration__": [
+                    "X",
+                    "Y"
+                ],
+                "__name__": "P_Position"
+            },
+            "p_size": {
+                "__enumeration__": [
+                    "X",
+                    "Y"
+                ],
+                "__name__": "P_Size"
+            },
+            "__name__": "P_Initial"
+        },
+        "__name__": "Common"
+    },
+    "control": {
+        "__methods__": {
+            "invalidate": {
+                "name": "Invalidate",
+                "description": "Invalidate the control,"
+            },
+            "uniquecontrolname": {
+                "name": "UniqueControlName",
+                "description": "Get unique control name (control & xdialog)."
+            }
+        },
+        "__name__": "Control"
+    },
+    "dockpanel": {
+        "__functions__": {
+            "hasrightdocking": {
+                "name": "HasRightDocking",
+                "description": "Returns TRUE if there is a docking panel on the right."
+            },
+            "hasleftdocking": {
+                "name": "HasLeftDocking",
+                "description": "Returns TRUE if there is a docking panel on the left."
+            },
+            "getrightdocking": {
+                "name": "GetRightDocking",
+                "description": "Returns the docking panel on the right."
+            },
+            "getleftdocking": {
+                "name": "GetLeftDocking",
+                "description": "Returns the docking panel on the left."
+            }
+        },
+        "__methods__": {
+            "getpanels": {
+                "name": "GetPanels",
+                "description": "Get active panels."
+            },
+            "getavailablepanels": {
+                "name": "GetAvailablePanels",
+                "description": "Get inactive panels."
+            },
+            "countavailablepanels": {
+                "name": "CountAvailablePanels",
+                "description": "Get number of inactive panels."
+            },
+            "closepanel": {
+                "name": "ClosePanel",
+                "description": "Close an active panel.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "closeall": {
+                "name": "CloseAll",
+                "description": "Close all panels in dock panel."
+            },
+            "splitpanel": {
+                "name": "SplitPanel",
+                "description": "Add a dock panel pane to the end.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "tearoffpanel": {
+                "name": "TearOffPanel",
+                "description": "Float the named panel.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "closeold",
+                        "type": "l",
+                        "optional": true
+                    }
+                ]
+            },
+            "dockpanelleft": {
+                "name": "DockPanelLeft",
+                "description": "Dock named panel on left.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "closeold",
+                        "type": "l",
+                        "optional": true
+                    },
+                    {
+                        "name": "addnew",
+                        "type": "l",
+                        "optional": true
+                    }
+                ]
+            },
+            "dockpanelright": {
+                "name": "DockPanelRight",
+                "description": "Dock named panel on left.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "closeold",
+                        "type": "l",
+                        "optional": true
+                    },
+                    {
+                        "name": "addnew",
+                        "type": "l",
+                        "optional": true
+                    }
+                ]
+            },
+            "ispinned": {
+                "name": "IsPinned",
+                "description": "Return if dock panel is pinned."
+            },
+            "pin": {
+                "name": "Pin",
+                "description": "Return if dock panel is pinned.",
+                "arguments": [
+                    {
+                        "name": "pinpanel",
+                        "type": "l"
+                    }
+                ]
+            },
+            "getdocking": {
+                "name": "GetDocking",
+                "description": "Return docking of panel (right/left/float)."
+            },
+            "minimizepane": {
+                "name": "MinimizePane",
+                "description": "Minimize pane.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "maximizepane": {
+                "name": "MaximizePane",
+                "description": "Maximize pane.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "restorepane": {
+                "name": "RestorePane",
+                "description": "Restore pane.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "restoreallpanes": {
+                "name": "RestoreAllPanes",
+                "description": "Restore All Pane."
+            },
+            "countpanes": {
+                "name": "CountPanes",
+                "description": "Return number of panes open."
+            },
+            "getpanestate": {
+                "name": "GetPaneState",
+                "description": "Get the state of a pane (maximized/minimized/restore).",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getpanes": {
+                "name": "GetPanes",
+                "description": "Return number names of panes displayed.",
+                "arguments": [
+                    {
+                        "name": "menuformat",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "invalidate": {
+                "name": "Invalidate",
+                "description": "Invalidate the control,"
+            },
+            "uniquecontrolname": {
+                "name": "UniqueControlName",
+                "description": "Get unique control name (control & xdialog)."
+            }
+        },
+        "__name__": "DockPanel"
+    },
+    "dom": {
+        "p_position": {
+            "__enumeration__": [
+                "X",
+                "Y",
+                "XI",
+                "YI"
+            ],
+            "__name__": "P_Position"
+        },
+        "__name__": "DOM"
+    },
+    "gallery": {
+        "__methods__": {
+            "groupexpand": {
+                "name": "GroupExpand",
+                "description": "Expand a gallery group.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "expand",
+                        "type": "l"
+                    }
+                ]
+            },
+            "isgroupexpanded": {
+                "name": "IsGroupExpanded",
+                "description": "Expand a gallery group.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "setcurrentitem": {
+                "name": "SetCurrentItem",
+                "description": "Sets a current item.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getcurrentitem": {
+                "name": "GetCurrentItem",
+                "description": "Gets the current item.",
+                "arguments": [
+                    {
+                        "name": "flyover",
+                        "type": "l",
+                        "optional": true
+                    }
+                ]
+            },
+            "getcurrentgroup": {
+                "name": "GetCurrentGroup",
+                "description": "Gets the group containing the current item.",
+                "arguments": [
+                    {
+                        "name": "flyover",
+                        "type": "l",
+                        "optional": true
+                    }
+                ]
+            },
+            "clearselection": {
+                "name": "ClearSelection",
+                "description": "Selects all items that match criteria."
+            },
+            "selectmatchingitems": {
+                "name": "SelectMatchingItems",
+                "description": "Selects all items that match criteria.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "select",
+                        "type": "l",
+                        "optional": true
+                    }
+                ]
+            },
+            "selectmatchingoptions": {
+                "name": "SelectMatchingOptions",
+                "description": "Selects all options that match criteria.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "select",
+                        "type": "l",
+                        "optional": true
+                    }
+                ]
+            },
+            "countmatchingitems": {
+                "name": "CountMatchingItems",
+                "description": "Get number of items that match the pattern.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getitemselection": {
+                "name": "GetItemSelection",
+                "description": "Get selection state of item.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "countitemselection": {
+                "name": "CountItemSelection",
+                "description": "Get number of items that match the pattern AND are selected.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getoptionselection": {
+                "name": "GetOptionSelection",
+                "description": "Get selection state of option.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getselectioncount": {
+                "name": "GetSelectionCount",
+                "description": "Gets the number of data items selected."
+            },
+            "sort": {
+                "name": "Sort",
+                "description": "Sorts sections using expression.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getorder": {
+                "name": "GetOrder",
+                "description": "Return the sort order set by 'Sort'."
+            },
+            "invalidate": {
+                "name": "Invalidate",
+                "description": "Invalidate the control,"
+            },
+            "uniquecontrolname": {
+                "name": "UniqueControlName",
+                "description": "Get unique control name (control & xdialog)."
+            }
+        },
+        "__name__": "Gallery"
+    },
+    "generic": {
+        "__methods__": {
+            "invalidate": {
+                "name": "Invalidate",
+                "description": "Invalidate the control,"
+            },
+            "uniquecontrolname": {
+                "name": "UniqueControlName",
+                "description": "Get unique control name (control & xdialog)."
+            }
+        },
+        "__name__": "Generic"
+    },
+    "metacontrol": {
+        "__methods__": {
+            "quickdrawinit": {
+                "name": "QuickDrawInit",
+                "description": "Implement QuickDraw with a controlLib.",
+                "arguments": [
+                    {
+                        "name": "controllib",
+                        "type": "p"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "drawcode",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "setwindowflags": {
+                "name": "SetWindowFlags",
+                "description": "Sets optional quickdraw window flags.",
+                "arguments": [
+                    {
+                        "name": "flags",
+                        "type": "c"
+                    }
+                ]
+            },
+            "controladd": {
+                "name": "ControlAdd",
+                "description": "Add a control.",
+                "arguments": [
+                    {
+                        "name": "control",
+                        "type": "Control::Control"
+                    }
+                ]
+            },
+            "metricsexecute": {
+                "name": "MetricsExecute",
+                "description": "Execute code to calculate metrics for draw context.",
+                "arguments": [
+                    {
+                        "name": "code",
+                        "type": "c"
+                    }
+                ]
+            },
+            "gethdc": {
+                "name": "GetHdc",
+                "description": "Get the hdc back (returns 0 if screen)."
+            },
+            "invalidate": {
+                "name": "Invalidate",
+                "description": "Invalidate the control,"
+            },
+            "uniquecontrolname": {
+                "name": "UniqueControlName",
+                "description": "Get unique control name (control & xdialog)."
+            }
+        },
+        "__name__": "MetaControl"
+    },
+    "region": {
+        "p_adjust": {
+            "__enumeration__": [
+                "X",
+                "Y"
+            ],
+            "__name__": "P_Adjust"
+        },
+        "__name__": "Region"
+    },
+    "statusanimation": {
+        "__functions__": {
+            "createanimation": {
+                "name": "CreateAnimation",
+                "description": "Return a pointer to a new animation object."
+            },
+            "createnamedanimation": {
+                "name": "CreateNamedAnimation",
+                "description": "Create named animation object.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getnamedanimation": {
+                "name": "GetNamedAnimation",
+                "description": "Get an existing named animation object.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "dropnamedanimation": {
+                "name": "DropNamedAnimation",
+                "description": "Delete named animation object.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addframe": {
+                "name": "AddFrame",
+                "description": "Add a frame of quickdraw animation.",
+                "arguments": [
+                    {
+                        "name": "quickdraw",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "StatusAnimation"
+    },
+    "statuswindow": {
+        "__functions__": {
+            "resetstatusbar": {
+                "name": "ResetStatusBar",
+                "description": "Causes the statusbar to be reloaded (reformatted)."
+            },
+            "getstatusbar": {
+                "name": "GetStatusBar",
+                "description": "Return a pointer to the statusbar object."
+            },
+            "createstatuswindow": {
+                "name": "CreateStatusWindow",
+                "description": "Create a new popup status window.",
+                "arguments": [
+                    {
+                        "name": "open",
+                        "type": "l",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "setareatext": {
+                "name": "SetAreaText",
+                "description": "Set the text for a named status area.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            },
+            "setareaquickdraw": {
+                "name": "SetAreaQuickDraw",
+                "description": "Set the quickdraw for a named status area.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "quickdraw",
+                        "type": "c"
+                    }
+                ]
+            },
+            "setareaprogress": {
+                "name": "SetAreaProgress",
+                "description": "Set the progress for a named status area.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "count",
+                        "type": "n"
+                    },
+                    {
+                        "name": "of",
+                        "type": "n"
+                    },
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "setareanamedanimation": {
+                "name": "SetAreaNamedAnimation",
+                "description": "Display the named animation in the area.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "animationname",
+                        "type": "c"
+                    }
+                ]
+            },
+            "settext": {
+                "name": "SetText",
+                "description": "Set the text for default status area.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            },
+            "setquickdraw": {
+                "name": "SetQuickDraw",
+                "description": "Set the quickdraw for default status area.",
+                "arguments": [
+                    {
+                        "name": "quickdraw",
+                        "type": "c"
+                    }
+                ]
+            },
+            "setprogress": {
+                "name": "SetProgress",
+                "description": "Set the progress for default status area.",
+                "arguments": [
+                    {
+                        "name": "count",
+                        "type": "n"
+                    },
+                    {
+                        "name": "of",
+                        "type": "n"
+                    },
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "setnamedanimation": {
+                "name": "SetNamedAnimation",
+                "description": "Display the named animation in the area.",
+                "arguments": [
+                    {
+                        "name": "animationname",
+                        "type": "c"
+                    }
+                ]
+            },
+            "eventcheck": {
+                "name": "EventCheck",
+                "description": "Return true if event was done.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "eventraise": {
+                "name": "EventRaise",
+                "description": "Raise an event.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "eventclear": {
+                "name": "EventClear",
+                "description": "Clear a named event, or all events if name was ommitted.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "settitle": {
+                "name": "SetTitle",
+                "description": "Give status window a title.",
+                "arguments": [
+                    {
+                        "name": "title",
+                        "type": "c"
+                    }
+                ]
+            },
+            "open": {
+                "name": "Open",
+                "description": "Open status window."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close status window."
+            }
+        },
+        "__name__": "StatusWindow"
+    },
+    "tabbandinterface": {
+        "__methods__": {
+            "create": {
+                "name": "Create",
+                "description": "initialize a tab band control.",
+                "arguments": [
+                    {
+                        "name": "titles",
+                        "type": "c"
+                    },
+                    {
+                        "name": "icons",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "set": {
+                "name": "Set",
+                "description": "Set current tab of tabband.",
+                "arguments": [
+                    {
+                        "name": "tabno",
+                        "type": "n"
+                    }
+                ]
+            },
+            "setdirty": {
+                "name": "SetDirty",
+                "description": "Set a tab of tabband as being dirty.",
+                "arguments": [
+                    {
+                        "name": "tabno",
+                        "type": "n"
+                    },
+                    {
+                        "name": "dirty",
+                        "type": "l"
+                    }
+                ]
+            },
+            "isdirty": {
+                "name": "IsDirty",
+                "description": "Query if a tab is dirty.",
+                "arguments": [
+                    {
+                        "name": "tabno",
+                        "type": "n"
+                    }
+                ]
+            },
+            "gettitle": {
+                "name": "GetTitle",
+                "description": "Gets a specific tab-band title.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "n"
+                    }
+                ]
+            },
+            "getcurrenttitle": {
+                "name": "GetCurrentTitle",
+                "description": "Gets current tab-band title."
+            },
+            "gettitles": {
+                "name": "GetTitles",
+                "description": "Gets the tab band titles."
+            },
+            "add": {
+                "name": "Add",
+                "description": "Add a tab band control to end.",
+                "arguments": [
+                    {
+                        "name": "title",
+                        "type": "c"
+                    },
+                    {
+                        "name": "icon",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "remove": {
+                "name": "Remove",
+                "description": "Remove a tab band control - (renumbers all items above).",
+                "arguments": [
+                    {
+                        "name": "tabno",
+                        "type": "n"
+                    }
+                ]
+            },
+            "clear": {
+                "name": "Clear",
+                "description": "Clear all the tabs."
+            },
+            "movedtab": {
+                "name": "MovedTab",
+                "description": "Get tab that was moved."
+            }
+        },
+        "__name__": "TabBandInterface"
+    },
+    "textedit": {
+        "__methods__": {
+            "invalidate": {
+                "name": "Invalidate",
+                "description": "Invalidate the control,"
+            },
+            "uniquecontrolname": {
+                "name": "UniqueControlName",
+                "description": "Get unique control name (control & xdialog)."
+            }
+        },
+        "__name__": "TextEdit"
+    },
+    "windowcontrolstyle": {
+        "__methods__": {
+            "setinvalid": {
+                "name": "SetInvalid",
+                "description": "Set offset to extend edge when invalidating element.",
+                "arguments": [
+                    {
+                        "name": "left",
+                        "type": "n"
+                    },
+                    {
+                        "name": "top",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "right",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "bottom",
+                        "type": "n",
+                        "optional": true
+                    }
+                ]
+            },
+            "getselectedstyle": {
+                "name": "GetSelectedStyle",
+                "description": "Get selected style for control."
+            },
+            "getcheckedstyle": {
+                "name": "GetCheckedStyle",
+                "description": "Get checked style for control."
+            },
+            "setflags": {
+                "name": "SetFlags",
+                "description": "Set special flags for control rendering/layout.",
+                "arguments": [
+                    {
+                        "name": "flags",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "WindowControlStyle"
+    },
+    "windowcontrolstyles": {
+        "__functions__": {
+            "getdefault": {
+                "name": "GetDefault",
+                "description": "Get the default control style definitions."
+            }
+        },
+        "__methods__": {
+            "addcontrolstyle": {
+                "name": "AddControlStyle",
+                "description": "Add a control element style.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "quickdraw",
+                        "type": "c"
+                    },
+                    {
+                        "name": "leftmargin",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "topmargin",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "rightmargin",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "bottommargin",
+                        "type": "n",
+                        "optional": true
+                    }
+                ]
+            },
+            "hascontrolstyle": {
+                "name": "HasControlStyle",
+                "description": "Returns if a control style exists.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getcontrolstyle": {
+                "name": "GetControlStyle",
+                "description": "Get an existing a control style.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "dropcontrolstyle": {
+                "name": "DropControlStyle",
+                "description": "Drop an existing a control style.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "hasbasestyle": {
+                "name": "HasBaseStyle",
+                "description": "Returns true if there is a base control styles."
+            },
+            "getbasestyle": {
+                "name": "GetBaseStyle",
+                "description": "Returns the base control styles."
+            }
+        },
+        "__name__": "WindowControlStyles"
+    },
+    "windowstyle": {
+        "__methods__": {
+            "getcontrolstyles": {
+                "name": "GetControlStyles",
+                "description": "Gets control styles unique to this window style."
+            },
+            "hashotspot": {
+                "name": "HasHotSpot",
+                "description": "Does a hotspot of name exist.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "findhotspot": {
+                "name": "FindHotSpot",
+                "description": "Return a hotspot, if one exists.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "addhotspot": {
+                "name": "AddHotSpot",
+                "description": "Add or replace a hotspot.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    },
+                    {
+                        "name": "left",
+                        "type": "n"
+                    },
+                    {
+                        "name": "top",
+                        "type": "n"
+                    },
+                    {
+                        "name": "right",
+                        "type": "n"
+                    },
+                    {
+                        "name": "bottom",
+                        "type": "n"
+                    }
+                ]
+            },
+            "drophotspot": {
+                "name": "DropHotSpot",
+                "description": "Remove a hotspot from a window style.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "addformat": {
+                "name": "AddFormat",
+                "description": "Add or get existing style format by name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "dropformat": {
+                "name": "DropFormat",
+                "description": "Drop a format style of name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "findformat": {
+                "name": "FindFormat",
+                "description": "Find format style of name, else return self.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "setflags": {
+                "name": "SetFlags",
+                "description": "Set special flags for control behavior and layout.",
+                "arguments": [
+                    {
+                        "name": "flags",
+                        "type": "c"
+                    }
+                ]
+            },
+            "setsolidcolor": {
+                "name": "SetSolidColor",
+                "description": "Set background for window style as simple solid color.",
+                "arguments": [
+                    {
+                        "name": "color",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "WindowStyle"
+    },
+    "windowstylecollection": {
+        "__functions__": {
+            "get": {
+                "name": "Get",
+                "description": "Get the window style manager.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addstyle": {
+                "name": "AddStyle",
+                "description": "Add or get existing style by name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "findstyle": {
+                "name": "FindStyle",
+                "description": "Find style of name, else return default style.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "dropstyle": {
+                "name": "DropStyle",
+                "description": "Drop a style of name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "setflatstyle": {
+                "name": "SetFlatStyle",
+                "description": "Set styling flag to 'flat'.",
+                "arguments": [
+                    {
+                        "name": "flat",
+                        "type": "l"
+                    }
+                ]
+            }
+        },
+        "__name__": "WindowStyleCollection"
+    },
+    "windowstylehotspot": {
+        "__enumeration__": [
+            "Left",
+            "Top",
+            "Right",
+            "Bottom",
+            "Cursor",
+            "DragAction",
+            "QuickDrawFlyover",
+            "QuickDrawLeftClick",
+            "LeftClickFunction",
+            "RightClickFunction",
+            "DoubleClickFunction",
+            "DynamicPosition"
+        ],
+        "__name__": "WindowStyleHotSpot"
+    },
+    "__name__": "XDialog"
+}

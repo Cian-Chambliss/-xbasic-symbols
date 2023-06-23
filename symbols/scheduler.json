@@ -1,0 +1,329 @@
+{
+    "dayofweek": {
+        "__enumeration__": [
+            "Day",
+            "Sunday",
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+        ],
+        "__name__": "DayOfWeek"
+    },
+    "log": {
+        "__methods__": {
+            "addentry": {
+                "name": "AddEntry",
+                "description": "PUBLIC AddEntry AS L (Entry AS P)",
+                "arguments": [
+                    {
+                        "name": "entry",
+                        "type": "P"
+                    }
+                ]
+            },
+            "query": {
+                "name": "Query",
+                "description": "PUBLIC Query AS L (ResultSet AS P, Filter AS C, Order AS C, Arguments AS P)",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    },
+                    {
+                        "name": "filter",
+                        "type": "C"
+                    },
+                    {
+                        "name": "order",
+                        "type": "C"
+                    },
+                    {
+                        "name": "arguments",
+                        "type": "P"
+                    }
+                ]
+            },
+            "querybytask": {
+                "name": "QueryByTask",
+                "description": "PUBLIC QueryByTask AS L (ResultSet AS P, Task AS P)",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    },
+                    {
+                        "name": "task",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "Log"
+    },
+    "logentry": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromresultset": {
+                "name": "FromResultSet",
+                "description": "PUBLIC FromResultSet AS L (ResultSet AS P)",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "LogEntry"
+    },
+    "schedule": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "nextoccurrence": {
+                "name": "NextOccurrence",
+                "description": "Compute the next time this schedule would run after the time provided.",
+                "arguments": [
+                    {
+                        "name": "last",
+                        "type": "T"
+                    }
+                ]
+            },
+            "nextoccurrences": {
+                "name": "NextOccurrences",
+                "description": "Compute and return as a string all of the times this schedule would run after the time provided but within the number of minutes provided.",
+                "arguments": [
+                    {
+                        "name": "last",
+                        "type": "T"
+                    },
+                    {
+                        "name": "minutes",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "Schedule"
+    },
+    "scheduler": {
+        "__methods__": {
+            "addtask": {
+                "name": "AddTask",
+                "description": "Add a new task.",
+                "arguments": [
+                    {
+                        "name": "task",
+                        "type": "P"
+                    }
+                ]
+            },
+            "deletetask": {
+                "name": "DeleteTask",
+                "description": "Delete a task.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "generatealloccurrences": {
+                "name": "GenerateAllOccurrences",
+                "description": "PUBLIC GenerateAllOccurrences AS L (Minutes AS N)",
+                "arguments": [
+                    {
+                        "name": "minutes",
+                        "type": "N"
+                    }
+                ]
+            },
+            "initializedatabase": {
+                "name": "InitializeDatabase",
+                "description": "Initialize the database referenced by the connection string for use by the scheduler.\nWARNING:: This function will delete and reinitialize any previously existing scheduler tables.",
+                "arguments": [
+                    {
+                        "name": "sqlconnectionstring",
+                        "type": "C"
+                    }
+                ]
+            },
+            "opendatabase": {
+                "name": "OpenDatabase",
+                "description": "Open the scheduler database using the connection string provided.",
+                "arguments": [
+                    {
+                        "name": "sqlconnectionstring",
+                        "type": "C"
+                    }
+                ]
+            },
+            "pause": {
+                "name": "Pause",
+                "description": "Pause theScheduler."
+            },
+            "resume": {
+                "name": "Resume",
+                "description": "Resume the Scheduler from a paused state."
+            },
+            "start": {
+                "name": "Start",
+                "description": "Start the Scheduler."
+            },
+            "status": {
+                "name": "Status",
+                "description": "Get status information about the Master Scheduler."
+            },
+            "stop": {
+                "name": "Stop",
+                "description": "Stop the Scheduler."
+            },
+            "tasknumber": {
+                "name": "TaskNumber",
+                "description": "Get the index of a Task from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "updatetask": {
+                "name": "UpdateTask",
+                "description": "Update a task.",
+                "arguments": [
+                    {
+                        "name": "task",
+                        "type": "P"
+                    },
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "Scheduler"
+    },
+    "scheduletype": {
+        "__enumeration__": [
+            "Daily",
+            "Weekly",
+            "Monthly",
+            "Once"
+        ],
+        "__name__": "ScheduleType"
+    },
+    "status": {
+        "__enumeration__": [
+            "Stopped",
+            "Running",
+            "Paused"
+        ],
+        "__name__": "Status"
+    },
+    "task": {
+        "__methods__": {
+            "addschedule": {
+                "name": "AddSchedule",
+                "description": "Add a Schedule.",
+                "arguments": [
+                    {
+                        "name": "schedule",
+                        "type": "Scheduler::Schedule"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteschedule": {
+                "name": "DeleteSchedule",
+                "description": "Delete a Schedule.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertschedule": {
+                "name": "InsertSchedule",
+                "description": "Insert a new Schedule.",
+                "arguments": [
+                    {
+                        "name": "schedule",
+                        "type": "Scheduler::Schedule"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveschedule": {
+                "name": "MoveSchedule",
+                "description": "Move a block of Schedule items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "nextoccurrences": {
+                "name": "NextOccurrences",
+                "description": "return a CR-LF delimited list of the next occurrences of this task",
+                "arguments": [
+                    {
+                        "name": "last",
+                        "type": "T"
+                    },
+                    {
+                        "name": "minutes",
+                        "type": "N"
+                    }
+                ]
+            },
+            "schedulenumber": {
+                "name": "ScheduleNumber",
+                "description": "Get the index of a Schedule from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "Task"
+    },
+    "__name__": "Scheduler"
+}

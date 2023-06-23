@@ -1,0 +1,2099 @@
+{
+    "borderdef": {
+        "__methods__": {
+            "render": {
+                "name": "Render",
+                "description": "Add border drawing code to the passed in drawcode.",
+                "arguments": [
+                    {
+                        "name": "drawcode",
+                        "type": "c"
+                    },
+                    {
+                        "name": "x",
+                        "type": "n"
+                    },
+                    {
+                        "name": "y",
+                        "type": "n"
+                    },
+                    {
+                        "name": "width",
+                        "type": "n"
+                    },
+                    {
+                        "name": "height",
+                        "type": "n"
+                    },
+                    {
+                        "name": "render",
+                        "type": "Control::RenderArgs",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "BorderDef"
+    },
+    "charargs": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Create a new character object.",
+                "arguments": [
+                    {
+                        "name": "char",
+                        "type": "c"
+                    },
+                    {
+                        "name": "repeat",
+                        "type": "n"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "CharArgs"
+    },
+    "checkbox": {
+        "__methods__": {
+            "bindvariable": {
+                "name": "BindVariable",
+                "description": "Bind controls contents to a variable.",
+                "arguments": [
+                    {
+                        "name": "varframe",
+                        "type": "P"
+                    },
+                    {
+                        "name": "varname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "controlprop",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "position": {
+                "name": "Position",
+                "description": "Re-position control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "getactiveinstance": {
+                "name": "GetActiveInstance",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onrbuttonup": {
+                "name": "OnRButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Handler for mouseMove event.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Handler for keyDown event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Handler for keyUp event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Handler for Translated Character event.",
+                "arguments": [
+                    {
+                        "name": "charargs",
+                        "type": "Control::CharArgs"
+                    }
+                ]
+            },
+            "onarrive": {
+                "name": "OnArrive",
+                "description": "Handler for gain focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "ondepart": {
+                "name": "OnDepart",
+                "description": "Handler for lose focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "onnotify": {
+                "name": "OnNotify",
+                "description": "Handler for notification (from child).",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::NotificationArgs"
+                    }
+                ]
+            }
+        },
+        "__name__": "CheckBox"
+    },
+    "colorhsleditor": {
+        "__methods__": {
+            "bindvariable": {
+                "name": "BindVariable",
+                "description": "Bind controls contents to a variable.",
+                "arguments": [
+                    {
+                        "name": "varframe",
+                        "type": "P"
+                    },
+                    {
+                        "name": "varname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "controlprop",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "position": {
+                "name": "Position",
+                "description": "Re-position control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "getactiveinstance": {
+                "name": "GetActiveInstance",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onrbuttonup": {
+                "name": "OnRButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Handler for mouseMove event.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Handler for keyDown event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Handler for keyUp event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Handler for Translated Character event.",
+                "arguments": [
+                    {
+                        "name": "charargs",
+                        "type": "Control::CharArgs"
+                    }
+                ]
+            },
+            "onarrive": {
+                "name": "OnArrive",
+                "description": "Handler for gain focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "ondepart": {
+                "name": "OnDepart",
+                "description": "Handler for lose focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "onnotify": {
+                "name": "OnNotify",
+                "description": "Handler for notification (from child).",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::NotificationArgs"
+                    }
+                ]
+            }
+        },
+        "__name__": "ColorHSLEditor"
+    },
+    "colorswatch": {
+        "__methods__": {
+            "bindvariable": {
+                "name": "BindVariable",
+                "description": "Bind controls contents to a variable.",
+                "arguments": [
+                    {
+                        "name": "varframe",
+                        "type": "P"
+                    },
+                    {
+                        "name": "varname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "controlprop",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "position": {
+                "name": "Position",
+                "description": "Re-position control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "getactiveinstance": {
+                "name": "GetActiveInstance",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onrbuttonup": {
+                "name": "OnRButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Handler for mouseMove event.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Handler for keyDown event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Handler for keyUp event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Handler for Translated Character event.",
+                "arguments": [
+                    {
+                        "name": "charargs",
+                        "type": "Control::CharArgs"
+                    }
+                ]
+            },
+            "onarrive": {
+                "name": "OnArrive",
+                "description": "Handler for gain focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "ondepart": {
+                "name": "OnDepart",
+                "description": "Handler for lose focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "onnotify": {
+                "name": "OnNotify",
+                "description": "Handler for notification (from child).",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::NotificationArgs"
+                    }
+                ]
+            }
+        },
+        "__name__": "ColorSwatch"
+    },
+    "commitargs": {
+        "__methods__": {
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "CommitArgs"
+    },
+    "control": {
+        "__methods__": {
+            "bindvariable": {
+                "name": "BindVariable",
+                "description": "Bind controls contents to a variable.",
+                "arguments": [
+                    {
+                        "name": "varframe",
+                        "type": "P"
+                    },
+                    {
+                        "name": "varname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "controlprop",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "position": {
+                "name": "Position",
+                "description": "Re-position control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "getactiveinstance": {
+                "name": "GetActiveInstance",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onrbuttonup": {
+                "name": "OnRButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Handler for mouseMove event.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Handler for keyDown event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Handler for keyUp event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Handler for Translated Character event.",
+                "arguments": [
+                    {
+                        "name": "charargs",
+                        "type": "Control::CharArgs"
+                    }
+                ]
+            },
+            "onarrive": {
+                "name": "OnArrive",
+                "description": "Handler for gain focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "ondepart": {
+                "name": "OnDepart",
+                "description": "Handler for lose focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "onnotify": {
+                "name": "OnNotify",
+                "description": "Handler for notification (from child).",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::NotificationArgs"
+                    }
+                ]
+            }
+        },
+        "__name__": "Control"
+    },
+    "dragdropargs": {},
+    "events": {
+        "__methods__": {
+            "onchange": {
+                "name": "OnChange",
+                "description": "Called every time a control change occurs.",
+                "arguments": [
+                    {
+                        "name": "ctl",
+                        "type": "Control::TextEdit"
+                    }
+                ]
+            }
+        },
+        "__name__": "Events"
+    },
+    "focusargs": {
+        "__methods__": {
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "FocusArgs"
+    },
+    "font": {},
+    "genericwindow": {},
+    "hscrollbar": {
+        "__methods__": {
+            "bindvariable": {
+                "name": "BindVariable",
+                "description": "Bind controls contents to a variable.",
+                "arguments": [
+                    {
+                        "name": "varframe",
+                        "type": "P"
+                    },
+                    {
+                        "name": "varname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "controlprop",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "position": {
+                "name": "Position",
+                "description": "Re-position control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "getactiveinstance": {
+                "name": "GetActiveInstance",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onrbuttonup": {
+                "name": "OnRButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Handler for mouseMove event.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Handler for keyDown event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Handler for keyUp event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Handler for Translated Character event.",
+                "arguments": [
+                    {
+                        "name": "charargs",
+                        "type": "Control::CharArgs"
+                    }
+                ]
+            },
+            "onarrive": {
+                "name": "OnArrive",
+                "description": "Handler for gain focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "ondepart": {
+                "name": "OnDepart",
+                "description": "Handler for lose focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "onnotify": {
+                "name": "OnNotify",
+                "description": "Handler for notification (from child).",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::NotificationArgs"
+                    }
+                ]
+            }
+        },
+        "__name__": "HScrollBar"
+    },
+    "keyargs": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Create a new mouse object.",
+                "arguments": [
+                    {
+                        "name": "vkey",
+                        "type": "n"
+                    },
+                    {
+                        "name": "repeat",
+                        "type": "n"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "n"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "keyname": {
+                "name": "KeyName",
+                "description": "Get the name of the key."
+            },
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "KeyArgs"
+    },
+    "metaeventargs": {
+        "__methods__": {
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "MetaEventArgs"
+    },
+    "mouseargs": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Create a new mouse object.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "n"
+                    },
+                    {
+                        "name": "y",
+                        "type": "n"
+                    },
+                    {
+                        "name": "doubleclick",
+                        "type": "l"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "n"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "repeatnotifytillup": {
+                "name": "RepeatNotifyTillUp",
+                "description": "send event on captured mouse over hotspot/control untill down.",
+                "arguments": [
+                    {
+                        "name": "event",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "interval",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "hotspot",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "scrollselectioncreate": {
+                "name": "ScrollSelectionCreate",
+                "description": "Create a ScrollingSelectMouseDrag object using defaults from the current object."
+            },
+            "scrollselection": {
+                "name": "ScrollSelection",
+                "description": "Use an initialized ScrollSelect (created by ScrollSelectCreate).",
+                "arguments": [
+                    {
+                        "name": "scrollselection",
+                        "type": "p"
+                    }
+                ]
+            },
+            "buttondown": {
+                "name": "ButtonDown",
+                "description": "captured  mouse down loop."
+            },
+            "release": {
+                "name": "Release",
+                "description": "Release captured mouse."
+            },
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "MouseArgs"
+    },
+    "mousedragargs": {},
+    "notificationargs": {
+        "__methods__": {
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "NotificationArgs"
+    },
+    "positionargs": {
+        "__methods__": {
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "PositionArgs"
+    },
+    "radio": {
+        "__methods__": {
+            "bindvariable": {
+                "name": "BindVariable",
+                "description": "Bind controls contents to a variable.",
+                "arguments": [
+                    {
+                        "name": "varframe",
+                        "type": "P"
+                    },
+                    {
+                        "name": "varname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "controlprop",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "position": {
+                "name": "Position",
+                "description": "Re-position control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "getactiveinstance": {
+                "name": "GetActiveInstance",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onrbuttonup": {
+                "name": "OnRButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Handler for mouseMove event.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Handler for keyDown event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Handler for keyUp event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Handler for Translated Character event.",
+                "arguments": [
+                    {
+                        "name": "charargs",
+                        "type": "Control::CharArgs"
+                    }
+                ]
+            },
+            "onarrive": {
+                "name": "OnArrive",
+                "description": "Handler for gain focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "ondepart": {
+                "name": "OnDepart",
+                "description": "Handler for lose focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "onnotify": {
+                "name": "OnNotify",
+                "description": "Handler for notification (from child).",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::NotificationArgs"
+                    }
+                ]
+            }
+        },
+        "__name__": "Radio"
+    },
+    "renderargs": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Create a new render object.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "n"
+                    },
+                    {
+                        "name": "y",
+                        "type": "n"
+                    },
+                    {
+                        "name": "width",
+                        "type": "n"
+                    },
+                    {
+                        "name": "height",
+                        "type": "n"
+                    },
+                    {
+                        "name": "id",
+                        "type": "c"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "c"
+                    },
+                    {
+                        "name": "type",
+                        "type": "c"
+                    },
+                    {
+                        "name": "data",
+                        "type": "c"
+                    },
+                    {
+                        "name": "settings",
+                        "type": "c"
+                    },
+                    {
+                        "name": "parentid",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "invalidate": {
+                "name": "Invalidate",
+                "description": "Notify the render window that drawCode has changed.",
+                "arguments": [
+                    {
+                        "name": "updatenow",
+                        "type": "l",
+                        "optional": true
+                    }
+                ]
+            },
+            "getsetting": {
+                "name": "GetSetting",
+                "description": "Get an individual setting from the settings.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "RenderArgs"
+    },
+    "renderargssetting": {
+        "__enumeration__": [
+            "Value"
+        ],
+        "__name__": "RenderArgsSetting"
+    },
+    "scrollingselectmousedrag": {
+        "p_end": {
+            "__enumeration__": [
+                "X",
+                "Y"
+            ],
+            "__name__": "P_End"
+        },
+        "p_offset": {
+            "__enumeration__": [
+                "X",
+                "Y"
+            ],
+            "__name__": "P_Offset"
+        },
+        "p_selection": {
+            "__enumeration__": [
+                "X",
+                "Y",
+                "Width",
+                "Height"
+            ],
+            "__name__": "P_Selection"
+        },
+        "p_start": {
+            "__enumeration__": [
+                "X",
+                "Y"
+            ],
+            "__name__": "P_Start"
+        },
+        "__name__": "ScrollingSelectMouseDrag"
+    },
+    "sizeargs": {
+        "__methods__": {
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "SizeArgs"
+    },
+    "static": {
+        "__methods__": {
+            "bindvariable": {
+                "name": "BindVariable",
+                "description": "Bind controls contents to a variable.",
+                "arguments": [
+                    {
+                        "name": "varframe",
+                        "type": "P"
+                    },
+                    {
+                        "name": "varname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "controlprop",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "position": {
+                "name": "Position",
+                "description": "Re-position control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "getactiveinstance": {
+                "name": "GetActiveInstance",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onrbuttonup": {
+                "name": "OnRButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Handler for mouseMove event.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Handler for keyDown event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Handler for keyUp event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Handler for Translated Character event.",
+                "arguments": [
+                    {
+                        "name": "charargs",
+                        "type": "Control::CharArgs"
+                    }
+                ]
+            },
+            "onarrive": {
+                "name": "OnArrive",
+                "description": "Handler for gain focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "ondepart": {
+                "name": "OnDepart",
+                "description": "Handler for lose focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "onnotify": {
+                "name": "OnNotify",
+                "description": "Handler for notification (from child).",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::NotificationArgs"
+                    }
+                ]
+            }
+        },
+        "__name__": "Static"
+    },
+    "textedit": {
+        "__methods__": {
+            "reset": {
+                "name": "Reset",
+                "description": "Reset Text.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insert_text": {
+                "name": "Insert_Text",
+                "description": "Insert Text.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "replace_text": {
+                "name": "Replace_Text",
+                "description": "Replace Text.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "set_cursor": {
+                "name": "Set_Cursor",
+                "description": "Position text.",
+                "arguments": [
+                    {
+                        "name": "pos",
+                        "type": "N"
+                    }
+                ]
+            },
+            "get_cursor": {
+                "name": "Get_Cursor",
+                "description": "Get Cursor Position."
+            },
+            "get_selection_start": {
+                "name": "Get_Selection_Start",
+                "description": "Gets the selection start normalize defaults to .F. (normalize means ensure start<=end).",
+                "arguments": [
+                    {
+                        "name": "normalize",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "get_selection_end": {
+                "name": "Get_Selection_End",
+                "description": "Gets the selection end normalize defaults to .F. (normalize means ensure start<=end).",
+                "arguments": [
+                    {
+                        "name": "normalize",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "select": {
+                "name": "Select",
+                "description": "Position text.",
+                "arguments": [
+                    {
+                        "name": "pos",
+                        "type": "N"
+                    },
+                    {
+                        "name": "length",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "get_select": {
+                "name": "Get_Select",
+                "description": "Returns the selected text."
+            },
+            "show_caret": {
+                "name": "Show_Caret",
+                "description": "Make selection visible."
+            },
+            "cut": {
+                "name": "Cut",
+                "description": "Delete selection and put selection on clipboard."
+            },
+            "copy": {
+                "name": "Copy",
+                "description": "Copy selection to clipboard."
+            },
+            "paste": {
+                "name": "Paste",
+                "description": "Paste contents of clipboard into text."
+            },
+            "delete": {
+                "name": "Delete",
+                "description": "Delete selection."
+            },
+            "activate": {
+                "name": "Activate",
+                "description": "Set focus to the control."
+            },
+            "waitforinput": {
+                "name": "WaitForInput",
+                "description": "Create a popup instance, and set a variable if text is committed, return true if committed.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "n"
+                    },
+                    {
+                        "name": "y",
+                        "type": "n"
+                    },
+                    {
+                        "name": "width",
+                        "type": "n"
+                    },
+                    {
+                        "name": "height",
+                        "type": "n"
+                    }
+                ]
+            },
+            "configure": {
+                "name": "Configure",
+                "description": "Configure editor type (i.e. none,expression,script,a5w,css... ).",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "c"
+                    }
+                ]
+            },
+            "bindvariable": {
+                "name": "BindVariable",
+                "description": "Bind controls contents to a variable.",
+                "arguments": [
+                    {
+                        "name": "varframe",
+                        "type": "P"
+                    },
+                    {
+                        "name": "varname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "controlprop",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "position": {
+                "name": "Position",
+                "description": "Re-position control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "getactiveinstance": {
+                "name": "GetActiveInstance",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onrbuttonup": {
+                "name": "OnRButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Handler for mouseMove event.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Handler for keyDown event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Handler for keyUp event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Handler for Translated Character event.",
+                "arguments": [
+                    {
+                        "name": "charargs",
+                        "type": "Control::CharArgs"
+                    }
+                ]
+            },
+            "onarrive": {
+                "name": "OnArrive",
+                "description": "Handler for gain focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "ondepart": {
+                "name": "OnDepart",
+                "description": "Handler for lose focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "onnotify": {
+                "name": "OnNotify",
+                "description": "Handler for notification (from child).",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::NotificationArgs"
+                    }
+                ]
+            }
+        },
+        "__name__": "TextEdit"
+    },
+    "updateargs": {
+        "__methods__": {
+            "getstring": {
+                "name": "GetString",
+                "description": "Get string represented by XML node."
+            },
+            "setstring": {
+                "name": "SetString",
+                "description": "Set string from XML node to complex type.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "UpdateArgs"
+    },
+    "vscrollbar": {
+        "__methods__": {
+            "bindvariable": {
+                "name": "BindVariable",
+                "description": "Bind controls contents to a variable.",
+                "arguments": [
+                    {
+                        "name": "varframe",
+                        "type": "P"
+                    },
+                    {
+                        "name": "varname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "controlprop",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "render": {
+                "name": "Render",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "position": {
+                "name": "Position",
+                "description": "Re-position control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "getactiveinstance": {
+                "name": "GetActiveInstance",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "renderargs",
+                        "type": "Control::RenderArgs"
+                    }
+                ]
+            },
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onrbuttonup": {
+                "name": "OnRButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onlbuttonup": {
+                "name": "OnLButtonUp",
+                "description": "Render control of type given arguments.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onmousemove": {
+                "name": "OnMouseMove",
+                "description": "Handler for mouseMove event.",
+                "arguments": [
+                    {
+                        "name": "mouseargs",
+                        "type": "Control::MouseArgs"
+                    }
+                ]
+            },
+            "onkeydown": {
+                "name": "OnKeyDown",
+                "description": "Handler for keyDown event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onkeyup": {
+                "name": "OnKeyUp",
+                "description": "Handler for keyUp event.",
+                "arguments": [
+                    {
+                        "name": "keyargs",
+                        "type": "Control::KeyArgs"
+                    }
+                ]
+            },
+            "onchar": {
+                "name": "OnChar",
+                "description": "Handler for Translated Character event.",
+                "arguments": [
+                    {
+                        "name": "charargs",
+                        "type": "Control::CharArgs"
+                    }
+                ]
+            },
+            "onarrive": {
+                "name": "OnArrive",
+                "description": "Handler for gain focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "ondepart": {
+                "name": "OnDepart",
+                "description": "Handler for lose focus event.",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::FocusArgs"
+                    }
+                ]
+            },
+            "onnotify": {
+                "name": "OnNotify",
+                "description": "Handler for notification (from child).",
+                "arguments": [
+                    {
+                        "name": "focusargs",
+                        "type": "Control::NotificationArgs"
+                    }
+                ]
+            }
+        },
+        "__name__": "VScrollBar"
+    },
+    "__name__": "Control"
+}

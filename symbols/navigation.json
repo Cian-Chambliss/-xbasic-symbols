@@ -1,0 +1,203 @@
+{
+    "navigator": {
+        "__methods__": {
+            "back": {
+                "name": "Back",
+                "description": "Go back page(es).",
+                "arguments": [
+                    {
+                        "name": "depth",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "backdepth": {
+                "name": "BackDepth",
+                "description": "return the depth of the history."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close the pages that point to us."
+            },
+            "createpage": {
+                "name": "CreatePage",
+                "description": "Create a page.",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sqlargs",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "filter",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "order",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "haspage": {
+                "name": "HasPage",
+                "description": "Returns true if the page is defined."
+            },
+            "implementationhook": {
+                "name": "ImplementationHook",
+                "description": "Install an implementation hook.",
+                "arguments": [
+                    {
+                        "name": "impl",
+                        "type": "P"
+                    }
+                ]
+            },
+            "lock": {
+                "name": "Lock",
+                "description": "Lock Navigation (prevents current view from being swapped out)."
+            },
+            "navigate": {
+                "name": "Navigate",
+                "description": "Navigate to a 'page'",
+                "arguments": [
+                    {
+                        "name": "page",
+                        "type": "P"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "next": {
+                "name": "Next",
+                "description": "Go foreward page(es).",
+                "arguments": [
+                    {
+                        "name": "depth",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "nextdepth": {
+                "name": "NextDepth",
+                "description": "return the depth of the history."
+            },
+            "popup": {
+                "name": "Popup",
+                "description": "Popup and 'navigate' to a page.",
+                "arguments": [
+                    {
+                        "name": "page",
+                        "type": "P"
+                    }
+                ]
+            },
+            "unlock": {
+                "name": "UnLock",
+                "description": "Unlock Navigation (allows current view from being swapped out - handles pending swaps)."
+            }
+        },
+        "__name__": "Navigator"
+    },
+    "page": {
+        "__functions__": {
+            "createfromdefinition": {
+                "name": "CreateFromDefinition",
+                "description": "Returns a new page definition with a navigation interface based on a numeric id.",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sqlargs",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "filter",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "order",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "pagefromid": {
+                "name": "PageFromId",
+                "description": "Returns a page definition based on a numeric id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "back": {
+                "name": "Back",
+                "description": "Return page(es) back.",
+                "arguments": [
+                    {
+                        "name": "depth",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "backcount": {
+                "name": "BackCount",
+                "description": "Get the count of pag(es) back."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "next": {
+                "name": "Next",
+                "description": "Return page(es) back.",
+                "arguments": [
+                    {
+                        "name": "depth",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "nextcount": {
+                "name": "NextCount",
+                "description": "Get the count of page(s) next."
+            }
+        },
+        "__name__": "Page"
+    },
+    "__name__": "Navigation"
+}

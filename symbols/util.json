@@ -1,0 +1,349 @@
+{
+    "executableversion": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "entrynumber": {
+                "name": "EntryNumber",
+                "description": "Get the index of a Entry from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "load": {
+                "name": "Load",
+                "description": "Retrieve version information for the file requested.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ExecutableVersion"
+    },
+    "interval": {
+        "__enumeration__": [
+            "Second",
+            "Millisecond",
+            "Microsecond"
+        ],
+        "__name__": "Interval"
+    },
+    "namedstringvalue": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "NamedStringValue"
+    },
+    "performancetimer": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "start": {
+                "name": "Start",
+                "description": "Reset the start time to the current time."
+            },
+            "stop": {
+                "name": "Stop",
+                "description": "Stop the timer and save the elapsed time."
+            }
+        },
+        "__name__": "PerformanceTimer"
+    },
+    "stringbuilder": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "concat": {
+                "name": "Concat",
+                "description": "Concatenate to the string.",
+                "arguments": [
+                    {
+                        "name": "string",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "reserve": {
+                "name": "Reserve",
+                "description": "Reserve size for buffer.",
+                "arguments": [
+                    {
+                        "name": "size",
+                        "type": "N"
+                    }
+                ]
+            },
+            "stritran": {
+                "name": "StrITran",
+                "description": "Translate a string.",
+                "arguments": [
+                    {
+                        "name": "searchvalue",
+                        "type": "C"
+                    },
+                    {
+                        "name": "replacementvalue",
+                        "type": "C"
+                    }
+                ]
+            },
+            "stritranmulti": {
+                "name": "StrITranMulti",
+                "description": "Translate a set of strings.",
+                "arguments": [
+                    {
+                        "name": "searchvalues",
+                        "type": "C"
+                    },
+                    {
+                        "name": "replacementvalues",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "StringBuilder"
+    },
+    "stringdictionary": {
+        "__methods__": {
+            "add": {
+                "name": "Add",
+                "description": "Add an item to the dictionary or change the existing value. \n\n\tReturns .t. if a new item has been added.\n\tReturns .f. if the item is already in the dictionary and its value was changed.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addentry": {
+                "name": "AddEntry",
+                "description": "Add a Entry.",
+                "arguments": [
+                    {
+                        "name": "entry",
+                        "type": "Util::NamedStringValue"
+                    }
+                ]
+            },
+            "clear": {
+                "name": "Clear",
+                "description": "Removes all entries from the dictionary"
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteentry": {
+                "name": "DeleteEntry",
+                "description": "Delete a Entry.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "entrynumber": {
+                "name": "EntryNumber",
+                "description": "Get the index of a Entry from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "exists": {
+                "name": "Exists",
+                "description": "Determine whether an item exists in the dictionary. \n\n\tReturns .t. if the item was found.\n\tReturns .f. if the item was not found.\n",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "initialize": {
+                "name": "Initialize",
+                "description": "Optionally clears and then initializes the string dictionary from a list of values in the format:\n\nKey1=Value1\nKey2=Value2\nKey3=Value3",
+                "arguments": [
+                    {
+                        "name": "values",
+                        "type": "C"
+                    },
+                    {
+                        "name": "clear",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertentry": {
+                "name": "InsertEntry",
+                "description": "Insert a new Entry.",
+                "arguments": [
+                    {
+                        "name": "entry",
+                        "type": "Util::NamedStringValue"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "lookup": {
+                "name": "Lookup",
+                "description": "Find an item and retrieve its value. \n\n\tReturns .t. if the item was found.\n\tReturns .f. if the item was not found.\n",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "moveentry": {
+                "name": "MoveEntry",
+                "description": "Move a block of Entry items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "remove": {
+                "name": "Remove",
+                "description": "Add an item to the dictionary. \n\n\tReturns .t. if an item has been removed.\n\tReturns .f. if no item was found.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "StringDictionary"
+    },
+    "templatedstring": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "concat": {
+                "name": "Concat",
+                "description": "Expand filter and Concatenate to the string."
+            },
+            "getbuilder": {
+                "name": "GetBuilder",
+                "description": "Get the associated string builder."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Convert placeholders containing expressions into a template with entries.",
+                "arguments": [
+                    {
+                        "name": "template_string",
+                        "type": "C"
+                    },
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setbuilder": {
+                "name": "SetBuilder",
+                "description": "Put all output in a string.",
+                "arguments": [
+                    {
+                        "name": "builder",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "TemplatedString"
+    },
+    "timer": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "reset": {
+                "name": "Reset",
+                "description": "Stop the timer (if it is running) and clear out all values."
+            },
+            "start": {
+                "name": "Start",
+                "description": "Reset the start time to the current time."
+            },
+            "stop": {
+                "name": "Stop",
+                "description": "Stop the timer and save the elapsed time."
+            }
+        },
+        "__name__": "Timer"
+    },
+    "__name__": "Util"
+}

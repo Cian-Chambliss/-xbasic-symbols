@@ -1,0 +1,224 @@
+{
+    "configuration": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Configuration"
+    },
+    "reportrequest": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportRequest"
+    },
+    "reportresponse": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportResponse"
+    },
+    "reportserver": {
+        "__functions__": {
+            "clientrequestallowed": {
+                "name": "ClientRequestAllowed",
+                "description": "Returns true if server running and we are not a server ourselves."
+            },
+            "droprequest": {
+                "name": "DropRequest",
+                "description": "Drop request from queue.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getrequest": {
+                "name": "GetRequest",
+                "description": "Get request.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getresponse": {
+                "name": "GetResponse",
+                "description": "Get response.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getstatus": {
+                "name": "GetStatus",
+                "description": "Show contents of queue.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "isreportserver": {
+                "name": "IsReportServer",
+                "description": "Is the current process report server."
+            },
+            "listqueue": {
+                "name": "ListQueue",
+                "description": "Show contents of queue.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "server",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "registerasserver": {
+                "name": "RegisterAsServer",
+                "description": "Register the process as a report server (returns true if registered)."
+            },
+            "respond": {
+                "name": "Respond",
+                "description": "Respond to request.",
+                "arguments": [
+                    {
+                        "name": "response",
+                        "type": "P"
+                    }
+                ]
+            },
+            "schedulereport": {
+                "name": "ScheduleReport",
+                "description": "Save a report to a file using report server, returns status (Success or error information).",
+                "arguments": [
+                    {
+                        "name": "request",
+                        "type": "P"
+                    },
+                    {
+                        "name": "wait",
+                        "type": "L"
+                    }
+                ]
+            },
+            "serversavailable": {
+                "name": "ServersAvailable",
+                "description": "Returns a list of available print servers.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "setserverlimit": {
+                "name": "SetServerLimit",
+                "description": "Set the limits after servers are already running - only decrease limits (from existing) if allow_throttle is true.",
+                "arguments": [
+                    {
+                        "name": "limit",
+                        "type": "N"
+                    },
+                    {
+                        "name": "featurepacks",
+                        "type": "C"
+                    },
+                    {
+                        "name": "allow_throttle",
+                        "type": "L"
+                    }
+                ]
+            },
+            "setstatus": {
+                "name": "SetStatus",
+                "description": "Set status of an item in the queue, indicate if the item is done (notify wait).",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "status",
+                        "type": "C"
+                    },
+                    {
+                        "name": "done",
+                        "type": "L"
+                    }
+                ]
+            },
+            "shutdownservers": {
+                "name": "ShutdownServers",
+                "description": "Shutdown servers - with option to leave some running.",
+                "arguments": [
+                    {
+                        "name": "leaverunning",
+                        "type": "N"
+                    }
+                ]
+            },
+            "startupservers": {
+                "name": "StartupServers",
+                "description": "Start report server process(es).",
+                "arguments": [
+                    {
+                        "name": "configuration",
+                        "type": "P"
+                    },
+                    {
+                        "name": "featurepacks",
+                        "type": "C"
+                    }
+                ]
+            },
+            "waitforrequest": {
+                "name": "WaitForRequest",
+                "description": "Server method - wait untill a request needs to be handled."
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportServer"
+    },
+    "__name__": "ReportServer"
+}

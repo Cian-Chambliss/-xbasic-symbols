@@ -1,0 +1,4576 @@
+{
+    "adbobject": {
+        "__functions__": {
+            "getdefault": {
+                "name": "GetDefault",
+                "description": "Get Default ADB object of Alpha Process (returns an empty object if none defined)."
+            },
+            "removedefault": {
+                "name": "RemoveDefault",
+                "description": "Unload and remove the default ADB Object."
+            }
+        },
+        "__methods__": {
+            "addfile": {
+                "name": "AddFile",
+                "description": "Add a file to the ADB.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "changes": {
+                "name": "Changes",
+                "description": "Track changes for object type.",
+                "arguments": [
+                    {
+                        "name": "objecttype",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "dirty": {
+                "name": "Dirty",
+                "description": "Returns the count of tracked changes (i.e. obejcts added/deleted) - if AdbDirty is true, returns change in top level ADB content.",
+                "arguments": [
+                    {
+                        "name": "adbdirty",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "dropfile": {
+                "name": "DropFile",
+                "description": "Drop a table/set library files to the ADB.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getactiveobject": {
+                "name": "GetActiveObject",
+                "description": "Get active object.",
+                "arguments": [
+                    {
+                        "name": "fullname",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "list": {
+                "name": "List",
+                "description": "List objects of objectType.",
+                "arguments": [
+                    {
+                        "name": "objecttype",
+                        "type": "C"
+                    },
+                    {
+                        "name": "displayformat",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "listone": {
+                "name": "ListOne",
+                "description": "Return the location of an object.",
+                "arguments": [
+                    {
+                        "name": "objecttype",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "displayformat",
+                        "type": "C"
+                    }
+                ]
+            },
+            "load": {
+                "name": "Load",
+                "description": "Load an ADB file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "loaduserfunctions": {
+                "name": "LoadUserFunctions",
+                "description": "Load UDF's from libraries into the current environment."
+            },
+            "location": {
+                "name": "Location",
+                "description": "Return the location of an object.",
+                "arguments": [
+                    {
+                        "name": "objecttype",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "objecttypes": {
+                "name": "ObjectTypes",
+                "description": "Return object types."
+            },
+            "save": {
+                "name": "Save",
+                "description": "Save changes to ADB file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "setactiveobject": {
+                "name": "SetActiveObject",
+                "description": "Set active object.",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "filename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "unload": {
+                "name": "Unload",
+                "description": "Unload an ADB definition."
+            },
+            "unloaduserfunctions": {
+                "name": "UnloadUserFunctions",
+                "description": "Unload global UDF functions and variables."
+            },
+            "update": {
+                "name": "Update",
+                "description": "Update ADB object, return 'true' if anything has changed."
+            }
+        },
+        "__name__": "AdbObject"
+    },
+    "altercolumns": {
+        "__methods__": {
+            "addcolumn": {
+                "name": "AddColumn",
+                "description": "Add a column definition to alter.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "log_template",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "filterjson": {
+                "name": "FilterJson",
+                "description": "Post filter columns in JSON.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "filterresultset": {
+                "name": "FilterResultSet",
+                "description": "Post filter columns in a result set.",
+                "arguments": [
+                    {
+                        "name": "resultsetin",
+                        "type": "P"
+                    }
+                ]
+            },
+            "getlogoutput": {
+                "name": "GetLogOutput",
+                "description": "Return the cumulative log_output of the columns."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AlterColumns"
+    },
+    "chrome": {
+        "__functions__": {
+            "frameworkversion": {
+                "name": "FrameworkVersion",
+                "description": "Return the major version of LIBCEF framework that is running (3 or 1)."
+            },
+            "offscreenrender": {
+                "name": "OffscreenRender",
+                "description": "Convert html to an offscreen bitmap of given size, returns the bitmap buffer.",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "background",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "offscreenrenderex": {
+                "name": "OffscreenRenderEx",
+                "description": "Convert html to an offscreen bitmap of given size, returns the bitmap buffer and the mapping in an object.",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "background",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "registerlanguageserver": {
+                "name": "RegisterLanguageServer",
+                "description": "Register a language server protocol handler (executable with stdin/stdout) that chrome can launch in response to redirected http requests from client middleware.",
+                "arguments": [
+                    {
+                        "name": "language",
+                        "type": "C"
+                    },
+                    {
+                        "name": "programpath",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setstartupoptions": {
+                "name": "SetStartupOptions",
+                "description": "Set LIBCEF initialization options, must be called before any other CEF methods are invoked.",
+                "arguments": [
+                    {
+                        "name": "debugport",
+                        "type": "N"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addeventlisteners": {
+                "name": "AddEventListeners",
+                "description": "Set mapping of event handlers in multiple line format 'id|event|handler' - where handler is a xdialog event, or if prefixed with a '=', an expression that gets evaluated.",
+                "arguments": [
+                    {
+                        "name": "mapping",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addresponsehandling": {
+                "name": "AddresponseHandling",
+                "description": "Add a responseHandling.",
+                "arguments": [
+                    {
+                        "name": "responsehandling",
+                        "type": "Helper::ChromeResponseHandler"
+                    }
+                ]
+            },
+            "addurlfilelocation": {
+                "name": "AddurlFileLocation",
+                "description": "Add a urlFileLocation.",
+                "arguments": [
+                    {
+                        "name": "urlfilelocation",
+                        "type": "Helper::UrlFileLocation"
+                    }
+                ]
+            },
+            "addurlreplace": {
+                "name": "AddurlReplace",
+                "description": "Add a urlReplace.",
+                "arguments": [
+                    {
+                        "name": "urlreplace",
+                        "type": "Helper::UrlReplaceRule"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "closedevtools": {
+                "name": "CloseDevtools",
+                "description": "Close chromes development tools."
+            },
+            "deleteresponsehandling": {
+                "name": "DeleteresponseHandling",
+                "description": "Delete a responseHandling.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteurlfilelocation": {
+                "name": "DeleteurlFileLocation",
+                "description": "Delete a urlFileLocation.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteurlreplace": {
+                "name": "DeleteurlReplace",
+                "description": "Delete a urlReplace.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "dropeventlisteners": {
+                "name": "DropEventListeners",
+                "description": "Drop event handers matching in multiple line format 'id|event|handler' - any colums left out will be excluded from match.",
+                "arguments": [
+                    {
+                        "name": "mapping",
+                        "type": "C"
+                    }
+                ]
+            },
+            "executejavascript": {
+                "name": "ExecuteJavascript",
+                "description": "Execute a snippet of javascript, return if started.",
+                "arguments": [
+                    {
+                        "name": "javascript",
+                        "type": "C"
+                    }
+                ]
+            },
+            "executejavascriptresult": {
+                "name": "ExecuteJavascriptResult",
+                "description": "Execute a snippet of javascript, returning a result.",
+                "arguments": [
+                    {
+                        "name": "javascript",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getactiverequest": {
+                "name": "GetActiveRequest",
+                "description": "Return an active request object.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getattribute": {
+                "name": "GetAttribute",
+                "description": "Get attribute value for dom node attribute with an id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attrib",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getinnerhtml": {
+                "name": "GetInnerHtml",
+                "description": "Set the Inner  HTML for a tag, given an id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getinnertext": {
+                "name": "GetInnerText",
+                "description": "Get the inner text for an id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getouterhtml": {
+                "name": "GetOuterHtml",
+                "description": "Get the Outer HTML for a tag, given an id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getrects": {
+                "name": "GetRects",
+                "description": "Returns JSON with ids and rectangles."
+            },
+            "getvalue": {
+                "name": "GetValue",
+                "description": "Get the value for an id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getzoomlevel": {
+                "name": "GetZoomLevel",
+                "description": "Returns the current page zoom level."
+            },
+            "goback": {
+                "name": "GoBack",
+                "description": "Go to the prior page."
+            },
+            "goforward": {
+                "name": "GoForward",
+                "description": "Go to the next page."
+            },
+            "hasattribute": {
+                "name": "HasAttribute",
+                "description": "Has attribute in a DOM element with the id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attrib",
+                        "type": "C"
+                    }
+                ]
+            },
+            "haselement": {
+                "name": "HasElement",
+                "description": "Has a DOM element with the id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertresponsehandling": {
+                "name": "InsertresponseHandling",
+                "description": "Insert a new responseHandling.",
+                "arguments": [
+                    {
+                        "name": "responsehandling",
+                        "type": "Helper::ChromeResponseHandler"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "inserturlfilelocation": {
+                "name": "InserturlFileLocation",
+                "description": "Insert a new urlFileLocation.",
+                "arguments": [
+                    {
+                        "name": "urlfilelocation",
+                        "type": "Helper::UrlFileLocation"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "inserturlreplace": {
+                "name": "InserturlReplace",
+                "description": "Insert a new urlReplace.",
+                "arguments": [
+                    {
+                        "name": "urlreplace",
+                        "type": "Helper::UrlReplaceRule"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveresponsehandling": {
+                "name": "MoveresponseHandling",
+                "description": "Move a block of responseHandling items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moveurlfilelocation": {
+                "name": "MoveurlFileLocation",
+                "description": "Move a block of urlFileLocation items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moveurlreplace": {
+                "name": "MoveurlReplace",
+                "description": "Move a block of urlReplace items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "opendevtools": {
+                "name": "OpenDevtools",
+                "description": "Launch chromes development tools."
+            },
+            "parserules": {
+                "name": "ParseRules",
+                "description": "Pass in optional 'replace:' and 'paths:' sections.",
+                "arguments": [
+                    {
+                        "name": "rules",
+                        "type": "C"
+                    }
+                ]
+            },
+            "pdfsave": {
+                "name": "PdfSave",
+                "description": "Save page(s) to a PDF.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "settings",
+                        "type": "C"
+                    }
+                ]
+            },
+            "print": {
+                "name": "Print",
+                "description": "Print content of chrome window"
+            },
+            "processurl": {
+                "name": "ProcessUrl",
+                "description": "Use the defined url replace rules to remap the url behind the scenes.",
+                "arguments": [
+                    {
+                        "name": "srcurl",
+                        "type": "C"
+                    }
+                ]
+            },
+            "reload": {
+                "name": "Reload",
+                "description": "Reload the page.",
+                "arguments": [
+                    {
+                        "name": "ignorecache",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "resolvepath": {
+                "name": "ResolvePath",
+                "description": "Use the defined file location logic to resolve filename path.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setattribute": {
+                "name": "SetAttribute",
+                "description": "Set attribute value for dom node attribute with an id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attrib",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setinnerhtml": {
+                "name": "SetInnerHtml",
+                "description": "Set the inner HTML for a tag, given an id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setvalue": {
+                "name": "SetValue",
+                "description": "Set the value for an id.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setzoomlevel": {
+                "name": "SetZoomLevel",
+                "description": "Sets the current page zoom level, 0 interpreted as reset to default.",
+                "arguments": [
+                    {
+                        "name": "zoomlevel",
+                        "type": "N"
+                    }
+                ]
+            },
+            "stop": {
+                "name": "Stop",
+                "description": "Stop the page loading."
+            }
+        },
+        "__name__": "Chrome"
+    },
+    "chromedomdocument": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "getelementbyid": {
+                "name": "getElementById",
+                "description": "method to construct a new DOM access node.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "ChromeDOMDocument"
+    },
+    "chromedomnode": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ChromeDOMNode"
+    },
+    "chromedomstylenode": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ChromeDOMStyleNode"
+    },
+    "chromepostentry": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ChromePostEntry"
+    },
+    "chromerequest": {
+        "__methods__": {
+            "addpost": {
+                "name": "Addpost",
+                "description": "Add a post.",
+                "arguments": [
+                    {
+                        "name": "post",
+                        "type": "Helper::ChromePostEntry"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletepost": {
+                "name": "Deletepost",
+                "description": "Delete a post.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertpost": {
+                "name": "Insertpost",
+                "description": "Insert a new post.",
+                "arguments": [
+                    {
+                        "name": "post",
+                        "type": "Helper::ChromePostEntry"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movepost": {
+                "name": "Movepost",
+                "description": "Move a block of post items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ChromeRequest"
+    },
+    "emftosvg": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "convert": {
+                "name": "Convert",
+                "description": "Convert EMF content to SVG.",
+                "arguments": [
+                    {
+                        "name": "emf",
+                        "type": "B"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "EMFToSvg"
+    },
+    "exifinfo": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getthumbnail": {
+                "name": "GetThumbnail",
+                "description": "Get the binary data for the thumbnail."
+            },
+            "hasthumbnail": {
+                "name": "HasThumbnail",
+                "description": "A thumbnail for the image is stored in the exif data."
+            },
+            "loadexifdata": {
+                "name": "LoadExifData",
+                "description": "Load Exif information from an image file.",
+                "arguments": [
+                    {
+                        "name": "imagename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "saveexifdata": {
+                "name": "SaveExifData",
+                "description": "Save Exif information to an image file.",
+                "arguments": [
+                    {
+                        "name": "imagename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setthumbnail": {
+                "name": "SetThumbnail",
+                "description": "Override the thumbnail stored in the exif data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    }
+                ]
+            }
+        },
+        "__name__": "ExifInfo"
+    },
+    "gpsexifinfo": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "GPSExifInfo"
+    },
+    "graphqlquery": {
+        "__functions__": {
+            "parse": {
+                "name": "Parse",
+                "description": "Create a graphQL query object from supplied graphQL query , use optional service definition.",
+                "arguments": [
+                    {
+                        "name": "query",
+                        "type": "C"
+                    },
+                    {
+                        "name": "filename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addargument": {
+                "name": "Addargument",
+                "description": "Add a argument.",
+                "arguments": [
+                    {
+                        "name": "argument",
+                        "type": "Helper::GraphQLQuery::Argument"
+                    }
+                ]
+            },
+            "addchildren": {
+                "name": "Addchildren",
+                "description": "Add a children.",
+                "arguments": [
+                    {
+                        "name": "children",
+                        "type": "Helper::GraphQLQuery"
+                    }
+                ]
+            },
+            "addcolumn": {
+                "name": "Addcolumn",
+                "description": "Add a column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "c"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteargument": {
+                "name": "Deleteargument",
+                "description": "Delete a argument.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletechildren": {
+                "name": "Deletechildren",
+                "description": "Delete a children.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletecolumn": {
+                "name": "Deletecolumn",
+                "description": "Delete a column.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getargument": {
+                "name": "GetArgument",
+                "description": "Returns an argument value.",
+                "arguments": [
+                    {
+                        "name": "argumentname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "defaultvalue",
+                        "type": "A"
+                    }
+                ]
+            },
+            "getchild": {
+                "name": "GetChild",
+                "description": "Returns the child.",
+                "arguments": [
+                    {
+                        "name": "childname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getcolumns": {
+                "name": "GetColumns",
+                "description": "Get Comma Delimited list of columns."
+            },
+            "haschild": {
+                "name": "HasChild",
+                "description": "Returns true if child exists.",
+                "arguments": [
+                    {
+                        "name": "childname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertargument": {
+                "name": "Insertargument",
+                "description": "Insert a new argument.",
+                "arguments": [
+                    {
+                        "name": "argument",
+                        "type": "Helper::GraphQLQuery::Argument"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertchildren": {
+                "name": "Insertchildren",
+                "description": "Insert a new children.",
+                "arguments": [
+                    {
+                        "name": "children",
+                        "type": "Helper::GraphQLQuery"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertcolumn": {
+                "name": "Insertcolumn",
+                "description": "Insert a new column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "c"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveargument": {
+                "name": "Moveargument",
+                "description": "Move a block of argument items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movechildren": {
+                "name": "Movechildren",
+                "description": "Move a block of children items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movecolumn": {
+                "name": "Movecolumn",
+                "description": "Move a block of column items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "requirecolumn": {
+                "name": "RequireColumn",
+                "description": "Add a column if it is missing.",
+                "arguments": [
+                    {
+                        "name": "columnname",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "GraphQLQuery"
+    },
+    "graphviz": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tosvg": {
+                "name": "ToSVG",
+                "description": "Create SVG from text dot file or source."
+            },
+            "tosvgfile": {
+                "name": "ToSVGFile",
+                "description": "Create SVG file from dot file or source.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "GraphViz"
+    },
+    "helperchromeresponsehandler": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "HelperChromeResponseHandler"
+    },
+    "htmlelement": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "HtmlElement"
+    },
+    "htmlprocessor": {
+        "__functions__": {
+            "combineduplicateattributes": {
+                "name": "CombineDuplicateAttributes",
+                "description": "Combine attributes that have been duplicated in a tag.",
+                "arguments": [
+                    {
+                        "name": "tagnames",
+                        "type": "C"
+                    },
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attributes",
+                        "type": "C"
+                    }
+                ]
+            },
+            "extracttagattributes": {
+                "name": "ExtractTagAttributes",
+                "description": "Return list of attributes (in format) from only tags in comma separated tagname list.",
+                "arguments": [
+                    {
+                        "name": "tagnames",
+                        "type": "C"
+                    },
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C"
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "extracttags": {
+                "name": "ExtractTags",
+                "description": "Return only tags in comma separated tagname list.",
+                "arguments": [
+                    {
+                        "name": "tagnames",
+                        "type": "C"
+                    },
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "outer",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "gettaginnerhtml": {
+                "name": "GetTagInnerHTML",
+                "description": "Get index element matching tag (returns blank if no inner html).",
+                "arguments": [
+                    {
+                        "name": "tagname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "gettagouterhtml": {
+                "name": "GetTagOuterHTML",
+                "description": "Get index element matching tag (returns blank if no inner html).",
+                "arguments": [
+                    {
+                        "name": "tagname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "removeblocktags": {
+                "name": "RemoveBlockTags",
+                "description": "Assumes 'pre' rules for spacing, but removes tags from html",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    }
+                ]
+            },
+            "removespans": {
+                "name": "RemoveSpans",
+                "description": "Remove spans from html.",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addcssattributefilter": {
+                "name": "AddCssAttributeFilter",
+                "description": "Adds a Css attribute filter.",
+                "arguments": [
+                    {
+                        "name": "attributefilter",
+                        "type": "C"
+                    },
+                    {
+                        "name": "valueexpression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "addtagattributefilter": {
+                "name": "AddTagAttributeFilter",
+                "description": "Adds a tag attribute filter.",
+                "arguments": [
+                    {
+                        "name": "attributefilter",
+                        "type": "C"
+                    },
+                    {
+                        "name": "valueexpression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "addtagpairfilter": {
+                "name": "AddTagPairFilter",
+                "description": "Replace an entire tag pair (beginning/end) that matches tag and/or crlf separated list of <attrib>=<pattern>.",
+                "arguments": [
+                    {
+                        "name": "tagfilter",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attributefilters",
+                        "type": "C"
+                    },
+                    {
+                        "name": "valueexpression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addtagpairmarkup": {
+                "name": "AddTagPairMarkup",
+                "description": "Add rule to replace generate markups (replace inline markup & saves mapping).",
+                "arguments": [
+                    {
+                        "name": "tagfilter",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attributefilters",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addtagpairrunfilter": {
+                "name": "AddTagPairRunFilter",
+                "description": "Replace an a run of matching tag pairs (i.e. group <p> tags that have a common class name).",
+                "arguments": [
+                    {
+                        "name": "tagfilter",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attributefilters",
+                        "type": "C"
+                    },
+                    {
+                        "name": "valueexpression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addresource": {
+                "name": "Addresource",
+                "description": "Add a resource.",
+                "arguments": [
+                    {
+                        "name": "resource",
+                        "type": "Helper::HtmlResource"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "countmarkupreplacement": {
+                "name": "CountMarkupReplacement",
+                "description": "Returns the number of markups done."
+            },
+            "deleteresource": {
+                "name": "Deleteresource",
+                "description": "Delete a resource.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "explicitimagetagsizing": {
+                "name": "ExplicitImageTagSizing",
+                "description": "Forces html processor to include IMG tag width & height (loads the post-processed image , may cost some time - optimized for file: protocol)."
+            },
+            "getmarkupreplacement": {
+                "name": "GetMarkupReplacement",
+                "description": "Returns the markup replacement for tag #.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    },
+                    {
+                        "name": "endtag",
+                        "type": "L"
+                    }
+                ]
+            },
+            "insertresource": {
+                "name": "Insertresource",
+                "description": "Insert a new resource.",
+                "arguments": [
+                    {
+                        "name": "resource",
+                        "type": "Helper::HtmlResource"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveresource": {
+                "name": "Moveresource",
+                "description": "Move a block of resource items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "processhtml": {
+                "name": "ProcessHTML",
+                "description": "Apply html edit rules to html.",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    }
+                ]
+            },
+            "processhtmlresources": {
+                "name": "ProcessHTMLResources",
+                "description": "Process html to convert ANY resources (images, optionally style sheets etc), into a standalone resource list (returned in resource array).",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "uri",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "flags",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "prefix",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "suffix",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "processjavascriptexample": {
+                "name": "ProcessJavascriptExample",
+                "description": "Create javascript markup (colorize using classes).",
+                "arguments": [
+                    {
+                        "name": "javascript",
+                        "type": "C"
+                    }
+                ]
+            },
+            "processsvgresources": {
+                "name": "ProcessSVGResources",
+                "description": "Process html to convert ANY embedded SVG tags into embedded background tags.",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "prefix",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "suffix",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "noimagereferences",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "processxbasicexample": {
+                "name": "ProcessXbasicExample",
+                "description": "Create Html for xbasic (colorize using classes).",
+                "arguments": [
+                    {
+                        "name": "xbasic",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sethighlighter": {
+                "name": "SetHighlighter",
+                "description": "Adds a highlighter.",
+                "arguments": [
+                    {
+                        "name": "classname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "searchpatterns",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setjavascriptfunctionreplace": {
+                "name": "SetJavascriptFunctionReplace",
+                "description": "Register expression for doing javascript function replacements.",
+                "arguments": [
+                    {
+                        "name": "valueexpression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setxbasicfunctionreplace": {
+                "name": "SetXbasicFunctionReplace",
+                "description": "Register expression for doing xbasic function replacements.",
+                "arguments": [
+                    {
+                        "name": "valueexpression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "terminateescapedcharacters": {
+                "name": "TerminateEscapedCharacters",
+                "description": "Force termination on escaped characters."
+            }
+        },
+        "__name__": "HtmlProcessor"
+    },
+    "htmlresource": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getcontent": {
+                "name": "GetContent",
+                "description": "Gets html resource content."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setcontent": {
+                "name": "SetContent",
+                "description": "Sets content for html resource.",
+                "arguments": [
+                    {
+                        "name": "content",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__name__": "HtmlResource"
+    },
+    "htmltopdf": {
+        "__methods__": {
+            "addcookie": {
+                "name": "Addcookie",
+                "description": "Add a cookie.",
+                "arguments": [
+                    {
+                        "name": "cookie",
+                        "type": "Helper::HtmlToPdfCookie"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletecookie": {
+                "name": "Deletecookie",
+                "description": "Delete a cookie.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertcookie": {
+                "name": "Insertcookie",
+                "description": "Insert a new cookie.",
+                "arguments": [
+                    {
+                        "name": "cookie",
+                        "type": "Helper::HtmlToPdfCookie"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movecookie": {
+                "name": "Movecookie",
+                "description": "Move a block of cookie items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "savehtmltopdf": {
+                "name": "SaveHTMLToPdf",
+                "description": "Generate a PDF from a given html.",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "output_filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "savehtmltopdfext": {
+                "name": "SaveHTMLToPdfExt",
+                "description": "Generate a PDF from a given html, using a running service.",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "output_filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "service",
+                        "type": "C"
+                    }
+                ]
+            },
+            "saveurltopdf": {
+                "name": "SaveUrlToPdf",
+                "description": "Generate a PDF from a given uri.",
+                "arguments": [
+                    {
+                        "name": "url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "output_filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "saveurltopdfext": {
+                "name": "SaveUrlToPdfExt",
+                "description": "Generate a PDF from a given uri, using a running service.",
+                "arguments": [
+                    {
+                        "name": "url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "output_filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "service",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "HtmlToPdf"
+    },
+    "htmltopdfcookie": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "HtmlToPdfCookie"
+    },
+    "imagemetrics": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "loadimage": {
+                "name": "LoadImage",
+                "description": "Load image metrics into class",
+                "arguments": [
+                    {
+                        "name": "imagetype",
+                        "type": "C"
+                    },
+                    {
+                        "name": "imagecontent",
+                        "type": "B"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ImageMetrics"
+    },
+    "jsonsql": {
+        "column": {
+            "__methods__": {
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                }
+            },
+            "__name__": "Column"
+        },
+        "constraint": {
+            "__methods__": {
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                }
+            },
+            "__name__": "Constraint"
+        },
+        "match": {
+            "__methods__": {
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                }
+            },
+            "__name__": "Match"
+        },
+        "process": {
+            "__functions__": {
+                "loadsqlclient": {
+                    "name": "LoadSQLClient",
+                    "description": "Load namespace class with methods and load models as classes.",
+                    "arguments": [
+                        {
+                            "name": "jsondef",
+                            "type": "C"
+                        },
+                        {
+                            "name": "fullnamespace",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "schemafromjson": {
+                    "name": "SchemaFromJson",
+                    "description": "Build a SQL schema object from JSON.",
+                    "arguments": [
+                        {
+                            "name": "schema",
+                            "type": "P"
+                        },
+                        {
+                            "name": "json",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "schemafromtext": {
+                    "name": "SchemaFromText",
+                    "description": "Build a SQL schema object from a text definition.",
+                    "arguments": [
+                        {
+                            "name": "schema",
+                            "type": "P"
+                        },
+                        {
+                            "name": "text",
+                            "type": "C"
+                        }
+                    ]
+                }
+            },
+            "__methods__": {
+                "addcolumn": {
+                    "name": "Addcolumn",
+                    "description": "Add a column.",
+                    "arguments": [
+                        {
+                            "name": "column",
+                            "type": "Helper::JSONSql::Column"
+                        }
+                    ]
+                },
+                "addcolumnexact": {
+                    "name": "AddcolumnExact",
+                    "description": "Add a columnExact.",
+                    "arguments": [
+                        {
+                            "name": "columnexact",
+                            "type": "Helper::JSONSql::Match"
+                        }
+                    ]
+                },
+                "addcolumnrange": {
+                    "name": "AddcolumnRange",
+                    "description": "Add a columnRange.",
+                    "arguments": [
+                        {
+                            "name": "columnrange",
+                            "type": "Helper::JSONSql::Range"
+                        }
+                    ]
+                },
+                "addcolumnsort": {
+                    "name": "AddcolumnSort",
+                    "description": "Add a columnSort.",
+                    "arguments": [
+                        {
+                            "name": "columnsort",
+                            "type": "Helper::JSONSql::SortColumn"
+                        }
+                    ]
+                },
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "columnasjson": {
+                    "name": "ColumnAsJson",
+                    "description": "Return columns as JSON.",
+                    "arguments": [
+                        {
+                            "name": "includeexact",
+                            "type": "L",
+                            "optional": true
+                        }
+                    ]
+                },
+                "columnasjsonarray": {
+                    "name": "ColumnAsJsonArray",
+                    "description": "Generate a JSON array from data + supplied table info.",
+                    "arguments": [
+                        {
+                            "name": "ti",
+                            "type": "P"
+                        },
+                        {
+                            "name": "includeexact",
+                            "type": "L",
+                            "optional": true
+                        }
+                    ]
+                },
+                "columnwhereasjson": {
+                    "name": "ColumnWhereAsJson",
+                    "description": "Return exact columns as JSON."
+                },
+                "deletecolumn": {
+                    "name": "Deletecolumn",
+                    "description": "Delete a column.",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "deletecolumnexact": {
+                    "name": "DeletecolumnExact",
+                    "description": "Delete a columnExact.",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "deletecolumnrange": {
+                    "name": "DeletecolumnRange",
+                    "description": "Delete a columnRange.",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "deletecolumnsort": {
+                    "name": "DeletecolumnSort",
+                    "description": "Delete a columnSort.",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "getcolumn": {
+                    "name": "GetColumn",
+                    "description": "Get column - if missing return default.",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "C"
+                        },
+                        {
+                            "name": "defaultvalue",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "getcolumnexact": {
+                    "name": "GetColumnExact",
+                    "description": "Get column match - if missing return default.",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "C"
+                        },
+                        {
+                            "name": "defaultvalue",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "getcolumnrange": {
+                    "name": "GetColumnRange",
+                    "description": "Get column range - returns empty range if none found.",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "insertcolumn": {
+                    "name": "Insertcolumn",
+                    "description": "Insert a new column.",
+                    "arguments": [
+                        {
+                            "name": "column",
+                            "type": "Helper::JSONSql::Column"
+                        },
+                        {
+                            "name": "insertbefore",
+                            "type": "N",
+                            "optional": true
+                        }
+                    ]
+                },
+                "insertcolumnexact": {
+                    "name": "InsertcolumnExact",
+                    "description": "Insert a new columnExact.",
+                    "arguments": [
+                        {
+                            "name": "columnexact",
+                            "type": "Helper::JSONSql::Match"
+                        },
+                        {
+                            "name": "insertbefore",
+                            "type": "N",
+                            "optional": true
+                        }
+                    ]
+                },
+                "insertcolumnrange": {
+                    "name": "InsertcolumnRange",
+                    "description": "Insert a new columnRange.",
+                    "arguments": [
+                        {
+                            "name": "columnrange",
+                            "type": "Helper::JSONSql::Range"
+                        },
+                        {
+                            "name": "insertbefore",
+                            "type": "N",
+                            "optional": true
+                        }
+                    ]
+                },
+                "insertcolumnsort": {
+                    "name": "InsertcolumnSort",
+                    "description": "Insert a new columnSort.",
+                    "arguments": [
+                        {
+                            "name": "columnsort",
+                            "type": "Helper::JSONSql::SortColumn"
+                        },
+                        {
+                            "name": "insertbefore",
+                            "type": "N",
+                            "optional": true
+                        }
+                    ]
+                },
+                "jsontoresultset": {
+                    "name": "JsonToResultSet",
+                    "description": "Produce a resultset , included whatever postprocessing is required.",
+                    "arguments": [
+                        {
+                            "name": "result",
+                            "type": "P"
+                        },
+                        {
+                            "name": "json",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "movecolumn": {
+                    "name": "Movecolumn",
+                    "description": "Move a block of column items.",
+                    "arguments": [
+                        {
+                            "name": "moveto",
+                            "type": "N"
+                        },
+                        {
+                            "name": "movefrom",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "movecolumnexact": {
+                    "name": "MovecolumnExact",
+                    "description": "Move a block of columnExact items.",
+                    "arguments": [
+                        {
+                            "name": "moveto",
+                            "type": "N"
+                        },
+                        {
+                            "name": "movefrom",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "movecolumnrange": {
+                    "name": "MovecolumnRange",
+                    "description": "Move a block of columnRange items.",
+                    "arguments": [
+                        {
+                            "name": "moveto",
+                            "type": "N"
+                        },
+                        {
+                            "name": "movefrom",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "movecolumnsort": {
+                    "name": "MovecolumnSort",
+                    "description": "Move a block of columnSort items.",
+                    "arguments": [
+                        {
+                            "name": "moveto",
+                            "type": "N"
+                        },
+                        {
+                            "name": "movefrom",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                },
+                "parsestatement": {
+                    "name": "ParseStatement",
+                    "description": "Parse a SQL statement into the JSONSqlProcess object.",
+                    "arguments": [
+                        {
+                            "name": "statement",
+                            "type": "C"
+                        },
+                        {
+                            "name": "args",
+                            "type": "P"
+                        },
+                        {
+                            "name": "schema",
+                            "type": "P"
+                        },
+                        {
+                            "name": "actions",
+                            "type": "C",
+                            "optional": true
+                        }
+                    ]
+                },
+                "validatecolumns": {
+                    "name": "ValidateColumns",
+                    "description": "Return non-empty string error if columns don't match supplied tableInfo (name and type).",
+                    "arguments": [
+                        {
+                            "name": "ti",
+                            "type": "P"
+                        }
+                    ]
+                }
+            },
+            "__name__": "Process"
+        },
+        "range": {
+            "__methods__": {
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                }
+            },
+            "__name__": "Range"
+        },
+        "sortcolumn": {
+            "__methods__": {
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                }
+            },
+            "__name__": "SortColumn"
+        },
+        "__name__": "JSONSql"
+    },
+    "jsontemplate": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Create a template loader.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "deserialize": {
+                "name": "Deserialize",
+                "description": "Deserialize from json (with schema name at top level).",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "get": {
+                "name": "Get",
+                "description": "Get a template loader.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "register": {
+                "name": "Register",
+                "description": "Register a template (retrieved through get).",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "serialize": {
+                "name": "Serialize",
+                "description": "Serialize to json (with schema name at top level).",
+                "arguments": [
+                    {
+                        "name": "schema",
+                        "type": "C"
+                    },
+                    {
+                        "name": "variable",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "From a json string, load using the template.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getdefinition": {
+                "name": "GetDefinition",
+                "description": "Dump the json definition for the template."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Convert variable to json that follows sparse template.",
+                "arguments": [
+                    {
+                        "name": "variable",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "JSONTemplate"
+    },
+    "mshtml": {
+        "__methods__": {
+            "bind": {
+                "name": "Bind",
+                "description": "Bind document to MSHTML object return true if success.",
+                "arguments": [
+                    {
+                        "name": "document",
+                        "type": "P"
+                    },
+                    {
+                        "name": "implementation_instance",
+                        "type": "P"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "gethtmllow": {
+                "name": "GetHTMLLow",
+                "description": "Return the current visual HTML text."
+            },
+            "getselection": {
+                "name": "GetSelection",
+                "description": "Get start & end of selection.",
+                "arguments": [
+                    {
+                        "name": "ignorecr",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "query": {
+                "name": "Query",
+                "description": "Ask for status from the HTML.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setcodemap": {
+                "name": "SetCodeMap",
+                "description": "Sets image to display in place of code.",
+                "arguments": [
+                    {
+                        "name": "imagecodemap",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "MSHTML"
+    },
+    "node": {
+        "__functions__": {
+            "addxbasichandler": {
+                "name": "AddXbasicHandler",
+                "description": "Register and xbasic event command handler.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C"
+                    },
+                    {
+                        "name": "command",
+                        "type": "C"
+                    },
+                    {
+                        "name": "functionname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "classtodefinition": {
+                "name": "ClassToDefinition",
+                "description": "Creates a JSON schema definition of an existing type.",
+                "arguments": [
+                    {
+                        "name": "typename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "removenamespace",
+                        "type": "C"
+                    }
+                ]
+            },
+            "defaultsettings": {
+                "name": "DefaultSettings",
+                "description": "Define the default settings for subseqent node services that apply changes.  This should be called to set the communication mechanism (default is named pipe).",
+                "arguments": [
+                    {
+                        "name": "settings",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getdefaultfolder": {
+                "name": "GetDefaultFolder",
+                "description": "Returns the node default (system) folder."
+            },
+            "getlasterror": {
+                "name": "GetLastError",
+                "description": "Load the last error generated by node."
+            },
+            "invokeeventhandler": {
+                "name": "InvokeEventHandler",
+                "description": "Call a node handler directly from xbasic (no overhead) - used to test a node event handler from alpha5.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C"
+                    },
+                    {
+                        "name": "data",
+                        "type": "C"
+                    }
+                ]
+            },
+            "isinprocess": {
+                "name": "IsInProcess",
+                "description": "Returns .t. if node is setup to run in-process."
+            },
+            "listfolders": {
+                "name": "ListFolders",
+                "description": "List the folders that are currently running."
+            },
+            "listrequests": {
+                "name": "ListRequests",
+                "description": "List running requests.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "registerapi": {
+                "name": "RegisterApi",
+                "description": "Registers an api definition for a node service in a folder (under a namespace).",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C"
+                    },
+                    {
+                        "name": "command",
+                        "type": "C"
+                    },
+                    {
+                        "name": "namespace",
+                        "type": "C"
+                    },
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "request": {
+                "name": "Request",
+                "description": "Make a JSON node request, returns a JSON packet response.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attachments",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "returnattachments",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "requestasync": {
+                "name": "RequestAsync",
+                "description": "Make a JSON node request, returns a task that can be used to wait upon the request to complete.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attachments",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "returnattachments",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "requestbackground": {
+                "name": "RequestBackground",
+                "description": "Make a JSON node request, returns a JSON packet response for a long running node task - this creates a worker thread when run from the Main thread so that UI can be refreshed.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attachments",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "returnattachments",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "setdefaultfolder": {
+                "name": "SetDefaultFolder",
+                "description": "Set the default node folder to something other than the EXE path (requires bootstrap level node installation be at location).",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "setinprocess": {
+                "name": "SetInProcess",
+                "description": "Set in process mode.",
+                "arguments": [
+                    {
+                        "name": "inprocess",
+                        "type": "L"
+                    }
+                ]
+            },
+            "settings": {
+                "name": "Settings",
+                "description": "Get/Set node settings (in JSON format) - If settings don't exist, they are loaded from the a5node.json file in the folder.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "settings",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "shutdown": {
+                "name": "Shutdown",
+                "description": "Force a shutdown of the node service.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "startup": {
+                "name": "Startup",
+                "description": "Startup node service without making any requests.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Node"
+    },
+    "nodeattachment": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getsize": {
+                "name": "GetSize",
+                "description": "Get the size of packet."
+            },
+            "istext": {
+                "name": "IsText",
+                "description": "Return if the packet is text."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "saveattachment": {
+                "name": "SaveAttachment",
+                "description": "Save the attachment data to a file of data.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "NodeAttachment"
+    },
+    "nodeattachments": {
+        "__methods__": {
+            "addattachment": {
+                "name": "Addattachment",
+                "description": "Add a attachment.",
+                "arguments": [
+                    {
+                        "name": "attachment",
+                        "type": "Helper::NodeAttachment"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteattachment": {
+                "name": "Deleteattachment",
+                "description": "Delete a attachment.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "generatemultipart": {
+                "name": "GenerateMultipart",
+                "description": "Generates multipart form data separated by a supplied boundary (calculated if empty)."
+            },
+            "getsize": {
+                "name": "GetSize",
+                "description": "Get the cumulative size of the payload."
+            },
+            "insertattachment": {
+                "name": "Insertattachment",
+                "description": "Insert a new attachment.",
+                "arguments": [
+                    {
+                        "name": "attachment",
+                        "type": "Helper::NodeAttachment"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveattachment": {
+                "name": "Moveattachment",
+                "description": "Move a block of attachment items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "saveattachments": {
+                "name": "SaveAttachments",
+                "description": "Save attachments to a prefix filename, return JSON array for attachment names.",
+                "arguments": [
+                    {
+                        "name": "prefixfilename",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "NodeAttachments"
+    },
+    "phantomjs": {
+        "__functions__": {
+            "request": {
+                "name": "Request",
+                "description": "Make a JSON phantomJs request, returns a JSON packet response (folder specifies CWD for phantomJs service data).",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request",
+                        "type": "C"
+                    }
+                ]
+            },
+            "shutdown": {
+                "name": "Shutdown",
+                "description": "Force a shutdown of the node service (folder specifies CWD for phantomJs service data).",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "startup": {
+                "name": "Startup",
+                "description": "Startup phantom js service without making a request (folder specifies CWD for phantomJs service data).",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PhantomJs"
+    },
+    "propertysearch": {
+        "__methods__": {
+            "addsearchcontent": {
+                "name": "AddsearchContent",
+                "description": "Add a searchContent.",
+                "arguments": [
+                    {
+                        "name": "searchcontent",
+                        "type": "c"
+                    }
+                ]
+            },
+            "addsearchname": {
+                "name": "AddsearchName",
+                "description": "Add a searchName.",
+                "arguments": [
+                    {
+                        "name": "searchname",
+                        "type": "c"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletesearchcontent": {
+                "name": "DeletesearchContent",
+                "description": "Delete a searchContent.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletesearchname": {
+                "name": "DeletesearchName",
+                "description": "Delete a searchName.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "dump": {
+                "name": "Dump",
+                "description": "Dumps properties that match criteria - format can include $(n) = name , $(v) = value , $(x) = xbasic (escaped) value.",
+                "arguments": [
+                    {
+                        "name": "prop",
+                        "type": "P"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "findfirst": {
+                "name": "FindFirst",
+                "description": "Start a search of a nested property.",
+                "arguments": [
+                    {
+                        "name": "prop",
+                        "type": "P"
+                    }
+                ]
+            },
+            "findnext": {
+                "name": "FindNext",
+                "description": "Continue search of nested properties."
+            },
+            "getpropertyname": {
+                "name": "GetPropertyName",
+                "description": "Get the fully qualified name of the property that matched our search."
+            },
+            "getpropertyvalue": {
+                "name": "GetPropertyValue",
+                "description": "Get the value of the property that matched our search criteria."
+            },
+            "insertsearchcontent": {
+                "name": "InsertsearchContent",
+                "description": "Insert a new searchContent.",
+                "arguments": [
+                    {
+                        "name": "searchcontent",
+                        "type": "c"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertsearchname": {
+                "name": "InsertsearchName",
+                "description": "Insert a new searchName.",
+                "arguments": [
+                    {
+                        "name": "searchname",
+                        "type": "c"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movesearchcontent": {
+                "name": "MovesearchContent",
+                "description": "Move a block of searchContent items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movesearchname": {
+                "name": "MovesearchName",
+                "description": "Move a block of searchName items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "stop": {
+                "name": "Stop",
+                "description": "Stop the search (useful for find-first)."
+            }
+        },
+        "__name__": "PropertySearch"
+    },
+    "propgridmethods": {
+        "__functions__": {
+            "tocustom": {
+                "name": "ToCustom",
+                "description": "Convert shorthand propgrid syntax to default custom template.",
+                "arguments": [
+                    {
+                        "name": "def",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tojson": {
+                "name": "ToJson",
+                "description": "Convert shorthand propgrid syntax to JSON.",
+                "arguments": [
+                    {
+                        "name": "def",
+                        "type": "C"
+                    }
+                ]
+            },
+            "updatesearch": {
+                "name": "UpdateSearch",
+                "description": "Incremental search from popup.",
+                "arguments": [
+                    {
+                        "name": "search",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "closepopup": {
+                "name": "ClosePopup",
+                "description": "Commit and close any popup windows in the propgrid."
+            },
+            "collapseall": {
+                "name": "CollapseAll",
+                "description": "Collapse all categories"
+            },
+            "commit": {
+                "name": "Commit",
+                "description": "Commit any pending edits to a field."
+            },
+            "dump": {
+                "name": "Dump",
+                "description": "Dump contents of a property grid (for searching etc).",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "dumperrors": {
+                "name": "DumpErrors",
+                "description": "Dump contents of a property grid runtime errors log.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "expandall": {
+                "name": "ExpandAll",
+                "description": "Expand all categories"
+            },
+            "expanditem": {
+                "name": "ExpandItem",
+                "description": "Expand/Collapse an item",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expand",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "getascustom": {
+                "name": "GetAsCustom",
+                "description": "Get the property grids default  custom template."
+            },
+            "getasjson": {
+                "name": "GetAsJson",
+                "description": "Get the property grid as a JSON definition."
+            },
+            "getchangelabel": {
+                "name": "GetChangeLabel",
+                "description": "Get the last change event label."
+            },
+            "getchangenewvalue": {
+                "name": "GetChangeNewValue",
+                "description": "Get the last change event new value."
+            },
+            "getchangeoldvalue": {
+                "name": "GetChangeOldValue",
+                "description": "Get the last change event old value."
+            },
+            "getchangevariablename": {
+                "name": "GetChangeVariableName",
+                "description": "Get the last change event variable name."
+            },
+            "getcontrolvariable": {
+                "name": "GetControlVariable",
+                "description": "Get the name if the parent grid variable."
+            },
+            "getcustommenu": {
+                "name": "GetCustomMenu",
+                "description": "Get the custom menu definitions."
+            },
+            "getdialog": {
+                "name": "GetDialog",
+                "description": "Get the dialog title."
+            },
+            "getfocus": {
+                "name": "GetFocus",
+                "description": "Get the item (group and label) that currently has focus."
+            },
+            "getfocustype": {
+                "name": "GetFocusType",
+                "description": "Return the type of selected item (blank if nothing is selected)."
+            },
+            "getfocusvalue": {
+                "name": "GetFocusValue",
+                "description": "Get the current value of the focused item."
+            },
+            "getfocusvariable": {
+                "name": "GetFocusVariable",
+                "description": "Get the current variable of the focused item (blank if there is none)."
+            },
+            "getproperty": {
+                "name": "GetProperty",
+                "description": "Get the property under the grid variable (return empty string if property does not exist).",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "isexpanded": {
+                "name": "IsExpanded",
+                "description": "Return true if item is expanded",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "reapplycategories": {
+                "name": "ReapplyCategories",
+                "description": "Notify control that Open categories have changed"
+            },
+            "rebind": {
+                "name": "Rebind",
+                "description": "Notify control that variables have been deleted & recreated, so bindings are no longer valid."
+            },
+            "selectfromkey": {
+                "name": "SelectFromKey",
+                "description": "Select (and show) an entry from a supplied key.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setfocus": {
+                "name": "SetFocus",
+                "description": "Set focus to an item",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setfocusvalue": {
+                "name": "SetFocusValue",
+                "description": "Set focused items value",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "showcategories": {
+                "name": "ShowCategories",
+                "description": "Indicate categories to show",
+                "arguments": [
+                    {
+                        "name": "categories",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "PropGridMethods"
+    },
+    "python": {
+        "__functions__": {
+            "autoreload": {
+                "name": "AutoReload",
+                "description": "Enable module automatic reloading.",
+                "arguments": [
+                    {
+                        "name": "reload",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "call": {
+                "name": "Call",
+                "description": "Call a function in  python module.",
+                "arguments": [
+                    {
+                        "name": "module",
+                        "type": "C"
+                    },
+                    {
+                        "name": "function",
+                        "type": "C"
+                    },
+                    {
+                        "name": "args",
+                        "type": "A"
+                    }
+                ]
+            },
+            "currentthread": {
+                "name": "CurrentThread",
+                "description": "Gets the current global interpreter lock python thread."
+            },
+            "debugthread": {
+                "name": "DebugThread",
+                "description": "Sets python debugging for the current thread (spins up a python debugger if required).",
+                "arguments": [
+                    {
+                        "name": "host",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "port",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "deletethreadstate": {
+                "name": "DeleteThreadState",
+                "description": "Remove python active thread state for a known thread.",
+                "arguments": [
+                    {
+                        "name": "threadname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "eval": {
+                "name": "Eval",
+                "description": "Evaluate a python expression.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "execute": {
+                "name": "Execute",
+                "description": "Execute some arbitray python code.",
+                "arguments": [
+                    {
+                        "name": "code",
+                        "type": "C"
+                    }
+                ]
+            },
+            "executefile": {
+                "name": "ExecuteFile",
+                "description": "Execute a python file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getbasepath": {
+                "name": "GetBasePath",
+                "description": "Return base path for python."
+            },
+            "getpythonexe": {
+                "name": "GetPythonExe",
+                "description": "Return the location of the python EXE for shelling."
+            },
+            "getpythonpackages": {
+                "name": "GetPythonPackages",
+                "description": "Return the location of the python base packages."
+            },
+            "print": {
+                "name": "Print",
+                "description": "Print output from python to calling environment.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "printerr": {
+                "name": "PrintErr",
+                "description": "Print error from python to calling environment.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "reloadmodule": {
+                "name": "ReloadModule",
+                "description": "Force reload of a python module.",
+                "arguments": [
+                    {
+                        "name": "module",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setpath": {
+                "name": "SetPath",
+                "description": "Set the path for the current python thread.",
+                "arguments": [
+                    {
+                        "name": "path",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Python"
+    },
+    "pythonobject": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "__call__": {
+                "name": "__Call__",
+                "description": "Call a function on a python object.",
+                "arguments": [
+                    {
+                        "name": "function",
+                        "type": "C"
+                    },
+                    {
+                        "name": "args",
+                        "type": "A"
+                    }
+                ]
+            },
+            "__getattribute__": {
+                "name": "__GetAttribute__",
+                "description": "Get an attribute.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "__get__": {
+                "name": "__Get__",
+                "description": "Returns item at tuple index.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "__hasmethod__": {
+                "name": "__HasMethod__",
+                "description": "Has a method.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "__inspect__": {
+                "name": "__Inspect__",
+                "description": "Inspect the type."
+            },
+            "__iscallable__": {
+                "name": "__IsCallable__",
+                "description": "Returns if item is callable."
+            },
+            "__islist__": {
+                "name": "__IsList__",
+                "description": "Returns true if object is a list."
+            },
+            "__istuple__": {
+                "name": "__IsTuple__",
+                "description": "Returns true if object is a tuple."
+            },
+            "__setattribute__": {
+                "name": "__SetAttribute__",
+                "description": "Set an attribute.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "__size__": {
+                "name": "__Size__",
+                "description": "Returns the size of the list or tuple."
+            },
+            "__type__": {
+                "name": "__Type__",
+                "description": "Return the type."
+            }
+        },
+        "__name__": "PythonObject"
+    },
+    "remote": {
+        "__functions__": {
+            "__assign__": {
+                "name": "__Assign__",
+                "description": "Assign an expression remotely.",
+                "arguments": [
+                    {
+                        "name": "connection",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "__close__": {
+                "name": "__Close__",
+                "description": "Close a host from the client.",
+                "arguments": [
+                    {
+                        "name": "connection",
+                        "type": "C"
+                    }
+                ]
+            },
+            "__debugclientclose__": {
+                "name": "__DebugClientClose__",
+                "description": "Send a close request to the debug client."
+            },
+            "__debugclientrunning__": {
+                "name": "__DebugClientRunning__",
+                "description": "Test if the debug client is running."
+            },
+            "__debugclient__": {
+                "name": "__DebugClient__",
+                "description": "Become the xbasic debug client process."
+            },
+            "__disposeobject__": {
+                "name": "__DisposeObject__",
+                "description": "DisposeObject a remote server object.",
+                "arguments": [
+                    {
+                        "name": "connection",
+                        "type": "C"
+                    },
+                    {
+                        "name": "id",
+                        "type": "N"
+                    }
+                ]
+            },
+            "__eval__": {
+                "name": "__Eval__",
+                "description": "Eval an expression remotely.",
+                "arguments": [
+                    {
+                        "name": "connection",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "__istype__": {
+                "name": "__IsType__",
+                "description": "Returns true if type is valid (differentiate static methods from constructors).",
+                "arguments": [
+                    {
+                        "name": "connection",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "__listen__": {
+                "name": "__Listen__",
+                "description": "Host - Listen & respond on named pipes prefixed with connection.",
+                "arguments": [
+                    {
+                        "name": "connection",
+                        "type": "C"
+                    }
+                ]
+            },
+            "__namespaceremote__": {
+                "name": "__NamespaceRemote__",
+                "description": "types (and optionally global functions) to remote.",
+                "arguments": [
+                    {
+                        "name": "connection",
+                        "type": "C"
+                    },
+                    {
+                        "name": "namespaces",
+                        "type": "C"
+                    },
+                    {
+                        "name": "globalfunctions",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "__print__": {
+                "name": "__Print__",
+                "description": "Print output to remote instance.",
+                "arguments": [
+                    {
+                        "name": "connection",
+                        "type": "C"
+                    },
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "__useexternaldebugclient__": {
+                "name": "__UseExternalDebugClient__",
+                "description": "Current process should use the debug client for A5w requests."
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "__call__": {
+                "name": "__Call__",
+                "description": "Call a method on an object.",
+                "arguments": [
+                    {
+                        "name": "function",
+                        "type": "C"
+                    },
+                    {
+                        "name": "args",
+                        "type": "A"
+                    }
+                ]
+            },
+            "__fromjson__": {
+                "name": "__FromJson__",
+                "description": "deserialize from json, additive copies the new properties in.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "additive",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "__getattribute__": {
+                "name": "__GetAttribute__",
+                "description": "Gets a property value.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "__get__": {
+                "name": "__Get__",
+                "description": "Returns item at tuple index.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "__hasmethod__": {
+                "name": "__HasMethod__",
+                "description": "Has a method.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "__iscallable__": {
+                "name": "__IsCallable__",
+                "description": "Returns if item is callable."
+            },
+            "__islist__": {
+                "name": "__IsList__",
+                "description": "Returns true if object is a list."
+            },
+            "__json__": {
+                "name": "__Json__",
+                "description": "Serialize to json."
+            },
+            "__remoteid__": {
+                "name": "__RemoteId__",
+                "description": "Remote id for object."
+            },
+            "__setattribute__": {
+                "name": "__SetAttribute__",
+                "description": "Sets a property value.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "__size__": {
+                "name": "__Size__",
+                "description": "Returns the size of the list."
+            },
+            "__type__": {
+                "name": "__Type__",
+                "description": "Return the type."
+            },
+            "__validatetype__": {
+                "name": "__ValidateType__",
+                "description": "Return true if the type is valid (handles static methods of a class as well).",
+                "arguments": [
+                    {
+                        "name": "typename",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "Remote"
+    },
+    "remotea5wrequest": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "RemoteA5WRequest"
+    },
+    "resultsetexpression": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Create an xbasic expression object bound to a result set.",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    },
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "filterresultset": {
+                "name": "FilterResultSet",
+                "description": "Creates a result set that filters another result set skipping rows where expression returns false.",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    },
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "skiprows",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "limitrows",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "tableinfoselect": {
+                "name": "TableInfoSelect",
+                "description": "Create a tableinfo using comma separated column names, if tableInfo is passed in, use it to specificy type of columns, else assume character , or honor optional :<Type> suffix on names.",
+                "arguments": [
+                    {
+                        "name": "columns",
+                        "type": "C"
+                    },
+                    {
+                        "name": "tableinfo",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "evaluate": {
+                "name": "Evaluate",
+                "description": "Evaluate the expression object in the current context."
+            },
+            "getresultlogical": {
+                "name": "GetResultLogical",
+                "description": "Returns the result as a logical."
+            },
+            "getresultnumber": {
+                "name": "GetResultNumber",
+                "description": "Returns the result as a number."
+            },
+            "getresultstring": {
+                "name": "GetResultString",
+                "description": "Returns the result as a string."
+            },
+            "getresulttype": {
+                "name": "GetResultType",
+                "description": "Returns the data type in result."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ResultSetExpression"
+    },
+    "servicerestaudit": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ServiceRestAudit"
+    },
+    "servicerestcall": {
+        "__functions__": {
+            "unregister": {
+                "name": "Unregister",
+                "description": "Clears the service rest call definition cache.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addattachment": {
+                "name": "AddAttachment",
+                "description": "Add an attachment for Call - used for multipart calls.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "data",
+                        "type": "A"
+                    },
+                    {
+                        "name": "mimetype",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "filename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "call": {
+                "name": "Call",
+                "description": "Invoke a service, returns true if succeeded, false if error occurred."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "responsehascontent": {
+                "name": "ResponseHasContent",
+                "description": "Returns true if the Call returned data."
+            },
+            "responseisbinary": {
+                "name": "ResponseIsBinary",
+                "description": "Returns true if the Call returned binary data."
+            }
+        },
+        "__name__": "ServiceRestCall"
+    },
+    "shellprocess": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Return a process to interact with, flag objects '-e' don't differentiate errors from other output.",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "workingdirectory",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "pathvariables",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "interactivecommandargumenthelp": {
+                "name": "InteractiveCommandArgumentHelp",
+                "description": "Returns optional list of arguments with descriptions (for completion).",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "interactivecommandhelp": {
+                "name": "InteractiveCommandHelp",
+                "description": "Returns optional command help.",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "interactivecommands": {
+                "name": "InteractiveCommands",
+                "description": "Returns a list of interactive commands (for shell)."
+            },
+            "interactivecommandsload": {
+                "name": "InteractiveCommandsLoad",
+                "description": "Load json auto-help.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "interactivecommandsreload": {
+                "name": "InteractiveCommandsReload",
+                "description": "Reload config files (should be called when user changes config)."
+            },
+            "killprocess": {
+                "name": "KillProcess",
+                "description": "Kill a running process using an id.",
+                "arguments": [
+                    {
+                        "name": "processid",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "processisrunning": {
+                "name": "processIsRunning",
+                "description": "Returns true if Process is still running."
+            },
+            "readline": {
+                "name": "readLine",
+                "description": "Reead line from output queue."
+            },
+            "waituntilterminate": {
+                "name": "waitUntilTerminate",
+                "description": "Wait for the process to terminate."
+            },
+            "writeinput": {
+                "name": "writeInput",
+                "description": "Write to processes input queue.",
+                "arguments": [
+                    {
+                        "name": "input",
+                        "type": "C"
+                    }
+                ]
+            },
+            "writeline": {
+                "name": "writeLine",
+                "description": "Write to line to input queue.",
+                "arguments": [
+                    {
+                        "name": "input",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "ShellProcess"
+    },
+    "task": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "wait": {
+                "name": "Wait",
+                "description": "Wait for task to complete, returning the result."
+            }
+        },
+        "__name__": "Task"
+    },
+    "tempfilemanager": {
+        "__methods__": {
+            "cleanupfiles": {
+                "name": "CleanupFiles",
+                "description": "Explicitly cleanup all files created by this object."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "clonefile": {
+                "name": "CloneFile",
+                "description": "Create a copy of the original file in the temp folder.",
+                "arguments": [
+                    {
+                        "name": "originalfile",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "TempfileManager"
+    },
+    "urlfilelocation": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "UrlFileLocation"
+    },
+    "urlreplacerule": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "UrlReplaceRule"
+    },
+    "v8": {
+        "__functions__": {
+            "nodesettings": {
+                "name": "NodeSettings",
+                "description": "Get/Set node settings (in JSON format).",
+                "arguments": [
+                    {
+                        "name": "settings",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "folder",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "nodeshutdown": {
+                "name": "NodeShutdown",
+                "description": "Force a shutdown of the node service.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "nodestartup": {
+                "name": "NodeStartup",
+                "description": "Startup node service without making any requests.",
+                "arguments": [
+                    {
+                        "name": "folder",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "setstartupoptions": {
+                "name": "SetStartupOptions",
+                "description": "Sets the startup options for the v8 engine (for debugging etc).",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C"
+                    }
+                ]
+            },
+            "supported": {
+                "name": "Supported",
+                "description": "Return if v8 engine is supported (installable)."
+            }
+        },
+        "__methods__": {
+            "bindscript": {
+                "name": "BindScript",
+                "description": "Binds a script  to an isolate (allows invokation in isolate of javascript function).",
+                "arguments": [
+                    {
+                        "name": "script",
+                        "type": "P"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "disabledebugger": {
+                "name": "DisableDebugger",
+                "description": "Enable the javascript debugger for isolate."
+            },
+            "enabledebugger": {
+                "name": "EnableDebugger",
+                "description": "Enable the javascript debugger (on a port).",
+                "arguments": [
+                    {
+                        "name": "port_number",
+                        "type": "N"
+                    },
+                    {
+                        "name": "wait_for_connection",
+                        "type": "L"
+                    }
+                ]
+            },
+            "executecompiled": {
+                "name": "ExecuteCompiled",
+                "description": "Run pre-compiled javascript.",
+                "arguments": [
+                    {
+                        "name": "script",
+                        "type": "P"
+                    }
+                ]
+            },
+            "executejavascript": {
+                "name": "ExecuteJavascript",
+                "description": "Parse and execute javascript, return if succeeded.",
+                "arguments": [
+                    {
+                        "name": "javascript",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getheapstatistics": {
+                "name": "GetHeapStatistics",
+                "description": "Return the heap usage for this instance of the v8 engine.",
+                "arguments": [
+                    {
+                        "name": "forcecollect",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "invokecompiledfunction": {
+                "name": "InvokeCompiledFunction",
+                "description": "Bind and Invoke javascript function in V8Script object, passing the arguments defined in objects 'arguments' array.",
+                "arguments": [
+                    {
+                        "name": "script",
+                        "type": "P"
+                    },
+                    {
+                        "name": "functionname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "argumentsarray",
+                        "type": "P"
+                    }
+                ]
+            },
+            "invokefunction": {
+                "name": "InvokeFunction",
+                "description": "Directly invoke a javscript function in a script.",
+                "arguments": [
+                    {
+                        "name": "javascript",
+                        "type": "C"
+                    },
+                    {
+                        "name": "functionname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "argumentsarray",
+                        "type": "P"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "noderequest": {
+                "name": "NodeRequest",
+                "description": "Make a JSON node request, returns a JSON packet response.",
+                "arguments": [
+                    {
+                        "name": "request",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attachments",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "returnattachments",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "parsejavascript": {
+                "name": "ParseJavascript",
+                "description": "Parse javascript, return a parsed javascript object .",
+                "arguments": [
+                    {
+                        "name": "javascript",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setenvironment": {
+                "name": "SetEnvironment",
+                "description": "Set top level environment variables to expose to javascript.",
+                "arguments": [
+                    {
+                        "name": "environment",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "V8"
+    },
+    "v8debugger": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "establishdebugcontext": {
+                "name": "establishDebugContext",
+                "description": "Call after the agent has been started, but before the client has been loaded (starts a thread to process the commands)."
+            },
+            "startagent": {
+                "name": "startAgent",
+                "description": "Attempt to start an agent process."
+            },
+            "startedclient": {
+                "name": "startedClient",
+                "description": "Indicates the xdialog that is hosting the debugger.",
+                "arguments": [
+                    {
+                        "name": "xdialogtitle",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "V8Debugger"
+    },
+    "v8environment": {
+        "__methods__": {
+            "addpath": {
+                "name": "Addpath",
+                "description": "Add a path.",
+                "arguments": [
+                    {
+                        "name": "path",
+                        "type": "c"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletepath": {
+                "name": "Deletepath",
+                "description": "Delete a path.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertpath": {
+                "name": "Insertpath",
+                "description": "Insert a new path.",
+                "arguments": [
+                    {
+                        "name": "path",
+                        "type": "c"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movepath": {
+                "name": "Movepath",
+                "description": "Move a block of path items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "V8Environment"
+    },
+    "v8script": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "V8Script"
+    },
+    "v8statistics": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "V8Statistics"
+    },
+    "webcontrolinstance": {
+        "__methods__": {
+            "bind": {
+                "name": "Bind",
+                "description": "Set Scroll bars.",
+                "arguments": [
+                    {
+                        "name": "control",
+                        "type": "P"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "geteventhandler": {
+                "name": "GetEventHandler",
+                "description": "Return event handler for control instance."
+            },
+            "getexternalinterface": {
+                "name": "GetExternalInterface",
+                "description": "Return the published interface (outside sees)."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setuserevents": {
+                "name": "SetUserEvents",
+                "description": "Handle events for implemting the HTML editor UI.",
+                "arguments": [
+                    {
+                        "name": "control",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "WebControlInstance"
+    },
+    "webeventargs": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "WebEventArgs"
+    },
+    "webexternalinterface": {
+        "__methods__": {
+            "checkstatuschange": {
+                "name": "CheckStatusChange",
+                "description": "Execute a mshtml command."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "command": {
+                "name": "Command",
+                "description": "Execute a mshtml command.",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertblock": {
+                "name": "InsertBlock",
+                "description": "Insert a block around current selection.",
+                "arguments": [
+                    {
+                        "name": "tagid",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attribs",
+                        "type": "C"
+                    }
+                ]
+            },
+            "inserttext": {
+                "name": "InsertText",
+                "description": "Insert text at current location.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "query": {
+                "name": "Query",
+                "description": "Execute a mshtml command.",
+                "arguments": [
+                    {
+                        "name": "commandformat",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sethtml": {
+                "name": "SetHTML",
+                "description": "Set HTML contents with optional selection.",
+                "arguments": [
+                    {
+                        "name": "html",
+                        "type": "C"
+                    },
+                    {
+                        "name": "selectstart",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "selectlength",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "set_scrollbars": {
+                "name": "set_ScrollBars",
+                "description": "Set Scroll bars.",
+                "arguments": [
+                    {
+                        "name": "scrollers",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "WebExternalInterface"
+    },
+    "__name__": "Helper"
+}

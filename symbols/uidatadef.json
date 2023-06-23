@@ -1,0 +1,229 @@
+{
+    "environment": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "createitem": {
+                "name": "CreateItem",
+                "description": "Create an single item that is bound this this environment.",
+                "arguments": [
+                    {
+                        "name": "rawtext",
+                        "type": "C"
+                    }
+                ]
+            },
+            "createlist": {
+                "name": "CreateList",
+                "description": "Create a flat list of rows of items (i.e. like a owner draw listliew).",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "createrow": {
+                "name": "CreateRow",
+                "description": "Create a rows of items (i.e. like a list from an owner draw list).",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "createtree": {
+                "name": "CreateTree",
+                "description": "Create an tree of items (i.e. like a menu).",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "emitimagecode": {
+                "name": "EmitImageCode",
+                "description": "For each image, emit code based on template provided.",
+                "arguments": [
+                    {
+                        "name": "template",
+                        "type": "C"
+                    },
+                    {
+                        "name": "starting",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "getimagecount": {
+                "name": "GetImageCount",
+                "description": "Returns the number of images in the environment."
+            },
+            "getimagename": {
+                "name": "GetImageName",
+                "description": "Returns a previously registered image (from a number - starting at 1).",
+                "arguments": [
+                    {
+                        "name": "imagenumber",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getimagenumber": {
+                "name": "GetImageNumber",
+                "description": "Returns the number for an image.",
+                "arguments": [
+                    {
+                        "name": "imagename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setcurrent": {
+                "name": "SetCurrent",
+                "description": "Establish context in which SetCurrent was called as the context for items."
+            }
+        },
+        "__name__": "Environment"
+    },
+    "item": {
+        "__methods__": {
+            "addchildren": {
+                "name": "AddChildren",
+                "description": "Add a Children.",
+                "arguments": [
+                    {
+                        "name": "children",
+                        "type": "UIDataDef::Item"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "createitem": {
+                "name": "CreateItem",
+                "description": "Create a sub-item for the named item.",
+                "arguments": [
+                    {
+                        "name": "rawtext",
+                        "type": "C"
+                    }
+                ]
+            },
+            "deletechildren": {
+                "name": "DeleteChildren",
+                "description": "Delete a Children.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "emitcode": {
+                "name": "EmitCode",
+                "description": "Emits code from the UI definition given a template.",
+                "arguments": [
+                    {
+                        "name": "template",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getenvironment": {
+                "name": "GetEnvironment",
+                "description": "Returns environment that item was created in."
+            },
+            "insertchildren": {
+                "name": "InsertChildren",
+                "description": "Insert a new Children.",
+                "arguments": [
+                    {
+                        "name": "children",
+                        "type": "UIDataDef::Item"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "issimple": {
+                "name": "IsSimple",
+                "description": "Returns true if entry is simple text."
+            },
+            "listcolumnsimple": {
+                "name": "ListColumnSimple",
+                "description": "Returns true if items in column are all simple (i.e. no embedded images etc).",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movechildren": {
+                "name": "MoveChildren",
+                "description": "Move a block of Children items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "populatelist": {
+                "name": "PopulateList",
+                "description": "Create a flat list of rows of items (i.e. like a owner draw listliew).",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "populaterow": {
+                "name": "PopulateRow",
+                "description": "Create a rows of items (i.e. like a list from an owner draw list).",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "populatetree": {
+                "name": "PopulateTree",
+                "description": "Create an tree of items (i.e. like a menu).",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "Item"
+    },
+    "__name__": "UIDataDef"
+}

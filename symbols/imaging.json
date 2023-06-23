@@ -1,0 +1,3156 @@
+{
+    "debugoptions": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getsockettracefilename": {
+                "name": "GetSocketTraceFileName",
+                "description": "Format the file name for the trace file based on the socket handle and the current SocketTracePath",
+                "arguments": [
+                    {
+                        "name": "handle",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DebugOptions"
+    },
+    "document": {
+        "__properties__": {
+            "elementcount": {
+                "name": "ElementCount"
+            },
+            "headercount": {
+                "name": "HeaderCount"
+            },
+            "body": {
+                "name": "Body"
+            },
+            "source": {
+                "name": "Source"
+            },
+            "callresult": {
+                "name": "CallResult"
+            },
+            "headers": {
+                "name": "Headers"
+            },
+            "contenttype": {
+                "name": "ContentType"
+            }
+        },
+        "__methods__": {
+            "header": {
+                "name": "Header",
+                "description": "Find a header by index number or by name.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N"
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L"
+                    }
+                ]
+            },
+            "findheader": {
+                "name": "FindHeader",
+                "description": "Find a header by name. Returns .f. if no value was found.\nNote: You can make repeated calls to get each occurence.\n      Be sure to initialize LastFound to 0 before the first call.\n      Pass the same variable in each time (it is updated with the index of the item found).\n      You can also search forward by passing '.f.' as the value of the SearchBackward argument.",
+                "arguments": [
+                    {
+                        "name": "header",
+                        "type": "INET::Parameter",
+                        "byref": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N",
+                        "byref": true
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "element": {
+                "name": "Element",
+                "description": "Returns the requested element from within the current document body.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "headervalue": {
+                "name": "HeaderValue",
+                "description": "Return the value of a header if it exists.\nReturns an empty string if the header is not found.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Parse the source for a document.\nAfter a successful parse the header and body elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "parseheaders": {
+                "name": "ParseHeaders",
+                "description": "Parse only the headers for a document.\nAfter a successful parse the header elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "parsebody": {
+                "name": "ParseBody",
+                "description": "Parse the only the document body.  Note:  You must have already parsed headers.\nAfter a successful parse the header and body elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "addelement": {
+                "name": "AddElement",
+                "description": "Add a new body element to a document.",
+                "arguments": [
+                    {
+                        "name": "document",
+                        "type": "INET::Document"
+                    }
+                ]
+            },
+            "savetofile": {
+                "name": "SaveToFile",
+                "description": "Save the complete request to a file.  If Append is set to .t., the request will be appended to the file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "append",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "releaseresources": {
+                "name": "ReleaseResources",
+                "description": "WARNING:  For system use only.  Release file mapping and underlying file."
+            }
+        },
+        "__name__": "Document"
+    },
+    "edition": {
+        "__enumeration__": [
+            "NA",
+            "Desktop",
+            "Developer",
+            "Enterprise",
+            "Server",
+            "Runtime"
+        ],
+        "__name__": "Edition"
+    },
+    "emaildocument": {
+        "__properties__": {
+            "elementcount": {
+                "name": "ElementCount"
+            },
+            "headercount": {
+                "name": "HeaderCount"
+            },
+            "body": {
+                "name": "Body"
+            },
+            "source": {
+                "name": "Source"
+            },
+            "callresult": {
+                "name": "CallResult"
+            },
+            "headers": {
+                "name": "Headers"
+            },
+            "contenttype": {
+                "name": "ContentType"
+            }
+        },
+        "__methods__": {
+            "header": {
+                "name": "Header",
+                "description": "Find a header by index number or by name.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N"
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L"
+                    }
+                ]
+            },
+            "findheader": {
+                "name": "FindHeader",
+                "description": "Find a header by name. Returns .f. if no value was found.\nNote: You can make repeated calls to get each occurence.\n      Be sure to initialize LastFound to 0 before the first call.\n      Pass the same variable in each time (it is updated with the index of the item found).\n      You can also search forward by passing '.f.' as the value of the SearchBackward argument.",
+                "arguments": [
+                    {
+                        "name": "header",
+                        "type": "INET::Parameter",
+                        "byref": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N",
+                        "byref": true
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "element": {
+                "name": "Element",
+                "description": "Returns the requested element from within the current document body.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "headervalue": {
+                "name": "HeaderValue",
+                "description": "Return the value of a header if it exists.\nReturns an empty string if the header is not found.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Parse the source for a document.\nAfter a successful parse the header and body elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "parseheaders": {
+                "name": "ParseHeaders",
+                "description": "Parse only the headers for a document.\nAfter a successful parse the header elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "parsebody": {
+                "name": "ParseBody",
+                "description": "Parse the only the document body.  Note:  You must have already parsed headers.\nAfter a successful parse the header and body elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "addelement": {
+                "name": "AddElement",
+                "description": "Add a new body element to a document.",
+                "arguments": [
+                    {
+                        "name": "document",
+                        "type": "INET::Document"
+                    }
+                ]
+            },
+            "savetofile": {
+                "name": "SaveToFile",
+                "description": "Save the complete request to a file.  If Append is set to .t., the request will be appended to the file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "append",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "releaseresources": {
+                "name": "ReleaseResources",
+                "description": "WARNING:  For system use only.  Release file mapping and underlying file."
+            }
+        },
+        "__name__": "EMailDocument"
+    },
+    "feature": {
+        "__enumeration__": [
+            "None",
+            "AlphaFiveDesktop"
+        ],
+        "__name__": "Feature"
+    },
+    "ftp": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletefile": {
+                "name": "DeleteFile",
+                "description": "Have the server remove the target file.",
+                "arguments": [
+                    {
+                        "name": "targetfile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "serversidepath",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "listdirectory": {
+                "name": "ListDirectory",
+                "description": "Receive the contents of the server side path directory in a string buffer.",
+                "arguments": [
+                    {
+                        "name": "listing",
+                        "type": "C"
+                    },
+                    {
+                        "name": "serversidepath",
+                        "type": "C"
+                    },
+                    {
+                        "name": "getdetails",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "receivebinarydata": {
+                "name": "ReceiveBinaryData",
+                "description": "Receive the contents of the target file in a buffer of binary data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    },
+                    {
+                        "name": "sourcefile",
+                        "type": "C"
+                    }
+                ]
+            },
+            "receivefile": {
+                "name": "ReceiveFile",
+                "description": "Receive a file from the server.  Contents are received as binary unless ReceiveBinary is set to .f.",
+                "arguments": [
+                    {
+                        "name": "sourcefile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "targetfile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "receivebinary",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "receivestringdata": {
+                "name": "ReceiveStringData",
+                "description": "Receive the contents of the target file in a buffer of text data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sourcefile",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sendbinarydata": {
+                "name": "SendBinaryData",
+                "description": "Send a buffer of binary data to the target file specified.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    },
+                    {
+                        "name": "targetfile",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sendfile": {
+                "name": "SendFile",
+                "description": "Send a file to the server.  Contents are sent as binary unless SendBinary is set to .f.",
+                "arguments": [
+                    {
+                        "name": "sourcefile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "targetfile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sendbinary",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "sendstringdata": {
+                "name": "SendStringData",
+                "description": "Send a buffer of text data to the target file specified.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C"
+                    },
+                    {
+                        "name": "targetfile",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "FTP"
+    },
+    "httpdocument": {
+        "__properties__": {
+            "protocol": {
+                "name": "Protocol"
+            },
+            "method": {
+                "name": "Method"
+            },
+            "majorversion": {
+                "name": "MajorVersion"
+            },
+            "minorversion": {
+                "name": "MinorVersion"
+            },
+            "url": {
+                "name": "URL"
+            },
+            "query": {
+                "name": "Query"
+            },
+            "querypath": {
+                "name": "QueryPath"
+            },
+            "queryargumentcount": {
+                "name": "QueryArgumentCount"
+            },
+            "statuscode": {
+                "name": "StatusCode"
+            },
+            "statustext": {
+                "name": "StatusText"
+            },
+            "host": {
+                "name": "Host"
+            },
+            "referrer": {
+                "name": "Referrer"
+            },
+            "cookies": {
+                "name": "Cookies"
+            },
+            "variables": {
+                "name": "Variables"
+            },
+            "uploadedfiles": {
+                "name": "UploadedFiles"
+            },
+            "cookievariables": {
+                "name": "CookieVariables"
+            },
+            "headervariables": {
+                "name": "HeaderVariables"
+            },
+            "formargumentcount": {
+                "name": "FormArgumentCount"
+            },
+            "argumentcount": {
+                "name": "ArgumentCount"
+            },
+            "elementcount": {
+                "name": "ElementCount"
+            },
+            "headercount": {
+                "name": "HeaderCount"
+            },
+            "body": {
+                "name": "Body"
+            },
+            "source": {
+                "name": "Source"
+            },
+            "callresult": {
+                "name": "CallResult"
+            },
+            "headers": {
+                "name": "Headers"
+            },
+            "contenttype": {
+                "name": "ContentType"
+            }
+        },
+        "__methods__": {
+            "argument": {
+                "name": "Argument",
+                "description": "Returns the argument at the index requested or searches for an argument with a matching name.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "formargument": {
+                "name": "FormArgument",
+                "description": "Returns the form argument at the index requested or searches for an argument with a matching name.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "queryargument": {
+                "name": "QueryArgument",
+                "description": "Returns the query string argument at the index requested or searches for an argument with a matching name.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "findargument": {
+                "name": "FindArgument",
+                "description": "Find an argument by name. Returns .f. if no match was found.\nNote: You can make repeated calls to get each occurence.\n      Be sure to initialize LastFound to 0 before the first call.\n      Pass the same variable in each time (it is updated with the index of the item found).\n      You can also search backward by passing .t. as the SearchBackward argument.",
+                "arguments": [
+                    {
+                        "name": "argument",
+                        "type": "INET::Parameter",
+                        "byref": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N",
+                        "byref": true
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "findformargument": {
+                "name": "FindFormArgument",
+                "description": "Find a form argument by name. Returns .f. if no match was found.\nNote: You can make repeated calls to get each occurence.\n      Be sure to initialize LastFound to 0 before the first call.\n      Pass the same variable in each time (it is updated with the index of the item found).\n      You can also search backward by passing .t. as the SearchBackward argument.",
+                "arguments": [
+                    {
+                        "name": "argument",
+                        "type": "INET::Parameter",
+                        "byref": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N",
+                        "byref": true
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "findqueryargument": {
+                "name": "FindQueryArgument",
+                "description": "Find a query string argument by name. Returns .f. if no match was found.\nNote: You can make repeated calls to get each occurence.\n      Be sure to initialize LastFound to 0 before the first call.\n      Pass the same variable in each time (it is updated with the index of the item found).\n      You can also search backward by passing .t. as the SearchBackward argument.",
+                "arguments": [
+                    {
+                        "name": "argument",
+                        "type": "INET::Parameter",
+                        "byref": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N",
+                        "byref": true
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "appendsession": {
+                "name": "AppendSession",
+                "description": "Append the Session ID to any URLs in the document.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "C"
+                    },
+                    {
+                        "name": "session",
+                        "type": "C"
+                    }
+                ]
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Parse the source for a document.\nAfter a successful parse the header and body elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "parseheaders": {
+                "name": "ParseHeaders",
+                "description": "Parse only the header portion of a document.\nAfter a successful parse the header elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "parsebody": {
+                "name": "ParseBody",
+                "description": "Parse only the document body.  You must have already parsed the header.\nAfter a successful parse the header and body elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "readandparsebody": {
+                "name": "ReadAndParseBody",
+                "description": "Read the body from the socket provided and parse the complete document body.  You must have already parsed the header.\nAfter a successful parse the header and body elements will be available.",
+                "arguments": [
+                    {
+                        "name": "socket",
+                        "type": "INET::Socket"
+                    },
+                    {
+                        "name": "bodylength",
+                        "type": "N"
+                    },
+                    {
+                        "name": "timeoutinmilliseconds",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "status",
+                        "type": "INET::RequestStatus",
+                        "optional": true
+                    }
+                ]
+            },
+            "header": {
+                "name": "Header",
+                "description": "Find a header by index number or by name.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N"
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L"
+                    }
+                ]
+            },
+            "findheader": {
+                "name": "FindHeader",
+                "description": "Find a header by name. Returns .f. if no value was found.\nNote: You can make repeated calls to get each occurence.\n      Be sure to initialize LastFound to 0 before the first call.\n      Pass the same variable in each time (it is updated with the index of the item found).\n      You can also search forward by passing '.f.' as the value of the SearchBackward argument.",
+                "arguments": [
+                    {
+                        "name": "header",
+                        "type": "INET::Parameter",
+                        "byref": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N",
+                        "byref": true
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "element": {
+                "name": "Element",
+                "description": "Returns the requested element from within the current document body.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "headervalue": {
+                "name": "HeaderValue",
+                "description": "Return the value of a header if it exists.\nReturns an empty string if the header is not found.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Parse the source for a document.\nAfter a successful parse the header and body elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "parseheaders": {
+                "name": "ParseHeaders",
+                "description": "Parse only the header portion of a document.\nAfter a successful parse the header elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "parsebody": {
+                "name": "ParseBody",
+                "description": "Parse only the document body.  You must have already parsed the header.\nAfter a successful parse the header and body elements will be available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "B"
+                    }
+                ]
+            },
+            "addelement": {
+                "name": "AddElement",
+                "description": "Add a new body element to a document.",
+                "arguments": [
+                    {
+                        "name": "document",
+                        "type": "INET::Document"
+                    }
+                ]
+            },
+            "savetofile": {
+                "name": "SaveToFile",
+                "description": "Save the complete request to a file.  If Append is set to .t., the request will be appended to the file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "append",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "releaseresources": {
+                "name": "ReleaseResources",
+                "description": "WARNING:  For system use only.  Release file mapping and underlying file."
+            }
+        },
+        "__name__": "HTTPDocument"
+    },
+    "httpsession": {
+        "__properties__": {
+            "id": {
+                "name": "ID"
+            },
+            "timestamp": {
+                "name": "TimeStamp"
+            },
+            "folder": {
+                "name": "Folder"
+            },
+            "url": {
+                "name": "URL"
+            }
+        },
+        "__name__": "HTTPSession"
+    },
+    "integratedsecuritymode": {
+        "__enumeration__": [
+            "None",
+            "Optional",
+            "Required"
+        ],
+        "__name__": "IntegratedSecurityMode"
+    },
+    "jsonparser": {
+        "__functions__": {
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "parse": {
+                "name": "Parse",
+                "description": "Parse",
+                "arguments": [
+                    {
+                        "name": "input",
+                        "type": "C"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "jsonparser": {
+                "name": "JSONParser",
+                "description": "Constructor"
+            },
+            "jsonparser": {
+                "name": "JSONParser",
+                "description": "Constructor"
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "JSONParser"
+    },
+    "license": {
+        "__methods__": {
+            "addlicensedproduct": {
+                "name": "AddLicensedProduct",
+                "description": "Add a LicensedProduct.",
+                "arguments": [
+                    {
+                        "name": "licensedproduct",
+                        "type": "INET::Activation::LicensedProduct"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletelicensedproduct": {
+                "name": "DeleteLicensedProduct",
+                "description": "Delete a LicensedProduct.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "licensedproductnumber": {
+                "name": "LicensedProductNumber",
+                "description": "Get the index of a LicensedProduct from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "License"
+    },
+    "licensedproduct": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "LicensedProduct"
+    },
+    "parameter": {
+        "__properties__": {
+            "name": {
+                "name": "Name"
+            },
+            "valuecount": {
+                "name": "ValueCount"
+            },
+            "parametercount": {
+                "name": "ParameterCount"
+            },
+            "callresult": {
+                "name": "CallResult"
+            },
+            "itemisindexed": {
+                "name": "ItemIsIndexed"
+            },
+            "itemindexprovided": {
+                "name": "ItemIndexProvided"
+            },
+            "itemindex": {
+                "name": "ItemIndex"
+            },
+            "rawnameexpression": {
+                "name": "RawNameExpression"
+            }
+        },
+        "__methods__": {
+            "addparameter": {
+                "name": "AddParameter",
+                "description": "Add a child parameter.",
+                "arguments": [
+                    {
+                        "name": "childparameter",
+                        "type": "INET::Parameter"
+                    }
+                ]
+            },
+            "addvalue": {
+                "name": "AddValue",
+                "description": "Add an element to the value list.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "B"
+                    }
+                ]
+            },
+            "clearparameters": {
+                "name": "ClearParameters",
+                "description": "Clear the list of parameters."
+            },
+            "clearvalues": {
+                "name": "ClearValues",
+                "description": "Clear the value list."
+            },
+            "parameter": {
+                "name": "Parameter",
+                "description": "Get the Parameter at the position requested by position or by name:",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "findparameter": {
+                "name": "FindParameter",
+                "description": "Find a parameter by name. Returns .f. if no match was found.\nNote: You can make repeated calls to get each occurence.\n      Be sure to initialize LastFound to 0 before the first call.\n      Pass the same variable in each time (it is updated with the index of the item found).\n      You can also search backward by passing .t. as the SearchBackward argument.",
+                "arguments": [
+                    {
+                        "name": "parameter",
+                        "type": "INET::Parameter",
+                        "byref": true
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "lastfound",
+                        "type": "N",
+                        "byref": true
+                    },
+                    {
+                        "name": "searchbackward",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "value": {
+                "name": "Value",
+                "description": "Get the value at the position requested.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "parsevalues": {
+                "name": "ParseValues",
+                "description": "Parse and add a string of values and parameters.",
+                "arguments": [
+                    {
+                        "name": "valuestring",
+                        "type": "C"
+                    }
+                ]
+            },
+            "removeparameter": {
+                "name": "RemoveParameter",
+                "description": "Get the Parameter at the position requested by position or by name:\n\nWhen removing by name, AllMatching can be passed as .t. to remove duplicates.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    },
+                    {
+                        "name": "allmatching",
+                        "type": "L"
+                    }
+                ]
+            },
+            "removevalue": {
+                "name": "RemoveValue",
+                "description": "Remove the value at the position requested.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "Parameter"
+    },
+    "productactivation": {
+        "__methods__": {
+            "activate": {
+                "name": "Activate",
+                "description": "Activate a license for this machine.\n\nIf a packet file name is provided, the function will look to see if the currently running product is already activated\nby reading the packet file.  If the file does not exist or does not contain a valid activation a request will be\nmade to activate the license.  If the call is successful, a new packet will be stored in PacketFileName.\n\nIf no packet file name is provided, a call to activate the product (or renew the lease) will be made.  If successful\nthe returned packet will be stored in CallResult.ResultData.\n\nIf a requested lease duration is included, A lease with a duration of this length will be requested from the Activation\nserver. The server may return a lease with a different duration however. This value is specified in minutes.",
+                "arguments": [
+                    {
+                        "name": "license",
+                        "type": "C"
+                    },
+                    {
+                        "name": "comment",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "packetfilename",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "requestedleaseduration",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "deactivate": {
+                "name": "Deactivate",
+                "description": "Deactivate a license for this machine.\n\nIf a packet file name is provided, the function will replace it.",
+                "arguments": [
+                    {
+                        "name": "license",
+                        "type": "C"
+                    },
+                    {
+                        "name": "comment",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "packetfilename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "explainwhylicenseisnotactive": {
+                "name": "ExplainWhyLicenseIsNotActive",
+                "description": "Formats an explanation as to why a license is not active.",
+                "arguments": [
+                    {
+                        "name": "license",
+                        "type": "C"
+                    }
+                ]
+            },
+            "generateactivationrequestpacket": {
+                "name": "GenerateActivationRequestPacket",
+                "description": "Generates a request packet to be used offline for activation.  The packet must be manually activated by Alpha Software.  The resulting \nactivation packet will be returned to the customer for installation on this machine.\n\nIf RequestPacketFileName is not provided, CallResult will contain the request packet.",
+                "arguments": [
+                    {
+                        "name": "license",
+                        "type": "C"
+                    },
+                    {
+                        "name": "requestpacketfilename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getlastvalidbuild": {
+                "name": "GetLastValidBuild",
+                "description": "Get the last build for which the specified license is valid.\n\nA return value of 0 indicates that there is no restriction on builds.",
+                "arguments": [
+                    {
+                        "name": "lastvalidbuild",
+                        "type": "C"
+                    },
+                    {
+                        "name": "license",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getleaseinformation": {
+                "name": "GetLeaseInformation",
+                "description": "Get a copy of the lease information for a license.",
+                "arguments": [
+                    {
+                        "name": "leaseinfo",
+                        "type": "P"
+                    },
+                    {
+                        "name": "license",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getlicensededition": {
+                "name": "GetLicensedEdition",
+                "description": "Get the software edition for the specified license.",
+                "arguments": [
+                    {
+                        "name": "edition",
+                        "type": "C"
+                    },
+                    {
+                        "name": "license",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getsubscriptionexpiration": {
+                "name": "GetSubscriptionExpiration",
+                "description": "Get the expiration date for a license.",
+                "arguments": [
+                    {
+                        "name": "expirationdate",
+                        "type": "T"
+                    },
+                    {
+                        "name": "license",
+                        "type": "C"
+                    }
+                ]
+            },
+            "isauthorizedtorun": {
+                "name": "IsAuthorizedToRun",
+                "description": "\nCheck the license to see if it is activated.\n\nIf not, activate a license for this machine.\n\nIf the license is or becomes activated, check to see if the license if valid for the input BuildNumber.\n\nIf a packet file name is provided, the function will look to see if the currently running product is already activated\nby reading the packet file.  If the file does not exist or does not contain a valid activation a request will be\nmade to activate the license.  If the call is successful, a new packet will be stored in PacketFileName.\n\nIf no packet file name is provided, a call to activate the product (or renew the lease) will be made.  If successful\nthe returned packet will be stored in CallResult.ResultData.",
+                "arguments": [
+                    {
+                        "name": "license",
+                        "type": "C"
+                    },
+                    {
+                        "name": "buildnumber",
+                        "type": "C"
+                    },
+                    {
+                        "name": "comment",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "packetfilename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "isrequired": {
+                "name": "IsRequired",
+                "description": "Checks to see if the use of this activation system is required."
+            },
+            "licensefeatureisenabled": {
+                "name": "LicenseFeatureIsEnabled",
+                "description": "Checks to see if the license is activated and the feature available for the running product.\n\nIf the license and feature are not enabled CallResult will contain the reason.",
+                "arguments": [
+                    {
+                        "name": "license",
+                        "type": "C"
+                    },
+                    {
+                        "name": "feature",
+                        "type": "C"
+                    }
+                ]
+            },
+            "licenseisactive": {
+                "name": "LicenseIsActive",
+                "description": "Checks to see if the license requested is activated and available for the running product.\n\nIf the license is not enabled CallResult will contain the reason.",
+                "arguments": [
+                    {
+                        "name": "license",
+                        "type": "C"
+                    }
+                ]
+            },
+            "loadactivation": {
+                "name": "LoadActivation",
+                "description": "Loads an activation packet from the string provided and validates it.",
+                "arguments": [
+                    {
+                        "name": "packet",
+                        "type": "C"
+                    }
+                ]
+            },
+            "loadactivationfromfile": {
+                "name": "LoadActivationFromFile",
+                "description": "Loads an activation packet from the file name provided and validates it.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "overrideedition": {
+                "name": "OverrideEdition",
+                "description": "Overrides the Edition name used for validation of a packet.",
+                "arguments": [
+                    {
+                        "name": "edition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "verifylicenseactivation": {
+                "name": "VerifyLicenseActivation",
+                "description": "\nCheck the license to see if it is activated.  \n\nIf not, activate a license for this machine.\n\nIf a packet file name is provided, the function will look to see if the currently running product is already activated\nby reading the packet file.  If the file does not exist or does not contain a valid activation a request will be\nmade to activate the license.  If the call is successful, a new packet will be stored in PacketFileName.\n\nIf no packet file name is provided, a call to activate the product (or renew the lease) will be made.  If successful\nthe returned packet will be stored in CallResult.ResultData.\n\nIf no requested lease duration is provided, the default will be used or the product and edition.\n",
+                "arguments": [
+                    {
+                        "name": "license",
+                        "type": "C"
+                    },
+                    {
+                        "name": "comment",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "packetfilename",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "requestedleaseduration",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "ProductActivation"
+    },
+    "requeststate": {
+        "__enumeration__": [
+            "NotSet",
+            "Initiated",
+            "Loading",
+            "Loaded",
+            "Parsing",
+            "Parsed",
+            "Executing",
+            "WritingResponse",
+            "Complete",
+            "Canceled",
+            "Error"
+        ],
+        "__name__": "RequestState"
+    },
+    "requeststatus": {
+        "__methods__": {
+            "cancelrequest": {
+                "name": "CancelRequest",
+                "description": "Asks that the request be canceled. \nNote: The request may or may not be canceled depending on the state of the worker thread."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "RequestStatus"
+    },
+    "requeststatuscollection": {
+        "__methods__": {
+            "addrequest": {
+                "name": "AddRequest",
+                "description": "Add a Request.",
+                "arguments": [
+                    {
+                        "name": "request",
+                        "type": "INET::RequestStatus"
+                    }
+                ]
+            },
+            "deleterequest": {
+                "name": "DeleteRequest",
+                "description": "Delete a Request.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "requestnumber": {
+                "name": "RequestNumber",
+                "description": "Get the index of a Request from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "RequestStatusCollection"
+    },
+    "sftp": {
+        "__methods__": {
+            "deletefile": {
+                "name": "DeleteFile",
+                "description": "Delete a file on the server using SFTP.",
+                "arguments": [
+                    {
+                        "name": "targetfile",
+                        "type": "C"
+                    }
+                ]
+            },
+            "listdirectory": {
+                "name": "ListDirectory",
+                "description": "Get a listing of files in a path using SFTP.",
+                "arguments": [
+                    {
+                        "name": "listing",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sftppath",
+                        "type": "C"
+                    },
+                    {
+                        "name": "getdetails",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "receivefile": {
+                "name": "ReceiveFile",
+                "description": "Receive a file using SFTP.",
+                "arguments": [
+                    {
+                        "name": "sourcefile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "targetfile",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sendfile": {
+                "name": "SendFile",
+                "description": "Send a file via SFTP.",
+                "arguments": [
+                    {
+                        "name": "sourcefile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "targetfile",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "SFTP"
+    },
+    "socket": {
+        "__properties__": {
+            "isbusy": {
+                "name": "IsBusy"
+            },
+            "isopen": {
+                "name": "IsOpen"
+            },
+            "isreadable": {
+                "name": "IsReadable"
+            },
+            "iswriteable": {
+                "name": "IsWriteable"
+            },
+            "remoteaddress": {
+                "name": "RemoteAddress"
+            },
+            "localaddress": {
+                "name": "LocalAddress"
+            },
+            "remoteport": {
+                "name": "RemotePort"
+            },
+            "localport": {
+                "name": "LocalPort"
+            },
+            "handle": {
+                "name": "Handle"
+            },
+            "callresult": {
+                "name": "CallResult"
+            },
+            "blocking": {
+                "name": "Blocking"
+            },
+            "bytesavailable": {
+                "name": "BytesAvailable"
+            },
+            "islistening": {
+                "name": "IsListening"
+            }
+        },
+        "__methods__": {
+            "accept": {
+                "name": "Accept",
+                "description": "Accept a new connection (the socket must already be listening).\nReturns a status object with information about the success of the call\nIf the call is successful, AcceptedSocket contains the new instance of INET::Socket.\n\nHandshakeReadTimeout is appropriate for SSL sockets only.\n\nExample: Result = MyListener.Accept(AcceptedSocket, 750)\n         if Result.Success then \n         ...",
+                "arguments": [
+                    {
+                        "name": "acceptedsocket",
+                        "type": "INET::Socket",
+                        "byref": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "handshakereadtimeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close an open connection."
+            },
+            "getoptions": {
+                "name": "GetOptions",
+                "description": "Get one or more option values in a single call:\nOptions - One or more of the following:\nA - Accepting\nL - Linger\nK - Keep Alive\nR - Reuse Address\nN - Don't route\nD - Delay\nX - Debug\nI - Receive buffer size\nO - Send buffer size\nT - Timeout",
+                "arguments": [
+                    {
+                        "name": "optionsrequested",
+                        "type": "C"
+                    }
+                ]
+            },
+            "connect": {
+                "name": "Connect",
+                "description": "Open a connection to the requested host and port.\nNote: ConnectTimeout is in milliseconds.",
+                "arguments": [
+                    {
+                        "name": "host",
+                        "type": "C"
+                    },
+                    {
+                        "name": "port",
+                        "type": "N"
+                    },
+                    {
+                        "name": "connecttimeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "listen": {
+                "name": "Listen",
+                "description": "Open a socket to listen for incoming requests.",
+                "arguments": [
+                    {
+                        "name": "port",
+                        "type": "N"
+                    },
+                    {
+                        "name": "host",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "reuseaddress",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "backlogsize",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "peek": {
+                "name": "Peek",
+                "description": "Read received characters from into stringNote:  Peek does not remove the charaters from the receive buffer.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C",
+                        "byref": true
+                    },
+                    {
+                        "name": "lengthrequested",
+                        "type": "N"
+                    }
+                ]
+            },
+            "querytcp": {
+                "name": "QueryTCP",
+                "description": "Returns .t. the TCP connection described by the arguments matches\nan active connection with the requested state.",
+                "arguments": [
+                    {
+                        "name": "localhost",
+                        "type": "C"
+                    },
+                    {
+                        "name": "localport",
+                        "type": "N"
+                    },
+                    {
+                        "name": "remotehost",
+                        "type": "C"
+                    },
+                    {
+                        "name": "remoteport",
+                        "type": "N"
+                    },
+                    {
+                        "name": "state",
+                        "type": "N"
+                    }
+                ]
+            },
+            "read": {
+                "name": "Read",
+                "description": "Read characters from socket into string.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C",
+                        "byref": true
+                    },
+                    {
+                        "name": "length",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "readexact",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "readbinary": {
+                "name": "ReadBinary",
+                "description": "Read bytes from socket into a BLOB variable.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B",
+                        "byref": true
+                    },
+                    {
+                        "name": "length",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "readexact",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "readline": {
+                "name": "ReadLine",
+                "description": "Reads a line from the receive buffer.\nA line is terminated by a carriage-return and a line feed.\nIf nothing is available, an empty string is returned.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C",
+                        "byref": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "setoptions": {
+                "name": "SetOptions",
+                "description": "Set one or more options in a single call:\nOptions - One or more of the following:\n[-]L - Linger\nK    - Keep Alive\nR    - Reuse Address\nN    - Don't route\n[-]D - Delay\nX    - Debug\nI=#  - Receive buffer size\nO=#  - Send buffer size\nT=#  - Timeout\nTS=# - Send timeout\nTR=# - Receive timeout",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C"
+                    }
+                ]
+            },
+            "write": {
+                "name": "Write",
+                "description": "Write string data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C"
+                    },
+                    {
+                        "name": "length",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "flush",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeoutinseconds",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "writebinary": {
+                "name": "WriteBinary",
+                "description": "Write binary data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    },
+                    {
+                        "name": "length",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "flush",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeoutinseconds",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "sendfile": {
+                "name": "SendFile",
+                "description": "Send the file named.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "flush",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "readuntil": {
+                "name": "ReadUntil",
+                "description": "Reads from the input stream until the delimiter is encountered or a timeout occurs.\nIf the function returns false, there may still be data in the returned buffer.\nThis means that the read timed out before receiving the delimiter.\nIf ReturnDelimiter is true, the delimiter is returned with the string.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C",
+                        "byref": true
+                    },
+                    {
+                        "name": "delimiter",
+                        "type": "C"
+                    },
+                    {
+                        "name": "returndelimiter",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "releasexbasic",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "readchunked": {
+                "name": "ReadChunked",
+                "description": "Read all chunks from an HTTP chunked data stream and return them in one binary object.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B",
+                        "byref": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "readanddiscard": {
+                "name": "ReadAndDiscard",
+                "description": "Read up to Length bytes of data from the socket and returns.  All data read is discarded",
+                "arguments": [
+                    {
+                        "name": "length",
+                        "type": "N"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "querytcpextended": {
+                "name": "QueryTCPExtended",
+                "description": "Returns .t. the TCP connection described by the arguments matches\nan active connection with the requested state.\n\nNote:  This function includes the logical argument MyProcess. \nWhen set to .t., only matches with the same process owner will be tested.\nWhen set to .f., only matches with the a different process owner will be tested.",
+                "arguments": [
+                    {
+                        "name": "localhost",
+                        "type": "C"
+                    },
+                    {
+                        "name": "localport",
+                        "type": "N"
+                    },
+                    {
+                        "name": "remotehost",
+                        "type": "C"
+                    },
+                    {
+                        "name": "remoteport",
+                        "type": "N"
+                    },
+                    {
+                        "name": "state",
+                        "type": "N"
+                    },
+                    {
+                        "name": "myprocess",
+                        "type": "L"
+                    }
+                ]
+            },
+            "waituntilwriteable": {
+                "name": "WaitUntilWriteable",
+                "description": "Returns .t. if the connection was or became writeable during the timeout interval and .f. if it is still not writeable.",
+                "arguments": [
+                    {
+                        "name": "timeoutinseconds",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Socket"
+    },
+    "sshportmappingtype": {
+        "__enumeration__": [
+            "LocalPort"
+        ],
+        "__name__": "SSHPortMappingType"
+    },
+    "sshsecuritymethod": {
+        "__enumeration__": [
+            "None",
+            "Password",
+            "KeyInMemory",
+            "KeyInFile"
+        ],
+        "__name__": "SSHSecurityMethod"
+    },
+    "sshtunnel": {
+        "__methods__": {
+            "close": {
+                "name": "Close",
+                "description": "Close any open tunnels and stop listening for new connections."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "open": {
+                "name": "Open",
+                "description": "Open a tunnel via SSH to to the TargetHost and TargetPort by connecting to ServerHost and ServerPort.\nThe SSHTunnel supports local port mapping.\nNote: Hosts can be either DNS names or IPV4 addresses (An example IPV4 addreses might be: 10.0.0.1);",
+                "arguments": [
+                    {
+                        "name": "request",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "SSHTunnel"
+    },
+    "sshtunnelrequest": {
+        "__methods__": {
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SSHTunnelRequest"
+    },
+    "sslcontext": {
+        "__properties__": {
+            "privatekeyfile": {
+                "name": "PrivateKeyFile"
+            },
+            "certificatefile": {
+                "name": "CertificateFile"
+            },
+            "certificateauthorityfile": {
+                "name": "CertificateAuthorityFile"
+            },
+            "certificatechainfile": {
+                "name": "CertificateChainFile"
+            },
+            "callresult": {
+                "name": "CallResult"
+            },
+            "cipherlist": {
+                "name": "CipherList"
+            },
+            "requirevalidcertificate": {
+                "name": "RequireValidCertificate"
+            },
+            "minimumtlslevel": {
+                "name": "MinimumTLSLevel"
+            },
+            "servername": {
+                "name": "ServerName"
+            }
+        },
+        "__methods__": {
+            "createprivatekey": {
+                "name": "CreatePrivateKey",
+                "description": "Create a private key with an optional password and write to KeyFileName\nNote: Bits must be one of 512, 1024 or 2048",
+                "arguments": [
+                    {
+                        "name": "keyfilename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "bits",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "createtestcertificate": {
+                "name": "CreateTestCertificate",
+                "description": "Create a server test certificate using an existing private key.",
+                "arguments": [
+                    {
+                        "name": "certificatefile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "privatekeyfile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "privatekeypassword",
+                        "type": "C"
+                    },
+                    {
+                        "name": "dayscertificateisvalid",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "countrycode",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "state",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "locality",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "organization",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "organizationalunit",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "commonname",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "comment",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "servername",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "serialnumber",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "createcertificaterequest": {
+                "name": "CreateCertificateRequest",
+                "description": "Create a reqest for a certificate.",
+                "arguments": [
+                    {
+                        "name": "certificatefile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "privatekeyfile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "privatekeypassword",
+                        "type": "C"
+                    },
+                    {
+                        "name": "countrycode",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "state",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "locality",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "organization",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "organizationalunit",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "commonname",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "email",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "decryptstring": {
+                "name": "DecryptString",
+                "description": "Decrypts a string which has been encrypted and converted to base64 encoding.",
+                "arguments": [
+                    {
+                        "name": "resultstring",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sourcestring",
+                        "type": "C"
+                    },
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "algorithm",
+                        "type": "C"
+                    },
+                    {
+                        "name": "initializer",
+                        "type": "B",
+                        "optional": true
+                    }
+                ]
+            },
+            "encryptstring": {
+                "name": "EncryptString",
+                "description": "Encrypts the string provided and encodes the encryption result using base64 encoding.\nNote: This function is optional.  Use it if you want to verify a context.",
+                "arguments": [
+                    {
+                        "name": "resultstring",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sourcestring",
+                        "type": "C"
+                    },
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "algorithm",
+                        "type": "C"
+                    },
+                    {
+                        "name": "initializer",
+                        "type": "B",
+                        "optional": true
+                    }
+                ]
+            },
+            "establishcontext": {
+                "name": "EstablishContext",
+                "description": "Create and verify SSL parameters and settings.\nNote: This function is optional.  Use it if you want to verify a context."
+            },
+            "createappledevcertificaterequest": {
+                "name": "CreateAppleDevCertificateRequest",
+                "description": "Create a reqest for a certificate.",
+                "arguments": [
+                    {
+                        "name": "certificatefile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "privatekeyfile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "privatekeypassword",
+                        "type": "C"
+                    },
+                    {
+                        "name": "email",
+                        "type": "C CommonName as C"
+                    },
+                    {
+                        "name": "countrycode",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "convertdertopem": {
+                "name": "ConvertDERToPEM",
+                "description": " Convert the certificate file in DER format in SourceCertificateFile to PEM format and write to DestinationCertificateFile.",
+                "arguments": [
+                    {
+                        "name": "sourcecertificatefile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "destinationcertificatefile",
+                        "type": "C"
+                    }
+                ]
+            },
+            "convertpemtoder": {
+                "name": "ConvertPEMToDER",
+                "description": " Convert the certificate file in in PEM format in SourceCertificateFile to DER format and write to DestinationCertificateFile.",
+                "arguments": [
+                    {
+                        "name": "sourcecertificatefile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "destinationcertificatefile",
+                        "type": "C"
+                    }
+                ]
+            },
+            "createpkcs12": {
+                "name": "CreatePKCS12",
+                "description": " Create a PKCS12 (PFX) file from a private key, certificate file, and (optionally) intermediate certificate file.",
+                "arguments": [
+                    {
+                        "name": "destinationfile"
+                    },
+                    {
+                        "name": "privatekeyfile"
+                    },
+                    {
+                        "name": "privatekeypassword"
+                    },
+                    {
+                        "name": "certificatefile"
+                    },
+                    {
+                        "name": "intermediatecertificatefile",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "outputpassword",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "SSLContext"
+    },
+    "sslsocket": {
+        "__properties__": {
+            "context": {
+                "name": "Context"
+            },
+            "isbusy": {
+                "name": "IsBusy"
+            },
+            "isopen": {
+                "name": "IsOpen"
+            },
+            "isreadable": {
+                "name": "IsReadable"
+            },
+            "iswriteable": {
+                "name": "IsWriteable"
+            },
+            "remoteaddress": {
+                "name": "RemoteAddress"
+            },
+            "localaddress": {
+                "name": "LocalAddress"
+            },
+            "remoteport": {
+                "name": "RemotePort"
+            },
+            "localport": {
+                "name": "LocalPort"
+            },
+            "handle": {
+                "name": "Handle"
+            },
+            "callresult": {
+                "name": "CallResult"
+            },
+            "blocking": {
+                "name": "Blocking"
+            },
+            "bytesavailable": {
+                "name": "BytesAvailable"
+            },
+            "islistening": {
+                "name": "IsListening"
+            }
+        },
+        "__methods__": {
+            "reconnect": {
+                "name": "Reconnect",
+                "description": "Reestablish the connection with an SSL partner (session settings may have changed)."
+            },
+            "startsslsession": {
+                "name": "StartSSLSession",
+                "description": "Begins an SSL session with a socket that is already opened.\nIf successful the socket remains secure until closed.\nIf unsuccessful both sockets will be closed.\nAfter this call you should no long reference OpenSocket.",
+                "arguments": [
+                    {
+                        "name": "opensocket",
+                        "type": "INET::Socket"
+                    }
+                ]
+            },
+            "accept": {
+                "name": "Accept",
+                "description": "Accept a new connection (the socket must already be listening).\nReturns a status object with information about the success of the call\nIf the call is successful, AcceptedSocket contains the new instance of INET::Socket.\n\nHandshakeReadTimeout is appropriate for SSL sockets only.\n\nExample: Result = MyListener.Accept(AcceptedSocket, 750)\n         if Result.Success then \n         ...",
+                "arguments": [
+                    {
+                        "name": "acceptedsocket",
+                        "type": "INET::Socket",
+                        "byref": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "handshakereadtimeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close an open connection."
+            },
+            "getoptions": {
+                "name": "GetOptions",
+                "description": "Get one or more option values in a single call:\nOptions - One or more of the following:\nA - Accepting\nL - Linger\nK - Keep Alive\nR - Reuse Address\nN - Don't route\nD - Delay\nX - Debug\nI - Receive buffer size\nO - Send buffer size\nT - Timeout",
+                "arguments": [
+                    {
+                        "name": "optionsrequested",
+                        "type": "C"
+                    }
+                ]
+            },
+            "connect": {
+                "name": "Connect",
+                "description": "Open a connection to the requested host and port.\nNote: ConnectTimeout is in milliseconds.",
+                "arguments": [
+                    {
+                        "name": "host",
+                        "type": "C"
+                    },
+                    {
+                        "name": "port",
+                        "type": "N"
+                    },
+                    {
+                        "name": "connecttimeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "listen": {
+                "name": "Listen",
+                "description": "Open a socket to listen for incoming requests.",
+                "arguments": [
+                    {
+                        "name": "port",
+                        "type": "N"
+                    },
+                    {
+                        "name": "host",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "reuseaddress",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "backlogsize",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "peek": {
+                "name": "Peek",
+                "description": "Read received characters from into stringNote:  Peek does not remove the charaters from the receive buffer.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C",
+                        "byref": true
+                    },
+                    {
+                        "name": "lengthrequested",
+                        "type": "N"
+                    }
+                ]
+            },
+            "querytcp": {
+                "name": "QueryTCP",
+                "description": "Returns .t. the TCP connection described by the arguments matches\nan active connection with the requested state.",
+                "arguments": [
+                    {
+                        "name": "localhost",
+                        "type": "C"
+                    },
+                    {
+                        "name": "localport",
+                        "type": "N"
+                    },
+                    {
+                        "name": "remotehost",
+                        "type": "C"
+                    },
+                    {
+                        "name": "remoteport",
+                        "type": "N"
+                    },
+                    {
+                        "name": "state",
+                        "type": "N"
+                    }
+                ]
+            },
+            "read": {
+                "name": "Read",
+                "description": "Read characters from socket into string.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C",
+                        "byref": true
+                    },
+                    {
+                        "name": "length",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "readexact",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "readbinary": {
+                "name": "ReadBinary",
+                "description": "Read bytes from socket into a BLOB variable.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B",
+                        "byref": true
+                    },
+                    {
+                        "name": "length",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "readexact",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "readline": {
+                "name": "ReadLine",
+                "description": "Reads a line from the receive buffer.\nA line is terminated by a carriage-return and a line feed.\nIf nothing is available, an empty string is returned.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C",
+                        "byref": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "setoptions": {
+                "name": "SetOptions",
+                "description": "Set one or more options in a single call:\nOptions - One or more of the following:\n[-]L - Linger\nK    - Keep Alive\nR    - Reuse Address\nN    - Don't route\n[-]D - Delay\nX    - Debug\nI=#  - Receive buffer size\nO=#  - Send buffer size\nT=#  - Timeout\nTS=# - Send timeout\nTR=# - Receive timeout",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C"
+                    }
+                ]
+            },
+            "write": {
+                "name": "Write",
+                "description": "Write string data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C"
+                    },
+                    {
+                        "name": "length",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "flush",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeoutinseconds",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "writebinary": {
+                "name": "WriteBinary",
+                "description": "Write binary data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    },
+                    {
+                        "name": "length",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "flush",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeoutinseconds",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "sendfile": {
+                "name": "SendFile",
+                "description": "Send the file named.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "flush",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "readuntil": {
+                "name": "ReadUntil",
+                "description": "Reads from the input stream until the delimiter is encountered or a timeout occurs.\nIf the function returns false, there may still be data in the returned buffer.\nThis means that the read timed out before receiving the delimiter.\nIf ReturnDelimiter is true, the delimiter is returned with the string.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C",
+                        "byref": true
+                    },
+                    {
+                        "name": "delimiter",
+                        "type": "C"
+                    },
+                    {
+                        "name": "returndelimiter",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "releasexbasic",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "readchunked": {
+                "name": "ReadChunked",
+                "description": "Read all chunks from an HTTP chunked data stream and return them in one binary object.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B",
+                        "byref": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "readanddiscard": {
+                "name": "ReadAndDiscard",
+                "description": "Read up to Length bytes of data from the socket and returns.  All data read is discarded",
+                "arguments": [
+                    {
+                        "name": "length",
+                        "type": "N"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "querytcpextended": {
+                "name": "QueryTCPExtended",
+                "description": "Returns .t. the TCP connection described by the arguments matches\nan active connection with the requested state.\n\nNote:  This function includes the logical argument MyProcess. \nWhen set to .t., only matches with the same process owner will be tested.\nWhen set to .f., only matches with the a different process owner will be tested.",
+                "arguments": [
+                    {
+                        "name": "localhost",
+                        "type": "C"
+                    },
+                    {
+                        "name": "localport",
+                        "type": "N"
+                    },
+                    {
+                        "name": "remotehost",
+                        "type": "C"
+                    },
+                    {
+                        "name": "remoteport",
+                        "type": "N"
+                    },
+                    {
+                        "name": "state",
+                        "type": "N"
+                    },
+                    {
+                        "name": "myprocess",
+                        "type": "L"
+                    }
+                ]
+            },
+            "waituntilwriteable": {
+                "name": "WaitUntilWriteable",
+                "description": "Returns .t. if the connection was or became writeable during the timeout interval and .f. if it is still not writeable.",
+                "arguments": [
+                    {
+                        "name": "timeoutinseconds",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "SSLSocket"
+    },
+    "sspicontext": {
+        "__methods__": {
+            "impersonate": {
+                "name": "Impersonate",
+                "description": "Impersonate the user the context defines.\nNote: This is an advanced function used by integrated security."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "processexchangeclientside": {
+                "name": "ProcessExchangeClientSide",
+                "description": "Process an exchanged integrated security (SSPI) data packet.\nNote: This is an advanced function used by integrated security.",
+                "arguments": [
+                    {
+                        "name": "requeststring",
+                        "type": "C"
+                    },
+                    {
+                        "name": "responsestring",
+                        "type": "C"
+                    },
+                    {
+                        "name": "target",
+                        "type": "C"
+                    },
+                    {
+                        "name": "done",
+                        "type": "L"
+                    },
+                    {
+                        "name": "initialcall",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "processexchangeserverside": {
+                "name": "ProcessExchangeServerSide",
+                "description": "Process an exchanged integrated security (SSPI) data packet.\nNote: This is an advanced function used by integrated security.",
+                "arguments": [
+                    {
+                        "name": "requeststring",
+                        "type": "C"
+                    },
+                    {
+                        "name": "responsestring",
+                        "type": "C"
+                    },
+                    {
+                        "name": "done",
+                        "type": "L"
+                    },
+                    {
+                        "name": "initialcall",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "revertimpersonation": {
+                "name": "RevertImpersonation",
+                "description": "Revert the impersonation of the user the context defines.\nNote: This is an advanced function used by integrated security."
+            }
+        },
+        "__name__": "SSPIContext"
+    },
+    "threadmemorysetaside": {
+        "__functions__": {
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "memoryusethreadinmb": {
+                "name": "MemoryUseThreadInMB",
+                "description": "MemoryUseThreadInMB",
+                "arguments": [
+                    {
+                        "name": "threadname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "requestmemorysetaside": {
+                "name": "RequestMemorySetAside",
+                "description": "RequestMemorySetAside",
+                "arguments": [
+                    {
+                        "name": "threadname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "memoryrequestedinmb",
+                        "type": "N"
+                    }
+                ]
+            },
+            "resetmemoryuse": {
+                "name": "ResetMemoryUse",
+                "description": "ResetMemoryUse"
+            },
+            "resetthreadmemoryuse": {
+                "name": "ResetThreadMemoryUse",
+                "description": "ResetThreadMemoryUse",
+                "arguments": [
+                    {
+                        "name": "threadname",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "threadmemorysetaside": {
+                "name": "ThreadMemorySetAside",
+                "description": "Constructor"
+            },
+            "threadmemorysetaside": {
+                "name": "ThreadMemorySetAside",
+                "description": "Constructor"
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "ThreadMemorySetAside"
+    },
+    "timecheck": {
+        "__functions__": {
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "trytogetnisttime": {
+                "name": "TryToGetNISTTime",
+                "description": "TryToGetNISTTime",
+                "arguments": [
+                    {
+                        "name": "time",
+                        "type": "T",
+                        "byref": true
+                    }
+                ]
+            },
+            "trytogetntptime": {
+                "name": "TryToGetNTPTime",
+                "description": "TryToGetNTPTime",
+                "arguments": [
+                    {
+                        "name": "time",
+                        "type": "T",
+                        "byref": true
+                    }
+                ]
+            },
+            "trytogetnetworktime": {
+                "name": "TryToGetNetworkTime",
+                "description": "TryToGetNetworkTime",
+                "arguments": [
+                    {
+                        "name": "time",
+                        "type": "T",
+                        "byref": true
+                    }
+                ]
+            },
+            "trytogettimeskewinhours": {
+                "name": "TryToGetTimeSkewInHours",
+                "description": "TryToGetTimeSkewInHours",
+                "arguments": [
+                    {
+                        "name": "skew",
+                        "type": "N",
+                        "byref": true
+                    }
+                ]
+            },
+            "trytogettimeskewinminutes": {
+                "name": "TryToGetTimeSkewInMinutes",
+                "description": "TryToGetTimeSkewInMinutes",
+                "arguments": [
+                    {
+                        "name": "skew",
+                        "type": "N",
+                        "byref": true
+                    }
+                ]
+            },
+            "trytogettimeskewinseconds": {
+                "name": "TryToGetTimeSkewInSeconds",
+                "description": "TryToGetTimeSkewInSeconds",
+                "arguments": [
+                    {
+                        "name": "skew",
+                        "type": "N",
+                        "byref": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "timecheck": {
+                "name": "TimeCheck",
+                "description": "Constructor"
+            },
+            "timecheck": {
+                "name": "TimeCheck",
+                "description": "Constructor"
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "TimeCheck"
+    },
+    "uploadedfile": {
+        "__functions__": {
+            "seterrorlogfile": {
+                "name": "SetErrorLogFile",
+                "description": "Internal function used to report potential issues with uploaded files.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "maximumreadabledataproperty",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "savetofile": {
+                "name": "SaveToFile",
+                "description": "Save the data to the file requested",
+                "arguments": [
+                    {
+                        "name": "destinationfile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "apppend",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "savetostorage": {
+                "name": "SaveToStorage",
+                "description": "Save the data to the storage member requested",
+                "arguments": [
+                    {
+                        "name": "destinationstorage",
+                        "type": "P"
+                    },
+                    {
+                        "name": "targetmember",
+                        "type": "C"
+                    },
+                    {
+                        "name": "contenttype",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "UploadedFile"
+    },
+    "uploadedfiles": {
+        "__methods__": {
+            "addfile": {
+                "name": "AddFile",
+                "description": "Add a File.",
+                "arguments": [
+                    {
+                        "name": "file",
+                        "type": "INET::UploadedFile"
+                    }
+                ]
+            },
+            "deletefile": {
+                "name": "DeleteFile",
+                "description": "Delete a File.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "filenumber": {
+                "name": "FileNumber",
+                "description": "Get the index of a File from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertfile": {
+                "name": "InsertFile",
+                "description": "Insert a new File.",
+                "arguments": [
+                    {
+                        "name": "file",
+                        "type": "INET::UploadedFile"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movefile": {
+                "name": "MoveFile",
+                "description": "Move a block of File items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "UploadedFiles"
+    },
+    "__name__": "INET"
+}

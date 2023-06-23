@@ -1,0 +1,196 @@
+{
+    "dataentrycontext": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleterecord": {
+                "name": "DeleteRecord",
+                "description": "Delete current table row."
+            },
+            "fieldget": {
+                "name": "FieldGet",
+                "description": "Put field value.",
+                "arguments": [
+                    {
+                        "name": "fieldname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "gettable": {
+                "name": "GetTable",
+                "description": "Get a pointer to the table that is currently in data entry."
+            },
+            "modebegin": {
+                "name": "ModeBegin",
+                "description": "Begin mode (i.e. change,enter,qbf,fbf).",
+                "arguments": [
+                    {
+                        "name": "mode",
+                        "type": "C"
+                    }
+                ]
+            },
+            "modeend": {
+                "name": "ModeEnd",
+                "description": "End mode.",
+                "arguments": [
+                    {
+                        "name": "commit",
+                        "type": "L"
+                    }
+                ]
+            },
+            "modeget": {
+                "name": "ModeGet",
+                "description": "Return the data entry mode."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setdirty": {
+                "name": "SetDirty",
+                "description": "Sets the current table 'dirty' regardless of changes made."
+            },
+            "updatefields": {
+                "name": "UpdateFields",
+                "description": "Cause view to refresh the fields.",
+                "arguments": [
+                    {
+                        "name": "fields",
+                        "type": "C"
+                    }
+                ]
+            },
+            "validation": {
+                "name": "Validation",
+                "description": "Returns error(s) from validation of current record."
+            }
+        },
+        "__name__": "DataEntryContext"
+    },
+    "dataentryerror": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataEntryError"
+    },
+    "dataentryerrors": {
+        "__methods__": {
+            "adderror": {
+                "name": "Adderror",
+                "description": "Add a error.",
+                "arguments": [
+                    {
+                        "name": "error",
+                        "type": "FieldRules::DataEntryError"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteerror": {
+                "name": "Deleteerror",
+                "description": "Delete a error.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "format": {
+                "name": "Format",
+                "description": "Output errors using a template.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "inserterror": {
+                "name": "Inserterror",
+                "description": "Insert a new error.",
+                "arguments": [
+                    {
+                        "name": "error",
+                        "type": "FieldRules::DataEntryError"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveerror": {
+                "name": "Moveerror",
+                "description": "Move a block of error items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataEntryErrors"
+    },
+    "dataentryfield": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "contextswitch": {
+                "name": "ContextSwitch",
+                "description": "Switch data entry context to this field."
+            },
+            "gettext": {
+                "name": "GetText",
+                "description": "Set text for field."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "settext": {
+                "name": "SetText",
+                "description": "Set text for field.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "updatefield": {
+                "name": "UpdateField",
+                "description": "Notify attached (views) of the change."
+            }
+        },
+        "__name__": "DataEntryField"
+    },
+    "__name__": "FieldRules"
+}

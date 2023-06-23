@@ -1,0 +1,215 @@
+{
+    "layoutattributes": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "LayoutAttributes"
+    },
+    "reportband": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "sectionget": {
+                "name": "SectionGet",
+                "description": "Get a block containing the objects."
+            }
+        },
+        "__name__": "ReportBand"
+    },
+    "reportdetail": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "reportbanddrop": {
+                "name": "ReportBandDrop",
+                "description": "Drops the report band definition."
+            },
+            "reportbandexists": {
+                "name": "ReportBandExists",
+                "description": "Returns true if report band is defined."
+            },
+            "reportbandget": {
+                "name": "ReportBandGet",
+                "description": "Returns a reportband if one doesn't already exist,else returns existing one."
+            }
+        },
+        "__name__": "ReportDetail"
+    },
+    "reportgroup": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportGroup"
+    },
+    "reportheaderfooter": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "reportbanddrop": {
+                "name": "ReportBandDrop",
+                "description": "Drops the report band definition."
+            },
+            "reportbandexists": {
+                "name": "ReportBandExists",
+                "description": "Returns true if report band is defined."
+            },
+            "reportbandget": {
+                "name": "ReportBandGet",
+                "description": "Returns a reportband if one doesn't already exist,else returns existing one."
+            }
+        },
+        "__name__": "ReportHeaderFooter"
+    },
+    "reportlevel": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "detailattributes": {
+                "name": "DetailAttributes",
+                "description": "Get detail level attributes for the report"
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportLevel"
+    },
+    "reporttemplate": {
+        "__functions__": {
+            "reporttemplategenerate": {
+                "name": "ReportTemplateGenerate",
+                "description": "Generates a report template given am index/toc XML definition, cr-lf delimited list of groups, and the part (toc/index).",
+                "arguments": [
+                    {
+                        "name": "indexxml",
+                        "type": "C"
+                    },
+                    {
+                        "name": "groupdef",
+                        "type": "C"
+                    },
+                    {
+                        "name": "part",
+                        "type": "C"
+                    },
+                    {
+                        "name": "layouttable",
+                        "type": "L"
+                    }
+                ]
+            },
+            "reporttemplatesave": {
+                "name": "ReportTemplateSave",
+                "description": "Create an ad-hoc report using a template - store in the tables dictonary using layoutName.",
+                "arguments": [
+                    {
+                        "name": "tablename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "reporttemplate",
+                        "type": "C"
+                    },
+                    {
+                        "name": "layoutname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "reporttemplateschemasave": {
+                "name": "ReportTemplateSchemaSave",
+                "description": "Create an ad-hoc report using a template - store in the tables dictonary using layoutName.",
+                "arguments": [
+                    {
+                        "name": "dictionaryname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "tableschema",
+                        "type": "C"
+                    },
+                    {
+                        "name": "reporttemplate",
+                        "type": "C"
+                    },
+                    {
+                        "name": "layoutname",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportTemplate"
+    },
+    "subsection": {
+        "__methods__": {
+            "banddrop": {
+                "name": "BandDrop",
+                "description": "Drops the band definition."
+            },
+            "bandexists": {
+                "name": "BandExists",
+                "description": "Returns true if band is defined."
+            },
+            "bandget": {
+                "name": "BandGet",
+                "description": "Returns a new band if one doesn't already exist,else returns existing one."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SubSection"
+    },
+    "__name__": "ReportEditor"
+}

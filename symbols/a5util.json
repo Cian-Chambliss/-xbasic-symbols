@@ -1,0 +1,107 @@
+{
+    "process": {
+        "__functions__": {
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "stopprogram": {
+                "name": "StopProgram",
+                "description": "StopProgram",
+                "arguments": [
+                    {
+                        "name": "proc",
+                        "type": "System::Diagnostics::Process"
+                    }
+                ]
+            },
+            "sysshellwaitresult": {
+                "name": "SysShellWaitResult",
+                "description": "SysShellWaitResult",
+                "arguments": [
+                    {
+                        "name": "commandline",
+                        "type": "C"
+                    },
+                    {
+                        "name": "showwindow",
+                        "type": "L"
+                    },
+                    {
+                        "name": "timeoutinmilliseconds",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "terminateontimeout",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "runasadministrator",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "process": {
+                "name": "Process",
+                "description": "Public Constructor"
+            },
+            "process": {
+                "name": "Process",
+                "description": "Public Constructor"
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "Process"
+    },
+    "__name__": "A5Util"
+}

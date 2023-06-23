@@ -1,0 +1,988 @@
+{
+    "axisdefinition": {
+        "__methods__": {
+            "addlabel": {
+                "name": "AddLabel",
+                "description": "Add a Label.",
+                "arguments": [
+                    {
+                        "name": "label",
+                        "type": "Charting::AxisLabelsDefinition"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletelabel": {
+                "name": "DeleteLabel",
+                "description": "Delete a Label.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "labelnumber": {
+                "name": "LabelNumber",
+                "description": "Get the index of a Label from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisDefinition"
+    },
+    "axisgridlinedefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisGridLineDefinition"
+    },
+    "axisgridlinesdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisGridLinesDefinition"
+    },
+    "axislabelsdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisLabelsDefinition"
+    },
+    "axislinedefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisLineDefinition"
+    },
+    "axisrangedefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisRangeDefinition"
+    },
+    "axistickdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisTickDefinition"
+    },
+    "axisticksdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisTicksDefinition"
+    },
+    "axistitledefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisTitleDefinition"
+    },
+    "axisunitsdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AxisUnitsDefinition"
+    },
+    "chartdatadefinition": {
+        "__methods__": {
+            "adddataaxislabel": {
+                "name": "AdddataAxisLabel",
+                "description": "Add a dataAxisLabel.",
+                "arguments": [
+                    {
+                        "name": "dataaxislabel",
+                        "type": "c"
+                    }
+                ]
+            },
+            "addserie": {
+                "name": "Addserie",
+                "description": "Add a serie.",
+                "arguments": [
+                    {
+                        "name": "serie",
+                        "type": "Charting::ChartSeriesDefinition"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletedataaxislabel": {
+                "name": "DeletedataAxisLabel",
+                "description": "Delete a dataAxisLabel.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteserie": {
+                "name": "Deleteserie",
+                "description": "Delete a serie.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertdataaxislabel": {
+                "name": "InsertdataAxisLabel",
+                "description": "Insert a new dataAxisLabel.",
+                "arguments": [
+                    {
+                        "name": "dataaxislabel",
+                        "type": "c"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertserie": {
+                "name": "Insertserie",
+                "description": "Insert a new serie.",
+                "arguments": [
+                    {
+                        "name": "serie",
+                        "type": "Charting::ChartSeriesDefinition"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movedataaxislabel": {
+                "name": "MovedataAxisLabel",
+                "description": "Move a block of dataAxisLabel items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moveserie": {
+                "name": "Moveserie",
+                "description": "Move a block of serie items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ChartDataDefinition"
+    },
+    "chartdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ChartDefinition"
+    },
+    "chartseriesdefinition": {
+        "__methods__": {
+            "adddata": {
+                "name": "Adddata",
+                "description": "Add a data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "Charting::ChartValueDefinition"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletedata": {
+                "name": "Deletedata",
+                "description": "Delete a data.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertdata": {
+                "name": "Insertdata",
+                "description": "Insert a new data.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "Charting::ChartValueDefinition"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movedata": {
+                "name": "Movedata",
+                "description": "Move a block of data items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ChartSeriesDefinition"
+    },
+    "chartvaluedefinition": {
+        "__functions__": {
+            "createboxplot": {
+                "name": "CreateBoxPlot",
+                "description": "Create a box plot data set.",
+                "arguments": [
+                    {
+                        "name": "lowerwisker",
+                        "type": "N"
+                    },
+                    {
+                        "name": "upperwisker",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lowerbox",
+                        "type": "N"
+                    },
+                    {
+                        "name": "upperbox",
+                        "type": "N"
+                    },
+                    {
+                        "name": "average",
+                        "type": "N"
+                    },
+                    {
+                        "name": "median",
+                        "type": "N"
+                    }
+                ]
+            },
+            "createstock": {
+                "name": "CreateStock",
+                "description": "Creates a stock data point.",
+                "arguments": [
+                    {
+                        "name": "high",
+                        "type": "N"
+                    },
+                    {
+                        "name": "low",
+                        "type": "N"
+                    },
+                    {
+                        "name": "open",
+                        "type": "N"
+                    },
+                    {
+                        "name": "close",
+                        "type": "N"
+                    }
+                ]
+            },
+            "createx": {
+                "name": "CreateX",
+                "description": "Create X Value for chart.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "N"
+                    }
+                ]
+            },
+            "createxy": {
+                "name": "CreateXY",
+                "description": "Creates X/Y Value for chart.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addboxplotunusual": {
+                "name": "AddBoxPlotUnusual",
+                "description": "Add an unusual value to a box plot value.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "N"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "datatostring": {
+                "name": "DataToString",
+                "description": "Convert the data to string (multiple data elements, like xy values, are comma separated)."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setboxplot": {
+                "name": "SetBoxPlot",
+                "description": "Generate a box plot.",
+                "arguments": [
+                    {
+                        "name": "lowerwisker",
+                        "type": "N"
+                    },
+                    {
+                        "name": "upperwisker",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lowerbox",
+                        "type": "N"
+                    },
+                    {
+                        "name": "upperbox",
+                        "type": "N"
+                    },
+                    {
+                        "name": "average",
+                        "type": "N"
+                    },
+                    {
+                        "name": "median",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setstock": {
+                "name": "SetStock",
+                "description": "Generate a stock data point.",
+                "arguments": [
+                    {
+                        "name": "high",
+                        "type": "N"
+                    },
+                    {
+                        "name": "low",
+                        "type": "N"
+                    },
+                    {
+                        "name": "open",
+                        "type": "N"
+                    },
+                    {
+                        "name": "close",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setx": {
+                "name": "SetX",
+                "description": "Sets X Value for chart.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setxy": {
+                "name": "SetXY",
+                "description": "Sets X/Y Value for chart.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            },
+            "valuetype": {
+                "name": "ValueType",
+                "description": "Returns type of point - Y, XY, X, Stock, Box."
+            }
+        },
+        "__name__": "ChartValueDefinition"
+    },
+    "chartvaluesdefinition": {
+        "__methods__": {
+            "addboxplotunusual": {
+                "name": "AddBoxPlotUnusual",
+                "description": "Add an unusual value to a box plot value.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "N"
+                    }
+                ]
+            },
+            "addvalue": {
+                "name": "Addvalue",
+                "description": "Add a value.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "n"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "datatostring": {
+                "name": "DataToString",
+                "description": "Convert the data to string (multiple data elements, like xy values, are comma separated)."
+            },
+            "deletevalue": {
+                "name": "Deletevalue",
+                "description": "Delete a value.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertvalue": {
+                "name": "Insertvalue",
+                "description": "Insert a new value.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "n"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movevalue": {
+                "name": "Movevalue",
+                "description": "Move a block of value items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setboxplot": {
+                "name": "SetBoxPlot",
+                "description": "Generate a box plot.",
+                "arguments": [
+                    {
+                        "name": "lowerwisker",
+                        "type": "N"
+                    },
+                    {
+                        "name": "upperwisker",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lowerbox",
+                        "type": "N"
+                    },
+                    {
+                        "name": "upperbox",
+                        "type": "N"
+                    },
+                    {
+                        "name": "average",
+                        "type": "N"
+                    },
+                    {
+                        "name": "median",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setstock": {
+                "name": "SetStock",
+                "description": "Generate a stock data point.",
+                "arguments": [
+                    {
+                        "name": "high",
+                        "type": "N"
+                    },
+                    {
+                        "name": "low",
+                        "type": "N"
+                    },
+                    {
+                        "name": "open",
+                        "type": "N"
+                    },
+                    {
+                        "name": "close",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setx": {
+                "name": "SetX",
+                "description": "Sets X Value for chart.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "N"
+                    }
+                ]
+            },
+            "valuetype": {
+                "name": "ValueType",
+                "description": "Returns type of point - X, Stock, Box."
+            }
+        },
+        "__name__": "ChartValuesDefinition"
+    },
+    "chartxyvaluedefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "datatostring": {
+                "name": "DataToString",
+                "description": "Convert the data to string (multiple data elements, like xy values, are comma separated)."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setxy": {
+                "name": "SetXY",
+                "description": "Sets X/Y Value for chart.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            },
+            "valuetype": {
+                "name": "ValueType",
+                "description": "Returns X/Y."
+            }
+        },
+        "__name__": "ChartXYValueDefinition"
+    },
+    "datapointdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataPointDefinition"
+    },
+    "datapointlabeldefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataPointLabelDefinition"
+    },
+    "datapointlegenddefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataPointLegendDefinition"
+    },
+    "datapointlegendentrydefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataPointLegendEntryDefinition"
+    },
+    "datapointlegendentrypartdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataPointLegendEntryPartDefinition"
+    },
+    "datapointlegendtitledefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataPointLegendTitleDefinition"
+    },
+    "datapointmarkerdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataPointMarkerDefinition"
+    },
+    "datasetdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DataSetDefinition"
+    },
+    "pagedefinition": {
+        "__methods__": {
+            "addtext": {
+                "name": "AddText",
+                "description": "Add a Text.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "Charting::TextDefinition"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletetext": {
+                "name": "DeleteText",
+                "description": "Delete a Text.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "textnumber": {
+                "name": "TextNumber",
+                "description": "Get the index of a Text from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "PageDefinition"
+    },
+    "plotareabackgrounddefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PlotAreaBackgroundDefinition"
+    },
+    "plotareadefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PlotAreaDefinition"
+    },
+    "styleboxcornerdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StyleBoxCornerDefinition"
+    },
+    "styleboxdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StyleBoxDefinition"
+    },
+    "stylefilldefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StyleFillDefinition"
+    },
+    "stylefillimagedefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StyleFillImageDefinition"
+    },
+    "stylefontdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StyleFontDefinition"
+    },
+    "stylelinedefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StyleLineDefinition"
+    },
+    "styletextdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StyleTextDefinition"
+    },
+    "textdefinition": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "TextDefinition"
+    },
+    "__name__": "Charting"
+}

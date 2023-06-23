@@ -1,0 +1,175 @@
+{
+    "devicecapabilities": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "printer_load": {
+                "description": "Get device capabilities for the printer.",
+                "arguments": [
+                    {
+                        "name": "printer_name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "DeviceCapabilities"
+    },
+    "graphticks": {
+        "__methods__": {
+            "calculate": {
+                "name": "Calculate",
+                "description": "Takes input properties and calculates output properties."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "datatopixel": {
+                "name": "DataToPixel",
+                "description": "Calculate pixel from data point value.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "N"
+                    }
+                ]
+            },
+            "gettick": {
+                "name": "GetTick",
+                "description": "Return the 'data' for a tick - starts at 1.",
+                "arguments": [
+                    {
+                        "name": "tick",
+                        "type": "N"
+                    }
+                ]
+            },
+            "gettickcount": {
+                "name": "GetTickCount",
+                "description": "Return the number of ticks."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "pixeltodata": {
+                "name": "PixelToData",
+                "description": "Calculate data point value from pixel.",
+                "arguments": [
+                    {
+                        "name": "pixel",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "GraphTicks"
+    },
+    "textmetrics": {
+        "__methods__": {
+            "addobject": {
+                "name": "Addobject",
+                "description": "Add a object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "GDI::TextMetricsObject"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteobject": {
+                "name": "Deleteobject",
+                "description": "Delete a object.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertobject": {
+                "name": "Insertobject",
+                "description": "Insert a new object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "GDI::TextMetricsObject"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveobject": {
+                "name": "Moveobject",
+                "description": "Move a block of object items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "populate": {
+                "name": "Populate",
+                "description": "Quickly repopulate the object array with text.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "recalcsize": {
+                "name": "RecalcSize",
+                "description": "Recalc size of all elements in helper array."
+            },
+            "setdevice": {
+                "name": "SetDevice",
+                "description": "Sets device context for text helper.",
+                "arguments": [
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "TextMetrics"
+    },
+    "textmetricsobject": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "TextMetricsObject"
+    },
+    "__name__": "GDI"
+}

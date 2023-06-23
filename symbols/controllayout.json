@@ -1,0 +1,2235 @@
+{
+    "actionbutton": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ActionButton"
+    },
+    "activex": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Activex"
+    },
+    "checkbox": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "CheckBox"
+    },
+    "columnorder": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ColumnOrder"
+    },
+    "conditional": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Conditional"
+    },
+    "control": {
+        "__methods__": {
+            "addsection": {
+                "name": "AddSection",
+                "description": "Add a Section.",
+                "arguments": [
+                    {
+                        "name": "section",
+                        "type": "ControlLayout::Section"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletesection": {
+                "name": "DeleteSection",
+                "description": "Delete a Section.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertsection": {
+                "name": "InsertSection",
+                "description": "Insert a new Section.",
+                "arguments": [
+                    {
+                        "name": "section",
+                        "type": "ControlLayout::Section"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movesection": {
+                "name": "MoveSection",
+                "description": "Move a block of Section items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "output": {
+                "name": "Output",
+                "description": "Recursively dump layout section information",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    },
+                    {
+                        "name": "parentname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "save": {
+                "name": "Save",
+                "description": "Return persisted 'saved' format."
+            }
+        },
+        "__name__": "Control"
+    },
+    "custom": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Custom"
+    },
+    "drawlayer": {
+        "__methods__": {
+            "addlayer": {
+                "name": "AddLayer",
+                "description": "Add a layer to this layer.",
+                "arguments": [
+                    {
+                        "name": "layer",
+                        "type": "P"
+                    }
+                ]
+            },
+            "associatedobject": {
+                "name": "AssociatedObject",
+                "description": "Set the object that causes repaint.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "buildlayer": {
+                "name": "BuildLayer",
+                "description": "If layer is derived (i.e. has children) - recalculated from its parts."
+            },
+            "checkchildrendirty": {
+                "name": "CheckChildrenDirty",
+                "description": "Returns TRUE of the children of the layer was accessed.",
+                "arguments": [
+                    {
+                        "name": "reset",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "checkdirty": {
+                "name": "CheckDirty",
+                "description": "Returns TRUE of the layer was accessed.",
+                "arguments": [
+                    {
+                        "name": "reset",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "clear": {
+                "name": "Clear",
+                "description": "Reset the layer (removes any child layers that might be defined)."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "droplayer": {
+                "name": "DropLayer",
+                "description": "Remove a logical layer.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "findlayer": {
+                "name": "FindLayer",
+                "description": "Finds a child layer based on name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "mergelayer": {
+                "name": "MergeLayer",
+                "description": "If layer is derived (i.e. has children) - turn it back into a leaf by building then removing children."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "repaint": {
+                "name": "Repaint",
+                "description": "Force the host of this layer to repaint."
+            }
+        },
+        "__name__": "DrawLayer"
+    },
+    "dropdown": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DropDown"
+    },
+    "dropdownedit": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DropDownEdit"
+    },
+    "dropdowneditkeylistcontrol": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DropDownEditKeyListControl"
+    },
+    "dropdownkeylistcontrol": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DropDownKeyListControl"
+    },
+    "dropdowntree": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DropDownTree"
+    },
+    "embeddedbrowse": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "EmbeddedBrowse"
+    },
+    "embeddedcard": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "EmbeddedCard"
+    },
+    "embeddedform": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "EmbeddedForm"
+    },
+    "field": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Field"
+    },
+    "form": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "column_order": {
+                "name": "Column_Order",
+                "description": "Order view on a column.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fieldruledrop": {
+                "name": "FieldRuleDrop",
+                "description": "Remove field rule.",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fieldruleexists": {
+                "name": "FieldRuleExists",
+                "description": "Returns 'true' if a form level field rule is defined for the field.",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fieldruleget": {
+                "name": "FieldRuleGet",
+                "description": "Get pointer to form-level definition for field rule.",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fieldrulescompact": {
+                "name": "FieldRulesCompact",
+                "description": "Removes definitions that have been restored to default 'empty' state.",
+                "arguments": [
+                    {
+                        "name": "tablename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "fieldrulesenum": {
+                "name": "FieldRulesEnum",
+                "description": "Returns a cr-lf delimited list of fields for which form-level-rules exists.",
+                "arguments": [
+                    {
+                        "name": "tablename",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getgroupname": {
+                "name": "GetGroupName",
+                "description": "Return name of group at specified level.",
+                "arguments": [
+                    {
+                        "name": "depth",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "recalccontainers": {
+                "name": "RecalcContainers",
+                "description": "Causes containers to be refreshed."
+            },
+            "sectionsget": {
+                "name": "SectionsGet",
+                "description": "Return cr-lf delimited list of section name."
+            }
+        },
+        "__name__": "Form"
+    },
+    "genericcontrol": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "GenericControl"
+    },
+    "keylistcontrol": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "KeyListControl"
+    },
+    "layoutcell": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getminheight": {
+                "name": "GetMinHeight",
+                "description": "Gets the rows minimum width."
+            },
+            "getminwidth": {
+                "name": "GetMinWidth",
+                "description": "Gets the cells minimum width."
+            },
+            "hasembeddedtable": {
+                "name": "HasEmbeddedTable",
+                "description": "Returns true if cell has an embedded table."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "LayoutCell"
+    },
+    "layoutcolumn": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "gethints": {
+                "name": "GetHints",
+                "description": "Gets columns hints."
+            },
+            "getminwidth": {
+                "name": "GetMinWidth",
+                "description": "Gets the columns minimum width."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "sethints": {
+                "name": "SetHints",
+                "description": "Sets columns hints.",
+                "arguments": [
+                    {
+                        "name": "hints",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "LayoutColumn"
+    },
+    "layoutdependencies": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Given an object (layout or control), Establish the layout depencies for that object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "LayoutDependencies"
+    },
+    "layoutreconfigure": {
+        "__methods__": {
+            "addreplacefield": {
+                "name": "AddReplaceField",
+                "description": "Adds 'replace field name' command to commands list.",
+                "arguments": [
+                    {
+                        "name": "oldfieldname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "newfieldname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addreplacetable": {
+                "name": "AddReplaceTable",
+                "description": "Adds 'replace table' command to commands list.",
+                "arguments": [
+                    {
+                        "name": "oldname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "newname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "reconfigure": {
+                "name": "Reconfigure",
+                "description": "Reconfigure the object (and children).",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "LayoutReconfigure"
+    },
+    "layoutrow": {
+        "__methods__": {
+            "addcell": {
+                "name": "AddCell",
+                "description": "Add a Cell.",
+                "arguments": [
+                    {
+                        "name": "cell",
+                        "type": "ControlLayout::LayoutCell"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletecell": {
+                "name": "DeleteCell",
+                "description": "Delete a Cell.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getconditionexpression": {
+                "name": "GetConditionExpression",
+                "description": "Get a condition expression (condition + generated suppress expression)."
+            },
+            "gethints": {
+                "name": "GetHints",
+                "description": "Gets row hints."
+            },
+            "getminheight": {
+                "name": "GetMinHeight",
+                "description": "Gets the rows minimum height."
+            },
+            "getpagebreak": {
+                "name": "GetPageBreak",
+                "description": "Gets page break for row."
+            },
+            "insertcell": {
+                "name": "InsertCell",
+                "description": "Insert a new Cell.",
+                "arguments": [
+                    {
+                        "name": "cell",
+                        "type": "ControlLayout::LayoutCell"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movecell": {
+                "name": "MoveCell",
+                "description": "Move a block of Cell items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "pagebreakafter": {
+                "name": "PageBreakAfter",
+                "description": "Row has break after."
+            },
+            "pagebreakbefore": {
+                "name": "PageBreakBefore",
+                "description": "Row has break before or row before has page-break-after.",
+                "arguments": [
+                    {
+                        "name": "ignorefooter",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "sethints": {
+                "name": "SetHints",
+                "description": "Sets row hints.",
+                "arguments": [
+                    {
+                        "name": "hints",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "LayoutRow"
+    },
+    "layouttable": {
+        "__methods__": {
+            "addcolumn": {
+                "name": "AddColumn",
+                "description": "Add a Column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "ControlLayout::LayoutColumn"
+                    }
+                ]
+            },
+            "addrow": {
+                "name": "AddRow",
+                "description": "Add a Row.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "ControlLayout::LayoutRow"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletecolumn": {
+                "name": "DeleteColumn",
+                "description": "Delete a Column.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleterow": {
+                "name": "DeleteRow",
+                "description": "Delete a Row.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "enumexpressions": {
+                "name": "EnumExpressions",
+                "description": "Enumerate layout table object expressions.",
+                "arguments": [
+                    {
+                        "name": "separator",
+                        "type": "C"
+                    }
+                ]
+            },
+            "enumeratelinkedreports": {
+                "name": "EnumerateLinkedReports",
+                "description": "Generate a list of external reports for object - format 'N'-name 'R'-row 'C'-column.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "enumeratestyleattributes": {
+                "name": "EnumerateStyleAttributes",
+                "description": "Enumerate attributes in style, pattern is name of attribute to look for (can include wild cards), format is output string $n = name, $v = value , $o = object , $r = row , $c = cell.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getcssstylesheet": {
+                "name": "GetCssStyleSheet",
+                "description": "Return HTML style sheet for the table."
+            },
+            "getfield": {
+                "name": "GetField",
+                "description": "Get field by name (allows non-standard fields).",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getflattenedstylesheet": {
+                "name": "GetFlattenedStyleSheet",
+                "description": "Return Flattened (cell based) style sheet for the table - creates styles that combine edges, fills & dividers producing Left,center,right & single ."
+            },
+            "gethelptext": {
+                "name": "GetHelpText",
+                "description": "Returns fly-over help text for object."
+            },
+            "getlayouttable": {
+                "name": "GetLayoutTable",
+                "description": "Get the layout table - optional name retreives embedded table.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getlinkedreport": {
+                "name": "GetLinkedReport",
+                "description": "Get content of named linked report.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getobjectsequence": {
+                "name": "GetObjectSequence",
+                "description": "Returns sequence number of object."
+            },
+            "getselectedlayouttable": {
+                "name": "GetSelectedLayoutTable",
+                "description": "Returns the name of selected layout table."
+            },
+            "indesignmode": {
+                "name": "InDesignMode",
+                "description": "Query if the table is in design mode."
+            },
+            "insertcolumn": {
+                "name": "InsertColumn",
+                "description": "Insert a new Column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "ControlLayout::LayoutColumn"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertrow": {
+                "name": "InsertRow",
+                "description": "Insert a new Row.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "ControlLayout::LayoutRow"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "layouttabletohtml": {
+                "name": "LayoutTableToHtml",
+                "description": "Return HTML that matches the table style and content - use curly bracket syntax to include fields.",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "P"
+                    },
+                    {
+                        "name": "part",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "movecolumn": {
+                "name": "MoveColumn",
+                "description": "Move a block of Column items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moverow": {
+                "name": "MoveRow",
+                "description": "Move a block of Row items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "objectcontext": {
+                "name": "ObjectContext",
+                "description": "Returns the objects' context."
+            },
+            "ondispose": {
+                "name": "OnDispose",
+                "description": "Called to break the cycle."
+            },
+            "onstylechange": {
+                "name": "OnStyleChange",
+                "description": "Notification that a style property has changed.",
+                "arguments": [
+                    {
+                        "name": "styleelement",
+                        "type": "C"
+                    }
+                ]
+            },
+            "replacelinkedreport": {
+                "name": "ReplaceLinkedReport",
+                "description": "Replace content of named linked report (return true if report was replaced.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    },
+                    {
+                        "name": "embeddedreport",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "resynchrowconditions": {
+                "name": "ResynchRowConditions",
+                "description": "force row conditions to be evaluated."
+            },
+            "sectionadd": {
+                "name": "SectionAdd",
+                "description": "Defines table object for named section (if not already defined for section).",
+                "arguments": [
+                    {
+                        "name": "sectionname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sectiondrop": {
+                "name": "SectionDrop",
+                "description": "Drops a table object from a named section (if it exists for named section).",
+                "arguments": [
+                    {
+                        "name": "sectionname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sectionsget": {
+                "name": "SectionsGet",
+                "description": "Return sections that Layout table is defined for."
+            },
+            "setcodepage": {
+                "name": "SetCodePage",
+                "description": "Set code page for data.",
+                "arguments": [
+                    {
+                        "name": "codepage",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setdeclaration": {
+                "name": "SetDeclaration",
+                "description": "Set field by name (allows non-standard fields).",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "LayoutTable"
+    },
+    "layouttablecontrol": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "LayoutTableControl"
+    },
+    "listbox": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Listbox"
+    },
+    "logicalgroup": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "LogicalGroup"
+    },
+    "mouseoperation": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "trapmouse": {
+                "name": "TrapMouse",
+                "description": "Install a handler to trap the mouse input until the 'up'.",
+                "arguments": [
+                    {
+                        "name": "handler",
+                        "type": "P"
+                    }
+                ]
+            },
+            "waitleave": {
+                "name": "WaitLeave",
+                "description": "Wait for mouse leave.",
+                "arguments": [
+                    {
+                        "name": "handler",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "MouseOperation"
+    },
+    "multistatebutton": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "MultiStateButton"
+    },
+    "olecontrol": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "OleControl"
+    },
+    "pagebreak": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PageBreak"
+    },
+    "radiobutton": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "RadioButton"
+    },
+    "report": {
+        "__functions__": {
+            "getclreport": {
+                "name": "GetCLReport",
+                "description": "return the session report (for internal use to get context).",
+                "arguments": [
+                    {
+                        "name": "session",
+                        "type": "N"
+                    }
+                ]
+            },
+            "supportslayouttable": {
+                "name": "SupportsLayoutTable",
+                "description": "returns true if report supports layout table reports.",
+                "arguments": [
+                    {
+                        "name": "reportname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "alternatedictionary",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "updatelayouttable": {
+                "name": "UpdateLayoutTable",
+                "description": "If report is a freeform report, then a layout table version of the report gets created.",
+                "arguments": [
+                    {
+                        "name": "reportname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "alternatedictionary",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addcontent": {
+                "name": "Addcontent",
+                "description": "Add a content.",
+                "arguments": [
+                    {
+                        "name": "content",
+                        "type": "ControlLayout::Section"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Force report object to close & remove any associated resources."
+            },
+            "column_order": {
+                "name": "Column_Order",
+                "description": "Order view on a column.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "converttolayouttable": {
+                "name": "ConvertToLayoutTable",
+                "description": "Convert report definition to use layout table."
+            },
+            "creatinglayouttablereport": {
+                "name": "CreatingLayoutTableReport",
+                "description": "Initialize a report as layout table report, but indicate that sections have not yet been created."
+            },
+            "deletecontent": {
+                "name": "Deletecontent",
+                "description": "Delete a content.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "emitreport": {
+                "name": "EmitReport",
+                "description": "Creates a report to emit (reportType is text,rtf or html template).",
+                "arguments": [
+                    {
+                        "name": "reporttype",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C"
+                    }
+                ]
+            },
+            "flattenlayouttable": {
+                "name": "FlattenLayoutTable",
+                "description": "Flattens report layout table if there are nested reports."
+            },
+            "getgroupname": {
+                "name": "GetGroupName",
+                "description": "Return name of group at specified level.",
+                "arguments": [
+                    {
+                        "name": "depth",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getgroupnames": {
+                "name": "GetGroupNames",
+                "description": "Return group names and properties.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getlayouttabledefinition": {
+                "name": "GetLayoutTableDefinition",
+                "description": "Return the XML for reports the layout table definiton (if report is a layout table report)."
+            },
+            "getstructure": {
+                "name": "GetStructure",
+                "description": "Return the report structure (just data source and grouping)."
+            },
+            "getwarnings": {
+                "name": "GetWarnings",
+                "description": "Gets warnings (if set during conversion)."
+            },
+            "hasstructure": {
+                "name": "HasStructure",
+                "description": "Report has custom structure (i.e. like link definitions)."
+            },
+            "index_tableschema": {
+                "name": "Index_TableSchema",
+                "description": "Get a schema used to create a table for index/t.o.c. entries.  Type is 'index' or 'toc'.",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertcontent": {
+                "name": "Insertcontent",
+                "description": "Insert a new content.",
+                "arguments": [
+                    {
+                        "name": "content",
+                        "type": "ControlLayout::Section"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "issingleton": {
+                "name": "IsSingleton",
+                "description": "Returns true if the report is a singleton."
+            },
+            "load": {
+                "name": "Load",
+                "description": "Load a report definition into object.",
+                "arguments": [
+                    {
+                        "name": "reportname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "schemaonly",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "designmode",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "loadltfromdefinition": {
+                "name": "LoadLTFromDefinition",
+                "description": "Load report structure & xml into a report object.",
+                "arguments": [
+                    {
+                        "name": "structure",
+                        "type": "P"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "xmllayout",
+                        "type": "C"
+                    }
+                ]
+            },
+            "loadlayouttable": {
+                "name": "LoadLayoutTable",
+                "description": "Load a layout table version of a report definition into object.",
+                "arguments": [
+                    {
+                        "name": "reportname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "schemaonly",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "designmode",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "movecontent": {
+                "name": "Movecontent",
+                "description": "Move a block of content items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "new": {
+                "name": "New",
+                "description": "Create a new report definition for a table or set.",
+                "arguments": [
+                    {
+                        "name": "tableorsetname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "printersettingsget": {
+                "name": "PrinterSettingsGet",
+                "description": "Pass in printer settings (landscape, margins etc).",
+                "arguments": [
+                    {
+                        "name": "settings",
+                        "type": "A"
+                    },
+                    {
+                        "name": "units",
+                        "type": "C"
+                    }
+                ]
+            },
+            "printersettingsset": {
+                "name": "PrinterSettingsSet",
+                "description": "Pass in printer settings (landscape, margins etc).",
+                "arguments": [
+                    {
+                        "name": "settings",
+                        "type": "A"
+                    },
+                    {
+                        "name": "units",
+                        "type": "C"
+                    }
+                ]
+            },
+            "recalccontainers": {
+                "name": "RecalcContainers",
+                "description": "Causes containers to be refreshed."
+            },
+            "sql_new": {
+                "name": "SQL_New",
+                "description": "Create a new report definition for a SQL data source.",
+                "arguments": [
+                    {
+                        "name": "connection",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sqlselect",
+                        "type": "C"
+                    },
+                    {
+                        "name": "useportable",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "sqlarguments",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "save": {
+                "name": "Save",
+                "description": "Save a report definition to dictionary.",
+                "arguments": [
+                    {
+                        "name": "reportname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "alternatedictionary",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "saveinstance": {
+                "name": "SaveInstance",
+                "description": "Save a report definition to an open dictionary.",
+                "arguments": [
+                    {
+                        "name": "handle",
+                        "type": "N"
+                    },
+                    {
+                        "name": "reportname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sectionsget": {
+                "name": "SectionsGet",
+                "description": "Return cr-lf delimited list of section name."
+            },
+            "tojson": {
+                "name": "ToJson",
+                "description": "Export the report definition to JSON."
+            }
+        },
+        "__name__": "Report"
+    },
+    "reportgroup": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportGroup"
+    },
+    "reportindex": {
+        "__methods__": {
+            "addentry": {
+                "name": "Addentry",
+                "description": "Add a entry.",
+                "arguments": [
+                    {
+                        "name": "entry",
+                        "type": "ControlLayout::ReportIndexEntry"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteentry": {
+                "name": "Deleteentry",
+                "description": "Delete a entry.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertentry": {
+                "name": "Insertentry",
+                "description": "Insert a new entry.",
+                "arguments": [
+                    {
+                        "name": "entry",
+                        "type": "ControlLayout::ReportIndexEntry"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveentry": {
+                "name": "Moveentry",
+                "description": "Move a block of entry items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportIndex"
+    },
+    "reportindexentry": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportIndexEntry"
+    },
+    "reportindexes": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "pruneentries": {
+                "name": "PruneEntries",
+                "description": "Removes empty sections."
+            }
+        },
+        "__name__": "ReportIndexes"
+    },
+    "reportstructure": {
+        "__methods__": {
+            "addgroup": {
+                "name": "AddGroup",
+                "description": "Add a Group.",
+                "arguments": [
+                    {
+                        "name": "group",
+                        "type": "ControlLayout::ReportGroup"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletegroup": {
+                "name": "DeleteGroup",
+                "description": "Delete a Group.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertgroup": {
+                "name": "InsertGroup",
+                "description": "Insert a new Group.",
+                "arguments": [
+                    {
+                        "name": "group",
+                        "type": "ControlLayout::ReportGroup"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movegroup": {
+                "name": "MoveGroup",
+                "description": "Move a block of Group items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportStructure"
+    },
+    "reportstructureattrib": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportStructureAttrib"
+    },
+    "reportstructureband": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportStructureBand"
+    },
+    "reportstructurehf": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ReportStructureHF"
+    },
+    "sc_a5wpage": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_A5WPage"
+    },
+    "sc_calendar": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_calendar"
+    },
+    "sc_clock": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_clock"
+    },
+    "sc_dropdownbrowse": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_dropDownBrowse"
+    },
+    "sc_embeddedgraph": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_embeddedGraph"
+    },
+    "sc_embeddedgridcomponent": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_EmbeddedGridComponent"
+    },
+    "sc_embeddedxdialog": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_EmbeddedXDialog"
+    },
+    "sc_htmlcontent": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_HTMLContent"
+    },
+    "sc_htmlform": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_HTMLForm"
+    },
+    "sc_keysearchbuttons": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_KeySearchButtons"
+    },
+    "sc_pdfviewer": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_pdfViewer"
+    },
+    "sc_recordnavigatortrackbar": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_RecordNavigatorTrackBar"
+    },
+    "sc_reportpreview": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_ReportPreview"
+    },
+    "sc_weburl": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_webURL"
+    },
+    "sc_xdlghyperlink": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SC_XDlgHyperlink"
+    },
+    "section": {
+        "__methods__": {
+            "addcontrol": {
+                "name": "AddControl",
+                "description": "Add a Control.",
+                "arguments": [
+                    {
+                        "name": "control",
+                        "type": "ControlLayout::Control"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "controladd": {
+                "name": "ControlAdd",
+                "description": "Add a control to a section.",
+                "arguments": [
+                    {
+                        "name": "control",
+                        "type": "P"
+                    }
+                ]
+            },
+            "deletecontrol": {
+                "name": "DeleteControl",
+                "description": "Delete a Control.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "finddrawlayer": {
+                "name": "FindDrawLayer",
+                "description": "Finds a child draw layer based on name - creates one if none exists already.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getgroupdepth": {
+                "name": "GetGroupDepth",
+                "description": "Get Group depth (if any) of the section."
+            },
+            "getobjectgroup": {
+                "name": "GetObjectGroup",
+                "description": "Returns a list replicating how the objects are grouped - placeholder encloses names in [],  keepall - keep ungrouped objects in list.",
+                "arguments": [
+                    {
+                        "name": "objects",
+                        "type": "C"
+                    },
+                    {
+                        "name": "keepall",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "placeholder",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "groupobjects": {
+                "name": "GroupObjects",
+                "description": "Group existing objects on a layout - allows for multiple levels of grouping with addition of '+' prefix on names.",
+                "arguments": [
+                    {
+                        "name": "grouping",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hasdrawlayer": {
+                "name": "HasDrawLayer",
+                "description": "Returns true if a layer already exists.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertcontrol": {
+                "name": "InsertControl",
+                "description": "Insert a new Control.",
+                "arguments": [
+                    {
+                        "name": "control",
+                        "type": "ControlLayout::Control"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "load": {
+                "name": "Load",
+                "description": "Load persisted containers.",
+                "arguments": [
+                    {
+                        "name": "saveddef",
+                        "type": "C"
+                    }
+                ]
+            },
+            "movecontrol": {
+                "name": "MoveControl",
+                "description": "Move a block of Control items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "output": {
+                "name": "Output",
+                "description": "Recursively dump layout section information",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    },
+                    {
+                        "name": "parentname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "save": {
+                "name": "Save",
+                "description": "Return persisted 'saved' format."
+            },
+            "setdrawlayer": {
+                "name": "SetDrawLayer",
+                "description": "Set draw/hotspot layer",
+                "arguments": [
+                    {
+                        "name": "layer",
+                        "type": "P"
+                    }
+                ]
+            },
+            "setgroupcontext": {
+                "name": "SetGroupContext",
+                "description": "Force context for group (used when building report via automation so that style lookup works).",
+                "arguments": [
+                    {
+                        "name": "part",
+                        "type": "C"
+                    },
+                    {
+                        "name": "depth",
+                        "type": "N"
+                    },
+                    {
+                        "name": "sequence",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "Section"
+    },
+    "sqldatasource": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SqlDataSource"
+    },
+    "staticbitmap": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StaticBitmap"
+    },
+    "staticframe": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StaticFrame"
+    },
+    "statichtml": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StaticHTML"
+    },
+    "staticline": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StaticLine"
+    },
+    "staticrtf": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StaticRtf"
+    },
+    "statictext": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "StaticText"
+    },
+    "tabbed": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Tabbed"
+    },
+    "tree": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Tree"
+    },
+    "twostatebutton": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "TwoStateButton"
+    },
+    "userdefined": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "UserDefined"
+    },
+    "__name__": "ControlLayout"
+}

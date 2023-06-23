@@ -1,0 +1,206 @@
+{
+    "decimal": {
+        "__functions__": {
+            "add": {
+                "name": "Add",
+                "description": "Add",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    },
+                    {
+                        "name": "two",
+                        "type": "C"
+                    }
+                ]
+            },
+            "ceiling": {
+                "name": "Ceiling",
+                "description": "Ceiling",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    }
+                ]
+            },
+            "compare": {
+                "name": "Compare",
+                "description": "Compare",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    },
+                    {
+                        "name": "two",
+                        "type": "C"
+                    }
+                ]
+            },
+            "divide": {
+                "name": "Divide",
+                "description": "Divide",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    },
+                    {
+                        "name": "two",
+                        "type": "C"
+                    }
+                ]
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "floor": {
+                "name": "Floor",
+                "description": "Floor",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    }
+                ]
+            },
+            "multiply": {
+                "name": "Multiply",
+                "description": "Multiply",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    },
+                    {
+                        "name": "two",
+                        "type": "C"
+                    }
+                ]
+            },
+            "negate": {
+                "name": "Negate",
+                "description": "Negate",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "remainder": {
+                "name": "Remainder",
+                "description": "Remainder",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    },
+                    {
+                        "name": "two",
+                        "type": "C"
+                    }
+                ]
+            },
+            "round": {
+                "name": "Round",
+                "description": "Round",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    }
+                ]
+            },
+            "round": {
+                "name": "Round",
+                "description": "Round",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    },
+                    {
+                        "name": "places",
+                        "type": "N"
+                    }
+                ]
+            },
+            "subtract": {
+                "name": "Subtract",
+                "description": "Subtract",
+                "arguments": [
+                    {
+                        "name": "one",
+                        "type": "C"
+                    },
+                    {
+                        "name": "two",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "decimal": {
+                "name": "Decimal",
+                "description": "Constructor"
+            },
+            "decimal": {
+                "name": "Decimal",
+                "description": "Constructor"
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "Decimal"
+    },
+    "__name__": "MathUtil"
+}

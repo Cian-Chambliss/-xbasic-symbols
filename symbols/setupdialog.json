@@ -1,0 +1,16 @@
+{
+    "layoutgrid": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "LayoutGrid"
+    },
+    "__name__": "SetupDialog"
+}

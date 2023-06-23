@@ -1,0 +1,380 @@
+{
+    "navigation": {
+        "__methods__": {
+            "bindrange": {
+                "name": "BindRange",
+                "description": "Set the 'selection' range (range end tracks with current row).",
+                "arguments": [
+                    {
+                        "name": "range",
+                        "type": "P"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleterecords": {
+                "name": "DeleteRecords",
+                "description": "Delete the records in the view."
+            },
+            "droprange": {
+                "name": "DropRange",
+                "description": "Disable bound range."
+            },
+            "evaluateall": {
+                "name": "EvaluateAll",
+                "description": "Evaluate expression for entire view, append results.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "evaluatecurrent": {
+                "name": "EvaluateCurrent",
+                "description": "Evaluate expression for current row.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "evaluaterange": {
+                "name": "EvaluateRange",
+                "description": "Evaluate expression for range.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getboundrange": {
+                "name": "GetBoundRange",
+                "description": "Retrieve a bound range."
+            },
+            "hasboundrange": {
+                "name": "HasBoundRange",
+                "description": "Determine if navigation object has a bound range."
+            },
+            "markrecords": {
+                "name": "MarkRecords",
+                "description": "Mark the records in the view."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setuprecordcache": {
+                "name": "SetupRecordCache",
+                "description": "Eanble-disable cache records in view - used to lock the view - limit of 0 means no limit to cache condition,watch expression is optional 'condition to refresh cache'.",
+                "arguments": [
+                    {
+                        "name": "enable",
+                        "type": "L"
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N"
+                    },
+                    {
+                        "name": "watchexpression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "unmarkrecords": {
+                "name": "UnmarkRecords",
+                "description": "Unmark the records in the view."
+            },
+            "fetch_first": {
+                "description": "Move row object to first record."
+            },
+            "fetch_goto": {
+                "description": "Goto a row (sets the current position from a previously navigated position).",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "P"
+                    }
+                ]
+            },
+            "fetch_last": {
+                "description": "Move row object to last record."
+            },
+            "fetch_next": {
+                "description": "Move row object to next record."
+            },
+            "fetch_pagedown": {
+                "description": "Move row object down by viewport size."
+            },
+            "fetch_pageup": {
+                "description": "Move row object up by viewport size."
+            },
+            "fetch_position_count": {
+                "description": "Get the topmost logical record position."
+            },
+            "fetch_position_goto": {
+                "description": "Goto the logical position in the range of all records.",
+                "arguments": [
+                    {
+                        "name": "offset",
+                        "type": "N"
+                    }
+                ]
+            },
+            "fetch_position_offset": {
+                "description": "Get the position of the current record within the range of all records."
+            },
+            "fetch_previous": {
+                "description": "Move row object to previous record."
+            },
+            "get_current_row": {
+                "description": "Get row object representing the current navigation row."
+            },
+            "get_current_row_index": {
+                "description": "Return which row in the viewport is the current row."
+            },
+            "get_viewport_row": {
+                "description": "Get row from viewport (starts ats 1).",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "make_visible": {
+                "description": "Make current row visible."
+            },
+            "refresh": {
+                "description": "Refresh the display."
+            },
+            "requires_refresh": {
+                "description": "Returns true if data has changed *after* the view was last refreshed."
+            },
+            "resynch_from_current": {
+                "description": "Resynch the record from the containing table object."
+            },
+            "rows_valid": {
+                "description": "Are the rows valid."
+            },
+            "scroll_first": {
+                "description": "Move row object to first record."
+            },
+            "scroll_goto": {
+                "description": "set top viewort top row.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "P"
+                    }
+                ]
+            },
+            "scroll_last": {
+                "description": "Move top row of viewport to last record."
+            },
+            "scroll_next": {
+                "description": "Move top row of viewport to next record."
+            },
+            "scroll_pagedown": {
+                "description": "Move top row of viewport down by viewport size."
+            },
+            "scroll_pageup": {
+                "description": "Move top row of viewport up by viewport size."
+            },
+            "scroll_position_count": {
+                "description": "Get the topmost logical record position for top row of viewport."
+            },
+            "scroll_position_goto": {
+                "description": "Goto the logical position in the range of all records in viewport (minus viewport size).",
+                "arguments": [
+                    {
+                        "name": "offset",
+                        "type": "N"
+                    }
+                ]
+            },
+            "scroll_position_offset": {
+                "description": "Get the position of the Move top row of viewport within the range of all records."
+            },
+            "scroll_previous": {
+                "description": "Move row object to previous record."
+            },
+            "set_handler": {
+                "description": "Set pointer to the event handler for navigation interface.",
+                "arguments": [
+                    {
+                        "name": "handler",
+                        "type": "P"
+                    }
+                ]
+            },
+            "viewport_row_get": {
+                "description": "Get the row that the current item is on."
+            },
+            "viewport_row_set": {
+                "description": "Set the row that the current item is on (returns the row that was set).",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__name__": "Navigation"
+    },
+    "navigationrange": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleterecords": {
+                "name": "DeleteRecords",
+                "description": "Delete the records in the range."
+            },
+            "evaluate": {
+                "name": "Evaluate",
+                "description": "Evaluate expression for range, append results.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "markrecords": {
+                "name": "MarkRecords",
+                "description": "Mark the records in the range."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "unmarkrecords": {
+                "name": "UnmarkRecords",
+                "description": "Unmark the records in the range."
+            },
+            "inside_range": {
+                "description": "Returns true if row is inside the range of rows defined.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "NavigationRange"
+    },
+    "navigationrow": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "evaluate": {
+                "name": "Evaluate",
+                "description": "Evaluate expression for row.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "get_navigation": {
+                "description": "Returns the navigation associated with the range."
+            },
+            "goto_row": {
+                "description": "Sets underlying table to the navigation row."
+            },
+            "insideboundrange": {
+                "name": "insideBoundRange",
+                "description": "Is the row inside the bound range."
+            },
+            "iscurrent": {
+                "name": "isCurrent",
+                "description": "Is this the 'current' row."
+            },
+            "isrowvalid": {
+                "name": "isRowValid",
+                "description": "Test that the row is still valid (i.e. not deleted)."
+            },
+            "same": {
+                "description": "Compare other row to this row, return true if the row is the same.",
+                "arguments": [
+                    {
+                        "name": "otherrow",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "NavigationRow"
+    },
+    "outputformat": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "renderall": {
+                "name": "RenderAll",
+                "description": "Render all rows in table navigation interface.",
+                "arguments": [
+                    {
+                        "name": "view",
+                        "type": "P"
+                    }
+                ]
+            },
+            "renderrange": {
+                "name": "RenderRange",
+                "description": "Render all rows in range as text output.",
+                "arguments": [
+                    {
+                        "name": "range",
+                        "type": "P"
+                    }
+                ]
+            },
+            "renderrow": {
+                "name": "RenderRow",
+                "description": "Render row as text output.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "P"
+                    }
+                ]
+            },
+            "renderviewport": {
+                "name": "RenderViewport",
+                "description": "Render all rows in viewport as text output.",
+                "arguments": [
+                    {
+                        "name": "view",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "OutputFormat"
+    },
+    "__name__": "TableNavigation"
+}

@@ -1,0 +1,78 @@
+{
+    "onecode": {
+        "__functions__": {
+            "bars": {
+                "name": "Bars",
+                "description": "Bars",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "C"
+                    }
+                ]
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "onecode": {
+                "name": "OneCode",
+                "description": "Public Constructor"
+            },
+            "onecode": {
+                "name": "OneCode",
+                "description": "Public Constructor"
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "OneCode"
+    },
+    "__name__": "USPS"
+}

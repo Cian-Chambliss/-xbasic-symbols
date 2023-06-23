@@ -1,0 +1,1693 @@
+{
+    "alignment": {
+        "__methods__": {
+            "clear": {
+                "name": "Clear",
+                "description": "Remove all settings."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert Edge text to an alignment definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getflags": {
+                "name": "GetFlags",
+                "description": "Returns alignment flags."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the Edge text that represents the alignment definition."
+            }
+        },
+        "__name__": "Alignment"
+    },
+    "baseborder": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert Border text to an border definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hasborder": {
+                "name": "HasBorder",
+                "description": "Returns true if a border is displayed."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the Border text that represents the border definition."
+            }
+        },
+        "__name__": "BaseBorder"
+    },
+    "border": {
+        "__methods__": {
+            "clear": {
+                "name": "Clear",
+                "description": "Remove all settings."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "combine": {
+                "name": "Combine",
+                "description": "Combine feature of a base border into this border.",
+                "arguments": [
+                    {
+                        "name": "baseborder",
+                        "type": "P"
+                    }
+                ]
+            },
+            "defineflags": {
+                "name": "DefineFlags",
+                "description": "Returns numeric value represent flags which properties the class defines."
+            },
+            "definesmore": {
+                "name": "DefinesMore",
+                "description": "Returns true if baseBorder defines properties not in current border.",
+                "arguments": [
+                    {
+                        "name": "baseborder",
+                        "type": "P"
+                    }
+                ]
+            },
+            "edgeoverrides": {
+                "name": "EdgeOverrides",
+                "description": "Returns true if any of the borders (left/right/top/bottom) are defined."
+            },
+            "generatecssstyle": {
+                "name": "GenerateCssStyle",
+                "description": "Generate the CSS style for the border , option 'edge' allows for top,left,right,bottom prefix to types.",
+                "arguments": [
+                    {
+                        "name": "edge",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "quickdrawgenerate": {
+                "name": "QuickdrawGenerate",
+                "description": "Generate quickdraw for line selection."
+            }
+        },
+        "__name__": "Border"
+    },
+    "edge": {
+        "__methods__": {
+            "clear": {
+                "name": "Clear",
+                "description": "Remove all settings."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert Edge text to an edge definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    },
+                    {
+                        "name": "prefix",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the Edge text that represents the edge definition.",
+                "arguments": [
+                    {
+                        "name": "prefix",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Edge"
+    },
+    "element": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "createpositionalstyle": {
+                "name": "CreatePositionalStyle",
+                "description": "Creates the flattened style element for a positional style for n of count elements.",
+                "arguments": [
+                    {
+                        "name": "offset",
+                        "type": "N"
+                    },
+                    {
+                        "name": "topoffset",
+                        "type": "N"
+                    },
+                    {
+                        "name": "state",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "createstyle": {
+                "name": "CreateStyle",
+                "description": "Creates the style for a positional element.",
+                "arguments": [
+                    {
+                        "name": "state",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Element"
+    },
+    "embeddedimage": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "frombinary": {
+                "name": "FromBinary",
+                "description": "Return type and content from binary 'image', returns true if succeeded.",
+                "arguments": [
+                    {
+                        "name": "content",
+                        "type": "B"
+                    }
+                ]
+            },
+            "fromfile": {
+                "name": "FromFile",
+                "description": "Load embedded image from a file, returns true if succeeded.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromhandle": {
+                "name": "FromHandle",
+                "description": "Load embedded image from a handle.",
+                "arguments": [
+                    {
+                        "name": "dibhandle",
+                        "type": "N"
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert Edge text to an alignment definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the Edge text that represents the alignment definition."
+            }
+        },
+        "__name__": "EmbeddedImage"
+    },
+    "fill": {
+        "__methods__": {
+            "clear": {
+                "name": "Clear",
+                "description": "Remove all settings."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert Fill text to an fill definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "generatecssstyle": {
+                "name": "GenerateCssStyle",
+                "description": "Generate the CSS style for the fill.",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "quickdrawgenerate": {
+                "name": "QuickdrawGenerate",
+                "description": "Generate quickdraw for line selection."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the Fill text that represents the fill definition."
+            }
+        },
+        "__name__": "Fill"
+    },
+    "font": {
+        "__methods__": {
+            "clear": {
+                "name": "Clear",
+                "description": "Remove all settings."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "combine": {
+                "name": "Combine",
+                "description": "Combine feature of a base font into this font.",
+                "arguments": [
+                    {
+                        "name": "basefont",
+                        "type": "P"
+                    }
+                ]
+            },
+            "defineflags": {
+                "name": "DefineFlags",
+                "description": "Returns numeric value represent flags which properties the class defines."
+            },
+            "definesmore": {
+                "name": "DefinesMore",
+                "description": "Returns true if baseFont defines properties not in current font.",
+                "arguments": [
+                    {
+                        "name": "basefont",
+                        "type": "P"
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert Font text to an font definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "generatecssstyle": {
+                "name": "GenerateCssStyle",
+                "description": "Generate the CSS style for the font."
+            },
+            "getfontdescriptor": {
+                "name": "GetFontDescriptor",
+                "description": "Returns the font descriptor (i.e. ascii font name)."
+            },
+            "getmetrics": {
+                "name": "GetMetrics",
+                "description": "Get a text metrics object for the font style."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "quickdrawgenerate": {
+                "name": "QuickdrawGenerate",
+                "description": "Generate quickdraw for line selection."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the Font text that represents the font definition."
+            }
+        },
+        "__name__": "Font"
+    },
+    "fontmetrics": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getextentheight": {
+                "name": "GetExtentHeight",
+                "description": "Get the height extent (in units) of the sample text using the font.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getextentwidth": {
+                "name": "GetExtentWidth",
+                "description": "Get the width extent (in units) of the sample text using the font.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "FontMetrics"
+    },
+    "image": {
+        "__methods__": {
+            "clear": {
+                "name": "Clear",
+                "description": "Remove all settings."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert Edge text to an alignment definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the Edge text that represents the alignment definition."
+            }
+        },
+        "__name__": "Image"
+    },
+    "namedstyle": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromcss": {
+                "name": "FromCSS",
+                "description": "Populate a named style from a CSS definition (uses HTML attributes & format wherever possible).",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert named visual style string to an named visual style definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tocss": {
+                "name": "ToCSS",
+                "description": "Output style sheet to CSS version."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the named visual style string that represents the named visual style definition."
+            }
+        },
+        "__name__": "NamedStyle"
+    },
+    "namedstyleauto": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert visual style string to an visual style definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the  visual style string that represents the visual style definition."
+            }
+        },
+        "__name__": "NamedStyleAuto"
+    },
+    "psuedoinfo": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getflags": {
+                "name": "GetFlags",
+                "description": "Reports bitwise flags (for psuedo-style)."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "definesalternates": {
+                "name": "definesAlternates",
+                "description": "defines alternates (with optional offset).",
+                "arguments": [
+                    {
+                        "name": "offset",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "definesfirst": {
+                "name": "definesFirst",
+                "description": "defines first (with optional offset).",
+                "arguments": [
+                    {
+                        "name": "offset",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "defineslast": {
+                "name": "definesLast",
+                "description": "defines first (with optional offset).",
+                "arguments": [
+                    {
+                        "name": "offset",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "PsuedoInfo"
+    },
+    "shadow": {
+        "__methods__": {
+            "clear": {
+                "name": "Clear",
+                "description": "Remove all settings."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert Shadow text to an shadow definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the Shadow text that represents the shadow definition."
+            }
+        },
+        "__name__": "Shadow"
+    },
+    "stack": {
+        "__methods__": {
+            "backgroundgenerate": {
+                "name": "BackgroundGenerate",
+                "description": "Returns the shape of an object layer=0 means all, 1=fill 2=border.",
+                "arguments": [
+                    {
+                        "name": "fullname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "layer",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getcursor": {
+                "name": "GetCursor",
+                "description": "Returns the name of a cursor for an element.",
+                "arguments": [
+                    {
+                        "name": "fullname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getelement": {
+                "name": "GetElement",
+                "description": "Get a style element pointer from the stack.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "output": {
+                "name": "Output",
+                "description": "Dump styles from all context.",
+                "arguments": [
+                    {
+                        "name": "stylesheetoutputformat",
+                        "type": "C"
+                    }
+                ]
+            },
+            "quickdrawgenerate": {
+                "name": "QuickdrawGenerate",
+                "description": "Given a style, generate quickdraw for font, color, brush and line style (the caller must generate the appropriate quickdraw for the border shape).",
+                "arguments": [
+                    {
+                        "name": "fullname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "hdc",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Stack"
+    },
+    "state": {
+        "__enumeration__": [
+            "Normal",
+            "Hover",
+            "Disabled",
+            "Selected",
+            "Focused"
+        ],
+        "__name__": "State"
+    },
+    "style": {
+        "__functions__": {
+            "csscolor": {
+                "name": "CSSColor",
+                "description": "Convert an alpha style color into an HTML color.",
+                "arguments": [
+                    {
+                        "name": "attribute",
+                        "type": "C"
+                    },
+                    {
+                        "name": "color",
+                        "type": "C"
+                    }
+                ]
+            },
+            "cssinline": {
+                "name": "CSSInline",
+                "description": "Convert visual inline fill properties to CSS.",
+                "arguments": [
+                    {
+                        "name": "style",
+                        "type": "C"
+                    }
+                ]
+            },
+            "combinestyles": {
+                "name": "CombineStyles",
+                "description": "Combine two styles with options (options are t,l,b,r for top/left/bottom/right - to pick which borders to define for style2).",
+                "arguments": [
+                    {
+                        "name": "style1",
+                        "type": "C"
+                    },
+                    {
+                        "name": "style2",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "copyattribute": {
+                "name": "CopyAttribute",
+                "description": "Copy an attribute from styleOther to styleOriginal.",
+                "arguments": [
+                    {
+                        "name": "styleoriginal",
+                        "type": "C"
+                    },
+                    {
+                        "name": "styleother",
+                        "type": "C"
+                    },
+                    {
+                        "name": "attribute",
+                        "type": "C"
+                    }
+                ]
+            },
+            "dynamicstyletemplate": {
+                "name": "DynamicStyleTemplate",
+                "description": "Create a template or expression for style that includes dynamic elements.",
+                "arguments": [
+                    {
+                        "name": "style",
+                        "type": "C"
+                    },
+                    {
+                        "name": "asexpression",
+                        "type": "L"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "applyboxmodifier": {
+                "name": "ApplyBoxModifier",
+                "description": "Modifies style to conform for a box modifer (section).",
+                "arguments": [
+                    {
+                        "name": "boxmodifier",
+                        "type": "C"
+                    }
+                ]
+            },
+            "backgroundgenerate": {
+                "name": "BackgroundGenerate",
+                "description": "Returns the shape of an object layer=0 means all, 1=fill 2=border.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "layer",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "clearstyle": {
+                "name": "ClearStyle",
+                "description": "Clears style elements (i.e. font,fill,border,alignment).",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "combine": {
+                "name": "Combine",
+                "description": "Combine feature of a base style into this style.",
+                "arguments": [
+                    {
+                        "name": "basestyle",
+                        "type": "P"
+                    }
+                ]
+            },
+            "definesmore": {
+                "name": "DefinesMore",
+                "description": "Returns true if baseStyle defines properties not in current style.",
+                "arguments": [
+                    {
+                        "name": "basestyle",
+                        "type": "P"
+                    }
+                ]
+            },
+            "dynamicevaluate": {
+                "name": "DynamicEvaluate",
+                "description": "If any dynamic fields exist for the style, they are evaluated - optional evalContext same as argument for eval() function.",
+                "arguments": [
+                    {
+                        "name": "evalcontext",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "dynamicstyletemplategenerate": {
+                "name": "DynamicStyleTemplateGenerate",
+                "description": "Generate an expression for a style with dynamic properties.",
+                "arguments": [
+                    {
+                        "name": "asexpression",
+                        "type": "L"
+                    }
+                ]
+            },
+            "enumeratefields": {
+                "name": "EnumerateFields",
+                "description": "Enumerate fields that are contained.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "fromcss": {
+                "name": "FromCSS",
+                "description": "Populate a visual style from a CSS definition (uses HTML attributes & format wherever possible).",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert visual style string to an visual style definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "generatecssstyle": {
+                "name": "GenerateCssStyle",
+                "description": "Generate the CSS style for the font, options - pick which elements to convert.",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getfield": {
+                "name": "GetField",
+                "description": "Get field by name (allows non-standard fields).",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getfillstyle": {
+                "name": "GetFillStyle",
+                "description": "Returns the fill style."
+            },
+            "getfontcolor": {
+                "name": "GetFontColor",
+                "description": "Returns the font color."
+            },
+            "getfontdescriptor": {
+                "name": "GetFontDescriptor",
+                "description": "Returns the font descriptor (i.e. ascii font name)."
+            },
+            "hasalignment": {
+                "name": "HasAlignment",
+                "description": "Returns true if style has alignment defined."
+            },
+            "hasbackground": {
+                "name": "HasBackground",
+                "description": "Returns true if style has a Fill or border Which is not empty."
+            },
+            "hasfield": {
+                "name": "HasField",
+                "description": "Return true if there is a field that matches the pattern (smatch).",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hasfill": {
+                "name": "HasFill",
+                "description": "Returns true if style has a fill style."
+            },
+            "hasfont": {
+                "name": "HasFont",
+                "description": "Returns true if style has a font definition."
+            },
+            "hasfontcolor": {
+                "name": "HasFontColor",
+                "description": "Returns true if style has a font color."
+            },
+            "hasfontmodifier": {
+                "name": "HasFontModifier",
+                "description": "Returns true if style has a font modifier (size,bold,italic,underline or strikeout)."
+            },
+            "hasimage": {
+                "name": "HasImage",
+                "description": "Returns true if style has a image style."
+            },
+            "hasline": {
+                "name": "HasLine",
+                "description": "Returns true if style has a line style."
+            },
+            "hasroundedcorners": {
+                "name": "HasRoundedCorners",
+                "description": "Returns true if style has rounded or beveled corners."
+            },
+            "isdefault": {
+                "name": "IsDefault",
+                "description": "Default style - returned for 'undefined' styles."
+            },
+            "isshrinkable": {
+                "name": "IsShrinkable",
+                "description": "resizable is set to shrink - property for print-time resize of elements."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "quickdrawgenerate": {
+                "name": "QuickdrawGenerate",
+                "description": "Given a style, generate quickdraw for font, color, brush and line style (the caller must generate the appropriate quickdraw for the border shape).",
+                "arguments": [
+                    {
+                        "name": "flags",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "hdc",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "setandconvertborders": {
+                "name": "SetAndConvertBorders",
+                "description": "Set borders (optimizes for styles on defined borders being the same).",
+                "arguments": [
+                    {
+                        "name": "left",
+                        "type": "P"
+                    },
+                    {
+                        "name": "right",
+                        "type": "P"
+                    },
+                    {
+                        "name": "top",
+                        "type": "P"
+                    },
+                    {
+                        "name": "bottom",
+                        "type": "P"
+                    }
+                ]
+            },
+            "setborders": {
+                "name": "SetBorders",
+                "description": "Set borders (optimizes for styles on defined borders being the same).",
+                "arguments": [
+                    {
+                        "name": "left",
+                        "type": "P"
+                    },
+                    {
+                        "name": "right",
+                        "type": "P"
+                    },
+                    {
+                        "name": "top",
+                        "type": "P"
+                    },
+                    {
+                        "name": "bottom",
+                        "type": "P"
+                    }
+                ]
+            },
+            "setdeclaration": {
+                "name": "SetDeclaration",
+                "description": "Set field by name (allows non-standard fields).",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tocss": {
+                "name": "ToCSS",
+                "description": "Output the  visual style string to a css style sheet."
+            },
+            "toreststyle": {
+                "name": "ToRestStyle",
+                "description": "Emit style - to rest output."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the  visual style string that represents the visual style definition."
+            }
+        },
+        "__name__": "Style"
+    },
+    "styleautomation": {
+        "__methods__": {
+            "bind": {
+                "name": "Bind",
+                "description": "Bind style automation to a definition property.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "P"
+                    },
+                    {
+                        "name": "propertyname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "bindlayouttable": {
+                "name": "BindLayoutTable",
+                "description": "Bind layout table object - this allows access to select visual column and row properties.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "P"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "enumeratefields": {
+                "name": "EnumerateFields",
+                "description": "Enumerate fields that are contained.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "extendedpropertyvisible": {
+                "name": "ExtendedPropertyVisible",
+                "description": "Returns true if the extended property is visible (i.e. Column_Width and Row_Height).",
+                "arguments": [
+                    {
+                        "name": "propertyname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert visual style string to an visual style definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getfield": {
+                "name": "GetField",
+                "description": "Get field by name (allows non-standard fields).",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getlayouttable": {
+                "name": "GetLayoutTable",
+                "description": "Get the current bound layout table."
+            },
+            "hasdynamic": {
+                "name": "HasDynamic",
+                "description": "Returns true if a dynamic property is found.",
+                "arguments": [
+                    {
+                        "name": "prop",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setdeclaration": {
+                "name": "SetDeclaration",
+                "description": "Set field by name (allows non-standard fields).",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the  visual style string that represents the visual style definition."
+            }
+        },
+        "__name__": "StyleAutomation"
+    },
+    "stylesheet": {
+        "__functions__": {
+            "linkedstylereset": {
+                "name": "LinkedStyleReset",
+                "description": "Force linked styles cache to be invalidated (so that changes to styles are reflected)."
+            },
+            "linkedstylesheet": {
+                "name": "LinkedStyleSheet",
+                "description": "Convert name into style sheet definition.",
+                "arguments": [
+                    {
+                        "name": "linkname",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addstyle": {
+                "name": "AddStyle",
+                "description": "Add a Style.",
+                "arguments": [
+                    {
+                        "name": "style",
+                        "type": "VisualStyle::NamedStyle"
+                    }
+                ]
+            },
+            "applydividerstyles": {
+                "name": "ApplyDividerStyles",
+                "description": "Add to a specified class border style overrides from another class applied to specified edge (top,left,bottom,right).",
+                "arguments": [
+                    {
+                        "name": "targetclassname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "srcclassname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "edge",
+                        "type": "C"
+                    }
+                ]
+            },
+            "baketocss": {
+                "name": "BakeToCSS",
+                "description": "Create CSS stylesheet from a visual stylesheet, css_format describes the level & features to implement.",
+                "arguments": [
+                    {
+                        "name": "css_format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "combinestyles": {
+                "name": "CombineStyles",
+                "description": "Returns style definition for combination of all styles named in classNames list.",
+                "arguments": [
+                    {
+                        "name": "classnames",
+                        "type": "C"
+                    }
+                ]
+            },
+            "definesbasestyle": {
+                "name": "DefinesBaseStyle",
+                "description": "Returns true if any custom variants match the passed in style (i.e. even if there is no base type, any custom types will cause true if style h).",
+                "arguments": [
+                    {
+                        "name": "basestyle",
+                        "type": "C"
+                    },
+                    {
+                        "name": "fallback",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "deletestyle": {
+                "name": "DeleteStyle",
+                "description": "Delete a Style.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "expandboxstyles": {
+                "name": "ExpandBoxStyles",
+                "description": "Expands 'box' styles based on root style(s) (if borders are defined) - removes borders from the 'base' style, which will only be kept around if it includes non-border properties.",
+                "arguments": [
+                    {
+                        "name": "rootclassnames",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromcss": {
+                "name": "FromCSS",
+                "description": "Populate a stylesheet from a CSS definition (uses HTML attributes & format wherever possible).",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Populate a stylesheet from a stylesheet definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getpositionalstyle": {
+                "name": "GetPositionalStyle",
+                "description": "Return the best psuedo-style (i.e. alt,first,last varients).",
+                "arguments": [
+                    {
+                        "name": "basestyle",
+                        "type": "C"
+                    },
+                    {
+                        "name": "offset",
+                        "type": "N"
+                    },
+                    {
+                        "name": "topoffset",
+                        "type": "N"
+                    },
+                    {
+                        "name": "fallback",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "getpsuedoflags": {
+                "name": "GetPsuedoFlags",
+                "description": "Reports bitwise flags for psuedo-style.",
+                "arguments": [
+                    {
+                        "name": "basename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "fallback",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "getpsuedoinfo": {
+                "name": "GetPsuedoInfo",
+                "description": "Get psuedo info for a base class (i.e. all classes defined).",
+                "arguments": [
+                    {
+                        "name": "basename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "matchpatterncount": {
+                "name": "MatchPatternCount",
+                "description": "Return the number of styles that match a given pattern.",
+                "arguments": [
+                    {
+                        "name": "stylepattern",
+                        "type": "C"
+                    }
+                ]
+            },
+            "matchpatternnames": {
+                "name": "MatchPatternNames",
+                "description": "Return a list of style names that match a pattern.",
+                "arguments": [
+                    {
+                        "name": "stylepattern",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "output": {
+                "name": "Output",
+                "description": "Dump the style sheet list (format specs: $N=name,$B=base name,$P=Psuedo-class).",
+                "arguments": [
+                    {
+                        "name": "stylesheetoutputformat",
+                        "type": "C"
+                    }
+                ]
+            },
+            "resolve": {
+                "name": "Resolve",
+                "description": "Resolves a style from a name - finds closest match (always returns a valid style).",
+                "arguments": [
+                    {
+                        "name": "stylename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "resolveexact": {
+                "name": "ResolveExact",
+                "description": "Resolves a style from a name - finds exact match, or fails.",
+                "arguments": [
+                    {
+                        "name": "stylename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "resolvemultiple": {
+                "name": "ResolveMultiple",
+                "description": "Resolves one OR many styles into a single stype element (multiple selector support).",
+                "arguments": [
+                    {
+                        "name": "stylename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "stylenumber": {
+                "name": "StyleNumber",
+                "description": "Get the index of a Style from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tocss": {
+                "name": "ToCSS",
+                "description": "Output style sheet to CSS version."
+            },
+            "toreportaliasnames": {
+                "name": "ToReportAliasNames",
+                "description": "Converts mapped names back to alias (used for css-name mapping in visual style)."
+            },
+            "toreststyle": {
+                "name": "ToRestStyle",
+                "description": "Emit stylesheet (matching prefix, ommitted) - to rest output.",
+                "arguments": [
+                    {
+                        "name": "prefix",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output a stylesheet definition."
+            }
+        },
+        "__name__": "StyleSheet"
+    },
+    "stylesheetauto": {
+        "__methods__": {
+            "addstyle": {
+                "name": "AddStyle",
+                "description": "Add a Style.",
+                "arguments": [
+                    {
+                        "name": "style",
+                        "type": "VisualStyle::NamedStyleAuto"
+                    }
+                ]
+            },
+            "bind": {
+                "name": "Bind",
+                "description": "Bind style sheet automation to a definition property.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "P"
+                    },
+                    {
+                        "name": "propertyname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletestyle": {
+                "name": "DeleteStyle",
+                "description": "Delete a Style.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert visual style string to an visual style definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertstyle": {
+                "name": "InsertStyle",
+                "description": "Insert a new Style.",
+                "arguments": [
+                    {
+                        "name": "style",
+                        "type": "VisualStyle::NamedStyleAuto"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movestyle": {
+                "name": "MoveStyle",
+                "description": "Move a block of Style items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the  visual style string that represents the visual style definition."
+            }
+        },
+        "__name__": "StyleSheetAuto"
+    },
+    "template": {
+        "__methods__": {
+            "addmetric": {
+                "name": "AddMetric",
+                "description": "Add a Metric.",
+                "arguments": [
+                    {
+                        "name": "metric",
+                        "type": "n"
+                    }
+                ]
+            },
+            "addtext": {
+                "name": "AddText",
+                "description": "Add a Text.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletemetric": {
+                "name": "DeleteMetric",
+                "description": "Delete a Metric.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletetext": {
+                "name": "DeleteText",
+                "description": "Delete a Text.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertmetric": {
+                "name": "InsertMetric",
+                "description": "Insert a new Metric.",
+                "arguments": [
+                    {
+                        "name": "metric",
+                        "type": "n"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "inserttext": {
+                "name": "InsertText",
+                "description": "Insert a new Text.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "c"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movemetric": {
+                "name": "MoveMetric",
+                "description": "Move a block of Metric items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movetext": {
+                "name": "MoveText",
+                "description": "Move a block of Text items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "output": {
+                "name": "Output",
+                "description": "Generate output from a styleSheet stack.",
+                "arguments": [
+                    {
+                        "name": "template",
+                        "type": "C"
+                    },
+                    {
+                        "name": "hdc",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Template"
+    },
+    "__name__": "VisualStyle"
+}

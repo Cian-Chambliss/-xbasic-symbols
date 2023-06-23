@@ -1,0 +1,201 @@
+{
+    "instance": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Instance"
+    },
+    "lock": {
+        "__methods__": {
+            "lock": {
+                "name": "Lock",
+                "description": "Lock with cache lock (no-op if already locked)."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "lock": {
+                "name": "Lock",
+                "description": "Lock with cache lock (no-op if already locked)."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "unlock": {
+                "name": "UnLock",
+                "description": "Done with cache lock (If ommitted will automatically occur in destructor)."
+            }
+        },
+        "__name__": "Lock"
+    },
+    "manager": {
+        "__functions__": {
+            "getcurrent": {
+                "name": "GetCurrent",
+                "description": "Return cache manager for the current thread."
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "lock": {
+                "name": "Lock",
+                "description": "Create a lock for a cache."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "clear": {
+                "description": "Clear the cache completely."
+            },
+            "create": {
+                "description": "Create a new cache instance.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expr",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expirefunction",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "createtimed": {
+                "name": "createTimed",
+                "description": "Create a new 'timeed' cache instance - expires only after time provided.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expr",
+                        "type": "C"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N"
+                    },
+                    {
+                        "name": "expirefunction",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "drop": {
+                "description": "Drop an entry from the cache.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "exists": {
+                "description": "Return if a cache instance exists.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "get": {
+                "description": "Return a cache instance.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "Manager"
+    },
+    "tabledata": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "TableData"
+    },
+    "tablemanager": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getdata": {
+                "name": "GetData",
+                "description": "Get 'external' data associated with a 'logical' table.",
+                "arguments": [
+                    {
+                        "name": "table",
+                        "type": "C"
+                    },
+                    {
+                        "name": "catagory",
+                        "type": "C"
+                    },
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setdata": {
+                "name": "SetData",
+                "description": "Set 'external' data associated with a 'logical' table.",
+                "arguments": [
+                    {
+                        "name": "table",
+                        "type": "C"
+                    },
+                    {
+                        "name": "catagory",
+                        "type": "C"
+                    },
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__name__": "TableManager"
+    },
+    "__name__": "GenericCache"
+}

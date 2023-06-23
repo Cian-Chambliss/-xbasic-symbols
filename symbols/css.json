@@ -1,0 +1,1032 @@
+{
+    "atrule": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert CSS Media text to an atRule definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the CSS Media that represents the style definition.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "AtRule"
+    },
+    "attributevaluearray": {
+        "__methods__": {
+            "addattribute": {
+                "name": "Addattribute",
+                "description": "Add a attribute.",
+                "arguments": [
+                    {
+                        "name": "attribute",
+                        "type": "c"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteattribute": {
+                "name": "Deleteattribute",
+                "description": "Delete a attribute.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Split attribute (taking parentheses and quotes into consideration).",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertattribute": {
+                "name": "Insertattribute",
+                "description": "Insert a new attribute.",
+                "arguments": [
+                    {
+                        "name": "attribute",
+                        "type": "c"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveattribute": {
+                "name": "Moveattribute",
+                "description": "Move a block of attribute items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Combine attributes."
+            }
+        },
+        "__name__": "AttributeValueArray"
+    },
+    "css3boxshadow": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Populate a box shadow from a compact definition.",
+                "arguments": [
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Return compact definition for a box shadow."
+            }
+        },
+        "__name__": "CSS3BoxShadow"
+    },
+    "digestedattributes": {
+        "__methods__": {
+            "addbox_shadow": {
+                "name": "Addbox_shadow",
+                "description": "Add a box_shadow.",
+                "arguments": [
+                    {
+                        "name": "box_shadow",
+                        "type": "Css::CSS3BoxShadow"
+                    }
+                ]
+            },
+            "addtext_shadow": {
+                "name": "Addtext_shadow",
+                "description": "Add a text_shadow.",
+                "arguments": [
+                    {
+                        "name": "text_shadow",
+                        "type": "Css::CSS3BoxShadow"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletebox_shadow": {
+                "name": "Deletebox_shadow",
+                "description": "Delete a box_shadow.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletetext_shadow": {
+                "name": "Deletetext_shadow",
+                "description": "Delete a text_shadow.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertbox_shadow": {
+                "name": "Insertbox_shadow",
+                "description": "Insert a new box_shadow.",
+                "arguments": [
+                    {
+                        "name": "box_shadow",
+                        "type": "Css::CSS3BoxShadow"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "inserttext_shadow": {
+                "name": "Inserttext_shadow",
+                "description": "Insert a new text_shadow.",
+                "arguments": [
+                    {
+                        "name": "text_shadow",
+                        "type": "Css::CSS3BoxShadow"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movebox_shadow": {
+                "name": "Movebox_shadow",
+                "description": "Move a block of box_shadow items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movetext_shadow": {
+                "name": "Movetext_shadow",
+                "description": "Move a block of text_shadow items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "DigestedAttributes"
+    },
+    "media": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert CSS Media text to an media definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the CSS Media that represents the style definition.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Media"
+    },
+    "scssvariable": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "SCssVariable"
+    },
+    "selector": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "flattenselectors": {
+                "name": "FlattenSelectors",
+                "description": "Output Cr-lf delimited list of selectors (commas -> crlf() + remove whitespace )."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert CSS text to an style definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromstringscss": {
+                "name": "FromStringSCss",
+                "description": "Convert SCSS style sheet text to an style definition (handles scss variables etc).",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "outputprocess": {
+                "name": "OutputProcess",
+                "description": "Process the CSS output (i.e. filter + output combination).",
+                "arguments": [
+                    {
+                        "name": "output",
+                        "type": "P"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the CSS text that represents the style definition.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Selector"
+    },
+    "styledef": {
+        "__methods__": {
+            "appendcss": {
+                "name": "AppendCss",
+                "description": "Convert CSS text to additional style definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "applyboxmodifier": {
+                "name": "ApplyBoxModifier",
+                "description": "Modifies style to conform for a box modifer (section).",
+                "arguments": [
+                    {
+                        "name": "boxmodifier",
+                        "type": "C"
+                    }
+                ]
+            },
+            "css3fromlegacy": {
+                "name": "CSS3FromLegacy",
+                "description": "Set undefined CSS3 features when legacy mozilla Or WebKit attributes."
+            },
+            "css3striplegacy": {
+                "name": "CSS3StripLegacy",
+                "description": "Clear out any legacy mozilla Or WebKit attributes already represented by CSS3 standard attributes in style (unbloat)."
+            },
+            "css3tolegacy": {
+                "name": "CSS3ToLegacy",
+                "description": "Represent any CSS3 features as legacy Mozilla and WebKit attributes (bloat)."
+            },
+            "clearcss": {
+                "name": "ClearCss",
+                "description": "Clear CSS style sheet."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "converttoa5borderstyle": {
+                "name": "ConvertToA5BorderStyle",
+                "description": "Returns an alpha five border style.",
+                "arguments": [
+                    {
+                        "name": "borderstyle",
+                        "type": "C"
+                    }
+                ]
+            },
+            "converttoa5colordef": {
+                "name": "ConvertToA5ColorDef",
+                "description": "Returns an alpha five color definition.",
+                "arguments": [
+                    {
+                        "name": "csscolor",
+                        "type": "C"
+                    }
+                ]
+            },
+            "converttotwips": {
+                "name": "ConvertToTwips",
+                "description": "Returns Css units into twips measurement.",
+                "arguments": [
+                    {
+                        "name": "cssunits",
+                        "type": "C"
+                    }
+                ]
+            },
+            "froma5fontdef": {
+                "name": "FromA5FontDef",
+                "description": "Populate font definiton and color from alpha five defitions.",
+                "arguments": [
+                    {
+                        "name": "fontdef",
+                        "type": "C"
+                    },
+                    {
+                        "name": "colordef",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert CSS text to an style definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromstringscss": {
+                "name": "FromStringSCss",
+                "description": "Convert SCSS style sheet text to an style definition (handles scss variables etc).",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getdigested": {
+                "name": "GetDigested",
+                "description": "Returns box-shadow attributes that are further digested."
+            },
+            "getfield": {
+                "name": "GetField",
+                "description": "Get field by name (allows non-standard css fields).",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hasborder": {
+                "name": "HasBorder",
+                "description": "Any aspect of border defined?"
+            },
+            "hascss3": {
+                "name": "HasCSS3",
+                "description": "Returns true if style sheet includes CSS3 attributes."
+            },
+            "hasfont": {
+                "name": "HasFont",
+                "description": "Any aspect of font defined?"
+            },
+            "haslegacy": {
+                "name": "HasLegacy",
+                "description": "Returns true if style sheet includes legacy attributes."
+            },
+            "hasroundedborder": {
+                "name": "HasRoundedBorder",
+                "description": "Defines rounded borders (requires knowledge of corners in stylesheets)."
+            },
+            "issame": {
+                "name": "IsSame",
+                "description": "Returns true if style matches exactly.",
+                "arguments": [
+                    {
+                        "name": "other",
+                        "type": "P"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "outputprocess": {
+                "name": "OutputProcess",
+                "description": "Process the CSS output (i.e. filter + output combination).",
+                "arguments": [
+                    {
+                        "name": "output",
+                        "type": "P"
+                    }
+                ]
+            },
+            "pixeltopoint": {
+                "name": "PixelToPoint",
+                "description": "Convert any units expressed in device dependent pixels to device indenpendent points."
+            },
+            "pointtopixel": {
+                "name": "PointToPixel",
+                "description": "Convert any units expressed in device indenpendent points into device dependent pixels."
+            },
+            "removefield": {
+                "name": "RemoveField",
+                "description": "Remove field by name (allows removal of individual css fields).",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "selectorscombine": {
+                "name": "SelectorsCombine",
+                "description": "Pass in other style definition set undefined attributes, already defined attributes get set to psuedo value <Multiple>.",
+                "arguments": [
+                    {
+                        "name": "other",
+                        "type": "P"
+                    }
+                ]
+            },
+            "setdeclaration": {
+                "name": "SetDeclaration",
+                "description": "Set field by name (allows non-standard css fields).",
+                "arguments": [
+                    {
+                        "name": "field",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "toa5colordef": {
+                "name": "ToA5ColorDef",
+                "description": "Returns an alpha five font color definition (foreground on background format)."
+            },
+            "toa5fontdef": {
+                "name": "ToA5FontDef",
+                "description": "Returns an alpha five font definition."
+            },
+            "tostring": {
+                "name": "toString",
+                "description": "Output the CSS text that represents the style definition.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "StyleDef"
+    },
+    "styleoutput": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "process": {
+                "name": "Process",
+                "description": "Process the current class/property/value (into output)."
+            },
+            "referencescss": {
+                "name": "ReferencesCss",
+                "description": "Filter or output expression references property OR value."
+            },
+            "referencesselector": {
+                "name": "ReferencesSelector",
+                "description": "Filter or output expression references the selector name."
+            }
+        },
+        "__name__": "StyleOutput"
+    },
+    "stylesheet": {
+        "__functions__": {
+            "containssass": {
+                "name": "ContainsSass",
+                "description": "Returns true if the stylesheet contains SASS patterns.",
+                "arguments": [
+                    {
+                        "name": "stylesheet",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addatrule": {
+                "name": "Addatrule",
+                "description": "Add a atrule.",
+                "arguments": [
+                    {
+                        "name": "atrule",
+                        "type": "Css::AtRule"
+                    }
+                ]
+            },
+            "additem": {
+                "name": "Additem",
+                "description": "Add a item.",
+                "arguments": [
+                    {
+                        "name": "item",
+                        "type": "Css::Selector"
+                    }
+                ]
+            },
+            "addmedia": {
+                "name": "Addmedia",
+                "description": "Add a media.",
+                "arguments": [
+                    {
+                        "name": "media",
+                        "type": "Css::Media"
+                    }
+                ]
+            },
+            "addscssvariable": {
+                "name": "AddscssVariable",
+                "description": "Add a scssVariable.",
+                "arguments": [
+                    {
+                        "name": "scssvariable",
+                        "type": "Css::SCssVariable"
+                    }
+                ]
+            },
+            "appendstylesheet": {
+                "name": "AppendStyleSheet",
+                "description": "Add styles to the current style sheet.",
+                "arguments": [
+                    {
+                        "name": "styles",
+                        "type": "P"
+                    }
+                ]
+            },
+            "applydividerstyles": {
+                "name": "ApplyDividerStyles",
+                "description": "Add to a specified class border style overrides from another class applied to specified edge (top,left,bottom,right).",
+                "arguments": [
+                    {
+                        "name": "targetclassname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "srcclassname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "edge",
+                        "type": "C"
+                    }
+                ]
+            },
+            "css3fromlegacy": {
+                "name": "CSS3FromLegacy",
+                "description": "Set undefined CSS3 features when legacy mozilla Or WebKit attributes."
+            },
+            "css3striplegacy": {
+                "name": "CSS3StripLegacy",
+                "description": "Clear out any legacy mozilla Or WebKit attributes already represented by CSS3 standard attributes in style (unbloat)."
+            },
+            "css3tolegacy": {
+                "name": "CSS3ToLegacy",
+                "description": "Represent any CSS3 features as legacy Mozilla and WebKit attributes (bloat)."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "collectsameselectors": {
+                "name": "CollectSameSelectors",
+                "description": "Compress selectors that match exactly."
+            },
+            "deleteatrule": {
+                "name": "Deleteatrule",
+                "description": "Delete a atrule.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteitem": {
+                "name": "Deleteitem",
+                "description": "Delete a item.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletemedia": {
+                "name": "Deletemedia",
+                "description": "Delete a media.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletescssvariable": {
+                "name": "DeletescssVariable",
+                "description": "Delete a scssVariable.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "expandboxstyles": {
+                "name": "ExpandBoxStyles",
+                "description": "Expands 'box' styles based on root style(s) (if borders are defined) - removes borders from the 'base' style, which will only be kept around if it includes non-border properties.",
+                "arguments": [
+                    {
+                        "name": "rootclassnames",
+                        "type": "C"
+                    }
+                ]
+            },
+            "extractstyles": {
+                "name": "ExtractStyles",
+                "description": "Returns a subset stylesheet based on styles that match selectors in list of patterns.",
+                "arguments": [
+                    {
+                        "name": "patterns",
+                        "type": "C"
+                    }
+                ]
+            },
+            "findselector": {
+                "name": "FindSelector",
+                "description": "Returns the index into item[] of the selector that matches the pattern.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "start",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "findselectors": {
+                "name": "FindSelectors",
+                "description": "Returns a cr-lf delimited list of selector names that match the pattern.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "flattenselectors": {
+                "name": "FlattenSelectors",
+                "description": "One class per selector."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Convert CSS style sheet text to an style definition.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromstringscss": {
+                "name": "FromStringSCss",
+                "description": "Convert SCSS style sheet text to an style definition (handles scss variables etc).",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hascss3": {
+                "name": "HasCSS3",
+                "description": "Returns true if style sheet includes CSS3 attributes."
+            },
+            "imagegenerate": {
+                "name": "ImageGenerate",
+                "description": "Remove and process @image-generate selectors.  input images are read from the provided input folder, outputs images are written to the provided output folder.",
+                "arguments": [
+                    {
+                        "name": "inputfolder",
+                        "type": "C"
+                    },
+                    {
+                        "name": "outputfolder",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertatrule": {
+                "name": "Insertatrule",
+                "description": "Insert a new atrule.",
+                "arguments": [
+                    {
+                        "name": "atrule",
+                        "type": "Css::AtRule"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertitem": {
+                "name": "Insertitem",
+                "description": "Insert a new item.",
+                "arguments": [
+                    {
+                        "name": "item",
+                        "type": "Css::Selector"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertmedia": {
+                "name": "Insertmedia",
+                "description": "Insert a new media.",
+                "arguments": [
+                    {
+                        "name": "media",
+                        "type": "Css::Media"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertscssvariable": {
+                "name": "InsertscssVariable",
+                "description": "Insert a new scssVariable.",
+                "arguments": [
+                    {
+                        "name": "scssvariable",
+                        "type": "Css::SCssVariable"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "mergelikeselectors": {
+                "name": "MergeLikeSelectors",
+                "description": "last duplicate selectors overwrite values in later selectors."
+            },
+            "moveatrule": {
+                "name": "Moveatrule",
+                "description": "Move a block of atrule items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moveitem": {
+                "name": "Moveitem",
+                "description": "Move a block of item items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movemedia": {
+                "name": "Movemedia",
+                "description": "Move a block of media items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movescssvariable": {
+                "name": "MovescssVariable",
+                "description": "Move a block of scssVariable items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "output": {
+                "name": "Output",
+                "description": "Create CSS output & object (with filter and output expression) and process it.",
+                "arguments": [
+                    {
+                        "name": "filter_expression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "output_expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "outputprocess": {
+                "name": "OutputProcess",
+                "description": "Process the CSS output (i.e. filter + output combination).",
+                "arguments": [
+                    {
+                        "name": "output",
+                        "type": "P"
+                    }
+                ]
+            },
+            "purgefirstselectors": {
+                "name": "PurgeFirstSelectors",
+                "description": "Purge first duplicate selectors."
+            },
+            "purgelastselectors": {
+                "name": "PurgeLastSelectors",
+                "description": "Purge last duplicate selectors."
+            },
+            "selectors": {
+                "name": "Selectors",
+                "description": "Get a list of selectors."
+            },
+            "selectorscombine": {
+                "name": "SelectorsCombine",
+                "description": "Returns a styleDef that combines all the attributes from the named selectors (cr-lf delimited list) - any attributes that are NOT common to all will have a value of <Multiple>.",
+                "arguments": [
+                    {
+                        "name": "selectors",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Output the CSS style sheet text that represents the style sheet definition.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "unflattenselectors": {
+                "name": "UnFlattenSelectors",
+                "description": "Attempt to restore prior selector."
+            }
+        },
+        "__name__": "StyleSheet"
+    },
+    "__name__": "Css"
+}

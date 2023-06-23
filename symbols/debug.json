@@ -1,0 +1,173 @@
+{
+    "xdialog": {
+        "__functions__": {
+            "to_quickdraw": {
+                "description": "Converts to xdialog format.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "c"
+                    },
+                    {
+                        "name": "options",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "x",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "y",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "width",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "height",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "flyover",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "pressed",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "to_hotspots": {
+                "description": "Converts to xdialog format to hotspot list.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "c"
+                    },
+                    {
+                        "name": "options",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "x",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "y",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "width",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "height",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "flyover",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "pressed",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "get_hotspot": {
+                "description": "Lookup hotspot by position.",
+                "arguments": [
+                    {
+                        "name": "hotspots",
+                        "type": "c"
+                    },
+                    {
+                        "name": "x",
+                        "type": "n"
+                    },
+                    {
+                        "name": "y",
+                        "type": "n"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "dialogs": {
+                "description": "Return names of all dialogs."
+            },
+            "grouped": {
+                "description": "return all xdialogs linked in group.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "regionresize": {
+                "name": "RegionResize",
+                "description": "Test resize of a region inside an xdialog.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "width",
+                        "type": "n"
+                    },
+                    {
+                        "name": "height",
+                        "type": "n"
+                    },
+                    {
+                        "name": "region",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "regionposition": {
+                "name": "RegionPosition",
+                "description": "Test resize of a region inside an xdialog.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "n"
+                    },
+                    {
+                        "name": "y",
+                        "type": "n"
+                    },
+                    {
+                        "name": "region",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "XDialog"
+    },
+    "__name__": "Debug"
+}

@@ -1,0 +1,3757 @@
+{
+    "boxdef": {
+        "__methods__": {
+            "bottomisdeepercontext": {
+                "name": "BottomIsDeeperContext",
+                "description": "Returns true of the bottom cell is at a deeper context."
+            },
+            "boxcontains": {
+                "name": "BoxContains",
+                "description": "Child box.",
+                "arguments": [
+                    {
+                        "name": "childbox",
+                        "type": "P"
+                    }
+                ]
+            },
+            "clearinline": {
+                "name": "ClearInline",
+                "description": "Clear inline style.",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "combinestyle": {
+                "name": "CombineStyle",
+                "description": "Add to style for a box.",
+                "arguments": [
+                    {
+                        "name": "style",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getquickdrawclipping": {
+                "name": "GetQuickdrawClipping",
+                "description": "If cell intersects a corner, and the box definition is rounded, we return the clipping quickdraw code - flags 'P' - from prev, 'N' to next.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "C"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "ncolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "nrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "drawcmd",
+                        "type": "C"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getrange": {
+                "name": "GetRange",
+                "description": "Get topleft & bottom right in a single string."
+            },
+            "insidebox": {
+                "name": "InsideBox",
+                "description": "Returns if a cell is *inside* the 'box' (note - new box starts every 'top' object/row, end every 'bottom' object/row.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "C"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "intersectsobject": {
+                "name": "IntersectsObject",
+                "description": "True if box intersects with layout object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "C"
+                    }
+                ]
+            },
+            "isbottomrow": {
+                "name": "IsBottomRow",
+                "description": "row is at bottom of object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "iscorner": {
+                "name": "IsCorner",
+                "description": "Returns if a cell is on a corner (thus requires potential clipping).",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "C"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "istoprow": {
+                "name": "IsTopRow",
+                "description": "row is at top of object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "topleftoverlaps": {
+                "name": "TopLeftOverlaps",
+                "description": "True if there are other boxes that share the top-left corner."
+            }
+        },
+        "__name__": "BoxDef"
+    },
+    "celldef": {
+        "__methods__": {
+            "addobject": {
+                "name": "AddObject",
+                "description": "Add a Object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "LayoutTable::ContainedObject"
+                    }
+                ]
+            },
+            "appendobject": {
+                "name": "AppendObject",
+                "description": "Add an object to the cell.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "clearcontent": {
+                "name": "ClearContent",
+                "description": "Clear content of a cell"
+            },
+            "clearinline": {
+                "name": "ClearInline",
+                "description": "Clear inline style.",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "clearobjects": {
+                "name": "ClearObjects",
+                "description": "empty the object collection."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "combinestyle": {
+                "name": "CombineStyle",
+                "description": "Add to style for a cell.",
+                "arguments": [
+                    {
+                        "name": "style",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "copyall": {
+                "name": "CopyAll",
+                "description": "Copy all aspects of another cell.",
+                "arguments": [
+                    {
+                        "name": "other",
+                        "type": "P"
+                    }
+                ]
+            },
+            "copycontent": {
+                "name": "CopyContent",
+                "description": "Set content of cell to aother.",
+                "arguments": [
+                    {
+                        "name": "other",
+                        "type": "P"
+                    }
+                ]
+            },
+            "deleteobject": {
+                "name": "DeleteObject",
+                "description": "Delete a Object.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getbackgroundimagename": {
+                "name": "GetBackgroundImageName",
+                "description": "Returns background image defined for cell (if it exists)."
+            },
+            "getformatexpression": {
+                "name": "GetFormatExpression",
+                "description": "Gets the format expression"
+            },
+            "getformattedexpression": {
+                "name": "GetFormattedExpression",
+                "description": "Gets formatted version of expression."
+            },
+            "gethorizontalalignment": {
+                "name": "GetHorizontalAlignment",
+                "description": "Returns horizontal alignment (if defined)."
+            },
+            "getminheight": {
+                "name": "GetMinHeight",
+                "description": "Gets the rows minimum width."
+            },
+            "getminwidth": {
+                "name": "GetMinWidth",
+                "description": "Gets the cells minimum width."
+            },
+            "getverticalalignment": {
+                "name": "GetVerticalAlignment",
+                "description": "Returns vertical alignment."
+            },
+            "getwordwrap": {
+                "name": "GetWordWrap",
+                "description": "Returns word-wrap."
+            },
+            "hascontent": {
+                "name": "HasContent",
+                "description": "Returns true if cell displays some form of content."
+            },
+            "hasembeddedtable": {
+                "name": "HasEmbeddedTable",
+                "description": "Returns true if cell has an embedded table."
+            },
+            "insertobject": {
+                "name": "InsertObject",
+                "description": "Insert a new Object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "LayoutTable::ContainedObject"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "isdefinedexpression": {
+                "name": "IsDefinedExpression",
+                "description": "Return optional 'defined' expression for the cell (expression to test for suppress blank rows)."
+            },
+            "moveobject": {
+                "name": "MoveObject",
+                "description": "Move a block of Object items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "objectnumber": {
+                "name": "ObjectNumber",
+                "description": "Get the index of a Object from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setformatexpression": {
+                "name": "SetFormatExpression",
+                "description": "Sets the format expression",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sethorizontalalignment": {
+                "name": "SetHorizontalAlignment",
+                "description": "Set horizontal alignment.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setverticalalignment": {
+                "name": "SetVerticalAlignment",
+                "description": "Set vertical alignment.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setwordwrap": {
+                "name": "SetWordWrap",
+                "description": "Sets word-wrap.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "L"
+                    }
+                ]
+            }
+        },
+        "__name__": "CellDef"
+    },
+    "column": {
+        "__methods__": {
+            "clearinline": {
+                "name": "ClearInline",
+                "description": "Clear inline style.",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "combinestyle": {
+                "name": "CombineStyle",
+                "description": "Add to style for a column.",
+                "arguments": [
+                    {
+                        "name": "style",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "gethints": {
+                "name": "GetHints",
+                "description": "Gets columns hints."
+            },
+            "getminwidth": {
+                "name": "GetMinWidth",
+                "description": "Gets the columns minimum width."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "recalcminimum": {
+                "name": "RecalcMinimum",
+                "description": "Recalc the minimum column dimensions (based on current minimum cells)."
+            },
+            "sethints": {
+                "name": "SetHints",
+                "description": "Sets columns hints.",
+                "arguments": [
+                    {
+                        "name": "hints",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setparent": {
+                "name": "SetParent",
+                "description": "Set parent table for column.",
+                "arguments": [
+                    {
+                        "name": "tabledef",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "Column"
+    },
+    "containedobject": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getobjecthandle": {
+                "name": "GetObjectHandle",
+                "description": "Returns a run time-bound handle to the object (speeds access).",
+                "arguments": [
+                    {
+                        "name": "topparent",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ContainedObject"
+    },
+    "freeformelement": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "FreeFormElement"
+    },
+    "freeformelements": {
+        "__functions__": {
+            "getoverlaps": {
+                "name": "GetOverlaps",
+                "description": "Returns overlapping rectangles in text.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    },
+                    {
+                        "name": "threshhold",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addbox": {
+                "name": "AddBox",
+                "description": "Add a Box.",
+                "arguments": [
+                    {
+                        "name": "box",
+                        "type": "LayoutTable::BoxDef"
+                    }
+                ]
+            },
+            "addcolumn": {
+                "name": "AddColumn",
+                "description": "Add a Column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "LayoutTable::Column"
+                    }
+                ]
+            },
+            "addrow": {
+                "name": "AddRow",
+                "description": "Add a Row.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "LayoutTable::RowDef"
+                    }
+                ]
+            },
+            "addsourcecolumn": {
+                "name": "AddSourceColumn",
+                "description": "Add a SourceColumn.",
+                "arguments": [
+                    {
+                        "name": "sourcecolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "addsourcerow": {
+                "name": "AddSourceRow",
+                "description": "Add a SourceRow.",
+                "arguments": [
+                    {
+                        "name": "sourcerow",
+                        "type": "N"
+                    }
+                ]
+            },
+            "addelement": {
+                "name": "Addelement",
+                "description": "Add a element.",
+                "arguments": [
+                    {
+                        "name": "element",
+                        "type": "LayoutTable::FreeFormElement"
+                    }
+                ]
+            },
+            "addpagebreak": {
+                "name": "AddpageBreak",
+                "description": "Add a pageBreak.",
+                "arguments": [
+                    {
+                        "name": "pagebreak",
+                        "type": "n"
+                    }
+                ]
+            },
+            "addrowbackground": {
+                "name": "AddrowBackground",
+                "description": "Add a rowBackground.",
+                "arguments": [
+                    {
+                        "name": "rowbackground",
+                        "type": "LayoutTable::FreeFormRowBackground"
+                    }
+                ]
+            },
+            "addsection": {
+                "name": "Addsection",
+                "description": "Add a section.",
+                "arguments": [
+                    {
+                        "name": "section",
+                        "type": "LayoutTable::FreeFormSection"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletebox": {
+                "name": "DeleteBox",
+                "description": "Delete a Box.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletecolumn": {
+                "name": "DeleteColumn",
+                "description": "Delete a Column.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleterow": {
+                "name": "DeleteRow",
+                "description": "Delete a Row.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletesourcecolumn": {
+                "name": "DeleteSourceColumn",
+                "description": "Delete a SourceColumn.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletesourcerow": {
+                "name": "DeleteSourceRow",
+                "description": "Delete a SourceRow.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteelement": {
+                "name": "Deleteelement",
+                "description": "Delete a element.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletepagebreak": {
+                "name": "DeletepageBreak",
+                "description": "Delete a pageBreak.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleterowbackground": {
+                "name": "DeleterowBackground",
+                "description": "Delete a rowBackground.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletesection": {
+                "name": "Deletesection",
+                "description": "Delete a section.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "formatcells": {
+                "name": "FormatCells",
+                "description": "Format rows & columns to fit element."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Create elements from text.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getbaseposition": {
+                "name": "GetBasePosition",
+                "description": "Returns the base position for a section - allows flatten of all sections into one form.",
+                "arguments": [
+                    {
+                        "name": "sectionname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getendposition": {
+                "name": "GetEndPosition",
+                "description": "Returns the end position for a section - allows range check for objects crossing sections.",
+                "arguments": [
+                    {
+                        "name": "sectionname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "insertbox": {
+                "name": "InsertBox",
+                "description": "Insert a new Box.",
+                "arguments": [
+                    {
+                        "name": "box",
+                        "type": "LayoutTable::BoxDef"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertcolumn": {
+                "name": "InsertColumn",
+                "description": "Insert a new Column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "LayoutTable::Column"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertrow": {
+                "name": "InsertRow",
+                "description": "Insert a new Row.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "LayoutTable::RowDef"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertsourcecolumn": {
+                "name": "InsertSourceColumn",
+                "description": "Insert a new SourceColumn.",
+                "arguments": [
+                    {
+                        "name": "sourcecolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertsourcerow": {
+                "name": "InsertSourceRow",
+                "description": "Insert a new SourceRow.",
+                "arguments": [
+                    {
+                        "name": "sourcerow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertelement": {
+                "name": "Insertelement",
+                "description": "Insert a new element.",
+                "arguments": [
+                    {
+                        "name": "element",
+                        "type": "LayoutTable::FreeFormElement"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertpagebreak": {
+                "name": "InsertpageBreak",
+                "description": "Insert a new pageBreak.",
+                "arguments": [
+                    {
+                        "name": "pagebreak",
+                        "type": "n"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertrowbackground": {
+                "name": "InsertrowBackground",
+                "description": "Insert a new rowBackground.",
+                "arguments": [
+                    {
+                        "name": "rowbackground",
+                        "type": "LayoutTable::FreeFormRowBackground"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertsection": {
+                "name": "Insertsection",
+                "description": "Insert a new section.",
+                "arguments": [
+                    {
+                        "name": "section",
+                        "type": "LayoutTable::FreeFormSection"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movebox": {
+                "name": "MoveBox",
+                "description": "Move a block of Box items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movecolumn": {
+                "name": "MoveColumn",
+                "description": "Move a block of Column items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moverow": {
+                "name": "MoveRow",
+                "description": "Move a block of Row items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movesourcecolumn": {
+                "name": "MoveSourceColumn",
+                "description": "Move a block of SourceColumn items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movesourcerow": {
+                "name": "MoveSourceRow",
+                "description": "Move a block of SourceRow items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moveelement": {
+                "name": "Moveelement",
+                "description": "Move a block of element items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movepagebreak": {
+                "name": "MovepageBreak",
+                "description": "Move a block of pageBreak items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moverowbackground": {
+                "name": "MoverowBackground",
+                "description": "Move a block of rowBackground items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movesection": {
+                "name": "Movesection",
+                "description": "Move a block of section items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "sortcells": {
+                "name": "SortCells",
+                "description": "If elements are added out of flow order, fix the order."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Dump text definition for elements."
+            }
+        },
+        "__name__": "FreeFormElements"
+    },
+    "freeformrowbackground": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "FreeFormRowBackground"
+    },
+    "freeformsection": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "FreeFormSection"
+    },
+    "objectref": {
+        "__methods__": {
+            "addrow": {
+                "name": "AddRow",
+                "description": "Add a Row.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "LayoutTable::RowDef"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleterow": {
+                "name": "DeleteRow",
+                "description": "Delete a Row.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "dropxml": {
+                "name": "DropXml",
+                "description": "Drops xml into an object - returns TRUE if the drop was handled (i.e. fields inserted).",
+                "arguments": [
+                    {
+                        "name": "xml",
+                        "type": "C"
+                    }
+                ]
+            },
+            "enumexpressions": {
+                "name": "EnumExpressions",
+                "description": "Enumerate layout table object expressions.",
+                "arguments": [
+                    {
+                        "name": "separator",
+                        "type": "C"
+                    }
+                ]
+            },
+            "enumeratelinkedreports": {
+                "name": "EnumerateLinkedReports",
+                "description": "Generate a list of external reports for object - format 'N'-name 'R'-row 'C'-column.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getcellboxposition": {
+                "name": "GetCellBoxPosition",
+                "description": "Get the position on the cell relatived to the top-left corner of the object.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "col",
+                        "type": "N"
+                    },
+                    {
+                        "name": "startx",
+                        "type": "N"
+                    },
+                    {
+                        "name": "starty",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getcellboxsize": {
+                "name": "GetCellBoxSize",
+                "description": "Get the size of the cell.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "col",
+                        "type": "N"
+                    },
+                    {
+                        "name": "rows",
+                        "type": "N"
+                    },
+                    {
+                        "name": "cols",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getcssstylesheet": {
+                "name": "GetCssStyleSheet",
+                "description": "Return HTML style sheet for the table."
+            },
+            "getflattenedstylesheet": {
+                "name": "GetFlattenedStyleSheet",
+                "description": "Return Flattened (cell based) style sheet for the table - creates styles that combine edges, fills & dividers producing Left,center,right & single ."
+            },
+            "getlinkedreport": {
+                "name": "GetLinkedReport",
+                "description": "Get content of named linked report.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getparent": {
+                "name": "GetParent",
+                "description": "Returns a pointer to layout parent."
+            },
+            "getrowbypos": {
+                "name": "GetRowByPos",
+                "description": "Get a row provided the position.",
+                "arguments": [
+                    {
+                        "name": "position",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getrowheights": {
+                "name": "GetRowHeights",
+                "description": "Get compound height of rows.",
+                "arguments": [
+                    {
+                        "name": "rowindex",
+                        "type": "N"
+                    },
+                    {
+                        "name": "rowcount",
+                        "type": "N"
+                    }
+                ]
+            },
+            "gettopparent": {
+                "name": "GetTopParent",
+                "description": "Returns current topparent object."
+            },
+            "hashiddencells": {
+                "name": "HasHiddenCells",
+                "description": "Returns true if hidden cells exist."
+            },
+            "insertrow": {
+                "name": "InsertRow",
+                "description": "Insert a new Row.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "LayoutTable::RowDef"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertrowbypos": {
+                "name": "InsertRowByPos",
+                "description": "Insert a row by position.",
+                "arguments": [
+                    {
+                        "name": "position",
+                        "type": "N"
+                    },
+                    {
+                        "name": "soft",
+                        "type": "L"
+                    }
+                ]
+            },
+            "layouttabletohtml": {
+                "name": "LayoutTableToHtml",
+                "description": "Return HTML that matches the table style and content - use curly bracket syntax to include fields.",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "P"
+                    },
+                    {
+                        "name": "part",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "mergerow": {
+                "name": "MergeRow",
+                "description": "Merge rows together.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moverow": {
+                "name": "MoveRow",
+                "description": "Move a block of Row items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "objectcontext": {
+                "name": "ObjectContext",
+                "description": "Returns the objects' context."
+            },
+            "queryobjects": {
+                "name": "QueryObjects",
+                "description": "Query objects: format  $N=name, $H=handle, $V=visible (T-true/F-false) $X= x location, $y= y location.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "restrictrow",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "restrictcol",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "replacelinkedreport": {
+                "name": "ReplaceLinkedReport",
+                "description": "Replace content of named linked report (return true if report was replaced.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "definition",
+                        "type": "C"
+                    },
+                    {
+                        "name": "embeddedreport",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "resetcellobjects": {
+                "name": "ResetCellObjects",
+                "description": "Clear and rebuild all Cell Objects (contained cells)."
+            },
+            "resizelastrow": {
+                "name": "ResizeLastRow",
+                "description": "Resize last row to force a fit (if required).",
+                "arguments": [
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "resizeproportionalrows": {
+                "name": "ResizeProportionalRows",
+                "description": "Resize rows proportionally to fit height.",
+                "arguments": [
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "resynchrowconditions": {
+                "name": "ResynchRowConditions",
+                "description": "force row conditions to be evaluated."
+            },
+            "setparent": {
+                "name": "SetParent",
+                "description": "Set parent table for column.",
+                "arguments": [
+                    {
+                        "name": "tabledef",
+                        "type": "P"
+                    }
+                ]
+            },
+            "isfirstobject": {
+                "name": "isFirstObject",
+                "description": "Table object is last table object with definition."
+            },
+            "islastobject": {
+                "name": "isLastObject",
+                "description": "Table object is first table object with definition."
+            }
+        },
+        "__name__": "ObjectRef"
+    },
+    "report": {
+        "__functions__": {
+            "createfromfile": {
+                "name": "CreateFromFile",
+                "description": "Create control layout report from a saved layoutTable::Report definition file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "createfromxml": {
+                "name": "CreateFromXML",
+                "description": "Create control layout report from xml string.",
+                "arguments": [
+                    {
+                        "name": "xmldefinition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "design": {
+                "name": "Design",
+                "description": "Launch report designer for xml file definition.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "designdefinitionload": {
+                "name": "DesignDefinitionLoad",
+                "description": "Load the design in the current session."
+            },
+            "designfilename": {
+                "name": "DesignFilename",
+                "description": "Launch report designer for xml file definition."
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "create": {
+                "name": "Create",
+                "description": "Create a report layout object from a LayoutTable report definition."
+            },
+            "emitsubreport": {
+                "name": "EmitSubreport",
+                "description": "Creates a report to emit (reportType is text,rtf or html template).",
+                "arguments": [
+                    {
+                        "name": "reporttype",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C"
+                    }
+                ]
+            },
+            "load": {
+                "name": "Load",
+                "description": "Load a report object from a report control - this only works for layout table reports.",
+                "arguments": [
+                    {
+                        "name": "report",
+                        "type": "P"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Report"
+    },
+    "rowdef": {
+        "__methods__": {
+            "addcell": {
+                "name": "AddCell",
+                "description": "Add a Cell.",
+                "arguments": [
+                    {
+                        "name": "cell",
+                        "type": "LayoutTable::CellDef"
+                    }
+                ]
+            },
+            "clearinline": {
+                "name": "ClearInline",
+                "description": "Clear inline style.",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "combinestyle": {
+                "name": "CombineStyle",
+                "description": "Add to style for a row.",
+                "arguments": [
+                    {
+                        "name": "style",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "deletecell": {
+                "name": "DeleteCell",
+                "description": "Delete a Cell.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getconditionexpression": {
+                "name": "GetConditionExpression",
+                "description": "Get a condition expression (condition + generated suppress expression)."
+            },
+            "gethints": {
+                "name": "GetHints",
+                "description": "Gets columns hints."
+            },
+            "getminheight": {
+                "name": "GetMinHeight",
+                "description": "Gets the rows minimum height."
+            },
+            "getpagebreak": {
+                "name": "GetPageBreak",
+                "description": "Gets page break for row."
+            },
+            "insertcell": {
+                "name": "InsertCell",
+                "description": "Insert a new Cell.",
+                "arguments": [
+                    {
+                        "name": "cell",
+                        "type": "LayoutTable::CellDef"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movecell": {
+                "name": "MoveCell",
+                "description": "Move a block of Cell items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "recalcminimum": {
+                "name": "RecalcMinimum",
+                "description": "Recalc the minimum height."
+            },
+            "resetcellobjects": {
+                "name": "ResetCellObjects",
+                "description": "Clear and rebuild all Cell Objects (contained cells).",
+                "arguments": [
+                    {
+                        "name": "topobject",
+                        "type": "C"
+                    },
+                    {
+                        "name": "objname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "rowstart",
+                        "type": "N"
+                    },
+                    {
+                        "name": "xstart",
+                        "type": "N"
+                    },
+                    {
+                        "name": "ystart",
+                        "type": "N"
+                    }
+                ]
+            },
+            "sethints": {
+                "name": "SetHints",
+                "description": "Sets columns hints.",
+                "arguments": [
+                    {
+                        "name": "hints",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setpagebreak": {
+                "name": "SetPageBreak",
+                "description": "Sets page break for row.",
+                "arguments": [
+                    {
+                        "name": "page_break",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setparent": {
+                "name": "SetParent",
+                "description": "Set parent object for column.",
+                "arguments": [
+                    {
+                        "name": "objdef",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "RowDef"
+    },
+    "table": {
+        "__functions__": {
+            "hostedactive": {
+                "name": "HostedActive",
+                "description": "Hosted selection as a string (watch to trigger changes)."
+            },
+            "hostedcommand": {
+                "name": "HostedCommand",
+                "description": "Hosted sections command.",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hostedcommandquery": {
+                "name": "HostedCommandQuery",
+                "description": "Hosted command query.",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hostedlayouttable": {
+                "name": "HostedLayoutTable",
+                "description": "Get the hosted table."
+            },
+            "hostedselection": {
+                "name": "HostedSelection",
+                "description": "Hosted selection as a string (watch to trigger changes)."
+            },
+            "hostedselectionset": {
+                "name": "HostedSelectionSet",
+                "description": "Set selection from a string.",
+                "arguments": [
+                    {
+                        "name": "selection",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hostedselections": {
+                "name": "HostedSelections",
+                "description": "Return tree of possible selections."
+            }
+        },
+        "__methods__": {
+            "addbox": {
+                "name": "AddBox",
+                "description": "Add a Box.",
+                "arguments": [
+                    {
+                        "name": "box",
+                        "type": "LayoutTable::BoxDef"
+                    }
+                ]
+            },
+            "addcolumn": {
+                "name": "AddColumn",
+                "description": "Add a Column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "LayoutTable::Column"
+                    }
+                ]
+            },
+            "addobject": {
+                "name": "AddObject",
+                "description": "Add a Object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "LayoutTable::ObjectRef"
+                    }
+                ]
+            },
+            "adjusttorectangle": {
+                "name": "AdjustToRectangle",
+                "description": "Adjust last column and row to a specified size, return true if both changes could be made.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "allowsparewidth": {
+                "name": "AllowSpareWidth",
+                "description": "Should we ignore changes to object width."
+            },
+            "appendcellobject": {
+                "name": "AppendCellObject",
+                "description": "Add an object to the cell.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "childname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "y",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "width",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "height",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "appendrow": {
+                "name": "AppendRow",
+                "description": "Add a row of height to end of table.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "appendsizedcolumn": {
+                "name": "AppendSizedColumn",
+                "description": "Add a column of width at end.",
+                "arguments": [
+                    {
+                        "name": "width",
+                        "type": "N"
+                    }
+                ]
+            },
+            "automerge": {
+                "name": "AutoMerge",
+                "description": "Automatically columns and rows that can be merged - given feature size.",
+                "arguments": [
+                    {
+                        "name": "mergewidth",
+                        "type": "N"
+                    },
+                    {
+                        "name": "mergeheight",
+                        "type": "N"
+                    }
+                ]
+            },
+            "beginupdate": {
+                "name": "BeginUpdate",
+                "description": "Begin updates (undoable in design environment).",
+                "arguments": [
+                    {
+                        "name": "description",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "cellsizechanged": {
+                "name": "CellSizeChanged",
+                "description": "Force an update of a cell size-dependent content.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "changedcolumns": {
+                "name": "ChangedColumns",
+                "description": "Columns were inserted.",
+                "arguments": [
+                    {
+                        "name": "colat",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    }
+                ]
+            },
+            "changedrows": {
+                "name": "ChangedRows",
+                "description": "Rows were inserted for an object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "rowat",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    }
+                ]
+            },
+            "clearcellcontent": {
+                "name": "ClearCellContent",
+                "description": "Clear all content from cell.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "columnisunused": {
+                "name": "ColumnIsUnused",
+                "description": "Returns true if the column cells are unmerged and empty.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "columnsizetofit": {
+                "name": "ColumnSizeToFit",
+                "description": "Resize the column to the minimum width needed to display the content.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "sizebyfield",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "command": {
+                "name": "Command",
+                "description": "Automation command (i.e. for selection).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "commitcolumnmove": {
+                "name": "CommitColumnMove",
+                "description": "Commit column move operation (move or delete).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "to_trash",
+                        "type": "L"
+                    }
+                ]
+            },
+            "commitrowmove": {
+                "name": "CommitRowMove",
+                "description": "Commit column row operation (move or delete).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "to_trash",
+                        "type": "L"
+                    }
+                ]
+            },
+            "copycolumns": {
+                "name": "CopyColumns",
+                "description": "Copy column(s) and cell(s) for object(s).",
+                "arguments": [
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "columncount",
+                        "type": "N"
+                    }
+                ]
+            },
+            "copyobject": {
+                "name": "CopyObject",
+                "description": "Copy a 'generic' version of the object (for later paste).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "copyrows": {
+                "name": "CopyRows",
+                "description": "Copy rows for an object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "rowcount",
+                        "type": "N"
+                    }
+                ]
+            },
+            "countboxselect": {
+                "name": "CountBoxSelect",
+                "description": "Return count of box-select cells.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "createcellreport": {
+                "name": "CreateCellReport",
+                "description": "Create a new embedded cell report with initial size.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "rows",
+                        "type": "N"
+                    },
+                    {
+                        "name": "columns",
+                        "type": "N"
+                    }
+                ]
+            },
+            "createobjectwrapper": {
+                "name": "CreateObjectWrapper",
+                "description": "Build a wrapper for object that is named.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "deletebox": {
+                "name": "DeleteBox",
+                "description": "Delete a Box.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletecolumn": {
+                "name": "DeleteColumn",
+                "description": "Delete a Column.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteobject": {
+                "name": "DeleteObject",
+                "description": "Delete a Object.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteobjectbyname": {
+                "name": "DeleteObjectByName",
+                "description": "Delete an object of name from table definition.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "deleterow": {
+                "name": "DeleteRow",
+                "description": "Delete row for object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deselect": {
+                "name": "Deselect",
+                "description": "Deselect this embedded table."
+            },
+            "displaycolumnmove": {
+                "name": "DisplayColumnMove",
+                "description": "Calculate & Turn on/off visuals for moving a column (returns new column position).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            },
+            "displayrowmove": {
+                "name": "DisplayRowMove",
+                "description": "Calculate & Turn on/off visuals for moving a row (returns new column position).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            },
+            "dragbox": {
+                "name": "DragBox",
+                "description": "Drag selected box target to object/location - returns turn if position caused a change.",
+                "arguments": [
+                    {
+                        "name": "target",
+                        "type": "C"
+                    },
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    }
+                ]
+            },
+            "droptargetisheadingorbody": {
+                "name": "DropTargetIsHeadingOrBody",
+                "description": "Drop target section contains heading or body.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "dropxml": {
+                "name": "DropXml",
+                "description": "Drops xml into an object - returns TRUE if the drop was handled (i.e. fields inserted).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "xml",
+                        "type": "C"
+                    }
+                ]
+            },
+            "endupdate": {
+                "name": "EndUpdate",
+                "description": "End updates (undoable in design environment).",
+                "arguments": [
+                    {
+                        "name": "commit",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "expandexternalreferences": {
+                "name": "ExpandExternalReferences",
+                "description": "Expand references to include the converted linked report name.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "expandprinttimecontrols": {
+                "name": "ExpandPrintTimeControls",
+                "description": "Expand cell contents that we want to be growable (memos & such) - before we print the contents.",
+                "arguments": [
+                    {
+                        "name": "objectfullname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "findlayouttable": {
+                "name": "FindLayoutTable",
+                "description": "Returns the table for the object, row and column.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "flattenembeddedtables": {
+                "name": "FlattenEmbeddedTables",
+                "description": "Add rows and columns to the report to include any embedded tables in the top level report."
+            },
+            "focusedobject": {
+                "name": "FocusedObject",
+                "description": "Return the related object that has focus."
+            },
+            "getbodydroptarget": {
+                "name": "GetBodyDropTarget",
+                "description": "Get the name of the body object."
+            },
+            "getcellbox": {
+                "name": "GetCellBox",
+                "description": "Return the box that the object is deepest inside.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getcellcount": {
+                "name": "GetCellCount",
+                "description": "Returns the number of cells that the layout object has.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getcolumnbypos": {
+                "name": "GetColumnByPos",
+                "description": "Return the column that the corresponds to the position.",
+                "arguments": [
+                    {
+                        "name": "position",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getcolumnminwidth": {
+                "name": "GetColumnMinWidth",
+                "description": "Returns minimum column width.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getcolumnwidth": {
+                "name": "GetColumnWidth",
+                "description": "Returns column width.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getcolumnwidths": {
+                "name": "GetColumnWidths",
+                "description": "Returns column width (s) starting at column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getcssstylesheet": {
+                "name": "GetCssStyleSheet",
+                "description": "Return HTML style sheet for the table."
+            },
+            "getdroptargetmode": {
+                "name": "GetDropTargetMode",
+                "description": "Returns the drop target mode.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getdroptargettable": {
+                "name": "GetDropTargetTable",
+                "description": "Returns the drop target table."
+            },
+            "getfirstobject": {
+                "name": "GetFirstObject",
+                "description": "Returns the first sequential object."
+            },
+            "getflattenedstylesheet": {
+                "name": "GetFlattenedStyleSheet",
+                "description": "Return Flattened (cell based) style sheet for the table - creates styles that combine edges, fills & dividers producing Left,center,right & single ."
+            },
+            "getheadingdroprow": {
+                "name": "GetHeadingDropRow",
+                "description": "Get the name of the heading target row."
+            },
+            "getheadingdroptarget": {
+                "name": "GetHeadingDropTarget",
+                "description": "Get the name of the heading object."
+            },
+            "getlayouttable": {
+                "name": "GetLayoutTable",
+                "description": "Get the layout table - optional name retreives embedded table.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getlayouttableoffset": {
+                "name": "GetLayoutTableOffset",
+                "description": "Get the offset of the selected table.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "startx",
+                        "type": "N"
+                    },
+                    {
+                        "name": "starty",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getobjectbyname": {
+                "name": "GetObjectByName",
+                "description": "Get an object from the collection of objects.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getpersistedobject": {
+                "name": "GetPersistedObject",
+                "description": "If non-null, definition was already persisted by named object."
+            },
+            "getpsuedoproperty": {
+                "name": "GetPsuedoProperty",
+                "description": "Return psuedo property (i.e. selectedRow,selectedColumn) which might include multiple values.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getrowcount": {
+                "name": "GetRowCount",
+                "description": "Get the Row count for an object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getrowheight": {
+                "name": "GetRowHeight",
+                "description": "Returns object row height.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getrowminheight": {
+                "name": "GetRowMinHeight",
+                "description": "Returns minimum row height.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getselectedcelldef": {
+                "name": "GetSelectedCellDef",
+                "description": "Returns 'x,y,w,h:content' of the selected cell as a string.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getselectedlayouttable": {
+                "name": "GetSelectedLayoutTable",
+                "description": "Returns the name of selected layout table."
+            },
+            "getsiblingafter": {
+                "name": "GetSiblingAfter",
+                "description": "Return the name of the sibling table object that is after the named one.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getsiblingbefore": {
+                "name": "GetSiblingBefore",
+                "description": "Return the name of the sibling table object that is before the named one.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "gettopparent": {
+                "name": "GetTopParent",
+                "description": "Returns current topparent object."
+            },
+            "getvalidsibling": {
+                "name": "GetValidSibling",
+                "description": "Returns name of valid sibling object (if one can be found).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hasboxselect": {
+                "name": "HasBoxSelect",
+                "description": "Return true if object has a box selection.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hascellcontent": {
+                "name": "HasCellContent",
+                "description": "Returns true if cell has content.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "hashiddencells": {
+                "name": "HasHiddenCells",
+                "description": "Returns true if hidden cells exist for named object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hasmergedcells": {
+                "name": "HasMergedCells",
+                "description": "Currently selected cell, or cell inside selection has merge.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hasobject": {
+                "name": "HasObject",
+                "description": "Returns true if layout has an object of name.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hasrowspans": {
+                "name": "HasRowSpans",
+                "description": "Returns true if the layout table contains any rowspans."
+            },
+            "hidecontainedobjects": {
+                "name": "HideContainedObjects",
+                "description": "Causes contained objects to all be hidden.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "indesignenvironment": {
+                "name": "InDesignEnvironment",
+                "description": "Query if the table is in design mode OR inside a design environment."
+            },
+            "indesignmode": {
+                "name": "InDesignMode",
+                "description": "Query if the table is in design mode."
+            },
+            "insertbox": {
+                "name": "InsertBox",
+                "description": "Insert a new Box.",
+                "arguments": [
+                    {
+                        "name": "box",
+                        "type": "LayoutTable::BoxDef"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertcolumn": {
+                "name": "InsertColumn",
+                "description": "Insert a new Column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "LayoutTable::Column"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertcolumnbypos": {
+                "name": "InsertColumnByPos",
+                "description": "Inserts a column - soft columns don't are automerged these are merged into existing cells.",
+                "arguments": [
+                    {
+                        "name": "position",
+                        "type": "N"
+                    },
+                    {
+                        "name": "soft",
+                        "type": "L"
+                    }
+                ]
+            },
+            "insertobject": {
+                "name": "InsertObject",
+                "description": "Insert a new Object.",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "LayoutTable::ObjectRef"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertrow": {
+                "name": "InsertRow",
+                "description": "Insert row of height.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertsizedcolumn": {
+                "name": "InsertSizedColumn",
+                "description": "Insert column of width.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    }
+                ]
+            },
+            "mergeboxselect": {
+                "name": "MergeBoxSelect",
+                "description": "Merge selected columns/rows box into a single cell, optionally clear the cells being merged.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "clearmerged",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "mergecolumn": {
+                "name": "MergeColumn",
+                "description": "Merge columns together.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    }
+                ]
+            },
+            "mergerow": {
+                "name": "MergeRow",
+                "description": "Merge rows together.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movebox": {
+                "name": "MoveBox",
+                "description": "Move a block of Box items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movecolumn": {
+                "name": "MoveColumn",
+                "description": "Move a block of Column items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moveobject": {
+                "name": "MoveObject",
+                "description": "Move a block of Object items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "moverow": {
+                "name": "MoveRow",
+                "description": "Move row(s) for object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "indexto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "indexfrom",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movetableobject": {
+                "name": "MoveTableObject",
+                "description": "Copy named object from passed in table to this table.",
+                "arguments": [
+                    {
+                        "name": "fromtable",
+                        "type": "P"
+                    },
+                    {
+                        "name": "fromobject",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "objectcontext": {
+                "name": "ObjectContext",
+                "description": "Returns the objects' context.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "objectisafter": {
+                "name": "ObjectIsAfter",
+                "description": "Returns true of objectName occurs 'after' afterObjectName.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "afterobjectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "objectisfirst": {
+                "name": "ObjectIsFirst",
+                "description": "Returns true if object is first in layout.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "objectislast": {
+                "name": "ObjectIsLast",
+                "description": "Returns true if object is last in layout.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "objectnumber": {
+                "name": "ObjectNumber",
+                "description": "Get the index of a Object from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "ondroptargettest": {
+                "name": "OnDropTargetTest",
+                "description": "Returns name of layout element user is hovering over for drop (drills down).",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "onhittest": {
+                "name": "OnHitTest",
+                "description": "Returns name of layout element user is hovering over.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "onpaint": {
+                "name": "OnPaint",
+                "description": "Paint the table for an object instance - returns quickdraw, part is  hdc for optional scaling, part is option 'sub-area' rendering (print time).",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "part",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    },
+                    {
+                        "name": "of",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onpaintbackground": {
+                "name": "OnPaintBackground",
+                "description": "Paint only background elements.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "part",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    },
+                    {
+                        "name": "of",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onpaintforeground": {
+                "name": "OnPaintForeground",
+                "description": "Paint only foreground elements.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "part",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    },
+                    {
+                        "name": "of",
+                        "type": "N"
+                    }
+                ]
+            },
+            "onpaintlayer": {
+                "name": "OnPaintLayer",
+                "description": "Paint object layer (background OR lines) based on collected print information objects + parts.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "partlist",
+                        "type": "C"
+                    },
+                    {
+                        "name": "hdc",
+                        "type": "N"
+                    },
+                    {
+                        "name": "pass",
+                        "type": "N"
+                    },
+                    {
+                        "name": "masks",
+                        "type": "C"
+                    }
+                ]
+            },
+            "onpaintsample": {
+                "name": "OnPaintSample",
+                "description": "Paint a sample of a table given all the components - scales to fit size.",
+                "arguments": [
+                    {
+                        "name": "x",
+                        "type": "N"
+                    },
+                    {
+                        "name": "y",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "detailrecords",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "onresizedrowsorcolumns": {
+                "name": "OnResizedRowsOrColumns",
+                "description": "Invoked after any rows or columns where resized for the table."
+            },
+            "onstylechange": {
+                "name": "OnStyleChange",
+                "description": "Notification that a style property has changed.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "pastecolumns": {
+                "name": "PasteColumns",
+                "description": "Paste column(s) and cell(s) data into object(s).",
+                "arguments": [
+                    {
+                        "name": "atcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "data",
+                        "type": "C"
+                    }
+                ]
+            },
+            "pasterows": {
+                "name": "PasteRows",
+                "description": "Paste row data into an object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "atrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "data",
+                        "type": "C"
+                    }
+                ]
+            },
+            "persistobject": {
+                "name": "PersistObject",
+                "description": "Returns XML and set the 'main' persist object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "persistobjectjson": {
+                "name": "PersistObjectJSON",
+                "description": "Returns JSON and set the 'main' persist object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "populatefreeform": {
+                "name": "PopulateFreeform",
+                "description": "Starting at a row/column, populate cells using a freeform description, will insert columns and rows as required.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "elements",
+                        "type": "P"
+                    },
+                    {
+                        "name": "sourcesection",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "pruneorphans": {
+                "name": "PruneOrphans",
+                "description": "Perform orphan cleanup before save."
+            },
+            "queryobjects": {
+                "name": "QueryObjects",
+                "description": "Query objects: format  $N=name, $H=handle, $V=visible (T-true/F-false) $X= x location, $y= y location.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "restrictrow",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "restrictcol",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "recalcobjectheight": {
+                "name": "RecalcObjectHeight",
+                "description": "Determine object height based on rows.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "recalcobjectwidth": {
+                "name": "RecalcObjectWidth",
+                "description": "Determine object width based on columns.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "recalculatelayout": {
+                "name": "RecalculateLayout",
+                "description": "Recalculate layout (i.e. merged elements)."
+            },
+            "renameobject": {
+                "name": "RenameObject",
+                "description": "Rename an existing object definition.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "newobjectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "requiresscrolling": {
+                "name": "RequiresScrolling",
+                "description": "Returns true if the view requires scrolling."
+            },
+            "resetcellobjects": {
+                "name": "ResetCellObjects",
+                "description": "Clear and rebuild all Cell Objects (contained cells).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "resetpersistobject": {
+                "name": "ResetPersistObject",
+                "description": "Clear remembered persist object, because we are re-saving."
+            },
+            "resizelastcolumn": {
+                "name": "ResizeLastColumn",
+                "description": "Cause column to fit (if small enough).",
+                "arguments": [
+                    {
+                        "name": "width",
+                        "type": "N"
+                    }
+                ]
+            },
+            "resizeproportionalcolumns": {
+                "name": "ResizeProportionalColumns",
+                "description": "Cause columns to be resized proprtionally to fill width provided.",
+                "arguments": [
+                    {
+                        "name": "width",
+                        "type": "N"
+                    }
+                ]
+            },
+            "resizesiblings": {
+                "name": "ResizeSiblings",
+                "description": "Resize sibling controls to match the size of the named control.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "restorefromxml": {
+                "name": "RestoreFromXML",
+                "description": "Does minimal restore from XML.",
+                "arguments": [
+                    {
+                        "name": "xmldef",
+                        "type": "C"
+                    }
+                ]
+            },
+            "rowsizegetfit": {
+                "name": "RowSizeGetFit",
+                "description": "Determine the best minimimum size for a row.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "rowsizetofit": {
+                "name": "RowSizeToFit",
+                "description": "Resize the row to the minimum height needed to display the content.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "scaletable": {
+                "name": "ScaleTable",
+                "description": "Apply a scale to the table.",
+                "arguments": [
+                    {
+                        "name": "scalex",
+                        "type": "N"
+                    },
+                    {
+                        "name": "scaley",
+                        "type": "N"
+                    }
+                ]
+            },
+            "scrollpos": {
+                "name": "ScrollPos",
+                "description": "Get the scroll position in pixels."
+            },
+            "scrollto": {
+                "name": "ScrollTo",
+                "description": "Scroll to a pixle position.",
+                "arguments": [
+                    {
+                        "name": "left",
+                        "type": "N"
+                    }
+                ]
+            },
+            "scrollviewsize": {
+                "name": "ScrollViewSize",
+                "description": "Retrieve the scroll viewport area size (useful for repaints - i.e. paint the remainder)."
+            },
+            "selectcell": {
+                "name": "SelectCell",
+                "description": "Select a cell for the named object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "selectcellbox": {
+                "name": "SelectCellBox",
+                "description": "Select a second cell for creating a box-selection.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "selectcolumn": {
+                "name": "SelectColumn",
+                "description": "Select Column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "columns",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "keeprows",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "selectrow": {
+                "name": "SelectRow",
+                "description": "Select a row.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "rows",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "keepcolumns",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "selectedcellcolumn": {
+                "name": "SelectedCellColumn",
+                "description": "Return the column of the selected cell.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "selectedcellrow": {
+                "name": "SelectedCellRow",
+                "description": "Return the row of the selected cell.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setactivecontent": {
+                "name": "SetActiveContent",
+                "description": "Set text in the currently selected cell.",
+                "arguments": [
+                    {
+                        "name": "text",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "styledef",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setactiveembeddedreport": {
+                "name": "SetActiveEmbeddedReport",
+                "description": "Set embedded report for active cell.",
+                "arguments": [
+                    {
+                        "name": "embeddedreport",
+                        "type": "P"
+                    }
+                ]
+            },
+            "setallowsparewidth": {
+                "name": "SetAllowSpareWidth",
+                "description": "Ignore changes of object width for columns - ('empty' region paints to right).",
+                "arguments": [
+                    {
+                        "name": "allow",
+                        "type": "L"
+                    }
+                ]
+            },
+            "setcellcolspan": {
+                "name": "SetCellColSpan",
+                "description": "Sets 'merge' on columns following cell (or removes if 1).",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "colspan",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setcellcontent": {
+                "name": "SetCellContent",
+                "description": "Set text in a cell for a named object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "text",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setcellstyle": {
+                "name": "SetCellStyle",
+                "description": "Set inline style definition for a named object.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "styledef",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setcodepage": {
+                "name": "SetCodePage",
+                "description": "Set code page for data.",
+                "arguments": [
+                    {
+                        "name": "codepage",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setcolumnwidth": {
+                "name": "SetColumnWidth",
+                "description": "Sets column width.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setdesignmode": {
+                "name": "SetDesignMode",
+                "description": "Set the design mode flag.",
+                "arguments": [
+                    {
+                        "name": "designmode",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "setdragdropinsert": {
+                "name": "SetDragDropInsert",
+                "description": "Turn on/off visuals for the drag-drop insertion, returns true if changed.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setdragdropnested": {
+                "name": "SetDragDropNested",
+                "description": "Set a nested insert context.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "target",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setpsuedoproperty": {
+                "name": "SetPsuedoProperty",
+                "description": "Set psuedo property (i.e. selectedRow,selectedColumn) which might include multiple values.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setrowheight": {
+                "name": "SetRowHeight",
+                "description": "Sets object row height.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setscrollviewsize": {
+                "name": "SetScrollViewSize",
+                "description": "Sets a 'scroll' width - i.e. size of block - if table is bigger that scroll, scrolling is allowed.",
+                "arguments": [
+                    {
+                        "name": "width",
+                        "type": "N"
+                    }
+                ]
+            },
+            "settopparent": {
+                "name": "SetTopParent",
+                "description": "Establish topparent object for purposes of notification of layout changes.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "simplifyembedded": {
+                "name": "SimplifyEmbedded",
+                "description": "Merge embedded tables that are 1 row x 1 column (into parent cell)."
+            },
+            "splitmergedcells": {
+                "name": "SplitMergedCells",
+                "description": "Split previously merged selected cell, or cells inside selection.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tableisnested": {
+                "name": "TableIsNested",
+                "description": "Returns true if the table is nested in another tables cell."
+            },
+            "updatecontainedobjects": {
+                "name": "UpdateContainedObjects",
+                "description": "Causes refresh of visibility and position of any contained objects.",
+                "arguments": [
+                    {
+                        "name": "objectname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "indesignmode",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "updateobjects": {
+                "name": "UpdateObjects",
+                "description": "Updates all objects & repaints the screen.",
+                "arguments": [
+                    {
+                        "name": "moveobjects",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "indesignmode",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Table"
+    },
+    "__name__": "LayoutTable"
+}

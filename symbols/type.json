@@ -1,0 +1,359 @@
+{
+    "array": {
+        "__methods__": {
+            "size": {
+                "description": "Get Array Size."
+            }
+        },
+        "__name__": "Array"
+    },
+    "attribute": {
+        "__enumeration__": [
+            "name",
+            "value"
+        ],
+        "__name__": "Attribute"
+    },
+    "definition": {
+        "__functions__": {
+            "exists": {
+                "name": "Exists",
+                "description": "Return true of a type exists (may or may not have metadata).",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            },
+            "getjsondefinition": {
+                "name": "GetJsonDefinition",
+                "description": "Returns a JSON definition of a class.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "getkind": {
+                "description": "Get Kind of class."
+            },
+            "find": {
+                "description": "Find a class by name."
+            }
+        },
+        "__name__": "Definition"
+    },
+    "metacontrolimpl": {
+        "__methods__": {
+            "draw": {
+                "name": "Draw",
+                "description": "Handler for drawing the control.",
+                "arguments": [
+                    {
+                        "name": "hdc",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "MetaControlImpl"
+    },
+    "result": {
+        "__methods__": {
+            "eval": {
+                "name": "Eval",
+                "description": "Evaluate an expression (return true if no errors).",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "Result"
+    },
+    "subelement": {
+        "__enumeration__": [
+            "name",
+            "prototype",
+            "description",
+            "attributes"
+        ],
+        "__name__": "Subelement"
+    },
+    "testuname": {
+        "__methods__": {
+            "add": {
+                "name": "Add",
+                "description": "Add a new name.",
+                "arguments": [
+                    {
+                        "name": "suggest",
+                        "type": "C"
+                    },
+                    {
+                        "name": "text",
+                        "type": "c"
+                    }
+                ]
+            },
+            "find": {
+                "name": "Find",
+                "description": "Retrieve a named object.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "drop": {
+                "name": "Drop",
+                "description": "Drops a named object.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "donothing": {
+                "name": "DoNothing",
+                "description": "Do nothing - for calcuating overhead of test harness WRT api.",
+                "arguments": [
+                    {
+                        "name": "result",
+                        "type": "c"
+                    }
+                ]
+            },
+            "enumname": {
+                "name": "EnumName",
+                "description": "Build a list of names."
+            },
+            "populatefromstring": {
+                "name": "PopulateFromString",
+                "description": "Populates cache from a cr-lf string.",
+                "arguments": [
+                    {
+                        "name": "string",
+                        "type": "c"
+                    }
+                ]
+            },
+            "enumpair": {
+                "name": "EnumPair",
+                "description": "Build a list of names:object."
+            }
+        },
+        "__name__": "TestUName"
+    },
+    "uuid": {
+        "__functions__": {
+            "createnew": {
+                "description": "Create a new UUID."
+            },
+            "fromstring": {
+                "description": "Create a UUID from a string.",
+                "arguments": [
+                    {
+                        "name": "uuidstring",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "tostring": {
+                "description": "Get a UUID's string representation."
+            }
+        },
+        "__name__": "UUID"
+    },
+    "variable": {
+        "__methods__": {
+            "name": {
+                "name": "Name",
+                "description": "Variable name."
+            }
+        },
+        "__name__": "Variable"
+    },
+    "variabledelegate": {
+        "__methods__": {
+            "canchange": {
+                "name": "CanChange",
+                "description": "Determine if a variable can be changed.",
+                "arguments": [
+                    {
+                        "name": "var",
+                        "type": "Type::Variable"
+                    },
+                    {
+                        "name": "newvalue",
+                        "type": "c"
+                    }
+                ]
+            },
+            "onchange": {
+                "name": "OnChange",
+                "description": "Called when a variable is changed.",
+                "arguments": [
+                    {
+                        "name": "var",
+                        "type": "Type::Variable"
+                    },
+                    {
+                        "name": "oldvalue",
+                        "type": "a"
+                    }
+                ]
+            }
+        },
+        "__name__": "VariableDelegate"
+    },
+    "xbasicexe": {
+        "__functions__": {
+            "get_current": {
+                "description": "Get the current exe."
+            }
+        },
+        "__methods__": {
+            "name": {
+                "name": "Name",
+                "description": "Get an executables unique name."
+            },
+            "hasmethod": {
+                "name": "HasMethod",
+                "description": "Return true if the method exists.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "invokemethod": {
+                "name": "InvokeMethod",
+                "description": "Invoke a method of an executable.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": ".."
+                    }
+                ]
+            },
+            "invokeinstancemethod": {
+                "name": "InvokeInstanceMethod",
+                "description": "Invoke an instance method of an executable.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "instance",
+                        "type": "p"
+                    },
+                    {
+                        "name": ".."
+                    }
+                ]
+            }
+        },
+        "__name__": "XbasicExe"
+    },
+    "xbasicmodule": {
+        "__functions__": {
+            "get_current": {
+                "description": "Get the current exe module."
+            }
+        },
+        "__methods__": {
+            "name": {
+                "name": "Name",
+                "description": "Get an modules unique name."
+            },
+            "executable": {
+                "name": "Executable",
+                "description": "Get the executables that contains the module."
+            },
+            "linesget": {
+                "name": "LinesGet",
+                "description": "Get lines from a module if it has debug symbol information, thread required only for breakpoint information.",
+                "arguments": [
+                    {
+                        "name": "line",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "lines",
+                        "type": "n",
+                        "optional": true
+                    },
+                    {
+                        "name": "thread",
+                        "type": "Alpha5::Thread",
+                        "optional": true
+                    }
+                ]
+            },
+            "hasmethod": {
+                "name": "HasMethod",
+                "description": "Return true if the method exists.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "invokemethod": {
+                "name": "InvokeMethod",
+                "description": "Invoke a method of an executable.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": ".."
+                    }
+                ]
+            },
+            "invokeinstancemethod": {
+                "name": "InvokeInstanceMethod",
+                "description": "Invoke an instance method of an executable.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "instance",
+                        "type": "p"
+                    },
+                    {
+                        "name": ".."
+                    }
+                ]
+            }
+        },
+        "__name__": "XbasicModule"
+    },
+    "__name__": "Type"
+}

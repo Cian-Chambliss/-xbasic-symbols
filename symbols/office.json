@@ -1,0 +1,1827 @@
+{
+    "borderdiagonal": {
+        "__enumeration__": [
+            "None",
+            "DiagonalDown",
+            "DiagonalUp",
+            "DiagonalBoth"
+        ],
+        "__name__": "BorderDiagonal"
+    },
+    "borderstyle": {
+        "__enumeration__": [
+            "None",
+            "Thin",
+            "Medium",
+            "Dashed",
+            "Dotted",
+            "Thick",
+            "Double",
+            "Hair",
+            "MediumDashed",
+            "DashDot",
+            "MediumDashDot",
+            "DashDotDot",
+            "MediumDashDotDot",
+            "SlantDashDot"
+        ],
+        "__name__": "BorderStyle"
+    },
+    "celltype": {
+        "__enumeration__": [
+            "Empty",
+            "Number",
+            "String",
+            "Boolean",
+            "Blank",
+            "Error"
+        ],
+        "__name__": "CellType"
+    },
+    "color": {
+        "__enumeration__": [
+            "Black",
+            "White",
+            "Red",
+            "BrightGreen",
+            "Blue",
+            "Yellow",
+            "Pink",
+            "Turquoise",
+            "DarkRed",
+            "Green",
+            "DarkBlue",
+            "DarkYellow",
+            "Violet",
+            "Teal",
+            "Gray25",
+            "Gray50",
+            "Periwinkle_CF",
+            "Plum_CF",
+            "Ivory_CF",
+            "LightTurquoise_CF",
+            "DarkPurple_CF",
+            "Coral_CF",
+            "OceanBlue_CF",
+            "IceBlue_CF",
+            "DarkBlue_CL",
+            "Pink_CL",
+            "Yellow_CL",
+            "Turquoise_CL",
+            "Violet_CL",
+            "DarkRed_CL",
+            "Teal_CL",
+            "Blue_CL",
+            "SkyBlue",
+            "LightTurquoise",
+            "LightGreen",
+            "LightYellow",
+            "PaleBlue",
+            "Rose",
+            "Lavender",
+            "Tan",
+            "LightBlue",
+            "Aqua",
+            "Lime",
+            "Gold",
+            "LightOrange",
+            "Orange",
+            "BlueGray",
+            "Gray40",
+            "DarkTeal",
+            "SeaGreen",
+            "DarkGreen",
+            "OliveGreen",
+            "Brown",
+            "Plum",
+            "Indigo",
+            "Gray80",
+            "DefaultForeGround",
+            "DefaultBackground",
+            "ToolTip",
+            "Auto"
+        ],
+        "__name__": "Color"
+    },
+    "errortype": {
+        "__enumeration__": [
+            "Null",
+            "DivideByZero",
+            "Value",
+            "Reference",
+            "Name",
+            "Number",
+            "NA",
+            "NoError"
+        ],
+        "__name__": "ErrorType"
+    },
+    "excel2003document": {
+        "__methods__": {
+            "addcustomnumericformat": {
+                "name": "AddCustomNumericFormat",
+                "description": "Add a new numeric format to the document.  \nThe contents of the format string must be a valid format expression for Excel.\nConsult Microsoft's documentation for rules for valid Excel format expressions.",
+                "arguments": [
+                    {
+                        "name": "formatstring",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addfont": {
+                "name": "AddFont",
+                "description": "Create a new font and add it to the document.\nYou can pass an existing font to copy its values into the new one.",
+                "arguments": [
+                    {
+                        "name": "initialfont",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "addformat": {
+                "name": "AddFormat",
+                "description": "Create a new format and add it to the document.  \nYou can pass an existing format to copy its values into the new one.",
+                "arguments": [
+                    {
+                        "name": "initialformat",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "addpicture": {
+                "name": "AddPicture",
+                "description": "Add a new picture to the document from the file specified.\nFormats supported include BMP, DIB, PNG, JPG and WMF \nUse the index value returned to reference the picture in other functions such as Office::Spreadsheet::SetPicture().",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addsheet": {
+                "name": "AddSheet",
+                "description": "Add a new spreadsheet to the document assigning it the name provided.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "addsheetfromdbf": {
+                "name": "AddSheetFromDBF",
+                "description": "Create a new spreadsheet and add it to the document.\nAdd the data in the table.\nOptionally include headings, select a range of rows and include \na SQL::TableInfo and user context to handle advanced transformations.",
+                "arguments": [
+                    {
+                        "name": "table",
+                        "type": "P"
+                    },
+                    {
+                        "name": "sheetname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "includeheadings",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "rowstocopy",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "startrow",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "referencecolumns",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "usercontext",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "addsheetfromresultset": {
+                "name": "AddSheetFromResultSet",
+                "description": "Create a new spreadsheet and add it to the document.\nAdd the data in the result set.\nOptionally include headings, select a range of rows and include \na SQL::TableInfo and user context to handle advanced transformations.",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    },
+                    {
+                        "name": "sheetname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "includeheadings",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "rowstocopy",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "startrow",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "referencecolumns",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "usercontext",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "clear": {
+                "name": "Clear",
+                "description": "Reinitialize the Excel document as a new one.\nImportant Note: Be sure that you have saved any existing document data using Save or SaveToBlob() before calling this function."
+            },
+            "copysheet": {
+                "name": "CopySheet",
+                "description": "Add a new spreadsheet to the document with the name specified by copying the contents of the sheet at index N.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "customnumericformat": {
+                "name": "CustomNumericFormat",
+                "description": "Get the format expression for the custom numeric format at the index specified.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "defaultfont": {
+                "name": "DefaultFont",
+                "description": "Get the default font name and size for this workbook.",
+                "arguments": [
+                    {
+                        "name": "fontname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "fontsize",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletesheet": {
+                "name": "DeleteSheet",
+                "description": "Delete the sheet at the index specified from the Excel document.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "findsheet": {
+                "name": "FindSheet",
+                "description": "Get a spreadsheet by name.",
+                "arguments": [
+                    {
+                        "name": "sheet",
+                        "type": "P"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getfont": {
+                "name": "GetFont",
+                "description": "Get the font indexed by Index.  Index must be a value between 1 and the number of fonts returned by the FontCount property.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getformat": {
+                "name": "GetFormat",
+                "description": "Get the format indexed by Index.  Index must be a value between 1 and the number of formats returned by the FormatCount property.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getsheet": {
+                "name": "GetSheet",
+                "description": "Get the spreadsheet at the index specified.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "load": {
+                "name": "Load",
+                "description": "Load the contents of an existing Excel 2003 (.xls) file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "loadfromblob": {
+                "name": "LoadFromBlob",
+                "description": "Load the Excel Document from a memory image of an Excel 2003 (.xls) file.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "save": {
+                "name": "Save",
+                "description": "Save the document to an Excel 2003 (.xls) file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "savetoblob": {
+                "name": "SaveToBlob",
+                "description": "Save the document to a memory image of an Excel 2003 (.xls) file.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    }
+                ]
+            },
+            "setactivesheet": {
+                "name": "SetActiveSheet",
+                "description": "Set the index of the spreadsheet that is considered active/current.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setdefaultfont": {
+                "name": "SetDefaultFont",
+                "description": "Set a default font name and size for this workbook.",
+                "arguments": [
+                    {
+                        "name": "fontname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "fontsize",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setlocale": {
+                "name": "SetLocale",
+                "description": "Set the locale name for the document.",
+                "arguments": [
+                    {
+                        "name": "locale",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tojson": {
+                "name": "ToJson",
+                "description": "Returns all the Sheets in a spreadsheet as json.",
+                "arguments": [
+                    {
+                        "name": "returnasobjects",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Excel2003Document"
+    },
+    "exceldocument": {
+        "__functions__": {
+            "getsheetnames": {
+                "name": "GetSheetNames",
+                "description": "Return a cr-lf delimited list of sheet names.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "sheettojson": {
+                "name": "SheetToJson",
+                "description": "Get a specific sheets cell values as JSON (first sheet if not specified).",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sheetname",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "returnasobjects",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "sheetstojson": {
+                "name": "SheetsToJson",
+                "description": "Get all sheets cell values as JSON.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "returnasobjects",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addcustomnumericformat": {
+                "name": "AddCustomNumericFormat",
+                "description": "Add a new numeric format to the document.  \nThe contents of the format string must be a valid format expression for Excel.\nConsult Microsoft's documentation for rules for valid Excel format expressions.",
+                "arguments": [
+                    {
+                        "name": "formatstring",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addfont": {
+                "name": "AddFont",
+                "description": "Create a new font and add it to the document.\nYou can pass an existing font to copy its values into the new one.",
+                "arguments": [
+                    {
+                        "name": "initialfont",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "addformat": {
+                "name": "AddFormat",
+                "description": "Create a new format and add it to the document.  \nYou can pass an existing format to copy its values into the new one.",
+                "arguments": [
+                    {
+                        "name": "initialformat",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "addpicture": {
+                "name": "AddPicture",
+                "description": "Add a new picture to the document from the file specified.\nFormats supported include BMP, DIB, PNG, JPG and WMF \nUse the index value returned to reference the picture in other functions such as Office::Spreadsheet::SetPicture().",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addsheet": {
+                "name": "AddSheet",
+                "description": "Add a new spreadsheet to the document assigning it the name provided.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "addsheetfromdbf": {
+                "name": "AddSheetFromDBF",
+                "description": "Create a new spreadsheet and add it to the document.\nAdd the data in the table.\nOptionally include headings, select a range of rows and include \na SQL::TableInfo and user context to handle advanced transformations.",
+                "arguments": [
+                    {
+                        "name": "table",
+                        "type": "P"
+                    },
+                    {
+                        "name": "sheetname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "includeheadings",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "rowstocopy",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "startrow",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "referencecolumns",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "usercontext",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "addsheetfromresultset": {
+                "name": "AddSheetFromResultSet",
+                "description": "Create a new spreadsheet and add it to the document.\nAdd the data in the result set.\nOptionally include headings, select a range of rows and include \na SQL::TableInfo and user context to handle advanced transformations.",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    },
+                    {
+                        "name": "sheetname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "includeheadings",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "rowstocopy",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "startrow",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "referencecolumns",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "usercontext",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "clear": {
+                "name": "Clear",
+                "description": "Reinitialize the Excel document as a new one.\nImportant Note: Be sure that you have saved any existing document data using Save or SaveToBlob() before calling this function."
+            },
+            "copysheet": {
+                "name": "CopySheet",
+                "description": "Add a new spreadsheet to the document with the name specified by copying the contents of the sheet at index N.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "customnumericformat": {
+                "name": "CustomNumericFormat",
+                "description": "Get the format expression for the custom numeric format at the index specified.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "defaultfont": {
+                "name": "DefaultFont",
+                "description": "Get the default font name and size for this workbook.",
+                "arguments": [
+                    {
+                        "name": "fontname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "fontsize",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletesheet": {
+                "name": "DeleteSheet",
+                "description": "Delete the sheet at the index specified from the Excel document.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "findsheet": {
+                "name": "FindSheet",
+                "description": "Get a spreadsheet by name.",
+                "arguments": [
+                    {
+                        "name": "sheet",
+                        "type": "P"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getfont": {
+                "name": "GetFont",
+                "description": "Get the font indexed by Index.  Index must be a value between 1 and the number of fonts returned by the FontCount property.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getformat": {
+                "name": "GetFormat",
+                "description": "Get the format indexed by Index.  Index must be a value between 1 and the number of formats returned by the FormatCount property.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getsheet": {
+                "name": "GetSheet",
+                "description": "Get the spreadsheet at the index specified.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "load": {
+                "name": "Load",
+                "description": "Load the contents of an existing Excel 2007 (.xlsx) file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "loadfromblob": {
+                "name": "LoadFromBlob",
+                "description": "Load the Excel Document from a memory image of an Excel 2007 (.xlsx) file.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "save": {
+                "name": "Save",
+                "description": "Save the document to an Excel 2007 (.xlsx) file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "savetoblob": {
+                "name": "SaveToBlob",
+                "description": "Save the document to a memory image of an Excel 2007 (.xlsx) file.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    }
+                ]
+            },
+            "setactivesheet": {
+                "name": "SetActiveSheet",
+                "description": "Set the index of the spreadsheet that is considered active/current.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setdefaultfont": {
+                "name": "SetDefaultFont",
+                "description": "Set a default font name and size for this workbook.",
+                "arguments": [
+                    {
+                        "name": "fontname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "fontsize",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setlocale": {
+                "name": "SetLocale",
+                "description": "Set the locale name for the document.",
+                "arguments": [
+                    {
+                        "name": "locale",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tojson": {
+                "name": "ToJson",
+                "description": "Returns all the Sheets in a spreadsheet as json.",
+                "arguments": [
+                    {
+                        "name": "returnasobjects",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "ExcelDocument"
+    },
+    "fillpattern": {
+        "__enumeration__": [
+            "None",
+            "Solid",
+            "Gray50",
+            "Gray75",
+            "Gray25",
+            "HorizontalStripe",
+            "VerticalStripe",
+            "ReverseDiagonalStripe",
+            "DiagonalStripe",
+            "DiagonalCrossHatch",
+            "ThickDiagonalCrossHatch",
+            "ThinHorizontalStripe",
+            "ThinVerticalStripe",
+            "ThinReverseDiagonalStripe",
+            "ThinDiagonalStripe",
+            "ThinHorizontalCrossHatch",
+            "ThinDiagonalCrossHatch",
+            "Gray12Point5",
+            "Gray6Point25"
+        ],
+        "__name__": "FillPattern"
+    },
+    "font": {
+        "__enumeration__": [
+            "Name",
+            "Size",
+            "Italic",
+            "StrikeOut",
+            "Color",
+            "Bold",
+            "Script",
+            "Underline"
+        ],
+        "__name__": "Font"
+    },
+    "format": {
+        "__enumeration__": [
+            "Font",
+            "NumericFormat",
+            "HorizontalAlignment",
+            "VerticalAlignment",
+            "Wrap",
+            "Rotation",
+            "Indent",
+            "ShrinkToFit",
+            "Border",
+            "BorderColor",
+            "BorderLeft",
+            "BorderLeftColor",
+            "BorderRight",
+            "BorderRightColor",
+            "BorderTop",
+            "BorderTopColor",
+            "BorderBottom",
+            "BorderBottomColor",
+            "BorderDiagonal",
+            "BorderDiagonalColor",
+            "BorderDiagonalStyle",
+            "FillPattern",
+            "PatternForegroundColor",
+            "PatternBackgroundColor",
+            "Locked",
+            "Hidden"
+        ],
+        "__name__": "Format"
+    },
+    "horizontalalignment": {
+        "__enumeration__": [
+            "General",
+            "Left",
+            "Center",
+            "Right",
+            "Fill",
+            "Justify",
+            "Merge",
+            "Distributed"
+        ],
+        "__name__": "HorizontalAlignment"
+    },
+    "numericformat": {
+        "__enumeration__": [
+            "General",
+            "Number",
+            "NumberDecimal2",
+            "NumberSeparated",
+            "NumberSeparatedDecimal2",
+            "CurrencyNegativeBracketed",
+            "CurrencyNegativeBracketedInRed",
+            "CurrencyDec2NegBracketed",
+            "CurrencyDec2NegBracketedInRed",
+            "Percent",
+            "PercentDecimal2",
+            "ScientificDecimal2",
+            "Fraction1Digit",
+            "Fraction2Digit",
+            "Date",
+            "CustomDMonYY",
+            "CustomDMon",
+            "CustomMonYY",
+            "CustomHMMAM",
+            "CustomHMMSSAM",
+            "CustomHMM",
+            "CustomHMMSS",
+            "CustomMDYYYYHMM",
+            "NumberSepNegBracketed",
+            "NumberSepNegBracketedInRed",
+            "NumberSepDec2NegBracketed",
+            "NumberSepDec2NegBracketedInRed",
+            "Account",
+            "AccountCurrency",
+            "AccountDecimal2",
+            "AccountDecimal2Currency",
+            "CustomMMSS",
+            "CustomH0MMSS",
+            "CustomMMSS0",
+            "Custom000P0E_PLUS0",
+            "Text"
+        ],
+        "__name__": "NumericFormat"
+    },
+    "paper": {
+        "__enumeration__": [
+            "DefaultSize",
+            "Letter",
+            "LetterSmall",
+            "Tabloid",
+            "Ledger",
+            "Legal",
+            "Statement",
+            "Executive",
+            "A3",
+            "A4",
+            "A4Small",
+            "A5",
+            "B4",
+            "B5",
+            "Folio",
+            "Quatro",
+            "Size10x14",
+            "Size10x17",
+            "Note",
+            "Envelope9",
+            "Envelope10",
+            "Envelope11",
+            "Envelope12",
+            "Envelope14",
+            "SizeC",
+            "SizeD",
+            "SizeE",
+            "EnvelopeDL",
+            "EnvelopeC5",
+            "EnvelopeC3",
+            "EnvelopeC4",
+            "EnvelopeC6",
+            "EnvelopeC65",
+            "EnvelopeB4",
+            "EnvelopeB5",
+            "EnvelopeB6",
+            "Envelope",
+            "EnvelopeMonarch",
+            "USEnvelope",
+            "Fanfold",
+            "GermanStandardFanfold",
+            "GermanLegalFanfold",
+            "B4ISO",
+            "JapanesePostcard",
+            "Size9x11",
+            "Size10x11",
+            "Size15x11",
+            "EnvelopeInvite",
+            "USLetterExtra",
+            "USLegalExtra",
+            "USTabloidExtra",
+            "A4Extra",
+            "LetterTransverse",
+            "A4Transverse",
+            "LetterExtraTransverse",
+            "SuperA",
+            "SuperB",
+            "USLetterPlus",
+            "A4Plus",
+            "A5Transverse",
+            "B5Transverse",
+            "A3Extra",
+            "A5Extra",
+            "B5Extra",
+            "A2",
+            "A3Transverse",
+            "A3ExtraTransverse",
+            "JapaneseDoublePostcard",
+            "A6",
+            "JapaneseEnvelopeKAKU2",
+            "JapaneseEnvelopeKAKU3",
+            "JapaneseEnvelopeCHOU3",
+            "JapaneseEnvelopeCHOU4",
+            "LetterRotated",
+            "A3Rotated",
+            "A4Rotated",
+            "A5Rotated",
+            "B4Rotated",
+            "B5Rotated",
+            "JapanesePostcardRotated",
+            "DoubleJapanesePostcardRotated",
+            "A6Rotated",
+            "JapaneseEnvelopeKAKU2Rotated",
+            "JapaneseEnvelopeKAKU3Rotated",
+            "JapaneseEnvelopeCHOU3Rotated",
+            "JapaneseEnvelopeCHOU4Rotated",
+            "B6",
+            "B6Rotated",
+            "Size12x11",
+            "JapaneseEnvelopeYOU4",
+            "JapaneseEnvelopeYOU4Rotated",
+            "PRC16K",
+            "PRC32K",
+            "PRC32KBig",
+            "PRCEnvelope1",
+            "PRCEnvelope2",
+            "PRCEnvelope3",
+            "PRCEnvelope4",
+            "PRCEnvelope5",
+            "PRCEnvelope6",
+            "PRCEnvelope7",
+            "PRCEnvelope8",
+            "PRCEnvelope9",
+            "PRCEnvelope10",
+            "PRC16KRotated",
+            "PRC32KRotated",
+            "PRC32KBIGRotated",
+            "PRCEnvelope1Rotated",
+            "PRCEnvelope2Rotated",
+            "PRCEnvelope3Rotated",
+            "PRCEnvelope4Rotated",
+            "PRCEnvelope5Rotated",
+            "PRCEnvelope6Rotated",
+            "PRCEnvelope7Rotated",
+            "PRCEnvelope8Rotated",
+            "PRCEnvelope9Rotated",
+            "PRCEnvelope10Rotated"
+        ],
+        "__name__": "Paper"
+    },
+    "script": {
+        "__enumeration__": [
+            "Normal",
+            "Super",
+            "Sub"
+        ],
+        "__name__": "Script"
+    },
+    "spreadsheet": {
+        "__methods__": {
+            "cellformat": {
+                "name": "CellFormat",
+                "description": "Returns the format of a cell.  The format properties are updateable.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "cellisdatevalue": {
+                "name": "CellIsDateValue",
+                "description": "Returns true if the cell is a date value.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "celltype": {
+                "name": "CellType",
+                "description": "Returns the enumerated type CellType indicating the contents of the cell.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "clear": {
+                "name": "Clear",
+                "description": "Clear part or all of the spreadsheet.",
+                "arguments": [
+                    {
+                        "name": "firstrow",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "firstcolumn",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "clearprintarea": {
+                "name": "ClearPrintArea",
+                "description": "Clears the print area."
+            },
+            "clearprintrepeats": {
+                "name": "ClearPrintRepeats",
+                "description": "Clears repeated rows and columns on each page."
+            },
+            "columnwidth": {
+                "name": "ColumnWidth",
+                "description": "Returns the currently assigned width for a column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "copycell": {
+                "name": "CopyCell",
+                "description": "Copy the cell and its format from SourceRow/Column to DestinationRow/Column.",
+                "arguments": [
+                    {
+                        "name": "sourcerow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "sourcecolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "destinationrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "destinationcolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletemerge": {
+                "name": "DeleteMerge",
+                "description": "Removes merged cells.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletenamedrange": {
+                "name": "DeleteNamedRange",
+                "description": "Deletes the range named.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getmerge": {
+                "name": "GetMerge",
+                "description": "Get the merged cell range that a particular cell belongs to.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getnamedrange": {
+                "name": "GetNamedRange",
+                "description": "Gets the range of rows and columns for a named range.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "groupcolumns": {
+                "name": "GroupColumns",
+                "description": "Group FirstColumn through LastColumn.  If Collapsed is set to true the group of columns will be collapsed.",
+                "arguments": [
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "collapsed",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "grouprows": {
+                "name": "GroupRows",
+                "description": "Group FirstRow through LastRow.  If Collapsed is set to true the group of rows will be collapsed.",
+                "arguments": [
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "collapsed",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertcolumn": {
+                "name": "InsertColumn",
+                "description": "Insert new columns from FirstColumn to LastColumn.",
+                "arguments": [
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertrow": {
+                "name": "InsertRow",
+                "description": "Insert new rows from FirstRow to LastRow.",
+                "arguments": [
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N"
+                    }
+                ]
+            },
+            "isblank": {
+                "name": "IsBlank",
+                "description": "Returns true if a cell is blank. Assigns the current cell format to Format.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "format",
+                        "type": "P"
+                    }
+                ]
+            },
+            "isformula": {
+                "name": "IsFormula",
+                "description": "Returns true if the cell contains a formula.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "read": {
+                "name": "Read",
+                "description": "Returns the data contents of a cell and updates Format with the cell's format.  \nNote: Check the contents using CellType if the cell might contain an error.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "format",
+                        "type": "P"
+                    }
+                ]
+            },
+            "readcomment": {
+                "name": "ReadComment",
+                "description": "Returns the text value of any comment assigned to the cell.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "readerror": {
+                "name": "ReadError",
+                "description": "Returns the error value, if any for a cell",
+                "arguments": [
+                    {
+                        "name": "rows",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "readformula": {
+                "name": "ReadFormula",
+                "description": "Returns the formula, if any, associated with the cell. Assigns the current cell format to Format.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "format",
+                        "type": "P"
+                    }
+                ]
+            },
+            "removecolumn": {
+                "name": "RemoveColumn",
+                "description": "Remove columns FirstColumn through LastColumn.",
+                "arguments": [
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "removerow": {
+                "name": "RemoveRow",
+                "description": "Remove rows FirstRow through LastRow.",
+                "arguments": [
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N"
+                    }
+                ]
+            },
+            "rowheight": {
+                "name": "RowHeight",
+                "description": "Returns the currently assigned height for a row.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setblank": {
+                "name": "SetBlank",
+                "description": "Sets the contents of a cell to a blank value and assigns a format.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "format",
+                        "type": "P"
+                    }
+                ]
+            },
+            "setcolumn": {
+                "name": "SetColumn",
+                "description": "Assigns a width and, optionally, a format for a column.  May also hide or show a column.",
+                "arguments": [
+                    {
+                        "name": "first",
+                        "type": "N"
+                    },
+                    {
+                        "name": "last",
+                        "type": "N"
+                    },
+                    {
+                        "name": "width",
+                        "type": "N"
+                    },
+                    {
+                        "name": "format",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "hidden",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "setformat": {
+                "name": "SetFormat",
+                "description": "Set the format for a block of cells.",
+                "arguments": [
+                    {
+                        "name": "startrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "startcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "endrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "endcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "format",
+                        "type": "P"
+                    }
+                ]
+            },
+            "sethorizontalpagebreak": {
+                "name": "SetHorizontalPageBreak",
+                "description": "Set a horizontal page break on the row specified.  Pass false to remove the break.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "pagebreak",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "setmerge": {
+                "name": "SetMerge",
+                "description": "Merges cells from the first row and column through the last row and column specified.",
+                "arguments": [
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setnamedrange": {
+                "name": "SetNamedRange",
+                "description": "Creates a named range for the rows and columns.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setpicture": {
+                "name": "SetPicture",
+                "description": "Assign a picture to a cell using the identifier returned the function Office::ExcelDocument::AddPicture().\nScale the picture proportionally using 1.0 as full sized.\"",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "pictureid",
+                        "type": "N"
+                    },
+                    {
+                        "name": "scale",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "setprintarea": {
+                "name": "SetPrintArea",
+                "description": "Sets the print area.",
+                "arguments": [
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setprintrepeatcolumns": {
+                "name": "SetPrintRepeatColumns",
+                "description": "Sets repeated columns on each page from FirstColumn to LastColumn.",
+                "arguments": [
+                    {
+                        "name": "firstcolumn",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastcolumn",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setprintrepeatrows": {
+                "name": "SetPrintRepeatRows",
+                "description": "Sets repeated rows on each page from FirstRow to LastRow.",
+                "arguments": [
+                    {
+                        "name": "firstrow",
+                        "type": "N"
+                    },
+                    {
+                        "name": "lastrow",
+                        "type": "N"
+                    }
+                ]
+            },
+            "setrow": {
+                "name": "SetRow",
+                "description": "Assigns a height and, optionally, a format for a row.  May also hide or show a row.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "height",
+                        "type": "N"
+                    },
+                    {
+                        "name": "format",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "hidden",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "setverticalpagebreak": {
+                "name": "SetVerticalPageBreak",
+                "description": "Set a vertical page break on the column specified.  Pass false to remove the break.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "pagebreak",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "split": {
+                "name": "Split",
+                "description": "Split the sheet at the row and column specified.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    }
+                ]
+            },
+            "tojson": {
+                "name": "ToJson",
+                "description": "Return the cells as JSON array of objects using names in first column, or as array of arrays.",
+                "arguments": [
+                    {
+                        "name": "returnasobjects",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "write": {
+                "name": "Write",
+                "description": "Sets data value of a cell and assigns a format.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    },
+                    {
+                        "name": "format",
+                        "type": "P"
+                    }
+                ]
+            },
+            "writecomment": {
+                "name": "WriteComment",
+                "description": "Assigns a comment and author to a cell giving it the designated text box size (in pixels).",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "comment",
+                        "type": "C"
+                    },
+                    {
+                        "name": "author",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "width",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "height",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "writeformula": {
+                "name": "WriteFormula",
+                "description": "Assigns a formula to a cell and assigns a format.",
+                "arguments": [
+                    {
+                        "name": "row",
+                        "type": "N"
+                    },
+                    {
+                        "name": "column",
+                        "type": "N"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "Spreadsheet"
+    },
+    "underline": {
+        "__enumeration__": [
+            "None",
+            "Single",
+            "Double",
+            "SingleAcc",
+            "DoubleAcc"
+        ],
+        "__name__": "Underline"
+    },
+    "verticalalignment": {
+        "__enumeration__": [
+            "Top",
+            "Center",
+            "Bottom",
+            "Justify",
+            "Distributed"
+        ],
+        "__name__": "VerticalAlignment"
+    },
+    "__name__": "Office"
+}

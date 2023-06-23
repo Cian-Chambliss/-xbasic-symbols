@@ -1,0 +1,47 @@
+{
+    "color": {
+        "__enumeration__": [
+            "Red",
+            "Green",
+            "Blue"
+        ],
+        "__name__": "Color"
+    },
+    "font": {
+        "__enumeration__": [
+            "FaceName",
+            "Weight",
+            "Height",
+            "Italic",
+            "Underline",
+            "StrikeOut",
+            "Orientation"
+        ],
+        "__name__": "Font"
+    },
+    "fonteffect": {
+        "__enumeration__": [
+            "font",
+            "palette",
+            "shadow",
+            "GetTransparent",
+            "GetFontEffect"
+        ],
+        "__name__": "FontEffect"
+    },
+    "paletteentry": {
+        "__enumeration__": [
+            "Name",
+            "color"
+        ],
+        "__name__": "PaletteEntry"
+    },
+    "shadow": {
+        "__enumeration__": [
+            "ShadowX",
+            "ShadowY"
+        ],
+        "__name__": "Shadow"
+    },
+    "__name__": "Style"
+}

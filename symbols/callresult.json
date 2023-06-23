@@ -1,0 +1,38 @@
+{
+    "__properties__": {
+        "code": {
+            "name": "Code"
+        },
+        "text": {
+            "name": "Text"
+        },
+        "success": {
+            "name": "Success"
+        },
+        "error": {
+            "name": "Error"
+        },
+        "canceled": {
+            "name": "Canceled"
+        },
+        "nativetext": {
+            "name": "NativeText"
+        },
+        "nativecode": {
+            "name": "NativeCode"
+        },
+        "returndatavalue": {
+            "name": "ReturnDataValue"
+        },
+        "rowsaffected": {
+            "name": "RowsAffected"
+        },
+        "stacktrace": {
+            "name": "StackTrace"
+        },
+        "textandstacktrace": {
+            "name": "TextAndStackTrace"
+        }
+    },
+    "__name__": "CallResult"
+}

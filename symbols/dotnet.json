@@ -1,0 +1,672 @@
+{
+    "assemblyreference": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "AssemblyReference"
+    },
+    "services": {
+        "__functions__": {
+            "constructgenerictypename": {
+                "name": "ConstructGenericTypeName",
+                "description": "Formats the type name required to create an instance of an arbitrary .NET class that is defined as a generic type.\nGenerics are types defined so that the actual data they contain can be decided at the time they are created.\nThe List generic type, for example, in the namespace System::Collections::Generic can be defined to contain String, Int32, Double and many other types.\n\nThe number and valid types of the GenericTypes argument will depend on the generic you are using.  Consult the providers documentation for this information.\n\nExample Usages:\n\n\t\tdim MyResult as P\n\t\tCreateObject(MyResult, DotNet::Services::ConstructGenericTypename(\"System.Collections.Generic.List\", \"System.String\"))\n\n\t\tor\n\n\t\tCreateObject(MyResult, DotNet::Services::ConstructGenericTypeName(\"System.Collections.Generic.Dictionary\", \"System.String\", \"System.Int32\"))\n",
+                "arguments": [
+                    {
+                        "name": "classname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "generictypes",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "callstaticfunction": {
+                "name": "CallStaticFunction",
+                "description": "Call a public class function (also called static) of an arbitrary .NET class.\nNote: If an assembly is provided, the assembly will be loaded and the function will be called.",
+                "arguments": [
+                    {
+                        "name": "fullyqualifiedfunctionname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assembly",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "args",
+                        "type": "A",
+                        "optional": true
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "createobject": {
+                "name": "CreateObject",
+                "description": "Create an instance of an arbitrary .NET class.\nNote: If an assembly is provided, the assembly will be loaded and an instance of a type in the assembly will be created.",
+                "arguments": [
+                    {
+                        "name": "instance",
+                        "type": "P"
+                    },
+                    {
+                        "name": "classname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assembly",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "args",
+                        "type": "A",
+                        "optional": true
+                    }
+                ]
+            },
+            "generateeventobject": {
+                "name": "GenerateEventObject",
+                "description": "IMPORTANT NOTE:  This function is for testing only.\nGenerate an event script object in the language specified (CSharp, JScript).",
+                "arguments": [
+                    {
+                        "name": "language",
+                        "type": "C"
+                    },
+                    {
+                        "name": "script",
+                        "type": "C"
+                    },
+                    {
+                        "name": "headers",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "references",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "generatewcfwebserviceclientfromurl": {
+                "name": "GenerateWCFWebServiceClientFromURL",
+                "description": "IMPORTANT NOTE:  This function is a preliminary version and may change in future updates.\nDownload and convert a WCF Web Service Descriptor to a client assembly that can be used to call the service.",
+                "arguments": [
+                    {
+                        "name": "url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assemblyfilename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "username",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "generatewcfwebserviceclientfromwsdl": {
+                "name": "GenerateWCFWebServiceClientFromWSDL",
+                "description": "IMPORTANT NOTE:  This function is a preliminary version and may change in future updates.\nConvert a WCF Web Service Descriptor Language (WSDL) string to a client assembly that can be used to call the service.",
+                "arguments": [
+                    {
+                        "name": "wsdl",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assemblyfilename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "username",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "generatewebreference": {
+                "name": "GenerateWebReference",
+                "description": "Create a web refeerence object from a URL.",
+                "arguments": [
+                    {
+                        "name": "url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assemblyfilename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "webreference",
+                        "type": "P"
+                    },
+                    {
+                        "name": "username",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "generatewebserviceclientfromurl": {
+                "name": "GenerateWebServiceClientFromURL",
+                "description": "Download and convert a Web Service Descriptor Language (WSDL) string to a client assembly that can be used to call the service.",
+                "arguments": [
+                    {
+                        "name": "url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assemblyfilename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "protocol",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "username",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "generatewebserviceclientfromwsdl": {
+                "name": "GenerateWebServiceClientFromWSDL",
+                "description": "Convert a Web Service Descriptor Language (WSDL) string to a client assembly that can be used to call the service.",
+                "arguments": [
+                    {
+                        "name": "wsdl",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assemblyfilename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "protocol",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "username",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getstaticproperty": {
+                "name": "GetStaticProperty",
+                "description": "Call a public class property (also called static) of an arbitrary .NET class.\nNote: If an assembly is provided, the assembly will be loaded and the property value will be retrieved.",
+                "arguments": [
+                    {
+                        "name": "fullyqualifiedpropertyname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assembly",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "args",
+                        "type": "A",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "registerassembly": {
+                "name": "RegisterAssembly",
+                "description": "Register all classes in a .NET assembly under the Alpha Five namespace provided.",
+                "arguments": [
+                    {
+                        "name": "parentnamespace",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assembly",
+                        "type": "P"
+                    }
+                ]
+            },
+            "registerclass": {
+                "name": "RegisterClass",
+                "description": "Register a .NET class in the Alpha Five namespace provided.\nNote: If an assembly is provided, the assembly will be loaded and an instance of a type in the assembly will be registered.",
+                "arguments": [
+                    {
+                        "name": "parentnamespace",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assignedclassname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sourceclassname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assembly",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "registernamespace": {
+                "name": "RegisterNamespace",
+                "description": "Register a single .NET assembly namespace and its children under the Alpha Five namespace provided.",
+                "arguments": [
+                    {
+                        "name": "parentnamespace",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sourcenamespace",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assembly",
+                        "type": "P"
+                    },
+                    {
+                        "name": "parentasalias",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "setstaticproperty": {
+                "name": "SetStaticProperty",
+                "description": "Call a public class property (also called static) of an arbitrary .NET class.\nNote: If an assembly is provided, the assembly will be loaded and the property value will be retrieved.",
+                "arguments": [
+                    {
+                        "name": "fullyqualifiedpropertyname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    },
+                    {
+                        "name": "assembly",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "args",
+                        "type": "A",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Services"
+    },
+    "webservices": {
+        "argument": {
+            "__methods__": {
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                }
+            },
+            "__name__": "Argument"
+        },
+        "argumentusage": {
+            "__enumeration__": [
+                "Input",
+                "Output",
+                "InputOutput"
+            ],
+            "__name__": "ArgumentUsage"
+        },
+        "method": {
+            "__methods__": {
+                "addargument": {
+                    "name": "AddArgument",
+                    "description": "Add a Argument.",
+                    "arguments": [
+                        {
+                            "name": "argument",
+                            "type": "DotNet::WebServices::Argument"
+                        }
+                    ]
+                },
+                "argumentnumber": {
+                    "name": "ArgumentNumber",
+                    "description": "Get the index of a Argument from the name.",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "deleteargument": {
+                    "name": "DeleteArgument",
+                    "description": "Delete a Argument.",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "insertargument": {
+                    "name": "InsertArgument",
+                    "description": "Insert a new Argument.",
+                    "arguments": [
+                        {
+                            "name": "argument",
+                            "type": "DotNet::WebServices::Argument"
+                        },
+                        {
+                            "name": "insertbefore",
+                            "type": "N",
+                            "optional": true
+                        }
+                    ]
+                },
+                "moveargument": {
+                    "name": "MoveArgument",
+                    "description": "Move a block of Argument items.",
+                    "arguments": [
+                        {
+                            "name": "moveto",
+                            "type": "N"
+                        },
+                        {
+                            "name": "movefrom",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                }
+            },
+            "__name__": "Method"
+        },
+        "property": {
+            "__methods__": {
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                }
+            },
+            "__name__": "Property"
+        },
+        "servicetype": {
+            "__enumeration__": [
+                "WCF",
+                "Soap",
+                "Soap12",
+                "Unknown"
+            ],
+            "__name__": "ServiceType"
+        },
+        "type": {
+            "__methods__": {
+                "addproperty": {
+                    "name": "AddProperty",
+                    "description": "Add a Property.",
+                    "arguments": [
+                        {
+                            "name": "property",
+                            "type": "DotNet::WebServices::Property"
+                        }
+                    ]
+                },
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "deleteproperty": {
+                    "name": "DeleteProperty",
+                    "description": "Delete a Property.",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "insertproperty": {
+                    "name": "InsertProperty",
+                    "description": "Insert a new Property.",
+                    "arguments": [
+                        {
+                            "name": "property",
+                            "type": "DotNet::WebServices::Property"
+                        },
+                        {
+                            "name": "insertbefore",
+                            "type": "N",
+                            "optional": true
+                        }
+                    ]
+                },
+                "moveproperty": {
+                    "name": "MoveProperty",
+                    "description": "Move a block of Property items.",
+                    "arguments": [
+                        {
+                            "name": "moveto",
+                            "type": "N"
+                        },
+                        {
+                            "name": "movefrom",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                },
+                "propertynumber": {
+                    "name": "PropertyNumber",
+                    "description": "Get the index of a Property from the name.",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "C"
+                        }
+                    ]
+                }
+            },
+            "__name__": "Type"
+        },
+        "webreference": {
+            "__methods__": {
+                "addmethod": {
+                    "name": "AddMethod",
+                    "description": "Add a Method.",
+                    "arguments": [
+                        {
+                            "name": "method",
+                            "type": "DotNet::WebServices::Method"
+                        }
+                    ]
+                },
+                "addtype": {
+                    "name": "AddType",
+                    "description": "Add a Type.",
+                    "arguments": [
+                        {
+                            "name": "type",
+                            "type": "DotNet::WebServices::Type"
+                        }
+                    ]
+                },
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "deletemethod": {
+                    "name": "DeleteMethod",
+                    "description": "Delete a Method.",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "deletetype": {
+                    "name": "DeleteType",
+                    "description": "Delete a Type.",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "insertmethod": {
+                    "name": "InsertMethod",
+                    "description": "Insert a new Method.",
+                    "arguments": [
+                        {
+                            "name": "method",
+                            "type": "DotNet::WebServices::Method"
+                        },
+                        {
+                            "name": "insertbefore",
+                            "type": "N",
+                            "optional": true
+                        }
+                    ]
+                },
+                "inserttype": {
+                    "name": "InsertType",
+                    "description": "Insert a new Type.",
+                    "arguments": [
+                        {
+                            "name": "type",
+                            "type": "DotNet::WebServices::Type"
+                        },
+                        {
+                            "name": "insertbefore",
+                            "type": "N",
+                            "optional": true
+                        }
+                    ]
+                },
+                "methodnumber": {
+                    "name": "MethodNumber",
+                    "description": "Get the index of a Method from the name.",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "movemethod": {
+                    "name": "MoveMethod",
+                    "description": "Move a block of Method items.",
+                    "arguments": [
+                        {
+                            "name": "moveto",
+                            "type": "N"
+                        },
+                        {
+                            "name": "movefrom",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "movetype": {
+                    "name": "MoveType",
+                    "description": "Move a block of Type items.",
+                    "arguments": [
+                        {
+                            "name": "moveto",
+                            "type": "N"
+                        },
+                        {
+                            "name": "movefrom",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                },
+                "typenumber": {
+                    "name": "TypeNumber",
+                    "description": "Get the index of a Type from the name.",
+                    "arguments": [
+                        {
+                            "name": "name",
+                            "type": "C"
+                        }
+                    ]
+                }
+            },
+            "__name__": "WebReference"
+        },
+        "__name__": "WebServices"
+    },
+    "__name__": "DotNet"
+}

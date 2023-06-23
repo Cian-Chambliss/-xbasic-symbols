@@ -1,0 +1,4339 @@
+{
+    "bson": {
+        "__functions__": {
+            "createfromresultset": {
+                "name": "CreateFromResultSet",
+                "description": "Stream a SQL Result to a BSON file (sequential BSON documents = sequential result set rows).  Set optional normalizeNames parameter to .t. if names should be forced to safe identifier names.",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    },
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "normalizenames",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "createtempresultset": {
+                "name": "CreateTempResultSet",
+                "description": "Creates a temporary BSON file from a resultset, then apply an order and optional options (and columns) to get a new open resultset that modifys the order.",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    },
+                    {
+                        "name": "orderexpression",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "columns",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "filetoresultset": {
+                "name": "FileToResultSet",
+                "description": "Create a result set from bson and optional order expresion, options (\"\",\"distict\" or \"distict row\") and table info (schema).",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "orderexpression",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "tableinfo",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "toresultset": {
+                "name": "ToResultSet",
+                "description": "Create a result set from bson and optional order expresion, options (\"\",\"distict\" or \"distict row\") and table info (schema).",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "B"
+                    },
+                    {
+                        "name": "orderexpression",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "tableinfo",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "getbson": {
+                "name": "getBson",
+                "description": "Get current BSON for object."
+            },
+            "getindexed": {
+                "name": "getIndexed",
+                "description": "Get indexed item from a JSON object - returns NIL if undefined.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getjson": {
+                "name": "getJson",
+                "description": "Get current JSON for object."
+            },
+            "getlength": {
+                "name": "getLength",
+                "description": "Get Length of array / count of elements at level."
+            },
+            "getproperty": {
+                "name": "getProperty",
+                "description": "Get property from a JSON object - returns NIL if undefined.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "isarray": {
+                "name": "isArray",
+                "description": "BSON object is an array."
+            },
+            "isobject": {
+                "name": "isObject",
+                "description": "BSON object is an object."
+            },
+            "nameindexed": {
+                "name": "nameIndexed",
+                "description": "Return the associated name (blank if none).",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "push": {
+                "description": "Push value into an 'array'.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "setbson": {
+                "name": "setBson",
+                "description": "Populate object from bson blob.",
+                "arguments": [
+                    {
+                        "name": "bson",
+                        "type": "B"
+                    }
+                ]
+            },
+            "setindexed": {
+                "name": "setIndexed",
+                "description": "Set indexed data to  array index.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "setjson": {
+                "name": "setJson",
+                "description": "Populate object from json.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setproperty": {
+                "name": "setProperty",
+                "description": "Get property from a JSON object.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__name__": "BSON"
+    },
+    "bsonreader": {
+        "__functions__": {
+            "createfromfile": {
+                "name": "CreateFromFile",
+                "description": "Read from a file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close the document reader (will release the stream)."
+            },
+            "documentnumber": {
+                "name": "DocumentNumber",
+                "description": "Document Number (starting at 0) of the document # in the stream."
+            },
+            "getdocument": {
+                "name": "GetDocument",
+                "description": "Gets the current document."
+            },
+            "gotodocumentnumber": {
+                "name": "GotoDocumentNumber",
+                "description": "Go to a specific document number.",
+                "arguments": [
+                    {
+                        "name": "documentnumber",
+                        "type": "N"
+                    }
+                ]
+            },
+            "gotonext": {
+                "name": "GotoNext",
+                "description": "Go to the next document number."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "BSONReader"
+    },
+    "couchdb": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Create a couchdb object.",
+                "arguments": [
+                    {
+                        "name": "_baseuri",
+                        "type": "C"
+                    },
+                    {
+                        "name": "_database",
+                        "type": "C"
+                    }
+                ]
+            },
+            "createpouch": {
+                "name": "CreatePouch",
+                "description": "Create a pouchdb object (local javascript couchdb implementation) - uses provided 'path' as base path for storing pouch data.",
+                "arguments": [
+                    {
+                        "name": "_database",
+                        "type": "C"
+                    },
+                    {
+                        "name": "_path",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "addindex": {
+                "name": "AddIndex",
+                "description": "Add index (if _index endpoint supported by backend).",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "C"
+                    },
+                    {
+                        "name": "def",
+                        "type": "C"
+                    }
+                ]
+            },
+            "addrecordattachment": {
+                "name": "AddRecordAttachment",
+                "description": "Add or replace an attachment to a revision of a record.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "revision",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "data",
+                        "type": "A"
+                    },
+                    {
+                        "name": "mimetype",
+                        "type": "C"
+                    }
+                ]
+            },
+            "cleanupviews": {
+                "name": "CleanupViews",
+                "description": "Clean up any unused couchdb views."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "commitchanges": {
+                "name": "CommitChanges",
+                "description": "Instructs couchdb to commit all changes to disk."
+            },
+            "createdatabase": {
+                "name": "CreateDatabase",
+                "description": "Create couch database (first time in)."
+            },
+            "databasecompact": {
+                "name": "DatabaseCompact",
+                "description": "Instructs couchdb to compact the database."
+            },
+            "deleteindex": {
+                "name": "DeleteIndex",
+                "description": "Remove index (if _index endpoint supported by backend).",
+                "arguments": [
+                    {
+                        "name": "ddoc",
+                        "type": "C"
+                    },
+                    {
+                        "name": "type",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "deleterecordattachment": {
+                "name": "DeleteRecordAttachment",
+                "description": "Delete an attachment from a revision of a record.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "revision",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "dropdatabase": {
+                "name": "DropDatabase",
+                "description": "Delete the couchdb database."
+            },
+            "getdatabaseinfo": {
+                "name": "GetDatabaseInfo",
+                "description": "Just get the database top level information."
+            },
+            "getrecordattachment": {
+                "name": "GetRecordAttachment",
+                "description": "Get an attachment to a revision of a record.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getrecordrevisions": {
+                "name": "GetRecordRevisions",
+                "description": "Gets a document db record using 'id'.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getrecords": {
+                "name": "GetRecords",
+                "description": "MongoDB style query (using _find endpoint).",
+                "arguments": [
+                    {
+                        "name": "criteria",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sorting",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "view",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getsecurity": {
+                "name": "GetSecurity",
+                "description": "Get security for database."
+            },
+            "gettemporaryview": {
+                "name": "GetTemporaryView",
+                "description": "Return the results of a temporary view (for development, avoid use for production site).",
+                "arguments": [
+                    {
+                        "name": "viewdefinition",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getview": {
+                "name": "GetView",
+                "description": "Query a saved view - leave viewName blank if same as design name.",
+                "arguments": [
+                    {
+                        "name": "design",
+                        "type": "C"
+                    },
+                    {
+                        "name": "viewname",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getviewkey": {
+                "name": "GetViewKey",
+                "description": "Get view documents that match the key.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "A"
+                    },
+                    {
+                        "name": "design",
+                        "type": "C"
+                    },
+                    {
+                        "name": "viewname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getviewrange": {
+                "name": "GetViewRange",
+                "description": "Get view with a key documents between the key values, inclusive flag for endkey is included.",
+                "arguments": [
+                    {
+                        "name": "startkey",
+                        "type": "A"
+                    },
+                    {
+                        "name": "endkey",
+                        "type": "A"
+                    },
+                    {
+                        "name": "inclusive",
+                        "type": "L"
+                    },
+                    {
+                        "name": "design",
+                        "type": "C"
+                    },
+                    {
+                        "name": "viewname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getviewvalue": {
+                "name": "GetViewValue",
+                "description": "Just return the 'value' json.",
+                "arguments": [
+                    {
+                        "name": "design",
+                        "type": "C"
+                    },
+                    {
+                        "name": "viewname",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "listdatabases": {
+                "name": "ListDatabases",
+                "description": "Get top level database list."
+            },
+            "listindexes": {
+                "name": "ListIndexes",
+                "description": "Get list of indexes (if _index endpoint supported by backend)."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "replicatedatabase": {
+                "name": "ReplicateDatabase",
+                "description": "Replicate a database.",
+                "arguments": [
+                    {
+                        "name": "replicaname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "createifnoexist",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "replicatefrom",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "CouchDB"
+    },
+    "curl": {
+        "__functions__": {
+            "definesconstant": {
+                "name": "DefinesConstant",
+                "description": "Returns true if CURLLIB defines named constant.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "downloadmultiple": {
+                "name": "DownloadMultiple",
+                "description": "Download multiple urls to filenames, crlf delimited list of the form <filename>|<url>.",
+                "arguments": [
+                    {
+                        "name": "list",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getconstant": {
+                "name": "GetConstant",
+                "description": "Get CURLLIB constant value, given name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getconstantnames": {
+                "name": "GetConstantNames",
+                "description": "Return all known CURLLIB constant names in a crlf delimited list."
+            },
+            "getjob": {
+                "name": "GetJob",
+                "description": "Wait on next scheduled message - returns a CurlJob object.  If pattern is specified, then only messages that match the pattern will be dequeued.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "init": {
+                "name": "Init",
+                "description": "Initialize a new Curl session.",
+                "arguments": [
+                    {
+                        "name": "url",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "listjobs": {
+                "name": "ListJobs",
+                "description": "Returns a list of schedules curl commands currently running.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "pendingcompletejobs": {
+                "name": "PendingCompleteJobs",
+                "description": "Returns a count of completed curl jobs.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "postjob": {
+                "name": "PostJob",
+                "description": "Creates a curl 'job' object, adds it to the completion queue (raises event) - use to close waiting queues.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "contextdata",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "request": {
+                "name": "Request",
+                "description": "Simple CURL request from request JSON or supplied properties.",
+                "arguments": [
+                    {
+                        "name": "request",
+                        "type": "A"
+                    }
+                ]
+            },
+            "requesttemplate": {
+                "name": "RequestTemplate",
+                "description": "Simple CURL request template, populated from optional namedresource, variables and arguments ,from request JSON or supplied properties.",
+                "arguments": [
+                    {
+                        "name": "request",
+                        "type": "A"
+                    },
+                    {
+                        "name": "namedresource",
+                        "type": "C"
+                    },
+                    {
+                        "name": "variables",
+                        "type": "A",
+                        "optional": true
+                    },
+                    {
+                        "name": "args",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "strerror": {
+                "name": "StrError",
+                "description": "Returns the error message for a returned code.",
+                "arguments": [
+                    {
+                        "name": "error_code",
+                        "type": "N"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close a curl object."
+            },
+            "errno": {
+                "name": "Errno",
+                "description": "Return curl error code."
+            },
+            "error": {
+                "name": "Error",
+                "description": "Return curl error message."
+            },
+            "escape": {
+                "name": "Escape",
+                "description": "Escape a curl string.",
+                "arguments": [
+                    {
+                        "name": "str",
+                        "type": "C"
+                    }
+                ]
+            },
+            "exec": {
+                "name": "Exec",
+                "description": "Execute curl."
+            },
+            "execbackground": {
+                "name": "ExecBackground",
+                "description": "Execute curl command in the background (spawns a worker thread) - useful for long operations done from the main thread."
+            },
+            "getinfo": {
+                "name": "GetInfo",
+                "description": "Gets information concerning the last transfer.",
+                "arguments": [
+                    {
+                        "name": "curlinfo",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "pause": {
+                "name": "Pause",
+                "description": "Pause a curl connection.",
+                "arguments": [
+                    {
+                        "name": "pauseoptions",
+                        "type": "C"
+                    }
+                ]
+            },
+            "reset": {
+                "name": "Reset",
+                "description": "Re-initializes all curl options, restores to default value."
+            },
+            "schedulejob": {
+                "name": "ScheduleJob",
+                "description": "Schedules a curl command, requires a unique 'name' so that we can later retrieve the state. optional contextdata is stored in the job object.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "contextdata",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "setopt": {
+                "name": "SetOpt",
+                "description": "Sets an option .",
+                "arguments": [
+                    {
+                        "name": "curloption",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "setoptmultiple": {
+                "name": "SetOptMultiple",
+                "description": "Sets an options from array or property tuples.",
+                "arguments": [
+                    {
+                        "name": "tuples",
+                        "type": "P"
+                    }
+                ]
+            },
+            "settrace": {
+                "name": "SetTrace",
+                "description": "Enable/disable trace for this curl operation.",
+                "arguments": [
+                    {
+                        "name": "enable",
+                        "type": "L"
+                    }
+                ]
+            },
+            "unescape": {
+                "name": "UnEscape",
+                "description": "Returns decoded string.",
+                "arguments": [
+                    {
+                        "name": "str",
+                        "type": "C"
+                    }
+                ]
+            },
+            "version": {
+                "name": "Version",
+                "description": "Returns curl version.",
+                "arguments": [
+                    {
+                        "name": "option",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Curl"
+    },
+    "curlfile": {
+        "__methods__": {
+            "clear": {
+                "name": "Clear",
+                "description": "Clear curl file object (close files, clear content)."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getcontent": {
+                "name": "GetContent",
+                "description": "Returns content of memory stream."
+            },
+            "getcookies": {
+                "name": "GetCookies",
+                "description": "Get Cookies (in either short form, just key-value pair, or long form - i.e. with metadata - requires SetCookieFlag called with true).",
+                "arguments": [
+                    {
+                        "name": "verbose",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "getheaders": {
+                "name": "GetHeaders",
+                "description": "Get headers (requires SetHeaderFlag called with true)."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setbinarymode": {
+                "name": "SetBinaryMode",
+                "description": "Sets the binary mode (write binary data to the socket).",
+                "arguments": [
+                    {
+                        "name": "binary",
+                        "type": "L"
+                    }
+                ]
+            },
+            "setcontent": {
+                "name": "SetContent",
+                "description": "Sets Content of memory stream.",
+                "arguments": [
+                    {
+                        "name": "content",
+                        "type": "A"
+                    }
+                ]
+            },
+            "setcookieflag": {
+                "name": "SetCookieFlag",
+                "description": "Sets the cookie flag (save cookies for request).",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "L"
+                    }
+                ]
+            },
+            "setfilename": {
+                "name": "SetFilename",
+                "description": "Sets filename, if this is a disk based file.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setheaderflag": {
+                "name": "SetHeaderFlag",
+                "description": "Sets the header flag (save headers for request).",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "L"
+                    }
+                ]
+            },
+            "trackprogress": {
+                "name": "TrackProgress",
+                "description": "Use IO rather than curl to track progress.",
+                "arguments": [
+                    {
+                        "name": "curlprogress",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__name__": "CurlFile"
+    },
+    "curljob": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getcontent": {
+                "name": "GetContent",
+                "description": "Contents of command."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "CurlJob"
+    },
+    "curlmulti": {
+        "__functions__": {
+            "init": {
+                "name": "Init",
+                "description": "Initialize a new CurlMulti ."
+            }
+        },
+        "__methods__": {
+            "addhandle": {
+                "name": "AddHandle",
+                "description": "Add curl handle to multi object.",
+                "arguments": [
+                    {
+                        "name": "curl",
+                        "type": "P"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close a curl multi object."
+            },
+            "exec": {
+                "name": "Exec",
+                "description": "Execute all associated curl."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "removehandle": {
+                "name": "RemoveHandle",
+                "description": "Remove a curl multi object.",
+                "arguments": [
+                    {
+                        "name": "curl",
+                        "type": "P"
+                    }
+                ]
+            },
+            "setopt": {
+                "name": "SetOpt",
+                "description": "Sets an option for all connections in multi.",
+                "arguments": [
+                    {
+                        "name": "option",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__name__": "CurlMulti"
+    },
+    "curlprogress": {
+        "__functions__": {
+            "createxdialogprogress": {
+                "name": "CreateXdialogProgress",
+                "description": "Creates a xdialog progress object that logs changes to an xdialog.",
+                "arguments": [
+                    {
+                        "name": "xdialogname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "xdialogevent",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "abort": {
+                "name": "Abort",
+                "description": "Causes the next 'progress' callback to force an abort."
+            },
+            "aborted": {
+                "name": "Aborted",
+                "description": "Returns true if abort was called...."
+            },
+            "busy": {
+                "name": "Busy",
+                "description": "Returns true when progress is busy (in use)...."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "done": {
+                "name": "Done",
+                "description": "Called when curl command has finished...."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setfrequency": {
+                "name": "SetFrequency",
+                "description": "Sets the frequency of update (size of chunks to report a change on).",
+                "arguments": [
+                    {
+                        "name": "chunksize",
+                        "type": "N"
+                    }
+                ]
+            },
+            "start": {
+                "name": "Start",
+                "description": "Called when progress is added."
+            },
+            "update": {
+                "name": "Update",
+                "description": "Update the progress (called by the curl when progress is updated)."
+            }
+        },
+        "__name__": "CurlProgress"
+    },
+    "curlrecorder": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "createcurl": {
+                "name": "CreateCurl",
+                "description": "Create a curl object that will be recorded."
+            },
+            "getbashcommand": {
+                "name": "GetBashCommand",
+                "description": "Get the Linux command line version of the curl."
+            },
+            "getjson": {
+                "name": "GetJson",
+                "description": "Get the template form of the curl data."
+            },
+            "getwincommand": {
+                "name": "GetWinCommand",
+                "description": "Get the Windows command line version of the curl."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "CurlRecorder"
+    },
+    "curlresponse": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getinfo": {
+                "name": "GetInfo",
+                "description": "Gets information from the request.",
+                "arguments": [
+                    {
+                        "name": "curlinfo",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "CurlResponse"
+    },
+    "curlshare": {
+        "__functions__": {
+            "init": {
+                "name": "Init",
+                "description": "Initialize a new CurlShare ."
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close a curl share object."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "setopt": {
+                "name": "SetOpt",
+                "description": "Sets an option for all connections in share.",
+                "arguments": [
+                    {
+                        "name": "option",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__name__": "CurlShare"
+    },
+    "documentdb": {
+        "__methods__": {
+            "addrecord": {
+                "name": "AddRecord",
+                "description": "Adds a document db record using 'id'.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C"
+                    }
+                ]
+            },
+            "bulkoperation": {
+                "name": "BulkOperation",
+                "description": "Bulk add/remove/update record operation.",
+                "arguments": [
+                    {
+                        "name": "data",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleterecord": {
+                "name": "DeleteRecord",
+                "description": "Deletes a document db record using 'id'.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "revision",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getallrecords": {
+                "name": "GetAllRecords",
+                "description": "Gets all records for a document database.",
+                "arguments": [
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getrecord": {
+                "name": "GetRecord",
+                "description": "Gets a document db record using 'id'.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "revision",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "updaterecord": {
+                "name": "UpdateRecord",
+                "description": "Updates a document db record using 'id'.",
+                "arguments": [
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "data",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "DocumentDB"
+    },
+    "json": {
+        "__functions__": {
+            "arraychunked": {
+                "name": "ArrayChunked",
+                "description": "Returns multiple json strings separated by a supplied 'separator' string.  maximumRows if > 0 is the maximum number or rows before we chunk it, maximumBytes if > 0 is the maximum number of bytes of data before we chunk it.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "maximumrows",
+                        "type": "N"
+                    },
+                    {
+                        "name": "maximumbytes",
+                        "type": "N"
+                    },
+                    {
+                        "name": "separator",
+                        "type": "C"
+                    }
+                ]
+            },
+            "arrayrange": {
+                "name": "ArrayRange",
+                "description": "Zero based Extract an array 'range' (i.e. startOffset=0,count=10 returns JSON array with the first 10 entries).",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "startoffset",
+                        "type": "N"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    }
+                ]
+            },
+            "arraysize": {
+                "name": "ArraySize",
+                "description": "Count the number of rows in a json array (returns -1 if the supplied JSON is not an array).",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "childdumpproperties": {
+                "name": "ChildDumpProperties",
+                "description": "Using a format string, dump the values from the children of the supplied JSON.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "escapeutf8": {
+                "name": "EscapeUTF8",
+                "description": "All high order characters in the JSON data get converted to escaped characters.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "expandsql": {
+                "name": "ExpandSQL",
+                "description": "ExpandSQL field in a portable SQL command(s).",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sqltemplate",
+                        "type": "C"
+                    },
+                    {
+                        "name": "pagesize",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "prefixtemplate",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "suffixtemplate",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "separator",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "extractmapped": {
+                "name": "ExtractMapped",
+                "description": "Extract mapped json (create the flat json with the element).",
+                "arguments": [
+                    {
+                        "name": "jsonmap",
+                        "type": "C"
+                    },
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "filejsonappend": {
+                "name": "FileJSONAppend",
+                "description": "Update (or delete) first JSON that matches passed in pattern, locks on the file for the process.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "record",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "filejsonget": {
+                "name": "FileJSONGet",
+                "description": "Return a matching record (blank if none was found).",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "match",
+                        "type": "C"
+                    }
+                ]
+            },
+            "filejsonupdate": {
+                "name": "FileJSONUpdate",
+                "description": "Update (or delete) first JSON that matches passed in pattern, locks on the file for the process.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "match",
+                        "type": "C"
+                    },
+                    {
+                        "name": "record",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "filejsonupsert": {
+                "name": "FileJSONUpsert",
+                "description": "Update (or append) first JSON that matches passed in pattern, locks on the file for the process.",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "match",
+                        "type": "C"
+                    },
+                    {
+                        "name": "record",
+                        "type": "C"
+                    }
+                ]
+            },
+            "filetoresultset": {
+                "name": "FileToResultSet",
+                "description": "Create a result set from json file and optional table info (schema).",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "tableinfo",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "alias",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "filetoresultsetex": {
+                "name": "FileToResultSetEx",
+                "description": "Create a result set from json file and optional table info (schema).",
+                "arguments": [
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "settings",
+                        "type": "P"
+                    }
+                ]
+            },
+            "foreachstring": {
+                "name": "ForEachString",
+                "description": "For each string in json, evaluate the expression to 'replace' the string. Optional comma separarate list restrict fieldnames that are processed.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expr",
+                        "type": "C"
+                    },
+                    {
+                        "name": "fields",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "formatmapped": {
+                "name": "FormatMapped",
+                "description": "Format mapped json (create the structured json).",
+                "arguments": [
+                    {
+                        "name": "jsonmap",
+                        "type": "C"
+                    },
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromgraphql": {
+                "name": "FromGraphQL",
+                "description": "Convert graphQL query into JSON representation.",
+                "arguments": [
+                    {
+                        "name": "graphql",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromgraphqlschema": {
+                "name": "FromGraphQLSchema",
+                "description": "Convert graphQL schema definition into JSON representation.",
+                "arguments": [
+                    {
+                        "name": "graphql",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromyaml": {
+                "name": "FromYaml",
+                "description": "Create JSON from YAML.",
+                "arguments": [
+                    {
+                        "name": "yaml",
+                        "type": "C"
+                    }
+                ]
+            },
+            "jsonappend": {
+                "name": "JSONAppend",
+                "description": "Update (or delete) first JSON that matches passed in pattern.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "record",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "jsonget": {
+                "name": "JSONGet",
+                "description": "Return a matching record (blank if none was found).",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "match",
+                        "type": "C"
+                    }
+                ]
+            },
+            "jsonupdate": {
+                "name": "JSONUpdate",
+                "description": "Update (or delete) first JSON that matches passed in pattern.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "match",
+                        "type": "C"
+                    },
+                    {
+                        "name": "record",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "jsonupsert": {
+                "name": "JSONUpsert",
+                "description": "Update (or append) first JSON that matches passed in pattern.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "match",
+                        "type": "C"
+                    },
+                    {
+                        "name": "record",
+                        "type": "C"
+                    }
+                ]
+            },
+            "jwtdecode": {
+                "name": "JWTDecode",
+                "description": "Decode without verify a JWT token, useful if we know that the token was validated, and don't want to provide the secret.",
+                "arguments": [
+                    {
+                        "name": "token",
+                        "type": "C"
+                    }
+                ]
+            },
+            "jwtsign": {
+                "name": "JWTSign",
+                "description": "Sign a javascript web token.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "secret",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "jwtverify": {
+                "name": "JWTVerify",
+                "description": "Verify a  javascript web token, return json if valid.",
+                "arguments": [
+                    {
+                        "name": "token",
+                        "type": "C"
+                    },
+                    {
+                        "name": "secret",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "javascripttojson": {
+                "name": "JavascriptToJson",
+                "description": "Turns embedded javascript snippets into string prefixed with {javascript}.",
+                "arguments": [
+                    {
+                        "name": "javascript",
+                        "type": "C"
+                    }
+                ]
+            },
+            "jsonaddfields": {
+                "name": "JsonAddFields",
+                "description": "Adds fields from a template that matches the 'shape' of the input json.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "jsonfieldtemplate",
+                        "type": "C"
+                    }
+                ]
+            },
+            "jsonforceobjectarray": {
+                "name": "JsonForceObjectArray",
+                "description": "Arrays of type other than object are wrapped in an object.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "fieldname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "jsonfromcsv": {
+                "name": "JsonFromCSV",
+                "description": "Convert CSV data to a JSON array - the first row of the CSV must be contain the field names. Optional flag 'b' - assume backslash escape.",
+                "arguments": [
+                    {
+                        "name": "csv",
+                        "type": "C"
+                    },
+                    {
+                        "name": "flags",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "jsonids": {
+                "name": "JsonIds",
+                "description": "Add generated Ids to JSON objects.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "skipchildless",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "altids",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "jsonobjflattenandforceobjarray": {
+                "name": "JsonObjFlattenAndForceObjArray",
+                "description": "Handles both flattening of objects and wrapping of non object array entries at the same time.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "separator",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "fieldname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "jsonobjectflatten": {
+                "name": "JsonObjectFlatten",
+                "description": "Flatten subobjects into parent JSON objects - recurses arrays.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "separator",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "jsonshred": {
+                "name": "JsonShred",
+                "description": "Shreds json levels described by template (which can contained added 'key' fields) into direct children on a top level JSON object.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "jsonfieldtemplate",
+                        "type": "C"
+                    },
+                    {
+                        "name": "topname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "jsontocsv": {
+                "name": "JsonToCSV",
+                "description": "Convert JSON data to a CSV array, optional comma delimited 'columns' are used if supplied to select columns.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "columns",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "tagname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "lowercasenames": {
+                "name": "LowercaseNames",
+                "description": "Make all names lowecase in JSON.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "objectdumpproperties": {
+                "name": "ObjectDumpProperties",
+                "description": "Using a format string, dump the values from the supplied JSON.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C"
+                    }
+                ]
+            },
+            "offsettopath": {
+                "name": "OffsetToPath",
+                "description": "Convert the location in a json string to a 'path'. The 'base' argument indicates array/position start - xbasic should be 1, javascript should be 0.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "offset",
+                        "type": "N"
+                    },
+                    {
+                        "name": "base",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "pathextract": {
+                "name": "PathExtract",
+                "description": "Return the json from the path. The 'base' argument indicates array/position start - xbasic should be 1, javascript should be 0.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "path",
+                        "type": "C"
+                    },
+                    {
+                        "name": "base",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "pathtooffset": {
+                "name": "PathToOffset",
+                "description": "Get the offset in the json (1 based) - for the 'path'. The 'base' argument indicates array/position start - xbasic should be 1, javascript should be 0.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "path",
+                        "type": "C"
+                    },
+                    {
+                        "name": "base",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "registerschemas": {
+                "name": "RegisterSchemas",
+                "description": "Create classes objects from JSON schemas.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "parent_namespace",
+                        "type": "C"
+                    }
+                ]
+            },
+            "templatereplace": {
+                "name": "TemplateReplace",
+                "description": "Replace template values embedded in JSON values.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "namedresource",
+                        "type": "C"
+                    },
+                    {
+                        "name": "variables",
+                        "type": "A",
+                        "optional": true
+                    },
+                    {
+                        "name": "args",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "toarguments": {
+                "name": "ToArguments",
+                "description": "Populate SQL::Arguments from JSON.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "args",
+                        "type": "P"
+                    }
+                ]
+            },
+            "toresultset": {
+                "name": "ToResultSet",
+                "description": "Create a result set from json and optional table info (schema).",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "tableinfo",
+                        "type": "P",
+                        "optional": true
+                    },
+                    {
+                        "name": "alias",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "toresultsetex": {
+                "name": "ToResultSetEx",
+                "description": "Create a result set from json and optional table info (schema).",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    },
+                    {
+                        "name": "settings",
+                        "type": "P"
+                    }
+                ]
+            },
+            "totypedjson": {
+                "name": "ToTypedJson",
+                "description": "Convert property to typed JSON.",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "P"
+                    }
+                ]
+            },
+            "toyaml": {
+                "name": "ToYaml",
+                "description": "Create YAML for JSON.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "deleteindexed": {
+                "name": "deleteIndexed",
+                "description": "Delete a indexed value.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deleteproperty": {
+                "name": "deleteProperty",
+                "description": "Delete a property.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getindexed": {
+                "name": "getIndexed",
+                "description": "Get indexed item from a JSON object - returns NIL if undefined.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "getjson": {
+                "name": "getJson",
+                "description": "Get current JSON for object."
+            },
+            "getlength": {
+                "name": "getLength",
+                "description": "Get Length of array / count of elements at level."
+            },
+            "getproperty": {
+                "name": "getProperty",
+                "description": "Get property from a JSON object - returns NIL if undefined.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getpropertystring": {
+                "name": "getPropertyString",
+                "description": "Get property from a JSON object - returns as string.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hasproperty": {
+                "name": "hasProperty",
+                "description": "Returns true if a property exist.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "isarray": {
+                "name": "isArray",
+                "description": "JSON object is an array."
+            },
+            "isobject": {
+                "name": "isObject",
+                "description": "JSON object is an object."
+            },
+            "listproperties": {
+                "name": "listProperties",
+                "description": "List Properties of an object in a cr-lf delimited list."
+            },
+            "nameindexed": {
+                "name": "nameIndexed",
+                "description": "Return the associated name (blank if none).",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "push": {
+                "description": "Push value into an 'array'.",
+                "arguments": [
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "setcasesensitive": {
+                "name": "setCaseSensitive",
+                "description": "Set case sensitive mode.",
+                "arguments": [
+                    {
+                        "name": "sensitive",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "setindexed": {
+                "name": "setIndexed",
+                "description": "Set indexed data to  array index.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "setjson": {
+                "name": "setJson",
+                "description": "Populate object from json.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setproperty": {
+                "name": "setProperty",
+                "description": "Get property from a JSON object.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "setpropertypath": {
+                "name": "setPropertyPath",
+                "description": "Set a nested property (treats '.' and '[]' in the name as object and array separators).",
+                "arguments": [
+                    {
+                        "name": "path",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            }
+        },
+        "__name__": "JSON"
+    },
+    "jsonfieldmapping": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "JSONFieldMapping"
+    },
+    "jsonmapping": {
+        "__methods__": {
+            "addcolumn": {
+                "name": "Addcolumn",
+                "description": "Add a column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "Extension::JSONFieldMapping"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletecolumn": {
+                "name": "Deletecolumn",
+                "description": "Delete a column.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertcolumn": {
+                "name": "Insertcolumn",
+                "description": "Insert a new column.",
+                "arguments": [
+                    {
+                        "name": "column",
+                        "type": "Extension::JSONFieldMapping"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "movecolumn": {
+                "name": "Movecolumn",
+                "description": "Move a block of column items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "populatedbffromjson": {
+                "name": "PopulateDBFFromJson",
+                "description": "Populate a DBF from json string.",
+                "arguments": [
+                    {
+                        "name": "dbffile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "populatedbffromjsonfile": {
+                "name": "PopulateDBFFromJsonFile",
+                "description": "Populate a DBF from json file.",
+                "arguments": [
+                    {
+                        "name": "dbffile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "filename",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "JSONMapping"
+    },
+    "listener": {
+        "__functions__": {
+            "get": {
+                "name": "Get",
+                "description": "Get a named listener.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Force Close of all readers, then Drop the listeners."
+            },
+            "closed": {
+                "name": "Closed",
+                "description": "Determine if the listener has been closed."
+            },
+            "drop": {
+                "name": "Drop",
+                "description": "Drop the listener (from named listeners)."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "read": {
+                "name": "Read",
+                "description": "Blocking event read - will cause state to go to 'ready' (for handling request) - many callers can listen for events."
+            }
+        },
+        "__name__": "Listener"
+    },
+    "listenerevent": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ListenerEvent"
+    },
+    "mongodb": {
+        "__functions__": {
+            "closeall": {
+                "name": "CloseAll",
+                "description": "Close all keepOpen connections."
+            },
+            "create": {
+                "name": "Create",
+                "description": "Create a mongo object.",
+                "arguments": [
+                    {
+                        "name": "_baseuri",
+                        "type": "C"
+                    },
+                    {
+                        "name": "_database",
+                        "type": "C"
+                    },
+                    {
+                        "name": "_collection",
+                        "type": "C"
+                    }
+                ]
+            },
+            "criteriatojavascript": {
+                "name": "CriteriaToJavascript",
+                "description": "Converts Mongo DB style JSON criteria into a javascript comparison expression where variables are under 'doc'.",
+                "arguments": [
+                    {
+                        "name": "view",
+                        "type": "C"
+                    }
+                ]
+            },
+            "defaultkeepopen": {
+                "name": "DefaultKeepOpen",
+                "description": "Set the default value for keepOpen on any new mongodb helper instances.",
+                "arguments": [
+                    {
+                        "name": "_keepopen",
+                        "type": "L"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "If keepOpen was set previously, close the associated connection."
+            },
+            "createindex": {
+                "name": "CreateIndex",
+                "description": "Create a new index.",
+                "arguments": [
+                    {
+                        "name": "keys",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C"
+                    }
+                ]
+            },
+            "dropallindexes": {
+                "name": "DropAllIndexes",
+                "description": "Drop all indexes."
+            },
+            "dropcollection": {
+                "name": "DropCollection",
+                "description": "Drop a collection.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "dropdatabase": {
+                "name": "DropDatabase",
+                "description": "Delete the mongo  database."
+            },
+            "dropindex": {
+                "name": "DropIndex",
+                "description": "Drop an existing index.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "C"
+                    }
+                ]
+            },
+            "ensureindex": {
+                "name": "EnsureIndex",
+                "description": "Create a new index if it does not already exist.",
+                "arguments": [
+                    {
+                        "name": "keys",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getindexes": {
+                "name": "GetIndexes",
+                "description": "Return the indexes for the collection."
+            },
+            "getrecords": {
+                "name": "GetRecords",
+                "description": "Get records from mongo collection that match the criteria spec.",
+                "arguments": [
+                    {
+                        "name": "criteria",
+                        "type": "C"
+                    },
+                    {
+                        "name": "sorting",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "view",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getrecordstoresultset": {
+                "name": "GetRecordsToResultSet",
+                "description": "Get records from mongo collection into a result set, use passed in mapping.",
+                "arguments": [
+                    {
+                        "name": "criteria",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "sorting",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "tableinfo",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "listcollections": {
+                "name": "ListCollections",
+                "description": "Get collections in the current database."
+            },
+            "listdatabases": {
+                "name": "ListDatabases",
+                "description": "Get top level database list."
+            },
+            "mapreduce": {
+                "name": "MapReduce",
+                "description": "Get result of a map/Reduce against a mongo collection.",
+                "arguments": [
+                    {
+                        "name": "mapfunction",
+                        "type": "C"
+                    },
+                    {
+                        "name": "reducefunction",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "finalizefunction",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "reindex": {
+                "name": "ReIndex",
+                "description": "Drop an recreate all indexes."
+            },
+            "renamecollection": {
+                "name": "RenameCollection",
+                "description": "Rename a collection.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "newname",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "MongoDB"
+    },
+    "oauthclient": {
+        "__functions__": {
+            "addprofile": {
+                "name": "AddProfile",
+                "description": "Adds an oauth profile to the list of profiles (these are used by CreateOAuth to construct new profiles) - if profile of name already exists, profile gets replaced.",
+                "arguments": [
+                    {
+                        "name": "profile",
+                        "type": "P"
+                    },
+                    {
+                        "name": "applicationpath",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "cleanuprequests": {
+                "name": "CleanupRequests",
+                "description": "Clean up any requests that have been hanging around longer than 'seconds'.",
+                "arguments": [
+                    {
+                        "name": "seconds",
+                        "type": "N"
+                    }
+                ]
+            },
+            "createoauth": {
+                "name": "CreateOAuth",
+                "description": "Create an OAuth object with defaults for oauth_profile (currently supported 'twitter').",
+                "arguments": [
+                    {
+                        "name": "oauth_profile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "applicationpath",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "defaultprofile": {
+                "name": "DefaultProfile",
+                "description": "Returns a pointer to the 'default' profile."
+            },
+            "getmetadata": {
+                "name": "GetMetadata",
+                "description": "Get the design_metadata for a profile type (settings for the builder that prompts user for client_id/keys etc).",
+                "arguments": [
+                    {
+                        "name": "oauth_profile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "applicationpath",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "getrequestdata": {
+                "name": "GetRequestData",
+                "description": "Get (and remove) request tokens url from cache.",
+                "arguments": [
+                    {
+                        "name": "token",
+                        "type": "C"
+                    }
+                ]
+            },
+            "gettokenforcallback": {
+                "name": "GetTokenForCallback",
+                "description": "Given a callback uri, determine the request token (which can be used by GetRequestData).",
+                "arguments": [
+                    {
+                        "name": "uri",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getoauthlevel": {
+                "name": "GetoAuthLevel",
+                "description": "Return the oAuth level (if defined) for a profile.",
+                "arguments": [
+                    {
+                        "name": "oauth_profile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "applicationpath",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "listprofiles": {
+                "name": "ListProfiles",
+                "description": "Returns a list of the registered profiles.",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "applicationpath",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "nonce_generate": {
+                "name": "NOnce_Generate",
+                "description": "Generate a new OAuth nonce token."
+            },
+            "openidurl": {
+                "name": "OpenIdUrl",
+                "description": "Generate a url for open id, required and optional are comma delimited lists of attributes to retreive on the request.",
+                "arguments": [
+                    {
+                        "name": "callback_url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "identity",
+                        "type": "C"
+                    },
+                    {
+                        "name": "required",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "optional",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "openidvalidate": {
+                "name": "OpenIdValidate",
+                "description": "Validate a call from open id, pass in the uriQuery parameters.",
+                "arguments": [
+                    {
+                        "name": "callback_url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "identity",
+                        "type": "C"
+                    },
+                    {
+                        "name": "uriquery",
+                        "type": "C"
+                    }
+                ]
+            },
+            "peekrequestdata": {
+                "name": "PeekRequestData",
+                "description": "Peek (and keep around) request tokens url from cache - used for getting context *before* the validate call.",
+                "arguments": [
+                    {
+                        "name": "token",
+                        "type": "C"
+                    }
+                ]
+            },
+            "removeprofile": {
+                "name": "RemoveProfile",
+                "description": "Remove (unload) a profile.",
+                "arguments": [
+                    {
+                        "name": "oauth_profile",
+                        "type": "C"
+                    },
+                    {
+                        "name": "applicationpath",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "setrequestdata": {
+                "name": "SetRequestData",
+                "description": "Sets a url for a request token (time sensitive cache).",
+                "arguments": [
+                    {
+                        "name": "token",
+                        "type": "C"
+                    },
+                    {
+                        "name": "requestdata",
+                        "type": "P"
+                    }
+                ]
+            },
+            "timestamp_generate": {
+                "name": "TimeStamp_Generate",
+                "description": "Generate a new OAuth timestamp token."
+            }
+        },
+        "__methods__": {
+            "accesstoken": {
+                "name": "AccessToken",
+                "description": "Request an oauth access token, given authentication data.",
+                "arguments": [
+                    {
+                        "name": "oauth_token",
+                        "type": "C"
+                    },
+                    {
+                        "name": "oauth_verifier",
+                        "type": "C"
+                    }
+                ]
+            },
+            "accesstoken2": {
+                "name": "AccessToken2",
+                "description": "Request an oauth access token, given code.",
+                "arguments": [
+                    {
+                        "name": "code",
+                        "type": "C"
+                    },
+                    {
+                        "name": "client_id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "client_secret",
+                        "type": "C"
+                    },
+                    {
+                        "name": "extra_args",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "addauthenticationurlparameter": {
+                "name": "AddAuthenticationUrlParameter",
+                "description": "Add a AuthenticationUrlParameter.",
+                "arguments": [
+                    {
+                        "name": "authenticationurlparameter",
+                        "type": "c"
+                    }
+                ]
+            },
+            "addsupportedresource": {
+                "name": "AddsupportedResource",
+                "description": "Add a supportedResource.",
+                "arguments": [
+                    {
+                        "name": "supportedresource",
+                        "type": "c"
+                    }
+                ]
+            },
+            "authenticationuri": {
+                "name": "AuthenticationURI",
+                "description": "Returns authentication URI."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteauthenticationurlparameter": {
+                "name": "DeleteAuthenticationUrlParameter",
+                "description": "Delete a AuthenticationUrlParameter.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "deletesupportedresource": {
+                "name": "DeletesupportedResource",
+                "description": "Delete a supportedResource.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "exec": {
+                "name": "Exec",
+                "description": "Perform an OAuth request.",
+                "arguments": [
+                    {
+                        "name": "request_method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_parameters",
+                        "type": "P"
+                    },
+                    {
+                        "name": "acceptmime",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "execlow": {
+                "name": "ExecLow",
+                "description": "Perform an OAuth request, but pass the parameters as a string (setting proper order of parameters is on the caller).",
+                "arguments": [
+                    {
+                        "name": "request_method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_params",
+                        "type": "C"
+                    },
+                    {
+                        "name": "acceptmime",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "escaped_request_url",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertauthenticationurlparameter": {
+                "name": "InsertAuthenticationUrlParameter",
+                "description": "Insert a new AuthenticationUrlParameter.",
+                "arguments": [
+                    {
+                        "name": "authenticationurlparameter",
+                        "type": "c"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "insertsupportedresource": {
+                "name": "InsertsupportedResource",
+                "description": "Insert a new supportedResource.",
+                "arguments": [
+                    {
+                        "name": "supportedresource",
+                        "type": "c"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveauthenticationurlparameter": {
+                "name": "MoveAuthenticationUrlParameter",
+                "description": "Move a block of AuthenticationUrlParameter items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "movesupportedresource": {
+                "name": "MovesupportedResource",
+                "description": "Move a block of supportedResource items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "populateapplicationtokens": {
+                "name": "PopulateApplicationTokens",
+                "description": "Populate the application specific tokens from a json string.",
+                "arguments": [
+                    {
+                        "name": "jsonsettings",
+                        "type": "C"
+                    }
+                ]
+            },
+            "refreshaccesstoken2": {
+                "name": "RefreshAccessToken2",
+                "description": "Get a new Aouth 2.0 access token using a refresh token.",
+                "arguments": [
+                    {
+                        "name": "refreshtoken",
+                        "type": "C"
+                    },
+                    {
+                        "name": "client_id",
+                        "type": "C"
+                    },
+                    {
+                        "name": "client_secret",
+                        "type": "C"
+                    }
+                ]
+            },
+            "requesttoken": {
+                "name": "RequestToken",
+                "description": "Request an oauth token for sign-in using oauth."
+            },
+            "revokerefreshtoken2": {
+                "name": "RevokeRefreshToken2",
+                "description": "Revokes a refresh token to prevent further access using this token.",
+                "arguments": [
+                    {
+                        "name": "refreshtoken",
+                        "type": "C"
+                    }
+                ]
+            },
+            "scheduleexec": {
+                "name": "ScheduleExec",
+                "description": "Perform an OAuth request in the background.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "contextdata",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_parameters",
+                        "type": "P"
+                    },
+                    {
+                        "name": "acceptmime",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "scheduleexeclow": {
+                "name": "ScheduleExecLow",
+                "description": "Perform an OAuth request in the background.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "contextdata",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_params",
+                        "type": "C"
+                    },
+                    {
+                        "name": "acceptmime",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "escaped_request_url",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "tocurl": {
+                "name": "ToCurl",
+                "description": "Create the curl request that performs an OAuth request.",
+                "arguments": [
+                    {
+                        "name": "request_method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_parameters",
+                        "type": "P"
+                    },
+                    {
+                        "name": "acceptmime",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "tocurllow": {
+                "name": "ToCurlLow",
+                "description": "Create the curl request that performs an OAuth request.",
+                "arguments": [
+                    {
+                        "name": "request_method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_url",
+                        "type": "C"
+                    },
+                    {
+                        "name": "request_params",
+                        "type": "C"
+                    },
+                    {
+                        "name": "acceptmime",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "escaped_request_url",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "OAuthClient"
+    },
+    "oauthrequestdata": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "fromstring": {
+                "name": "FromString",
+                "description": "Populate OAuthRequestData from json.",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Return json representing OAuthRequestData ."
+            }
+        },
+        "__name__": "OAuthRequestData"
+    },
+    "preg": {
+        "__functions__": {
+            "filter": {
+                "description": "Returns the subjects that match.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "A"
+                    },
+                    {
+                        "name": "replacement",
+                        "type": "A"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "A"
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "grep": {
+                "description": "Returns array of the elements of the input array matching a pattern.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "input",
+                        "type": "A"
+                    },
+                    {
+                        "name": "invert",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "match": {
+                "description": "Seaches subject for a match to the regular expression in the pattern.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "A"
+                    }
+                ]
+            },
+            "match_all": {
+                "description": "Seaches subject for a match to the regular expression in the pattern.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "A"
+                    }
+                ]
+            },
+            "match_first": {
+                "description": "Seaches subject for a match to the regular expression in the pattern.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "A"
+                    }
+                ]
+            },
+            "quote": {
+                "description": "Quote a string with delimiters to include in a regular expression.",
+                "arguments": [
+                    {
+                        "name": "str",
+                        "type": "C"
+                    },
+                    {
+                        "name": "delimiter",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "replace": {
+                "description": "Searches subject for matches to pattern and replaces them with replacement.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "A"
+                    },
+                    {
+                        "name": "replacement",
+                        "type": "A"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "A"
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "split": {
+                "description": "Split a string by a regular expression,  flags 'n' - no blank, 'd' - collect delimiters .",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "subject",
+                        "type": "C"
+                    },
+                    {
+                        "name": "limit",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "flags",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PReg"
+    },
+    "pregresult": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PRegResult"
+    },
+    "pregresults": {
+        "__methods__": {
+            "additem": {
+                "name": "Additem",
+                "description": "Add a item.",
+                "arguments": [
+                    {
+                        "name": "item",
+                        "type": "Extension::PRegResult"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "collapseitems": {
+                "name": "CollapseItems",
+                "description": "Collapse the individual items."
+            },
+            "deleteitem": {
+                "name": "Deleteitem",
+                "description": "Delete a item.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "gettext": {
+                "name": "GetText",
+                "description": "Get text from item array.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "insertitem": {
+                "name": "Insertitem",
+                "description": "Insert a new item.",
+                "arguments": [
+                    {
+                        "name": "item",
+                        "type": "Extension::PRegResult"
+                    },
+                    {
+                        "name": "insertbefore",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "moveitem": {
+                "name": "Moveitem",
+                "description": "Move a block of item items.",
+                "arguments": [
+                    {
+                        "name": "moveto",
+                        "type": "N"
+                    },
+                    {
+                        "name": "movefrom",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "seterrorresult": {
+                "name": "SetErrorResult",
+                "description": "Returns error result.",
+                "arguments": [
+                    {
+                        "name": "errortext",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setmatched": {
+                "name": "SetMatched",
+                "description": "Indicate explicitly that a match occurred."
+            }
+        },
+        "__name__": "PRegResults"
+    },
+    "redisclient": {
+        "__functions__": {
+            "createclient": {
+                "name": "CreateClient",
+                "description": "Createa a redis client - note timeout is expressed in seconds - 0 means use default, -1 means no timeout.",
+                "arguments": [
+                    {
+                        "name": "host",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "port",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "blpop": {
+                "name": "BLPop",
+                "description": "BLPop Command. returns first element and removes or block until one is available.",
+                "arguments": [
+                    {
+                        "name": "key1",
+                        "type": "C"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "key2",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "key3",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "brpop": {
+                "name": "BRPop",
+                "description": "BRPop Command. returns last element and removes or block until one is available.",
+                "arguments": [
+                    {
+                        "name": "key1",
+                        "type": "C"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "key2",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "key3",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "brpoplpush": {
+                "name": "BRPopLPush",
+                "description": "BRPopLPush Command. Pop a value from a list, push it to another list and return it; or block until one is available.",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "C"
+                    },
+                    {
+                        "name": "destination",
+                        "type": "C"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "close": {
+                "name": "Close",
+                "description": "Close the redis client (forces re-open)."
+            },
+            "createlistener": {
+                "name": "CreateListener",
+                "description": "Create a named listener, takes a cr-lf delimited list of redis commands to listen on.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "rediscommands",
+                        "type": "C"
+                    }
+                ]
+            },
+            "decr": {
+                "name": "Decr",
+                "description": "Incr Command.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "del": {
+                "name": "Del",
+                "description": "Delete Command.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "execute": {
+                "name": "Execute",
+                "description": "Execute Command.",
+                "arguments": [
+                    {
+                        "name": "command",
+                        "type": "C"
+                    }
+                ]
+            },
+            "exists": {
+                "name": "Exists",
+                "description": "Exists Command.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "expire": {
+                "name": "Expire",
+                "description": "Expire Command.  Key will go away in # of seconds.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "seconds",
+                        "type": "N"
+                    }
+                ]
+            },
+            "get": {
+                "name": "Get",
+                "description": "Get Command.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "getreply": {
+                "name": "GetReply",
+                "description": "Block until next result (i.e. subscribe)."
+            },
+            "getset": {
+                "name": "GetSet",
+                "description": "GetSet Command. Gets old value at same time it sets new value.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "hdel": {
+                "name": "HDel",
+                "description": "Delete a hash field.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hexists": {
+                "name": "HExists",
+                "description": "Test if hash field exists.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hget": {
+                "name": "HGet",
+                "description": "Get a has field field.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hgetall": {
+                "name": "HGetAll",
+                "description": "Get all fields and values in a hash, interleaving field and value.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hincrby": {
+                "name": "HIncrBy",
+                "description": "Increment a field in a hash (handles integer & float).",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "field",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "N"
+                    }
+                ]
+            },
+            "hkeys": {
+                "name": "HKeys",
+                "description": "Get All keys in a hash (i.e. field names).",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hlen": {
+                "name": "HLen",
+                "description": "Get the number of fields in a hash.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hset": {
+                "name": "HSet",
+                "description": "Set the value of a field in a hash.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "field",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "hstrlen": {
+                "name": "HStrLen",
+                "description": "Get the length of the value, if set, otherwise return '0'.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "field",
+                        "type": "C"
+                    }
+                ]
+            },
+            "hvals": {
+                "name": "HVals",
+                "description": "Get the values for all fields in a hash.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "incr": {
+                "name": "Incr",
+                "description": "Incr Command.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "keys": {
+                "name": "Keys",
+                "description": "Keys Command. Use pattern to search for keys.",
+                "arguments": [
+                    {
+                        "name": "pattern",
+                        "type": "C"
+                    }
+                ]
+            },
+            "lindex": {
+                "name": "LIndex",
+                "description": "LIndex Command. Get an element from a list by its index.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "linsert": {
+                "name": "LInsert",
+                "description": "LInsert Command. Inserts a value index a list after (or before) the item in find.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "find",
+                        "type": "A"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    },
+                    {
+                        "name": "before",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "llen": {
+                "name": "LLen",
+                "description": "LLen Command. Get the length of a list (with optional value to stop at).",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "find",
+                        "type": "A",
+                        "optional": true
+                    }
+                ]
+            },
+            "lpop": {
+                "name": "LPop",
+                "description": "LPop Command. Remove and get the first element in a list.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "lpush": {
+                "name": "LPush",
+                "description": "LPush Command. Prepend one or multiple values to a list.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "lpushx": {
+                "name": "LPushX",
+                "description": "LPushX Command. Prepend a value to a list, only if the list exists.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "lrange": {
+                "name": "LRange",
+                "description": "LRange Command. Get a range of elements from a list.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "start",
+                        "type": "N",
+                        "optional": true
+                    },
+                    {
+                        "name": "stop",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "lrem": {
+                "name": "LRem",
+                "description": "LRem Command. Get a range of elements from a list.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "count",
+                        "type": "N"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "lset": {
+                "name": "LSet",
+                "description": "LSet Command. Set the value of an element in a list by its index.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "index",
+                        "type": "N"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "ltrim": {
+                "name": "LTrim",
+                "description": "LTrim Command. Trim a list to the specified range.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "start",
+                        "type": "N"
+                    },
+                    {
+                        "name": "stop",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "persist": {
+                "name": "Persist",
+                "description": "Persist Command.  Removes any expiration on key.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "publish": {
+                "name": "Publish",
+                "description": "Publish a message over a channel.",
+                "arguments": [
+                    {
+                        "name": "channel",
+                        "type": "C"
+                    },
+                    {
+                        "name": "message",
+                        "type": "C"
+                    }
+                ]
+            },
+            "rpop": {
+                "name": "RPop",
+                "description": "RPop Command. Remove and get the last element in a list.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            },
+            "rpoplpush": {
+                "name": "RPopLPush",
+                "description": "RPopLPush Command.Remove and get the last element in a list",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "C"
+                    },
+                    {
+                        "name": "destination",
+                        "type": "C"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "N",
+                        "optional": true
+                    }
+                ]
+            },
+            "rpush": {
+                "name": "RPush",
+                "description": "RPush Command. Append value to list.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "rpushx": {
+                "name": "RPushX",
+                "description": "RPushX Command. Append value to list, only if the list exists.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "rename": {
+                "name": "Rename",
+                "description": "Rename Command.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "newkey",
+                        "type": "C"
+                    }
+                ]
+            },
+            "renamenx": {
+                "name": "RenameNX",
+                "description": "Rename Command. Only performs the rename if the key does not exist.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "newkey",
+                        "type": "C"
+                    }
+                ]
+            },
+            "set": {
+                "name": "Set",
+                "description": "Set Command.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "A"
+                    }
+                ]
+            },
+            "ttl": {
+                "name": "TTL",
+                "description": "TTL Command.  returns time to live for a key.",
+                "arguments": [
+                    {
+                        "name": "key",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "RedisClient"
+    },
+    "redisresult": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getitem": {
+                "name": "GetItem",
+                "description": "Get a given array item.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "haserror": {
+                "name": "HasError",
+                "description": "returns true if error was encountered."
+            },
+            "isnil": {
+                "name": "IsNil",
+                "description": "Returns if the redis value is NIL."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "size": {
+                "name": "Size",
+                "description": "Gets size (if array)."
+            }
+        },
+        "__name__": "RedisResult"
+    },
+    "regex": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "geterror": {
+                "name": "GetError",
+                "description": "Get last regex error."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "grep": {
+                "description": "Grep a regex expression.",
+                "arguments": [
+                    {
+                        "name": "source_text",
+                        "type": "C"
+                    },
+                    {
+                        "name": "regex_pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "match": {
+                "description": "MatchSplit a regex expression.",
+                "arguments": [
+                    {
+                        "name": "source_text",
+                        "type": "C"
+                    },
+                    {
+                        "name": "regex_pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "merge": {
+                "description": "Merge a regex expression.",
+                "arguments": [
+                    {
+                        "name": "source_text",
+                        "type": "C"
+                    },
+                    {
+                        "name": "regex_pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "split": {
+                "description": "Split a regex expression.",
+                "arguments": [
+                    {
+                        "name": "source_text",
+                        "type": "C"
+                    },
+                    {
+                        "name": "regex_pattern",
+                        "type": "C"
+                    },
+                    {
+                        "name": "format",
+                        "type": "C",
+                        "optional": true
+                    },
+                    {
+                        "name": "options",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            }
+        },
+        "__name__": "Regex"
+    },
+    "toresultsetsettings": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ToResultSetSettings"
+    },
+    "uriparse": {
+        "__methods__": {
+            "builduri": {
+                "name": "BuildURI",
+                "description": "Build parts into a URI."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "combineuri": {
+                "name": "CombineURI",
+                "description": "Add missing elements from other URI.",
+                "arguments": [
+                    {
+                        "name": "otheruri",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "parseuri": {
+                "name": "ParseURI",
+                "description": "Parse a URI into separate parts.",
+                "arguments": [
+                    {
+                        "name": "uri",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "URIParse"
+    },
+    "uriquery": {
+        "__methods__": {
+            "buildheaders": {
+                "name": "BuildHeaders",
+                "description": "Build URIQuery query into headers."
+            },
+            "builduriquery": {
+                "name": "BuildURIQuery",
+                "description": "Build parts query into a URI."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "data": {
+                "name": "Data",
+                "description": "Get data for name (returns empty string if no data exists).",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "fromjson": {
+                "name": "FromJson",
+                "description": "JSON Content passed in (oAuth 2.0 passes back as json, not posted).",
+                "arguments": [
+                    {
+                        "name": "json",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "parseheaders": {
+                "name": "ParseHeaders",
+                "description": "Parse header into URIQuery.",
+                "arguments": [
+                    {
+                        "name": "headers",
+                        "type": "C"
+                    }
+                ]
+            },
+            "parseuriquery": {
+                "name": "ParseURIQuery",
+                "description": "Parse a URI query into separate parts.",
+                "arguments": [
+                    {
+                        "name": "uri",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setdata": {
+                "name": "SetData",
+                "description": "Set data given a name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "value",
+                        "type": "C"
+                    }
+                ]
+            },
+            "tojson": {
+                "name": "ToJson",
+                "description": "Create JSON from uriQuery."
+            }
+        },
+        "__name__": "URIQuery"
+    },
+    "__name__": "Extension"
+}

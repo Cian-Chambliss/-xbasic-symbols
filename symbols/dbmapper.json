@@ -1,0 +1,17 @@
+{
+    "extension": {
+        "__methods__": {
+            "get": {
+                "description": "Get a local table for the mapper.",
+                "arguments": [
+                    {
+                        "name": "tablename",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "Extension"
+    },
+    "__name__": "DbMapper"
+}

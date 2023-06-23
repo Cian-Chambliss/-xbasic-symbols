@@ -1,0 +1,36 @@
+{
+    "accesspermission": {
+        "__enumeration__": [
+            "Public",
+            "Protected",
+            "Private"
+        ],
+        "__name__": "AccessPermission"
+    },
+    "classkind": {
+        "__enumeration__": [
+            "Class",
+            "Namespace",
+            "Ordinal"
+        ],
+        "__name__": "ClassKind"
+    },
+    "instancelevel": {
+        "__enumeration__": [
+            "Dynamic",
+            "Static",
+            "Constant"
+        ],
+        "__name__": "InstanceLevel"
+    },
+    "scope": {
+        "__enumeration__": [
+            "Local",
+            "Session",
+            "Global",
+            "System"
+        ],
+        "__name__": "Scope"
+    },
+    "__name__": "Attribute"
+}

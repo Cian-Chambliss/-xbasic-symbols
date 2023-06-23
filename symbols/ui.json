@@ -1,0 +1,188 @@
+{
+    "rect": {
+        "__properties__": {
+            "left": {
+                "name": "left"
+            },
+            "top": {
+                "name": "top"
+            },
+            "right": {
+                "name": "right"
+            },
+            "bottom": {
+                "name": "bottom"
+            },
+            "width": {
+                "name": "width"
+            },
+            "height": {
+                "name": "height"
+            }
+        },
+        "__name__": "Rect"
+    },
+    "theme": {
+        "__functions__": {
+            "enumerate": {
+                "name": "Enumerate",
+                "description": "Enumerate all the theme information (C=class,P=Part,S=State).",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "class",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "part",
+                        "type": "c",
+                        "optional": true
+                    },
+                    {
+                        "name": "state",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "create": {
+                "name": "Create",
+                "description": "Create a theme object.",
+                "arguments": [
+                    {
+                        "name": "classname",
+                        "type": "c"
+                    }
+                ]
+            },
+            "themefilename": {
+                "name": "ThemeFileName",
+                "description": "Get the name of the current theme file."
+            },
+            "themecolor": {
+                "name": "ThemeColor",
+                "description": "Get the name of the current theme file."
+            }
+        },
+        "__methods__": {
+            "name": {
+                "name": "Name",
+                "description": "Returns the name of the Theme."
+            },
+            "enumeratefonts": {
+                "name": "EnumerateFonts",
+                "description": "Enumerate Fonts in a theme (N=name,D=definition).",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "enumeratecolors": {
+                "name": "EnumerateColors",
+                "description": "Enumerate Colors in a theme (N=name,C=color,R=RGB color).",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "enumeratesizes": {
+                "name": "EnumerateSizes",
+                "description": "Enumerate Sizes in a theme (N=name,S=size).",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "enumerateints": {
+                "name": "EnumerateInts",
+                "description": "Enumerate Integer values in a theme (N=name,I=int value).",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "enumeratebools": {
+                "name": "EnumerateBools",
+                "description": "Enumerate Integer values in a theme (N=name,I=int value).",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "enumeratestrings": {
+                "name": "EnumerateStrings",
+                "description": "Enumerate Strings in a theme (N=name,S=string).",
+                "arguments": [
+                    {
+                        "name": "format",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "enumerateproperties": {
+                "name": "EnumerateProperties",
+                "description": "Enumerate all properties format is prefix - property added on.",
+                "arguments": [
+                    {
+                        "name": "format_prefix",
+                        "type": "c",
+                        "optional": true
+                    }
+                ]
+            },
+            "part": {
+                "name": "Part",
+                "description": "Get a part object from a Theme Instance.",
+                "arguments": [
+                    {
+                        "name": "partname",
+                        "type": "c"
+                    }
+                ]
+            }
+        },
+        "__name__": "Theme"
+    },
+    "themepart": {
+        "p_size": {
+            "__enumeration__": [
+                "x",
+                "y"
+            ],
+            "__name__": "P_size"
+        },
+        "__name__": "ThemePart"
+    },
+    "themestate": {
+        "p_size": {
+            "__enumeration__": [
+                "x",
+                "y"
+            ],
+            "__name__": "P_size"
+        },
+        "__name__": "ThemeState"
+    },
+    "__name__": "UI"
+}

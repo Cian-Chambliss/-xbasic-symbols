@@ -1,0 +1,15 @@
+{
+  "name": "xbasic-symbols",
+  "version": "1.0.0",
+  "description": "Alpha Anywhere Xbasic Symbol Loader",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "alphaanywhere",
+    "xbasic"
+  ],
+  "author": "cian chambliss",
+  "license": "MIT"
+}

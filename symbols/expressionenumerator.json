@@ -1,0 +1,54 @@
+{
+    "expressionenumerator": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "enumexpression": {
+                "name": "EnumExpression",
+                "description": "Collect internal expressions that object uses.",
+                "arguments": [
+                    {
+                        "name": "expr",
+                        "type": "C"
+                    }
+                ]
+            },
+            "enumreportdata": {
+                "name": "EnumReportData",
+                "description": "Collect data/group expressions that objects requests.",
+                "arguments": [
+                    {
+                        "name": "groupname",
+                        "type": "C"
+                    },
+                    {
+                        "name": "name",
+                        "type": "C"
+                    },
+                    {
+                        "name": "expr",
+                        "type": "C"
+                    },
+                    {
+                        "name": "layoutdependent",
+                        "type": "L",
+                        "optional": true
+                    },
+                    {
+                        "name": "objectname",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ExpressionEnumerator"
+    },
+    "__name__": "ExpressionEnumerator"
+}

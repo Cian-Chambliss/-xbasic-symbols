@@ -1,0 +1,168 @@
+{
+    "library": {
+        "__functions__": {
+            "get": {
+                "name": "Get",
+                "description": "Get a library object for an aex.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "setrunningpath": {
+                "name": "SetRunningPath",
+                "description": "Change the running path - defaults to temporary folder if ommitted (This prevents locking of original AEX so that it can be regenerted).",
+                "arguments": [
+                    {
+                        "name": "runningpath",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "load": {
+                "name": "Load",
+                "description": "Load library into the current scope."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Library"
+    },
+    "librarycollection": {
+        "__functions__": {
+            "get": {
+                "name": "Get",
+                "description": "Get a collection of libraries into a library collection.",
+                "arguments": [
+                    {
+                        "name": "librarylist",
+                        "type": "C"
+                    }
+                ]
+            },
+            "terminate": {
+                "name": "Terminate",
+                "description": "Terminate all loaded AEX files."
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "variableframe": {
+                "name": "VariableFrame",
+                "description": "Get variable frame scope for collection of libraries."
+            }
+        },
+        "__name__": "LibraryCollection"
+    },
+    "resource": {
+        "__functions__": {
+            "expandtodata": {
+                "name": "ExpandToData",
+                "description": "Gets base64 encoded data version of URL (for embedding).",
+                "arguments": [
+                    {
+                        "name": "urltext",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "alphatype": {
+                "name": "AlphaType",
+                "description": "Return the alpha field type that best represents the mime type."
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "lookup": {
+                "name": "Lookup",
+                "description": "Lookup a built-in alpha five resource.",
+                "arguments": [
+                    {
+                        "name": "urltext",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "toexpression": {
+                "name": "ToExpression",
+                "description": "Return expression (for persisting values)."
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "Return text (if mime type is based on text)."
+            }
+        },
+        "__name__": "Resource"
+    },
+    "resourcecachelimit": {
+        "__enumeration__": [
+            "CacheNever",
+            "CacheAlways",
+            "CacheSession",
+            "CacheGlobal"
+        ],
+        "__name__": "ResourceCacheLimit"
+    },
+    "urlrequest": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "processpost": {
+                "name": "ProcessPost",
+                "description": "Initialize posting data.",
+                "arguments": [
+                    {
+                        "name": "mime_type",
+                        "type": "C"
+                    },
+                    {
+                        "name": "data",
+                        "type": "B"
+                    }
+                ]
+            },
+            "seturl": {
+                "name": "SetUrl",
+                "description": "Initialize url.",
+                "arguments": [
+                    {
+                        "name": "url",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "UrlRequest"
+    },
+    "__name__": "A5Res"
+}

@@ -1,0 +1,449 @@
+{
+    "application": {
+        "__methods__": {
+            "addpublication": {
+                "name": "AddPublication",
+                "description": "Add a Publication.",
+                "arguments": [
+                    {
+                        "name": "publication",
+                        "type": "ApplicationServer::Publication"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletepublication": {
+                "name": "DeletePublication",
+                "description": "Delete a Publication.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "publicationnumber": {
+                "name": "PublicationNumber",
+                "description": "Get the index of a Publication from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "Application"
+    },
+    "clusterconfiguration": {
+        "__methods__": {
+            "addapplication": {
+                "name": "AddApplication",
+                "description": "Add a Application.",
+                "arguments": [
+                    {
+                        "name": "application",
+                        "type": "ApplicationServer::ClusteredApplicationConfiguration"
+                    }
+                ]
+            },
+            "applicationnumber": {
+                "name": "ApplicationNumber",
+                "description": "Get the index of a Application from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteapplication": {
+                "name": "DeleteApplication",
+                "description": "Delete a Application.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ClusterConfiguration"
+    },
+    "clusteredapplicationconfiguration": {
+        "__methods__": {
+            "addhost": {
+                "name": "AddHost",
+                "description": "Add a Host.",
+                "arguments": [
+                    {
+                        "name": "host",
+                        "type": "ApplicationServer::HostReference"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletehost": {
+                "name": "DeleteHost",
+                "description": "Delete a Host.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "hostnumber": {
+                "name": "HostNumber",
+                "description": "Get the index of a Host from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ClusteredApplicationConfiguration"
+    },
+    "connectorconfiguration": {
+        "__methods__": {
+            "addclustermanager": {
+                "name": "AddClusterManager",
+                "description": "Add a ClusterManager.",
+                "arguments": [
+                    {
+                        "name": "clustermanager",
+                        "type": "ApplicationServer::HostReference"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "clustermanagernumber": {
+                "name": "ClusterManagerNumber",
+                "description": "Get the index of a ClusterManager from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            },
+            "deleteclustermanager": {
+                "name": "DeleteClusterManager",
+                "description": "Delete a ClusterManager.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ConnectorConfiguration"
+    },
+    "credentials": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Credentials"
+    },
+    "hostreference": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "HostReference"
+    },
+    "loadbalancingmethod": {
+        "__enumeration__": [
+            "RoundRobin",
+            "WeightedServer",
+            "Session",
+            "ResponseType"
+        ],
+        "__name__": "LoadBalancingMethod"
+    },
+    "protocol": {
+        "__enumeration__": [
+            "HTTP",
+            "FTP",
+            "MSMQ",
+            "SOAP",
+            "EMAIL"
+        ],
+        "__name__": "Protocol"
+    },
+    "publication": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Publication"
+    },
+    "publicationdbfdatabase": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PublicationDBFDatabase"
+    },
+    "publicationdbftable": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PublicationDBFTable"
+    },
+    "publicationdirectory": {
+        "__methods__": {
+            "addpublication": {
+                "name": "AddPublication",
+                "description": "Add a Publication.",
+                "arguments": [
+                    {
+                        "name": "publication",
+                        "type": "ApplicationServer::Publication"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletepublication": {
+                "name": "DeletePublication",
+                "description": "Delete a Publication.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "publicationnumber": {
+                "name": "PublicationNumber",
+                "description": "Get the index of a Publication from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "PublicationDirectory"
+    },
+    "publicationfile": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PublicationFile"
+    },
+    "publicationhostreference": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "PublicationHostReference"
+    },
+    "publicationrequest": {
+        "__methods__": {
+            "addtargethost": {
+                "name": "AddTargetHost",
+                "description": "Add a TargetHost.",
+                "arguments": [
+                    {
+                        "name": "targethost",
+                        "type": "ApplicationServer::HostReference"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deletetargethost": {
+                "name": "DeleteTargetHost",
+                "description": "Delete a TargetHost.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "targethostnumber": {
+                "name": "TargetHostNumber",
+                "description": "Get the index of a TargetHost from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "PublicationRequest"
+    },
+    "publicationtype": {
+        "__enumeration__": [
+            "File",
+            "Directory",
+            "DBFDatabase",
+            "DBFTable"
+        ],
+        "__name__": "PublicationType"
+    },
+    "response": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "Response"
+    },
+    "server": {
+        "__methods__": {
+            "addworkerthread": {
+                "name": "AddWorkerThread",
+                "description": "Add a WorkerThread.",
+                "arguments": [
+                    {
+                        "name": "workerthread",
+                        "type": "ApplicationServer::WorkerThread"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "deleteworkerthread": {
+                "name": "DeleteWorkerThread",
+                "description": "Delete a WorkerThread.",
+                "arguments": [
+                    {
+                        "name": "index",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "workerthreadnumber": {
+                "name": "WorkerThreadNumber",
+                "description": "Get the index of a WorkerThread from the name.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "Server"
+    },
+    "workerthread": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "WorkerThread"
+    },
+    "__name__": "ApplicationServer"
+}

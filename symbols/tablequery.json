@@ -1,0 +1,180 @@
+{
+    "executeresult": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "loadtableinfo": {
+                "name": "LoadTableInfo",
+                "description": "If successful, the table schema was loaded into tableInfo.",
+                "arguments": [
+                    {
+                        "name": "name",
+                        "type": "P"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "ExecuteResult"
+    },
+    "tablecommand": {
+        "__functions__": {
+            "create": {
+                "name": "Create",
+                "description": "Returns a command object, optionally bound to arguments.",
+                "arguments": [
+                    {
+                        "name": "tablename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "arguments",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "createfromresultset": {
+                "name": "CreateFromResultSet",
+                "description": "Returns a command object for a result set, optionally bound to arguments - allows post-process of another resultset.",
+                "arguments": [
+                    {
+                        "name": "resultset",
+                        "type": "P"
+                    },
+                    {
+                        "name": "tablename",
+                        "type": "C"
+                    },
+                    {
+                        "name": "arguments",
+                        "type": "P",
+                        "optional": true
+                    }
+                ]
+            },
+            "replacearguments": {
+                "name": "ReplaceArguments",
+                "description": "Replace arguments in an expression with xbasic literal values.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    },
+                    {
+                        "name": "arguments",
+                        "type": "P"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "distinct": {
+                "name": "Distinct",
+                "description": "Distinct based on orderby."
+            },
+            "distinctrow": {
+                "name": "DistinctRow",
+                "description": "Distinct rows only."
+            },
+            "limit": {
+                "name": "Limit",
+                "description": "Limit for query (number of records).",
+                "arguments": [
+                    {
+                        "name": "limit",
+                        "type": "N"
+                    }
+                ]
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            },
+            "orderby": {
+                "name": "OrderBy",
+                "description": "Order expression.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            },
+            "run": {
+                "name": "Run",
+                "description": "Run the table command."
+            },
+            "select": {
+                "name": "Select",
+                "description": "Select command (with optional list of fields to include).",
+                "arguments": [
+                    {
+                        "name": "columns",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "selectcount": {
+                "name": "SelectCount",
+                "description": "Select Count command ().",
+                "arguments": [
+                    {
+                        "name": "columns",
+                        "type": "C",
+                        "optional": true
+                    }
+                ]
+            },
+            "startoffset": {
+                "name": "StartOffset",
+                "description": "Start offset.",
+                "arguments": [
+                    {
+                        "name": "offset",
+                        "type": "N"
+                    }
+                ]
+            },
+            "where": {
+                "name": "Where",
+                "description": "Where expression.",
+                "arguments": [
+                    {
+                        "name": "expression",
+                        "type": "C"
+                    }
+                ]
+            }
+        },
+        "__name__": "TableCommand"
+    },
+    "tableresult": {
+        "__methods__": {
+            "clone": {
+                "name": "Clone",
+                "description": "Create a copy of an object instance."
+            },
+            "getalphaerror": {
+                "name": "GetAlphaError",
+                "description": "Get Alpha error code."
+            },
+            "newinstance": {
+                "name": "NewInstance",
+                "description": "Create a new object instance of the same type."
+            }
+        },
+        "__name__": "TableResult"
+    },
+    "__name__": "TableQuery"
+}
