@@ -3,26 +3,66 @@ var symbols = {};
 var topnamespace = require("./topnamespace.json");
 
 var getNamespace = function(name,callback) {
+    var remainder = null;
+    if(name) {
+        while(name.substr(0,1) == ":") {
+            name = name.substr(1);
+        }
+    }
+    remainder = name.split("::");
+    if( remainder.length > 1 ) {
+        name = remainder[0];
+        remainder[0] = "";
+        remainder = remainder.join("::");
+        while(remainder.substr(0,1) == ":") {
+            remainder = remainder.substr(1);
+        }
+    } else {
+        remainder = null;
+    }
     name = name.toLowerCase();
+    var resolveRemainder = function(ptr,remainder) {
+        if( remainder ) {
+            remainder = remainder.split("::");
+            for( var i = 0 ; i < remainder.length ; ++i ) {
+               ptr = ptr[remainder[i]];
+               if( !ptr ) {
+                   break;
+               }
+            }
+         }
+         if( ptr ) {
+            callback(null,ptr);
+         } else {
+            callback("Namespace not found",null);
+         }
+    };
     if( !symbols[name] ) {
         if( topnamespace[name] )
         {
             try {
                 symbols[name] = require("./symbols/"+name+".json");
-                callback(null,symbols[name]);
+                resolveRemainder(symbols[name],remainder);
             } catch (error) {
-                callback("Symbol not found",null);
+                callback("Namespace not found",null);
             }
         }
         else
         {
-            callback("Symbol not found",null);
+            callback("Namespace not found",null);
         }
     } else {
-        callback(null,symbols[name]);
+        resolveRemainder(symbols[name],remainder);
     }
 };
-var listNamespaces = function(prefix,detailed,callback) {
+var listNamespaces = function(args,callback) {
+    if( !args) {
+        args = {};
+    }
+    var prefix = args.prefix;
+    var detailed = args.detailed;
+    var instanced = args.instanced;
+
     var buildPrototype = function(arguments) {
         var proto = "(";
         var isOptional = false;
@@ -54,7 +94,7 @@ var listNamespaces = function(prefix,detailed,callback) {
             }
         }
         filter = filter.toLowerCase();
-        if( namespace.__properties__ ) {
+        if( namespace.__properties__ && instanced ) {
             for( var name in namespace.__properties__ ) {
                 var item = namespace.__properties__[name];
                 if( filter.length > 0 ) {
@@ -77,7 +117,7 @@ var listNamespaces = function(prefix,detailed,callback) {
                 }
             }
         }
-        if(namespace.__functions__) {
+        if(namespace.__functions__ ) {
             for( var name in namespace.__functions__ ) {
                 var item = namespace.__functions__[name];
                 if( filter.length > 0 ) {
@@ -119,7 +159,7 @@ var listNamespaces = function(prefix,detailed,callback) {
                 }
             }
         }
-        if( namespace.__methods__ ) {
+        if( namespace.__methods__ && instanced ) {
             for( var name in namespace.__methods__ ) {
                 var item = namespace.__methods__[name];
                 if( filter.length > 0 ) {
