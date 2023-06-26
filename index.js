@@ -23,15 +23,36 @@ var getNamespace = function(name,callback) {
     }
 };
 var listNamespaces = function(prefix,detailed,callback) {
+    var buildPrototype = function(arguments) {
+        var proto = "(";
+        var isOptional = false;
+        var suffix = "";
+        for( var i = 0 ; i < arguments.length ; ++i ) {
+            if( i > 0 ) {
+                proto += ",";
+            }
+            if(  arguments[i].optional ) {
+                isOptional = true;
+            }
+            if( isOptional ) {
+                proto += "[";
+                suffix += "]";
+            }
+            proto += arguments[i].name;
+        }
+        proto += suffix + ")";
+        return proto;
+    };
     var dumpNames = function(namespace,filter) {
         var names = [];
-        if( filter ) {
-            filter = filter.toLowerCase();
+        if( !filter ) {
+            filter = "";
         }
+        filter = filter.toLowerCase();
         if( namespace.__properties__ ) {
             for( var name in namespace.__properties__ ) {
                 var item = namespace.__properties__[name];
-                if( filter && filter.length > 0 ) {
+                if( filter.length > 0 ) {
                     if( filter != name.substring(0,filter.length)) {
                         continue;
                     }
@@ -50,9 +71,11 @@ var listNamespaces = function(prefix,detailed,callback) {
                     names.push("."+propertyName);
                 }
             }
-            for( var name in namespace.__methods__ ) {
-                var item = namespace.__methods__[name];
-                if( filter && filter.length > 0 ) {
+        }
+        if(namespace.__functions__) {
+            for( var name in namespace.__functions__ ) {
+                var item = namespace.__functions__[name];
+                if( filter.length > 0 ) {
                     if( filter != name.substring(0,filter.length)) {
                         continue;
                     }
@@ -60,11 +83,54 @@ var listNamespaces = function(prefix,detailed,callback) {
                 var proto = "()";
                 var methodName = name;
                 var description = null;
+                var arguments = [];
                 if( typeof item === 'string') {
                     methodName = item;
                 } else {
                     if( item.description ) {
                         description = item.description;
+                    }
+                    if( item.arguments ) {
+                        arguments = item.arguments;
+                        proto = buildPrototype(arguments);
+                    }
+                    if( item.__name__ ) {
+                        methodName = item.__name__;
+                    } else if( item.name ) {
+                        methodName = item.name;
+                    }
+                }
+                if( !description ) {
+                    description = methodName + " function."
+                }
+                if(  detailed ) {
+                    names.push({ type : "function" , name : methodName , prototype : methodName + proto , arguments : arguments, description : description });
+                } else {
+                    names.push(methodName+proto);
+                }
+            }
+        }
+        if( namespace.__methods__ ) {
+            for( var name in namespace.__methods__ ) {
+                var item = namespace.__methods__[name];
+                if( filter.length > 0 ) {
+                    if( filter != name.substring(0,filter.length)) {
+                        continue;
+                    }
+                }
+                var proto = "()";
+                var methodName = name;
+                var description = null;
+                var arguments = [];
+                if( typeof item === 'string') {
+                    methodName = item;
+                } else {
+                    if( item.description ) {
+                        description = item.description;
+                    }
+                    if( item.arguments ) {
+                        arguments = item.arguments;
+                        proto = buildPrototype(arguments);
                     }
                     if( item.__name__ ) {
                         methodName = item.__name__;
@@ -76,7 +142,7 @@ var listNamespaces = function(prefix,detailed,callback) {
                     description = methodName + " method."
                 }
                 if(  detailed ) {
-                    names.push({ type : "method" , name : methodName , prototype : methodName + proto , description : description });
+                    names.push({ type : "method" , name : methodName , prototype : methodName + proto , arguments: arguments, description : description });
                 } else {
                     names.push(methodName+proto);
                 }
@@ -84,8 +150,8 @@ var listNamespaces = function(prefix,detailed,callback) {
         }
         for(var name in namespace ) {
             var item =namespace[name];
-            if( name != "__name__" &&  name != "__methods__" && name != "__properties__" ) {
-                if( filter && filter.length > 0 ) {
+            if( name != "__name__" &&  name != "__methods__" &&  name != "__functions__" && name != "__properties__" ) {
+                if( filter.length > 0 ) {
                     if( filter != name.substring(0,filter.length)) {
                         continue;
                     }
@@ -105,7 +171,7 @@ var listNamespaces = function(prefix,detailed,callback) {
                 }
             }
         }
-       return names;
+        return names;
     };
     if(prefix) {
         while(prefix.substr(0,1) == ":") {
@@ -123,11 +189,11 @@ var listNamespaces = function(prefix,detailed,callback) {
                         for( var i = 1 ; i < parts.length ; ++i ) {
                             if( data[parts[i]] ) {
                                 data = data[parts[i]];
-                            } else if( i+1 < parts.length ) {
+                            } else if( (i+1) < parts.length ) {
                                 data = null;
                                 break;
                             } else {
-                                filter = data[i];
+                                filter = parts[i];
                                 break;
                             }
                         }
@@ -142,7 +208,7 @@ var listNamespaces = function(prefix,detailed,callback) {
         } else if( topnamespace[parts[0]] ) {
             getNamespace(parts[0],function(err,data) {
                 if( data ) {
-                    callback(null,dumpNames(data));
+                    callback(null,dumpNames(data,""));
                 } else {
                     callback(err,null);
                 }
@@ -151,7 +217,7 @@ var listNamespaces = function(prefix,detailed,callback) {
             callback(null,dumpNames(topnamespace,parts[0]));
         }
     } else {
-        callback(null,dumpNames(topnamespace));
+        callback(null,dumpNames(topnamespace,""));
     }
 };
 
