@@ -45,8 +45,13 @@ var listNamespaces = function(prefix,detailed,callback) {
     };
     var dumpNames = function(namespace,filter) {
         var names = [];
+        var isFullMethodName = 0;
         if( !filter ) {
             filter = "";
+        } else {
+            if( filter.indexOf("(") > 0 ) {
+                isFullMethodName = filter.indexOf("(");
+            }
         }
         filter = filter.toLowerCase();
         if( namespace.__properties__ ) {
@@ -76,7 +81,11 @@ var listNamespaces = function(prefix,detailed,callback) {
             for( var name in namespace.__functions__ ) {
                 var item = namespace.__functions__[name];
                 if( filter.length > 0 ) {
-                    if( filter != name.substring(0,filter.length)) {
+                    if( isFullMethodName > 0 ) {
+                        if( name.length != isFullMethodName || name != filter.substr(0,isFullMethodName)  ) {
+                            continue;
+                        }
+                    } else if( filter != name.substring(0,filter.length)) {
                         continue;
                     }
                 }
@@ -114,7 +123,11 @@ var listNamespaces = function(prefix,detailed,callback) {
             for( var name in namespace.__methods__ ) {
                 var item = namespace.__methods__[name];
                 if( filter.length > 0 ) {
-                    if( filter != name.substring(0,filter.length)) {
+                    if( isFullMethodName > 0 ) {
+                        if( name.length != isFullMethodName || name != filter.substr(0,isFullMethodName)  ) {
+                            continue;
+                        }
+                    } else if( filter != name.substring(0,filter.length)) {
                         continue;
                     }
                 }
