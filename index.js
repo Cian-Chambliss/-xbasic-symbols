@@ -79,40 +79,50 @@ var createCompletion = function(_namespace,_parent) {
                 ) {
                 var src = ns[name];
                 var kind = "snippet";
-                if( src.__metadata__ ) {
-                    src = src.__metadata__;
-                } else if( !parent || parent[0] != '_' ) {
-                    src.__metadata__ = {};
-                    src = src.__metadata__;
-                }
-                if( !src.documentation && !src.description ) {
-                    src.documentation = name+" property";
-                }
-                if( !src.insertText ) {
-                    var isFunc = true;
-                    if( parent == "__methods__")
-                        kind = "method";
-                    else if( parent == "__functions__")
-                        kind = "function";
-                    else
-                        isFunc = false;
+                if (
+                    typeof src === 'object' &&
+                    !Array.isArray(src) &&
+                    src !== null
+                ) {
+                    if( src.__metadata__ ) {
+                        src = src.__metadata__;
+                    } else if( !parent || parent[0] != '_' ) {
+                        src.__metadata__ = {};
+                        src = src.__metadata__;
+                    }
+                    if( !src.documentation && !src.description ) {
+                        src.documentation = name+" property";
+                    }
+                    if( !src.insertText ) {
+                        var isFunc = true;
+                        if( parent == "__methods__")
+                            kind = "method";
+                        else if( parent == "__functions__")
+                            kind = "function";
+                        else
+                            isFunc = false;
 
-                    if( isFunc ) {
-                        src.insertText = functionPrototype(src,name);
-                    } else if( src.name ) {
-                        src.insertText = src.name;
-                    } else if( ns[name].__name__ ) {
-                        src.insertText = ns[name].__name__;
-                    } else 
-                        src.insertText = name;
+                        if( isFunc ) {
+                            src.insertText = functionPrototype(src,name);
+                        } else if( src.name ) {
+                            src.insertText = src.name;
+                        } else if( ns[name].__name__ ) {
+                            src.insertText = ns[name].__name__;
+                        } else 
+                            src.insertText = name;
+                    }
+                    if( src.name  ) {
+                        name = src.name;
+                    } else if( ns[name].__name__  ) {
+                        name = ns[name].__name__;
+                    }
+                    var complete = { label : name , kind: kind , documentation: (src.documentation || src.description) , insertText: src.insertText };
+                    autocomplete.push(complete);
+                } else {
+                    name = ns[name];
+                    var complete = { label : name , kind: kind , insertText: name };
+                    autocomplete.push(complete);
                 }
-                if( src.name  ) {
-                    name = src.name;
-                } else if( ns[name].__name__  ) {
-                    name = ns[name].__name__;
-                }
-                var complete = { label : name , kind: kind , documentation: (src.documentation || src.description) , insertText: src.insertText };
-                autocomplete.push(complete);
             }
         }
     };
