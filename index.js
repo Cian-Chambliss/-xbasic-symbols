@@ -152,6 +152,8 @@ var getNamespace = function(name,callback) {
         while(name.substr(0,1) == ":") {
             name = name.substr(1);
         }
+        while(name.length > 1 && name.substr(name.length-1) == ":")
+             name = name.substr(0,name.length-1);
     }
     remainder = name.split("::");
     if( remainder.length > 1 ) {
@@ -203,6 +205,7 @@ var getNamespace = function(name,callback) {
 };
 
 var resolveName = function(name) {
+    name = name.toLowerCase();
     return getNamespace(name,function(err,data) { resultData = data; });
 };
 
@@ -492,12 +495,13 @@ var autoComplete = function(source) {
         } else {
             varname = varname.substring(0,varname.length-2);
         }
+        console.log("Look for "+varname);
         var nsp = resolveName(varname);
         if( nsp ) {
             return createCompletion(nsp);
         }
         return  [ ] ;
-    } else if( textUntilPosition.substring(textUntilPosition.length-1,textUntilPosition.length) == "." && position.lineNumber > 1) {
+    } else if( textUntilPosition.substring(textUntilPosition.length-1,textUntilPosition.length) == "." && source.lineNumber > 1) {
         var lspace = textUntilPosition.lastIndexOf(" ");
         var altspace = textUntilPosition.lastIndexOf("\n");
         var varname = textUntilPosition;
@@ -570,7 +574,7 @@ var autoComplete = function(source) {
                 var autoComplete = null;                                
                 var startCol = 0;
                 var endCol = 0;
-                var startLine = position.lineNumber;
+                var startLine = source.lineNumber;
                 if( spacesRemoved.substring(spacesRemoved.length-1,spacesRemoved.length) == "(" ) {
                     argumentName = funPtr.arguments[0].name;
                     startCol = startFunc + 2;
@@ -579,7 +583,7 @@ var autoComplete = function(source) {
                     startCol = startFunc + funcArg[0].length + 3;
                     for( var i = 1 ; i < funPtr.arguments.length ; ++i ) {
                         endCol = startCol + funcArg[i].length;                          
-                        if( position.column <=  endCol ) {
+                        if( source.column <=  endCol ) {
                             argumentName = funPtr.arguments[i].name;
                             argumentNumber = i;
                             break;
@@ -613,7 +617,7 @@ var autoComplete = function(source) {
                     };                                  
                 }
             }
-        } else if( spacesRemoved.substring(spacesRemoved.length-1,spacesRemoved.length) == "=" && position.lineNumber > 1) {
+        } else if( spacesRemoved.substring(spacesRemoved.length-1,spacesRemoved.length) == "=" && source.lineNumber > 1) {
             var lspace = spacesRemoved.lastIndexOf("\n");
             var varname = spacesRemoved;
             if( lspace > 0 ) {
@@ -658,9 +662,10 @@ var autoComplete = function(source) {
     for( var name in topnamespace ) {
         var ns = topnamespace[name];
         if( ns ) {
-            
-            if( ns.__name__ )
-                name = ns.__name__;
+            if( typeof ns === 'string' ) 
+                name = ns;
+            else if( ns.__name__ )
+                name = ns.__name__;   
             items.push({
                 label: name,
                 documentation: name+' namespace',
