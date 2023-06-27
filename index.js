@@ -603,9 +603,6 @@ var autoComplete = function(source) {
                             autoComplete =  harvestVariableTypes(source, funPtr.arguments[argumentNumber].type );
                         }
                     }
-                    if( !autoComplete ) {
-                        autoComplete = A5.xbasicComplete.argumentsTypes[argumentName];
-                    }
                 }
                 if( autoComplete ) {
                     return {
@@ -711,7 +708,128 @@ var autoComplete = function(source) {
     return items;
 };
 
+var autoHelp = function(source) {
+    var textUntilPosition = source.textUntilPosition;
+    var leadingPos = textUntilPosition.length;
+    textUntilPosition = textUntilPosition.trim();
+    leadingPos = leadingPos - textUntilPosition.length;
+    var parenPos = textUntilPosition.lastIndexOf("(");
+    if( parenPos > 0 ) {
+        var endParenPos = textUntilPosition.indexOf(")",parenPos);
+        if( endParenPos > parenPos && endParenPos != (textUntilPosition.length-1) ) {
+            ;
+        } else {
+            var funcName = textUntilPosition.substring( 0 , parenPos );
+            var subExprPos = -1;
+            var separators = "()+-=<>*/?";
+            for( var i = 0 ; i < separators.length ; ++i ) {
+                if( subExprPos < funcName.lastIndexOf(separators[i]) ) {
+                    subExprPos = funcName.lastIndexOf(separators[i]);
+                }
+            }
+            if( subExprPos >= 0 ) {
+                funcName = funcName.substring(subExprPos+1).trim();
+            }
+            var instFun = funcName.lastIndexOf(".");
+            if( instFun < funcName.lastIndexOf("::") ) {
+                instFun = funcName.lastIndexOf("::");
+            }
+            var funPtr = null;
+            if( instFun > 0 ) {
+                var typeName = funcName.substring(0,instFun).toLowerCase();
+                var nsp = resolveName(typeName);
+                if( nsp ) {
+                    if( funcName[instFun] == ":" )
+                        funcName = funcName.substring(instFun+2).toLowerCase();
+                    else
+                        funcName = funcName.substring(instFun+1).toLowerCase();
+                    if( nsp.__functions__ ) {
+                        funPtr = nsp.__functions__[funcName];
+                    }
+                } else if( funcName.indexOf("::") < 0 ) {
+                    var typeName = lookupVariableInstType(source,funcName.substring(0,instFun));
+                    if( typeName ) {
+                        var nsp = resolveName(typeName);
+                        if( nsp ) {
+                            funcName = funcName.substring(instFun+1).toLowerCase()
+                            if( nsp.__functions__ ) {
+                                funPtr = nsp.__functions__[funcName];
+                            }                                            
+                            if( nsp.__methods__ ) {
+                                funPtr = nsp.__methods__[funcName];
+                            }                                            
+                        }
+                    }
+                }
+            } else {
+                var ident = getXBIdent( funcName );
+                if( ident ) {
+                    ident = ident.toLowerCase();
+                    var syms = lookupGlobalSymbols(ident);                        
+                    if( syms ) {
+                        funPtr = syms[ident];
+                        typeName = null;
+                    }
+                }            
+            }
+            if( funPtr ) {
+                if( typeName ) {
+                    typeName = typeName + ".";
+                } else {
+                    typeName = "";
+                }
+                var runCommand = null;
+                var argumentNumber = 0;
+                var argumentName = null;
+                var startCol = 0;
+                var endCol = 0;
+                var startLine = source.line;
+
+                if( funPtr.arguments && funPtr.arguments.length ) {
+                    var startArgs = textUntilPosition.indexOf("(");
+                    if( startArgs > 0 ) {
+                        var argList = textUntilPosition.substring(startArgs+1).split(',');
+                        var toArgs = argList.length;
+
+                        var lastHLArg = argList[argList.length-1];
+
+                        var fullLine = source.fullLine();
+                        lastHLArg =  lastHLArg +  fullLine.substr(source.textUntilPosition.length).split(",")[0];
+                        if( lastHLArg.length > 1 && lastHLArg[lastHLArg.length-1] == ')' ) {
+                            lastHLArg = lastHLArg.substring(0,lastHLArg.length-1);
+                        }                                        
+                        argList[argList.length-1] = lastHLArg;
+
+                        if( toArgs <= funPtr.arguments.length )  {
+                            argumentNumber = toArgs-1;
+                            startCol = parenPos + 2 + leadingPos;
+                            for( var i = 0 ; i < argumentNumber ; ++i ) {
+                                startCol = startCol + argList[i].length + 1;
+                            }
+                            if( argList[argumentNumber].length > 1 ) {
+                                if( argList[argumentNumber][argList[argumentNumber].length-1] == ")" ) { 
+                                    argList[argumentNumber] = argList[argumentNumber].substring(0,argList[argumentNumber].length-1);
+                                }
+                            }
+                            endCol = startCol + argList[argumentNumber].length;
+                            argumentName = funPtr.arguments[argumentNumber].name;
+                        } else {
+                            runCommand = null;
+                        }
+                    } else {
+                        runCommand = null;
+                    }
+                }
+                return { prototype : typeName + functionPrototype(funPtr,funcName,true),
+                         documentation : funPtr.documentation || funPtr.description
+                };
+            }
+        }
+    }
+    return null;
+};
+
 
 module.exports = {
-   getNamespace : getNamespace , listNamespaces : listNamespaces , autoComplete : autoComplete
+   getNamespace : getNamespace , listNamespaces : listNamespaces , autoComplete : autoComplete , autoHelp : autoHelp
 };
