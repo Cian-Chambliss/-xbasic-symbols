@@ -205,8 +205,11 @@ var getNamespace = function(name,callback) {
 };
 
 var resolveName = function(name) {
-    name = name.toLowerCase();
-    return getNamespace(name,function(err,data) { resultData = data; });
+    if(name) {
+        name = name.toLowerCase();
+        return getNamespace(name,function(err,data) { resultData = data; });
+    }
+    return null;
 };
 
 var listNamespaces = function(args,callback) {
