@@ -148,64 +148,77 @@
         ],
         "__name__": "ArgumentUsage"
     },
-    "callresult": {
-        "__properties__": {
-            "code": {
-                "name": "Code"
-            },
-            "text": {
-                "name": "Text"
-            },
-            "nativecode": {
-                "name": "NativeCode"
-            },
-            "nativetext": {
-                "name": "NativeText"
-            },
-            "syntax": {
-                "name": "Syntax"
-            },
-            "api": {
-                "name": "API"
-            },
-            "rowsaffected": {
-                "name": "RowsAffected"
-            },
-            "success": {
-                "name": "Success"
-            },
-            "error": {
-                "name": "Error"
-            },
-            "canceled": {
-                "name": "Canceled"
-            },
-            "warnings": {
-                "name": "Warnings"
-            },
-            "lastinsertedidentity": {
-                "name": "LastInsertedIdentity"
-            },
-            "rowsreturned": {
-                "name": "RowsReturned"
-            },
-            "messagetodisplay": {
-                "name": "MessageToDisplay"
-            }
+    "auth": {
+        "authtype": {
+            "__enumeration__": [
+                "None",
+                "OAuth"
+            ],
+            "__name__": "AuthType"
         },
-        "__methods__": {
-            "fromtext": {
-                "name": "FromText",
-                "description": "Set the error value from the supplied text.",
-                "arguments": [
-                    {
-                        "name": "text",
-                        "type": "C"
-                    }
-                ]
-            }
+        "oauth": {
+            "__methods__": {
+                "addscope": {
+                    "name": "Addscope",
+                    "description": "Add a scope.",
+                    "arguments": [
+                        {
+                            "name": "scope",
+                            "type": "c"
+                        }
+                    ]
+                },
+                "clone": {
+                    "name": "Clone",
+                    "description": "Create a copy of an object instance."
+                },
+                "deletescope": {
+                    "name": "Deletescope",
+                    "description": "Delete a scope.",
+                    "arguments": [
+                        {
+                            "name": "index",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "insertscope": {
+                    "name": "Insertscope",
+                    "description": "Insert a new scope.",
+                    "arguments": [
+                        {
+                            "name": "scope",
+                            "type": "c"
+                        },
+                        {
+                            "name": "insertbefore",
+                            "type": "N",
+                            "optional": true
+                        }
+                    ]
+                },
+                "movescope": {
+                    "name": "Movescope",
+                    "description": "Move a block of scope items.",
+                    "arguments": [
+                        {
+                            "name": "moveto",
+                            "type": "N"
+                        },
+                        {
+                            "name": "movefrom",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "newinstance": {
+                    "name": "NewInstance",
+                    "description": "Create a new object instance of the same type."
+                }
+            },
+            "__name__": "OAuth"
         },
-        "__name__": "CallResult"
+        "__name__": "Auth"
     },
     "columnvalue": {
         "__methods__": {
@@ -3064,6 +3077,1270 @@
         },
         "__name__": "DataTypeInfo"
     },
+    "deletestatement": {
+        "selectitem": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "source": {
+                    "name": "Source"
+                },
+                "alias": {
+                    "name": "Alias"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "SelectItem"
+        },
+        "columnreference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "ColumnReference"
+        },
+        "functionname": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "FunctionName"
+        },
+        "tablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "TableReference"
+        },
+        "selecttablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                },
+                "alias": {
+                    "name": "Alias"
+                },
+                "join": {
+                    "name": "Join"
+                }
+            },
+            "__name__": "SelectTableReference"
+        },
+        "join": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "jointype": {
+                    "name": "JoinType"
+                },
+                "outerjointype": {
+                    "name": "OuterJoinType"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "on": {
+                    "name": "On"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "Join"
+        },
+        "valueexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "arithmeticoperator": {
+                    "name": "ArithmeticOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ValueExpression"
+        },
+        "logicalexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "logicaloperator": {
+                    "name": "LogicalOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "LogicalExpression"
+        },
+        "groupby": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "having": {
+                    "name": "Having"
+                }
+            },
+            "__name__": "GroupBy"
+        },
+        "columnorder": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "order": {
+                    "name": "Order"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ColumnOrder"
+        },
+        "assignment": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "value": {
+                    "name": "Value"
+                }
+            },
+            "__name__": "Assignment"
+        },
+        "union": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "select": {
+                    "name": "Select"
+                },
+                "all": {
+                    "name": "All"
+                }
+            },
+            "__name__": "Union"
+        },
+        "arithmeticoperator": {
+            "__enumeration__": [
+                "NONE",
+                "PLUS",
+                "MINUS",
+                "TIMES",
+                "DIVIDE",
+                "MOD",
+                "AMPERSAND",
+                "TILDE",
+                "BITWISEOR",
+                "BITWISEXOR",
+                "FUNCTION",
+                "NULL",
+                "ARGUMENT",
+                "CASE",
+                "CAST"
+            ],
+            "__name__": "ArithmeticOperator"
+        },
+        "duplicateoption": {
+            "__enumeration__": [
+                "NONE",
+                "DISTINCT",
+                "DISTINCTROWS",
+                "ALLROWS"
+            ],
+            "__name__": "DuplicateOption"
+        },
+        "jointype": {
+            "__enumeration__": [
+                "INNER",
+                "OUTER"
+            ],
+            "__name__": "JoinType"
+        },
+        "logicaloperator": {
+            "__enumeration__": [
+                "NONE",
+                "EMPTY",
+                "AND",
+                "OR",
+                "NOT",
+                "BETWEEN",
+                "NOTBETWEEN",
+                "LIKE",
+                "NOTLIKE",
+                "CONTAINS",
+                "IN",
+                "NOTIN",
+                "ISNULL",
+                "ISNOTNULL",
+                "ASSIGNEQUAL",
+                "NOTEQUAL",
+                "LESSTHANORGREATERTHAN",
+                "LESSTHANOREQUALTO",
+                "NOTGREATERTHAN",
+                "LESSTHAN",
+                "GREATERTHANOREQUALTO",
+                "NOTLESSTHAN",
+                "GREATERTHAN",
+                "EXISTS"
+            ],
+            "__name__": "LogicalOperator"
+        },
+        "order": {
+            "__enumeration__": [
+                "EMPTY",
+                "ASC",
+                "DESC"
+            ],
+            "__name__": "Order"
+        },
+        "outerjointype": {
+            "__enumeration__": [
+                "NONE",
+                "LEFT",
+                "RIGHT",
+                "FULL"
+            ],
+            "__name__": "OuterJoinType"
+        },
+        "replaceoption": {
+            "__enumeration__": [
+                "APPEND",
+                "REPLACE"
+            ],
+            "__name__": "ReplaceOption"
+        },
+        "__name__": "DeleteStatement"
+    },
+    "importstatement": {
+        "selectitem": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "source": {
+                    "name": "Source"
+                },
+                "alias": {
+                    "name": "Alias"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "SelectItem"
+        },
+        "columnreference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "ColumnReference"
+        },
+        "functionname": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "FunctionName"
+        },
+        "tablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "TableReference"
+        },
+        "selecttablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                },
+                "alias": {
+                    "name": "Alias"
+                },
+                "join": {
+                    "name": "Join"
+                }
+            },
+            "__name__": "SelectTableReference"
+        },
+        "join": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "jointype": {
+                    "name": "JoinType"
+                },
+                "outerjointype": {
+                    "name": "OuterJoinType"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "on": {
+                    "name": "On"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "Join"
+        },
+        "valueexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "arithmeticoperator": {
+                    "name": "ArithmeticOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ValueExpression"
+        },
+        "logicalexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "logicaloperator": {
+                    "name": "LogicalOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "LogicalExpression"
+        },
+        "groupby": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "having": {
+                    "name": "Having"
+                }
+            },
+            "__name__": "GroupBy"
+        },
+        "columnorder": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "order": {
+                    "name": "Order"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ColumnOrder"
+        },
+        "assignment": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "value": {
+                    "name": "Value"
+                }
+            },
+            "__name__": "Assignment"
+        },
+        "union": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "select": {
+                    "name": "Select"
+                },
+                "all": {
+                    "name": "All"
+                }
+            },
+            "__name__": "Union"
+        },
+        "arithmeticoperator": {
+            "__enumeration__": [
+                "NONE",
+                "PLUS",
+                "MINUS",
+                "TIMES",
+                "DIVIDE",
+                "MOD",
+                "AMPERSAND",
+                "TILDE",
+                "BITWISEOR",
+                "BITWISEXOR",
+                "FUNCTION",
+                "NULL",
+                "ARGUMENT",
+                "CASE",
+                "CAST"
+            ],
+            "__name__": "ArithmeticOperator"
+        },
+        "duplicateoption": {
+            "__enumeration__": [
+                "NONE",
+                "DISTINCT",
+                "DISTINCTROWS",
+                "ALLROWS"
+            ],
+            "__name__": "DuplicateOption"
+        },
+        "jointype": {
+            "__enumeration__": [
+                "INNER",
+                "OUTER"
+            ],
+            "__name__": "JoinType"
+        },
+        "logicaloperator": {
+            "__enumeration__": [
+                "NONE",
+                "EMPTY",
+                "AND",
+                "OR",
+                "NOT",
+                "BETWEEN",
+                "NOTBETWEEN",
+                "LIKE",
+                "NOTLIKE",
+                "CONTAINS",
+                "IN",
+                "NOTIN",
+                "ISNULL",
+                "ISNOTNULL",
+                "ASSIGNEQUAL",
+                "NOTEQUAL",
+                "LESSTHANORGREATERTHAN",
+                "LESSTHANOREQUALTO",
+                "NOTGREATERTHAN",
+                "LESSTHAN",
+                "GREATERTHANOREQUALTO",
+                "NOTLESSTHAN",
+                "GREATERTHAN",
+                "EXISTS"
+            ],
+            "__name__": "LogicalOperator"
+        },
+        "order": {
+            "__enumeration__": [
+                "EMPTY",
+                "ASC",
+                "DESC"
+            ],
+            "__name__": "Order"
+        },
+        "outerjointype": {
+            "__enumeration__": [
+                "NONE",
+                "LEFT",
+                "RIGHT",
+                "FULL"
+            ],
+            "__name__": "OuterJoinType"
+        },
+        "replaceoption": {
+            "__enumeration__": [
+                "APPEND",
+                "REPLACE"
+            ],
+            "__name__": "ReplaceOption"
+        },
+        "__name__": "ImportStatement"
+    },
     "indexcolumninfo": {
         "__methods__": {
             "clone": {
@@ -3158,6 +4435,638 @@
             }
         },
         "__name__": "IndexInfo"
+    },
+    "insertstatement": {
+        "selectitem": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "source": {
+                    "name": "Source"
+                },
+                "alias": {
+                    "name": "Alias"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "SelectItem"
+        },
+        "columnreference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "ColumnReference"
+        },
+        "functionname": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "FunctionName"
+        },
+        "tablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "TableReference"
+        },
+        "selecttablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                },
+                "alias": {
+                    "name": "Alias"
+                },
+                "join": {
+                    "name": "Join"
+                }
+            },
+            "__name__": "SelectTableReference"
+        },
+        "join": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "jointype": {
+                    "name": "JoinType"
+                },
+                "outerjointype": {
+                    "name": "OuterJoinType"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "on": {
+                    "name": "On"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "Join"
+        },
+        "valueexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "arithmeticoperator": {
+                    "name": "ArithmeticOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ValueExpression"
+        },
+        "logicalexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "logicaloperator": {
+                    "name": "LogicalOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "LogicalExpression"
+        },
+        "groupby": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "having": {
+                    "name": "Having"
+                }
+            },
+            "__name__": "GroupBy"
+        },
+        "columnorder": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "order": {
+                    "name": "Order"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ColumnOrder"
+        },
+        "assignment": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "value": {
+                    "name": "Value"
+                }
+            },
+            "__name__": "Assignment"
+        },
+        "union": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "select": {
+                    "name": "Select"
+                },
+                "all": {
+                    "name": "All"
+                }
+            },
+            "__name__": "Union"
+        },
+        "arithmeticoperator": {
+            "__enumeration__": [
+                "NONE",
+                "PLUS",
+                "MINUS",
+                "TIMES",
+                "DIVIDE",
+                "MOD",
+                "AMPERSAND",
+                "TILDE",
+                "BITWISEOR",
+                "BITWISEXOR",
+                "FUNCTION",
+                "NULL",
+                "ARGUMENT",
+                "CASE",
+                "CAST"
+            ],
+            "__name__": "ArithmeticOperator"
+        },
+        "duplicateoption": {
+            "__enumeration__": [
+                "NONE",
+                "DISTINCT",
+                "DISTINCTROWS",
+                "ALLROWS"
+            ],
+            "__name__": "DuplicateOption"
+        },
+        "jointype": {
+            "__enumeration__": [
+                "INNER",
+                "OUTER"
+            ],
+            "__name__": "JoinType"
+        },
+        "logicaloperator": {
+            "__enumeration__": [
+                "NONE",
+                "EMPTY",
+                "AND",
+                "OR",
+                "NOT",
+                "BETWEEN",
+                "NOTBETWEEN",
+                "LIKE",
+                "NOTLIKE",
+                "CONTAINS",
+                "IN",
+                "NOTIN",
+                "ISNULL",
+                "ISNOTNULL",
+                "ASSIGNEQUAL",
+                "NOTEQUAL",
+                "LESSTHANORGREATERTHAN",
+                "LESSTHANOREQUALTO",
+                "NOTGREATERTHAN",
+                "LESSTHAN",
+                "GREATERTHANOREQUALTO",
+                "NOTLESSTHAN",
+                "GREATERTHAN",
+                "EXISTS"
+            ],
+            "__name__": "LogicalOperator"
+        },
+        "order": {
+            "__enumeration__": [
+                "EMPTY",
+                "ASC",
+                "DESC"
+            ],
+            "__name__": "Order"
+        },
+        "outerjointype": {
+            "__enumeration__": [
+                "NONE",
+                "LEFT",
+                "RIGHT",
+                "FULL"
+            ],
+            "__name__": "OuterJoinType"
+        },
+        "replaceoption": {
+            "__enumeration__": [
+                "APPEND",
+                "REPLACE"
+            ],
+            "__name__": "ReplaceOption"
+        },
+        "__name__": "InsertStatement"
     },
     "intermediatetype": {
         "__enumeration__": [
@@ -3426,6 +5335,638 @@
             }
         },
         "__name__": "NamedValue"
+    },
+    "query": {
+        "selectitem": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "source": {
+                    "name": "Source"
+                },
+                "alias": {
+                    "name": "Alias"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "SelectItem"
+        },
+        "columnreference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "ColumnReference"
+        },
+        "functionname": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "FunctionName"
+        },
+        "tablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "TableReference"
+        },
+        "selecttablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                },
+                "alias": {
+                    "name": "Alias"
+                },
+                "join": {
+                    "name": "Join"
+                }
+            },
+            "__name__": "SelectTableReference"
+        },
+        "join": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "jointype": {
+                    "name": "JoinType"
+                },
+                "outerjointype": {
+                    "name": "OuterJoinType"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "on": {
+                    "name": "On"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "Join"
+        },
+        "valueexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "arithmeticoperator": {
+                    "name": "ArithmeticOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ValueExpression"
+        },
+        "logicalexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "logicaloperator": {
+                    "name": "LogicalOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "LogicalExpression"
+        },
+        "groupby": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "having": {
+                    "name": "Having"
+                }
+            },
+            "__name__": "GroupBy"
+        },
+        "columnorder": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "order": {
+                    "name": "Order"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ColumnOrder"
+        },
+        "assignment": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "value": {
+                    "name": "Value"
+                }
+            },
+            "__name__": "Assignment"
+        },
+        "union": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "select": {
+                    "name": "Select"
+                },
+                "all": {
+                    "name": "All"
+                }
+            },
+            "__name__": "Union"
+        },
+        "arithmeticoperator": {
+            "__enumeration__": [
+                "NONE",
+                "PLUS",
+                "MINUS",
+                "TIMES",
+                "DIVIDE",
+                "MOD",
+                "AMPERSAND",
+                "TILDE",
+                "BITWISEOR",
+                "BITWISEXOR",
+                "FUNCTION",
+                "NULL",
+                "ARGUMENT",
+                "CASE",
+                "CAST"
+            ],
+            "__name__": "ArithmeticOperator"
+        },
+        "duplicateoption": {
+            "__enumeration__": [
+                "NONE",
+                "DISTINCT",
+                "DISTINCTROWS",
+                "ALLROWS"
+            ],
+            "__name__": "DuplicateOption"
+        },
+        "jointype": {
+            "__enumeration__": [
+                "INNER",
+                "OUTER"
+            ],
+            "__name__": "JoinType"
+        },
+        "logicaloperator": {
+            "__enumeration__": [
+                "NONE",
+                "EMPTY",
+                "AND",
+                "OR",
+                "NOT",
+                "BETWEEN",
+                "NOTBETWEEN",
+                "LIKE",
+                "NOTLIKE",
+                "CONTAINS",
+                "IN",
+                "NOTIN",
+                "ISNULL",
+                "ISNOTNULL",
+                "ASSIGNEQUAL",
+                "NOTEQUAL",
+                "LESSTHANORGREATERTHAN",
+                "LESSTHANOREQUALTO",
+                "NOTGREATERTHAN",
+                "LESSTHAN",
+                "GREATERTHANOREQUALTO",
+                "NOTLESSTHAN",
+                "GREATERTHAN",
+                "EXISTS"
+            ],
+            "__name__": "LogicalOperator"
+        },
+        "order": {
+            "__enumeration__": [
+                "EMPTY",
+                "ASC",
+                "DESC"
+            ],
+            "__name__": "Order"
+        },
+        "outerjointype": {
+            "__enumeration__": [
+                "NONE",
+                "LEFT",
+                "RIGHT",
+                "FULL"
+            ],
+            "__name__": "OuterJoinType"
+        },
+        "replaceoption": {
+            "__enumeration__": [
+                "APPEND",
+                "REPLACE"
+            ],
+            "__name__": "ReplaceOption"
+        },
+        "__name__": "Query"
     },
     "referentialupdaterule": {
         "__enumeration__": [
@@ -4760,6 +7301,638 @@
         },
         "__name__": "Schema"
     },
+    "statement": {
+        "selectitem": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "source": {
+                    "name": "Source"
+                },
+                "alias": {
+                    "name": "Alias"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "SelectItem"
+        },
+        "columnreference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "ColumnReference"
+        },
+        "functionname": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "FunctionName"
+        },
+        "tablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "TableReference"
+        },
+        "selecttablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                },
+                "alias": {
+                    "name": "Alias"
+                },
+                "join": {
+                    "name": "Join"
+                }
+            },
+            "__name__": "SelectTableReference"
+        },
+        "join": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "jointype": {
+                    "name": "JoinType"
+                },
+                "outerjointype": {
+                    "name": "OuterJoinType"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "on": {
+                    "name": "On"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "Join"
+        },
+        "valueexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "arithmeticoperator": {
+                    "name": "ArithmeticOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ValueExpression"
+        },
+        "logicalexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "logicaloperator": {
+                    "name": "LogicalOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "LogicalExpression"
+        },
+        "groupby": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "having": {
+                    "name": "Having"
+                }
+            },
+            "__name__": "GroupBy"
+        },
+        "columnorder": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "order": {
+                    "name": "Order"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ColumnOrder"
+        },
+        "assignment": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "value": {
+                    "name": "Value"
+                }
+            },
+            "__name__": "Assignment"
+        },
+        "union": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "select": {
+                    "name": "Select"
+                },
+                "all": {
+                    "name": "All"
+                }
+            },
+            "__name__": "Union"
+        },
+        "arithmeticoperator": {
+            "__enumeration__": [
+                "NONE",
+                "PLUS",
+                "MINUS",
+                "TIMES",
+                "DIVIDE",
+                "MOD",
+                "AMPERSAND",
+                "TILDE",
+                "BITWISEOR",
+                "BITWISEXOR",
+                "FUNCTION",
+                "NULL",
+                "ARGUMENT",
+                "CASE",
+                "CAST"
+            ],
+            "__name__": "ArithmeticOperator"
+        },
+        "duplicateoption": {
+            "__enumeration__": [
+                "NONE",
+                "DISTINCT",
+                "DISTINCTROWS",
+                "ALLROWS"
+            ],
+            "__name__": "DuplicateOption"
+        },
+        "jointype": {
+            "__enumeration__": [
+                "INNER",
+                "OUTER"
+            ],
+            "__name__": "JoinType"
+        },
+        "logicaloperator": {
+            "__enumeration__": [
+                "NONE",
+                "EMPTY",
+                "AND",
+                "OR",
+                "NOT",
+                "BETWEEN",
+                "NOTBETWEEN",
+                "LIKE",
+                "NOTLIKE",
+                "CONTAINS",
+                "IN",
+                "NOTIN",
+                "ISNULL",
+                "ISNOTNULL",
+                "ASSIGNEQUAL",
+                "NOTEQUAL",
+                "LESSTHANORGREATERTHAN",
+                "LESSTHANOREQUALTO",
+                "NOTGREATERTHAN",
+                "LESSTHAN",
+                "GREATERTHANOREQUALTO",
+                "NOTLESSTHAN",
+                "GREATERTHAN",
+                "EXISTS"
+            ],
+            "__name__": "LogicalOperator"
+        },
+        "order": {
+            "__enumeration__": [
+                "EMPTY",
+                "ASC",
+                "DESC"
+            ],
+            "__name__": "Order"
+        },
+        "outerjointype": {
+            "__enumeration__": [
+                "NONE",
+                "LEFT",
+                "RIGHT",
+                "FULL"
+            ],
+            "__name__": "OuterJoinType"
+        },
+        "replaceoption": {
+            "__enumeration__": [
+                "APPEND",
+                "REPLACE"
+            ],
+            "__name__": "ReplaceOption"
+        },
+        "__name__": "Statement"
+    },
     "syntaxtemplate": {
         "__functions__": {
             "createincrementalloader": {
@@ -5857,6 +9030,638 @@
             "ObjectDefinition"
         ],
         "__name__": "TableType"
+    },
+    "updatestatement": {
+        "selectitem": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "source": {
+                    "name": "Source"
+                },
+                "alias": {
+                    "name": "Alias"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "SelectItem"
+        },
+        "columnreference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "ColumnReference"
+        },
+        "functionname": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "FunctionName"
+        },
+        "tablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                }
+            },
+            "__name__": "TableReference"
+        },
+        "selecttablereference": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "owner": {
+                    "name": "Owner"
+                },
+                "name": {
+                    "name": "Name"
+                },
+                "alias": {
+                    "name": "Alias"
+                },
+                "join": {
+                    "name": "Join"
+                }
+            },
+            "__name__": "SelectTableReference"
+        },
+        "join": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "jointype": {
+                    "name": "JoinType"
+                },
+                "outerjointype": {
+                    "name": "OuterJoinType"
+                },
+                "table": {
+                    "name": "Table"
+                },
+                "on": {
+                    "name": "On"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "Join"
+        },
+        "valueexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "arithmeticoperator": {
+                    "name": "ArithmeticOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ValueExpression"
+        },
+        "logicalexpression": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "logicaloperator": {
+                    "name": "LogicalOperator"
+                },
+                "operand": {
+                    "name": "Operand"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "LogicalExpression"
+        },
+        "groupby": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "having": {
+                    "name": "Having"
+                }
+            },
+            "__name__": "GroupBy"
+        },
+        "columnorder": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "sqlstatement": {
+                    "name": "SQLStatement"
+                },
+                "errorcolumn": {
+                    "name": "ErrorColumn"
+                },
+                "errortext": {
+                    "name": "ErrorText"
+                },
+                "parsetree": {
+                    "name": "ParseTree"
+                },
+                "xml": {
+                    "name": "XML"
+                },
+                "tablereferences": {
+                    "name": "TableReferences"
+                },
+                "selecttablereferences": {
+                    "name": "SelectTableReferences"
+                },
+                "columnreferences": {
+                    "name": "ColumnReferences"
+                },
+                "functionreferences": {
+                    "name": "FunctionReferences"
+                },
+                "arguments": {
+                    "name": "Arguments"
+                },
+                "callresult": {
+                    "name": "CallResult"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "order": {
+                    "name": "Order"
+                }
+            },
+            "__methods__": {
+                "reset": {
+                    "name": "Reset",
+                    "description": "Reset the query as if it had just been created."
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse the SQLStatement passed (or the value previously set into the SQLStatement property).",
+                    "arguments": [
+                        {
+                            "name": "SQLStatement",
+                            "optional": true,
+                            "type": "C"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format the original source (by default, lines are broken at significant keywords)..",
+                    "arguments": [
+                        {
+                            "name": "AddCrLf",
+                            "optional": true
+                        }
+                    ]
+                }
+            },
+            "__name__": "ColumnOrder"
+        },
+        "assignment": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "column": {
+                    "name": "Column"
+                },
+                "value": {
+                    "name": "Value"
+                }
+            },
+            "__name__": "Assignment"
+        },
+        "union": {
+            "__properties__": {
+                "tokentypename": {
+                    "name": "TokenTypeName"
+                },
+                "select": {
+                    "name": "Select"
+                },
+                "all": {
+                    "name": "All"
+                }
+            },
+            "__name__": "Union"
+        },
+        "arithmeticoperator": {
+            "__enumeration__": [
+                "NONE",
+                "PLUS",
+                "MINUS",
+                "TIMES",
+                "DIVIDE",
+                "MOD",
+                "AMPERSAND",
+                "TILDE",
+                "BITWISEOR",
+                "BITWISEXOR",
+                "FUNCTION",
+                "NULL",
+                "ARGUMENT",
+                "CASE",
+                "CAST"
+            ],
+            "__name__": "ArithmeticOperator"
+        },
+        "duplicateoption": {
+            "__enumeration__": [
+                "NONE",
+                "DISTINCT",
+                "DISTINCTROWS",
+                "ALLROWS"
+            ],
+            "__name__": "DuplicateOption"
+        },
+        "jointype": {
+            "__enumeration__": [
+                "INNER",
+                "OUTER"
+            ],
+            "__name__": "JoinType"
+        },
+        "logicaloperator": {
+            "__enumeration__": [
+                "NONE",
+                "EMPTY",
+                "AND",
+                "OR",
+                "NOT",
+                "BETWEEN",
+                "NOTBETWEEN",
+                "LIKE",
+                "NOTLIKE",
+                "CONTAINS",
+                "IN",
+                "NOTIN",
+                "ISNULL",
+                "ISNOTNULL",
+                "ASSIGNEQUAL",
+                "NOTEQUAL",
+                "LESSTHANORGREATERTHAN",
+                "LESSTHANOREQUALTO",
+                "NOTGREATERTHAN",
+                "LESSTHAN",
+                "GREATERTHANOREQUALTO",
+                "NOTLESSTHAN",
+                "GREATERTHAN",
+                "EXISTS"
+            ],
+            "__name__": "LogicalOperator"
+        },
+        "order": {
+            "__enumeration__": [
+                "EMPTY",
+                "ASC",
+                "DESC"
+            ],
+            "__name__": "Order"
+        },
+        "outerjointype": {
+            "__enumeration__": [
+                "NONE",
+                "LEFT",
+                "RIGHT",
+                "FULL"
+            ],
+            "__name__": "OuterJoinType"
+        },
+        "replaceoption": {
+            "__enumeration__": [
+                "APPEND",
+                "REPLACE"
+            ],
+            "__name__": "ReplaceOption"
+        },
+        "__name__": "UpdateStatement"
     },
     "updatewherecriteria": {
         "__enumeration__": [

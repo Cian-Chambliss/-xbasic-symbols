@@ -7,13 +7,6 @@
         },
         "__name__": "Array"
     },
-    "attribute": {
-        "__enumeration__": [
-            "name",
-            "value"
-        ],
-        "__name__": "Attribute"
-    },
     "definition": {
         "__functions__": {
             "exists": {

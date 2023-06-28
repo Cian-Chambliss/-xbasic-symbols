@@ -1,4 +1,383 @@
 {
+    "a5activationmanager": {
+        "leaseinformation": {
+            "__functions__": {
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "referenceequals": {
+                    "name": "ReferenceEquals",
+                    "description": "ReferenceEquals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                }
+            },
+            "__methods__": {
+                "leaseinformation": {
+                    "name": "LeaseInformation",
+                    "description": "Constructor"
+                },
+                "leaseinformation": {
+                    "name": "LeaseInformation",
+                    "description": "Constructor",
+                    "arguments": [
+                        {
+                            "name": "other",
+                            "type": "DotNet::A5ActivationManager::LeaseInformation"
+                        }
+                    ]
+                },
+                "leaseinformation": {
+                    "name": "LeaseInformation",
+                    "description": "Constructor"
+                },
+                "leaseinformation": {
+                    "name": "LeaseInformation",
+                    "description": "Constructor",
+                    "arguments": [
+                        {
+                            "name": "other",
+                            "type": "DotNet::A5ActivationManager::LeaseInformation"
+                        }
+                    ]
+                },
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obj",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "gethashcode": {
+                    "name": "GetHashCode",
+                    "description": "GetHashCode"
+                },
+                "gettype": {
+                    "name": "GetType",
+                    "description": "GetType"
+                },
+                "tostring": {
+                    "name": "ToString",
+                    "description": "ToString"
+                }
+            },
+            "__name__": "LeaseInformation"
+        },
+        "leasetype": {
+            "__functions__": {
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "format": {
+                    "name": "Format",
+                    "description": "Format",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        },
+                        {
+                            "name": "value",
+                            "type": "A"
+                        },
+                        {
+                            "name": "format",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "getname": {
+                    "name": "GetName",
+                    "description": "GetName",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        },
+                        {
+                            "name": "value",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "getnames": {
+                    "name": "GetNames",
+                    "description": "GetNames",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        }
+                    ]
+                },
+                "getunderlyingtype": {
+                    "name": "GetUnderlyingType",
+                    "description": "GetUnderlyingType",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        }
+                    ]
+                },
+                "getvalues": {
+                    "name": "GetValues",
+                    "description": "GetValues",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        }
+                    ]
+                },
+                "isdefined": {
+                    "name": "IsDefined",
+                    "description": "IsDefined",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        },
+                        {
+                            "name": "value",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        },
+                        {
+                            "name": "value",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "parse": {
+                    "name": "Parse",
+                    "description": "Parse",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        },
+                        {
+                            "name": "value",
+                            "type": "C"
+                        },
+                        {
+                            "name": "ignorecase",
+                            "type": "L"
+                        }
+                    ]
+                },
+                "referenceequals": {
+                    "name": "ReferenceEquals",
+                    "description": "ReferenceEquals",
+                    "arguments": [
+                        {
+                            "name": "obja",
+                            "type": "A"
+                        },
+                        {
+                            "name": "objb",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "toobject": {
+                    "name": "ToObject",
+                    "description": "ToObject",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        },
+                        {
+                            "name": "value",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "toobject": {
+                    "name": "ToObject",
+                    "description": "ToObject",
+                    "arguments": [
+                        {
+                            "name": "enumtype",
+                            "type": "System::Type"
+                        },
+                        {
+                            "name": "value",
+                            "type": "N"
+                        }
+                    ]
+                },
+                "tryparse": {
+                    "name": "TryParse",
+                    "description": "TryParse",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "C"
+                        },
+                        {
+                            "name": "ignorecase",
+                            "type": "L"
+                        },
+                        {
+                            "name": "result",
+                            "type": "P"
+                        }
+                    ]
+                },
+                "tryparse": {
+                    "name": "TryParse",
+                    "description": "TryParse",
+                    "arguments": [
+                        {
+                            "name": "value",
+                            "type": "C"
+                        },
+                        {
+                            "name": "result",
+                            "type": "P"
+                        }
+                    ]
+                }
+            },
+            "__methods__": {
+                "leasetype": {
+                    "name": "LeaseType",
+                    "description": "Public Constructor"
+                },
+                "leasetype": {
+                    "name": "LeaseType",
+                    "description": "Public Constructor"
+                },
+                "compareto": {
+                    "name": "CompareTo",
+                    "description": "CompareTo",
+                    "arguments": [
+                        {
+                            "name": "target",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "equals": {
+                    "name": "Equals",
+                    "description": "Equals",
+                    "arguments": [
+                        {
+                            "name": "obj",
+                            "type": "A"
+                        }
+                    ]
+                },
+                "gethashcode": {
+                    "name": "GetHashCode",
+                    "description": "GetHashCode"
+                },
+                "gettype": {
+                    "name": "GetType",
+                    "description": "GetType"
+                },
+                "gettypecode": {
+                    "name": "GetTypeCode",
+                    "description": "GetTypeCode"
+                },
+                "hasflag": {
+                    "name": "HasFlag",
+                    "description": "HasFlag",
+                    "arguments": [
+                        {
+                            "name": "flag",
+                            "type": "System::Enum"
+                        }
+                    ]
+                },
+                "tostring": {
+                    "name": "ToString",
+                    "description": "ToString"
+                },
+                "tostring": {
+                    "name": "ToString",
+                    "description": "ToString",
+                    "arguments": [
+                        {
+                            "name": "format",
+                            "type": "C"
+                        }
+                    ]
+                },
+                "tostring": {
+                    "name": "ToString",
+                    "description": "ToString",
+                    "arguments": [
+                        {
+                            "name": "format",
+                            "type": "C"
+                        },
+                        {
+                            "name": "provider",
+                            "type": "System::IFormatProvider"
+                        }
+                    ]
+                },
+                "tostring": {
+                    "name": "ToString",
+                    "description": "ToString",
+                    "arguments": [
+                        {
+                            "name": "provider",
+                            "type": "System::IFormatProvider"
+                        }
+                    ]
+                }
+            },
+            "__name__": "LeaseType"
+        },
+        "__name__": "A5ActivationManager"
+    },
     "assemblyreference": {
         "__methods__": {
             "clone": {

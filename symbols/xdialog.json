@@ -40,19 +40,6 @@
         },
         "__name__": "Common"
     },
-    "control": {
-        "__methods__": {
-            "invalidate": {
-                "name": "Invalidate",
-                "description": "Invalidate the control,"
-            },
-            "uniquecontrolname": {
-                "name": "UniqueControlName",
-                "description": "Get unique control name (control & xdialog)."
-            }
-        },
-        "__name__": "Control"
-    },
     "dockpanel": {
         "__functions__": {
             "hasrightdocking": {

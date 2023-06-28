@@ -1845,21 +1845,6 @@
         },
         "__name__": "ColorDefinition"
     },
-    "control": {
-        "__functions__": {
-            "getnullcontrol": {
-                "name": "GetNullControl",
-                "description": "Return the NULL control."
-            }
-        },
-        "__methods__": {
-            "invalidate": {
-                "name": "Invalidate",
-                "description": "Force the repaint of a control."
-            }
-        },
-        "__name__": "Control"
-    },
     "dde": {
         "__methods__": {
             "class": {
