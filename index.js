@@ -721,7 +721,7 @@ var autoHelp = function(source) {
         } else {
             var funcName = textUntilPosition.substring( 0 , parenPos );
             var subExprPos = -1;
-            var separators = "()+-=<>*/?";
+            var separators = "()+-=<>*/? ";
             for( var i = 0 ; i < separators.length ; ++i ) {
                 if( subExprPos < funcName.lastIndexOf(separators[i]) ) {
                     subExprPos = funcName.lastIndexOf(separators[i]);
