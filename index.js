@@ -432,22 +432,23 @@ var listNamespaces = function(args,callback) {
 };
 
 //----------------------- AutoComplete
+var lookupVariableInstType = function (source,variable) {
+    // find out if we are completing a property in the 'dependencies' object.
+    var textUntilPosition = source.textUntilPosition;
+    var varName = "dim "+variable+" as ";
+    var  dimLoc = textUntilPosition.lastIndexOf(varName);
+    if( dimLoc >= 0 ) {
+        dimLoc = dimLoc + varName.length;
+        var typeName = textUntilPosition.substring(dimLoc).split("\n")[0].trim().toLowerCase();
+        if( typeName ) {
+            return typeName;
+        }
+    }
+    return null;
+};
 
 var autoComplete = function(source) {
-    var lookupVariableInstType = function (source,variable) {
-        // find out if we are completing a property in the 'dependencies' object.
-        var textUntilPosition = source.textUntilPosition;
-        var varName = "dim "+variable+" as ";
-        var  dimLoc = textUntilPosition.lastIndexOf(varName);
-        if( dimLoc >= 0 ) {
-            dimLoc = dimLoc + varName.length;
-            var typeName = textUntilPosition.substring(dimLoc).split("\n")[0].trim().toLowerCase();
-            if( typeName ) {
-                return typeName;
-            }
-        }
-        return null;
-    };
+    
     var harvestVariableTypes = function (source,varType) {
         // find out if we are completing a property in the 'dependencies' object.
         var textUntilPosition = source.textUntilPosition;
@@ -747,6 +748,7 @@ var autoHelp = function(source) {
                         funPtr = nsp.__functions__[funcName];
                     }
                 } else if( funcName.indexOf("::") < 0 ) {
+                    console.log("Lookup inst "+funcName);
                     var typeName = lookupVariableInstType(source,funcName.substring(0,instFun));
                     if( typeName ) {
                         var nsp = resolveName(typeName);
