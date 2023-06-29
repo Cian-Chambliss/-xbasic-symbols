@@ -499,7 +499,6 @@ var autoComplete = function(source) {
         } else {
             varname = varname.substring(0,varname.length-2);
         }
-        console.log("Look for "+varname);
         var nsp = resolveName(varname);
         if( nsp ) {
             return createCompletion(nsp);
@@ -631,7 +630,14 @@ var autoComplete = function(source) {
                 var nsp = resolveName(typeName);
                 if( nsp ) {
                     if( nsp.__enumeration__ ) {
-                        return { type : "enumeration" , completion : nsp.__enumeration__ };
+                        var completeSnippet = function(arr) {
+                            var items = [];
+                            for(var i = 0 ; i < arr.length ; ++i ) {
+                                items.push({label:arr[i],insertText:arr[i]});
+                            }
+                            return items;
+                        }
+                        return completeSnippet( nsp.__enumeration__ );
                     }
                 }
             }                        
