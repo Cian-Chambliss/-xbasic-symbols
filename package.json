@@ -1,6 +1,6 @@
 {
   "name": "xbasic-symbols",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Alpha Anywhere Xbasic Symbol Loader",
   "main": "index.js",
   "scripts": {

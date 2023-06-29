@@ -1,0 +1,41 @@
+{
+    "trayhandler": {
+        "__methods__": {
+            "onrbuttondown": {
+                "name": "OnRButtonDown",
+                "description": "",
+                "arguments": [
+                    {
+                        "name": "arg",
+                        "type": "P"
+                    }
+                ]
+            },
+            "get_title": {
+                "description": ""
+            },
+            "get_text": {
+                "description": ""
+            },
+            "get_icon": {
+                "description": ""
+            },
+            "onlbuttondown": {
+                "name": "OnLButtonDown",
+                "description": "",
+                "arguments": [
+                    {
+                        "name": "arg",
+                        "type": "P"
+                    }
+                ]
+            },
+            "oncreate": {
+                "name": "OnCreate",
+                "description": ""
+            }
+        },
+        "__name__": "TrayHandler"
+    },
+    "__name__": "alpha5shell"
+}

@@ -1,0 +1,1063 @@
+{
+    "__name__": "file",
+    "__functions__": {
+        "class": {
+            "name": "class",
+            "description": "Get the class name."
+        },
+        "copy2": {
+            "name": "copy2",
+            "description": "Same as File.Copy(), but if the dest_filename folder does not exist, then creates it.",
+            "arguments": [
+                {
+                    "name": "source_filename",
+                    "type": "C"
+                },
+                {
+                    "name": "dest_filename"
+                },
+                {
+                    "name": "only_copy_if_newer",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Copy_Folder": {
+            "name": "Copy_Folder",
+            "description": "Copy all of the files in a folder from one folder to another. All sub-folders are copies as well.",
+            "arguments": [
+                {
+                    "name": "sourcefolder",
+                    "type": "C"
+                },
+                {
+                    "name": "targetfolder"
+                },
+                {
+                    "name": "only_copy_if_newer",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "create_time": {
+            "name": "create_time",
+            "description": "Returns the date/time at which a file was created",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "dir_create_recurse": {
+            "name": "dir_create_recurse",
+            "description": " Creates a folder, creating as many sub-folders as necessary.",
+            "arguments": [
+                {
+                    "name": "folder",
+                    "type": "C"
+                }
+            ]
+        },
+        "FromProperty_SaveAs": {
+            "name": "FromProperty_SaveAs",
+            "description": "save a file from a property as a specific type, such as 'blob', 'string', 'json', 'json-schema:UX'",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                },
+                {
+                    "name": "Props"
+                },
+                {
+                    "name": "SaveAs",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "read_time": {
+            "name": "read_time",
+            "description": "Returns the date/time at which a file was last read",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "Send": {
+            "name": "Send",
+            "description": "Send one or more files to an address. Options: C or Z = compress (i.e. zip) files before sending.",
+            "arguments": [
+                {
+                    "name": "filenames"
+                },
+                {
+                    "name": "emailaddress",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "optional": true
+                },
+                {
+                    "name": "zipname",
+                    "optional": true
+                },
+                {
+                    "name": "comment",
+                    "optional": true
+                },
+                {
+                    "name": "use_A5_email_client",
+                    "optional": true
+                },
+                {
+                    "name": "store_in_outbox",
+                    "optional": true
+                },
+                {
+                    "name": "show_client",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "size": {
+            "name": "size",
+            "description": "Returns the size of a file",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "update_time": {
+            "name": "update_time",
+            "description": "Returns the date/time at which a file was last updated",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "open": {
+            "name": "open",
+            "description": "Open an existing file.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "file_open_mode",
+                    "type": "N"
+                }
+            ]
+        },
+        "is_valid": {
+            "name": "is_valid",
+            "description": "Is the current file valid."
+        },
+        "create": {
+            "name": "create",
+            "description": "Create a new file.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "file_open_mode",
+                    "type": "N"
+                }
+            ]
+        },
+        "close": {
+            "name": "close",
+            "description": "Close an open file."
+        },
+        "read": {
+            "name": "read",
+            "description": "Read bytes from file into string.",
+            "arguments": [
+                {
+                    "name": "Length",
+                    "type": "N"
+                }
+            ]
+        },
+        "write": {
+            "name": "write",
+            "description": "Write string to file.",
+            "arguments": [
+                {
+                    "name": "String"
+                },
+                {
+                    "name": "Length",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "readb": {
+            "name": "readb",
+            "description": "Read bytes from file into a blob.",
+            "arguments": [
+                {
+                    "name": "Length",
+                    "type": "N"
+                }
+            ]
+        },
+        "writeb": {
+            "name": "writeb",
+            "description": "Write blob to file.",
+            "arguments": [
+                {
+                    "name": "blob",
+                    "type": "B"
+                }
+            ]
+        },
+        "seek": {
+            "name": "seek",
+            "description": "Set the position in the file.",
+            "arguments": [
+                {
+                    "name": "Position",
+                    "type": "N"
+                }
+            ]
+        },
+        "pos_get": {
+            "name": "pos_get",
+            "description": "Get the position in the file."
+        },
+        "bytes_get": {
+            "name": "bytes_get",
+            "description": "Get the length of the file in bytes."
+        },
+        "text_encoding": {
+            "name": "text_encoding",
+            "description": "Get the encoding type of a text file.\n\nPossible Values Include: (ASCII, UTF16LE, UTF16BE, UTF32LE, UTF32BE)"
+        },
+        "chars_get": {
+            "name": "chars_get",
+            "description": "Get the length of the file in characters."
+        },
+        "flush": {
+            "name": "flush",
+            "description": "Flush contents of file to disk."
+        },
+        "write_line": {
+            "name": "write_line",
+            "description": "Write string to file, add a trailing <CR>-<LF>.",
+            "arguments": [
+                {
+                    "name": "String",
+                    "type": "C"
+                }
+            ]
+        },
+        "read_line": {
+            "name": "read_line",
+            "description": "Read a line from the file."
+        },
+        "eof": {
+            "name": "eof",
+            "description": "Return TRUE if positioned at the end of the file."
+        },
+        "scan": {
+            "name": "scan",
+            "description": "Scans foreward from location in file for case-sensitive text, returns offset >= 0 if found, else returns -1.",
+            "arguments": [
+                {
+                    "name": "text",
+                    "type": "C"
+                }
+            ]
+        },
+        "scani": {
+            "name": "scani",
+            "description": "Scans foreward from location in file for case-insensitive text, returns offset >= 0 if found, else returns -1.",
+            "arguments": [
+                {
+                    "name": "text",
+                    "type": "C"
+                }
+            ]
+        },
+        "insert_write": {
+            "name": "insert_write",
+            "description": "Inserts text into file at position (first following content).",
+            "arguments": [
+                {
+                    "name": "Pos",
+                    "type": "N"
+                },
+                {
+                    "name": "text",
+                    "type": "C"
+                }
+            ]
+        },
+        "rename": {
+            "name": "rename",
+            "description": "Rename a file.",
+            "arguments": [
+                {
+                    "name": "old_name",
+                    "type": "C"
+                },
+                {
+                    "name": "new_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "copy": {
+            "name": "copy",
+            "description": "Copy a file.",
+            "arguments": [
+                {
+                    "name": "source_filename",
+                    "type": "C"
+                },
+                {
+                    "name": "dest_filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "remove": {
+            "name": "remove",
+            "description": "Remove a file.",
+            "arguments": [
+                {
+                    "name": "file_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "exists": {
+            "name": "exists",
+            "description": "Does file exist.",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "fullname_get": {
+            "name": "fullname_get",
+            "description": "Return full filename (as resolved by system).",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "zip": {
+            "name": "zip",
+            "description": "Zip files listed - expects a comma separated list.",
+            "arguments": [
+                {
+                    "name": "zipfilename",
+                    "type": "C"
+                },
+                {
+                    "name": "files"
+                },
+                {
+                    "name": "zip_flags",
+                    "optional": true
+                },
+                {
+                    "name": "base_path",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "zip_from_blob": {
+            "name": "zip_from_blob",
+            "description": "Zip content from a blob.",
+            "arguments": [
+                {
+                    "name": "zipfilename",
+                    "type": "C"
+                },
+                {
+                    "name": "filename",
+                    "type": "C"
+                },
+                {
+                    "name": "content",
+                    "type": "B"
+                }
+            ]
+        },
+        "zip_from_string": {
+            "name": "zip_from_string",
+            "description": "Zip content from a content.",
+            "arguments": [
+                {
+                    "name": "zipfilename",
+                    "type": "C"
+                },
+                {
+                    "name": "filename",
+                    "type": "C"
+                },
+                {
+                    "name": "content",
+                    "type": "C"
+                }
+            ]
+        },
+        "unzip": {
+            "name": "unzip",
+            "description": "Extract files from a zip file - use optional name/path.",
+            "arguments": [
+                {
+                    "name": "zipfilename"
+                },
+                {
+                    "name": "files",
+                    "optional": true
+                },
+                {
+                    "name": "path",
+                    "optional": true
+                },
+                {
+                    "name": "unzip_flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "unzip_to_blob": {
+            "name": "unzip_to_blob",
+            "description": "Extract a zip file to a blob.",
+            "arguments": [
+                {
+                    "name": "zipfilename",
+                    "type": "C"
+                },
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "unzip_to_string": {
+            "name": "unzip_to_string",
+            "description": "Extract a zip file to a string.",
+            "arguments": [
+                {
+                    "name": "zipfilename",
+                    "type": "C"
+                },
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "unzip_exists": {
+            "name": "unzip_exists",
+            "description": "Returns true if filename exists inside the zip file.",
+            "arguments": [
+                {
+                    "name": "zipfilename",
+                    "type": "C"
+                },
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "ziplist": {
+            "name": "ziplist",
+            "description": "Report on the contents of a zip file.",
+            "arguments": [
+                {
+                    "name": "zipfilename"
+                },
+                {
+                    "name": "Separator",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "drives_get": {
+            "name": "drives_get",
+            "description": "Returns a list of the valid drives.",
+            "arguments": [
+                {
+                    "name": "Separator",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "machines_get": {
+            "name": "machines_get",
+            "description": "Returns a list of the valid servers - options S-storage,P-drinters,D-include domains,F=<format> - special format options C-omment,P-rovider,L-ocalname,T-ype,B-ase,M-achine,R-esource.",
+            "arguments": [
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "drive_type": {
+            "name": "drive_type",
+            "description": "Returns The type of the drive.",
+            "arguments": [
+                {
+                    "name": "Drive",
+                    "type": "C"
+                }
+            ]
+        },
+        "temp_path_get": {
+            "name": "temp_path_get",
+            "description": "Returns the windows temporary file path."
+        },
+        "package_path_get": {
+            "name": "package_path_get",
+            "description": "Returns the folder alpha anywhere installs and looks for packages in."
+        },
+        "attributes_get": {
+            "name": "attributes_get",
+            "description": "Returns A list of file attribute flags for the file.",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "attributes_set": {
+            "name": "attributes_set",
+            "description": "Sets file attributes for a file (-/+ R-readonly H-hidden A-Archive N-Normal).",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                },
+                {
+                    "name": "attributes",
+                    "type": "C"
+                }
+            ]
+        },
+        "shortname_to_longname": {
+            "name": "shortname_to_longname",
+            "description": "Converts a shortname to a longname.",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "longname_to_shortname": {
+            "name": "longname_to_shortname",
+            "description": "Converts a longname to a shortname.",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "drive_space_avail": {
+            "name": "drive_space_avail",
+            "description": "Returns the number of bytes free on the disk.",
+            "arguments": [
+                {
+                    "name": "Drive",
+                    "type": "C"
+                }
+            ]
+        },
+        "drive_space_total": {
+            "name": "drive_space_total",
+            "description": "Returns the number of bytes that can be stored on the drive."
+        },
+        "filename_parse": {
+            "name": "filename_parse",
+            "description": "Returns the component(s) of the filename in the order specified (D=drive,P=Path,N=Name,E=Extension).",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "Component",
+                    "type": "C"
+                }
+            ]
+        },
+        "path_normalize": {
+            "name": "path_normalize",
+            "description": "Given a base path and a relative path return the resulting normalized path.",
+            "arguments": [
+                {
+                    "name": "BasePath",
+                    "type": "C"
+                },
+                {
+                    "name": "RealitivePath",
+                    "type": "C"
+                }
+            ]
+        },
+        "path_relative": {
+            "name": "path_relative",
+            "description": "Given a base path and a fully qualified path return the resulting relative path.",
+            "arguments": [
+                {
+                    "name": "BasePath",
+                    "type": "C"
+                },
+                {
+                    "name": "FullPath",
+                    "type": "C"
+                }
+            ]
+        },
+        "path_final": {
+            "name": "path_final",
+            "description": "Returns the 'final' path.",
+            "arguments": [
+                {
+                    "name": "Path",
+                    "type": "C"
+                }
+            ]
+        },
+        "dir_create": {
+            "name": "dir_create",
+            "description": "Creates A new directory.",
+            "arguments": [
+                {
+                    "name": "newdirectory",
+                    "type": "C"
+                }
+            ]
+        },
+        "dir_put": {
+            "name": "dir_put",
+            "description": "Change to a directory.",
+            "arguments": [
+                {
+                    "name": "directory",
+                    "type": "C"
+                }
+            ]
+        },
+        "dir_remove": {
+            "name": "dir_remove",
+            "description": "Remove a directory.",
+            "arguments": [
+                {
+                    "name": "directory",
+                    "type": "C"
+                }
+            ]
+        },
+        "dir_get": {
+            "name": "dir_get",
+            "description": "Get the current working directory."
+        },
+        "temp_create": {
+            "name": "temp_create",
+            "description": "Create a temp filename.",
+            "arguments": [
+                {
+                    "name": "path",
+                    "type": "C"
+                }
+            ]
+        },
+        "to_string": {
+            "name": "to_string",
+            "description": "Reads a file to a in memory string.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "to_blob": {
+            "name": "to_blob",
+            "description": "Reads a file to a in memory blob.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "to_property": {
+            "name": "to_property",
+            "description": "Reads a file to a in dot variable - returns file contents as string.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "pointer",
+                    "type": "P"
+                }
+            ]
+        },
+        "append": {
+            "name": "append",
+            "description": "Writes a string or blob to a file.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "string",
+                    "type": "C"
+                }
+            ]
+        },
+        "append_line": {
+            "name": "append_line",
+            "description": "Writes a string to a file followed by a carriage return and line feed.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "string",
+                    "type": "C"
+                }
+            ]
+        },
+        "from_string": {
+            "name": "from_string",
+            "description": "Writes a string to a file.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "string",
+                    "type": "C"
+                }
+            ]
+        },
+        "From_blob": {
+            "name": "From_blob",
+            "description": "Writes a blob to a file.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "data",
+                    "type": "B"
+                }
+            ]
+        },
+        "From_property": {
+            "name": "From_property",
+            "description": "Writes pointer contents to a file.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "pointer",
+                    "type": "P"
+                }
+            ]
+        },
+        "watch_create": {
+            "name": "watch_create",
+            "description": "Executes code on change of some aspect of a path changes (flags F= files renamed/add/delete D= sub-directory renamed/added/deleted A=Attributes changed L=Length of file(s) changed T=Time Changed S=File security changed  R=recurse).",
+            "arguments": [
+                {
+                    "name": "Watchname",
+                    "type": "C"
+                },
+                {
+                    "name": "Path",
+                    "type": "C"
+                },
+                {
+                    "name": "flags",
+                    "type": "C"
+                },
+                {
+                    "name": "Code",
+                    "type": "C"
+                }
+            ]
+        },
+        "watch_destroy": {
+            "name": "watch_destroy",
+            "description": "Removes a registered 'watch'.",
+            "arguments": [
+                {
+                    "name": "Watchname",
+                    "type": "C"
+                }
+            ]
+        },
+        "watch_enumerate": {
+            "name": "watch_enumerate",
+            "description": "Enumerate all file watches - format F=File/Path, N=Wwatch Name O=Option Flags.",
+            "arguments": [
+                {
+                    "name": "Format",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "stream_copy": {
+            "name": "stream_copy",
+            "description": "Perform a streamed copy - control variables include .exit and .bytes .",
+            "arguments": [
+                {
+                    "name": "stream_from",
+                    "type": "P"
+                },
+                {
+                    "name": "stream_to",
+                    "type": "P"
+                },
+                {
+                    "name": "control"
+                },
+                {
+                    "name": "chunksize",
+                    "optional": true
+                },
+                {
+                    "name": "max_length",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "stream_to_string": {
+            "name": "stream_to_string",
+            "description": "Perform a streamed copy to a string- control variables include .exit and .bytes .",
+            "arguments": [
+                {
+                    "name": "stream_from",
+                    "type": "P"
+                },
+                {
+                    "name": "control"
+                },
+                {
+                    "name": "chunksize",
+                    "optional": true
+                },
+                {
+                    "name": "max_length",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "stream_to_blob": {
+            "name": "stream_to_blob",
+            "description": "Perform a streamed copy to a blob- control variables include .exit and .bytes .",
+            "arguments": [
+                {
+                    "name": "stream_from",
+                    "type": "P"
+                },
+                {
+                    "name": "control"
+                },
+                {
+                    "name": "chunksize",
+                    "optional": true
+                },
+                {
+                    "name": "max_length",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "stream_from_string": {
+            "name": "stream_from_string",
+            "description": "Perform a streamed copy from a string- control variables include .exit and .bytes .",
+            "arguments": [
+                {
+                    "name": "stream_to",
+                    "type": "P"
+                },
+                {
+                    "name": "string",
+                    "type": "C"
+                },
+                {
+                    "name": "control"
+                },
+                {
+                    "name": "chunksize",
+                    "optional": true
+                },
+                {
+                    "name": "max_length",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "stream_from_blob": {
+            "name": "stream_from_blob",
+            "description": "Perform a streamed copy from a blob- control variables include .exit and .bytes .",
+            "arguments": [
+                {
+                    "name": "stream_to",
+                    "type": "P"
+                },
+                {
+                    "name": "string",
+                    "type": "C"
+                },
+                {
+                    "name": "control"
+                },
+                {
+                    "name": "chunksize",
+                    "optional": true
+                },
+                {
+                    "name": "max_length",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "ftp_parse": {
+            "name": "ftp_parse",
+            "description": "Process FTP list data.",
+            "arguments": [
+                {
+                    "name": "ftp_data",
+                    "type": "C"
+                },
+                {
+                    "name": "format",
+                    "type": "C"
+                }
+            ]
+        },
+        "dependencies": {
+            "name": "dependencies",
+            "description": "Pass in a list of dependencies (file that must be >= is always first separate with '|') - returns list of dependencies that are not >=.",
+            "arguments": [
+                {
+                    "name": "file_dependencies",
+                    "type": "C"
+                }
+            ]
+        },
+        "enum_open": {
+            "name": "enum_open",
+            "description": "Get a list of all the open files.",
+            "arguments": [
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "local_to_network": {
+            "name": "local_to_network",
+            "description": "Convert mapped names to UNC names.",
+            "arguments": [
+                {
+                    "name": "format",
+                    "type": "C"
+                }
+            ]
+        },
+        "sys_path": {
+            "name": "sys_path",
+            "description": "Retreive a windows system path given a pathType (admintools,appdata,common_admintools,common_appdata,common_documents,common_program_files,cookies,history,internet_cache,local_appdata,local_appdata,mypictures,personal,program_files,system,windows) with options ,(create,dont_verify) .",
+            "arguments": [
+                {
+                    "name": "pathType",
+                    "type": "C"
+                }
+            ]
+        },
+        "change_access": {
+            "name": "change_access",
+            "description": "Grant/Deny security to all users. accessFlags are characters for  +/i arwe  for  +(grant) - (deny) a(ll) r(ead) w(rite) e(x)ecute.",
+            "arguments": [
+                {
+                    "name": "path",
+                    "type": "C"
+                },
+                {
+                    "name": "accessFlags",
+                    "type": "C"
+                }
+            ]
+        },
+        "typeof_property": {
+            "name": "typeof_property",
+            "description": "Returns the type that the property filename is stored as (property_to_blob, property_to_string, json , json-template etc).",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "format_size": {
+            "name": "format_size",
+            "description": "Returns the size formatted in bytes, KB, MB, GB, etc.",
+            "arguments": [
+                {
+                    "name": "size",
+                    "type": "N"
+                },
+                {
+                    "name": "decimal_places",
+                    "type": "N"
+                }
+            ]
+        }
+    }
+}

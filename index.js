@@ -443,6 +443,11 @@ var lookupVariableInstType = function (source,variable) {
         if( typeName ) {
             return typeName;
         }
+    } else {
+        variable = variable.toLowerCase();
+        if( topnamespace[variable] ) {
+            return variable;
+        }
     }
     return null;
 };
@@ -504,7 +509,7 @@ var autoComplete = function(source) {
             return createCompletion(nsp);
         }
         return  [ ] ;
-    } else if( textUntilPosition.substring(textUntilPosition.length-1,textUntilPosition.length) == "." && source.lineNumber > 1) {
+    } else if( textUntilPosition.substring(textUntilPosition.length-1,textUntilPosition.length) == "." ) {
         var lspace = textUntilPosition.lastIndexOf(" ");
         var altspace = textUntilPosition.lastIndexOf("\n");
         var varname = textUntilPosition;
@@ -540,7 +545,7 @@ var autoComplete = function(source) {
             spacesRemoved = textUntilPosition;
         }
 
-        if( ",(".indexOf(spacesRemoved.substring(spacesRemoved.length-1,spacesRemoved.length)) >= 0 && source.lineNumber > 1) {                                                        
+        if( ",(".indexOf(spacesRemoved.substring(spacesRemoved.length-1,spacesRemoved.length)) >= 0 ) {                                                        
             var fullLine = source.fullLine();
             var startFunc = spacesRemoved.lastIndexOf("(");
             var endFunc = fullLine.lastIndexOf(")");

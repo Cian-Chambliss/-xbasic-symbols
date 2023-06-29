@@ -1,0 +1,1957 @@
+{
+    "__name__": "form",
+    "__functions__": {
+        "Restore": {
+            "name": "Restore",
+            "description": "Restores the Form window."
+        },
+        "Minimize": {
+            "name": "Minimize",
+            "description": "Minimizes the Form window."
+        },
+        "Maximize": {
+            "name": "Maximize",
+            "description": "Maximizes the Form window."
+        },
+        "Activate": {
+            "name": "Activate",
+            "description": "Sets focus to the object, optional flags 'E' - activate & edit cell in browse, 'A' - additive activate in design mode.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Hide": {
+            "name": "Hide",
+            "description": "Hides the Form window."
+        },
+        "Show": {
+            "name": "Show",
+            "description": "Shows the Form window."
+        },
+        "IsVisible": {
+            "name": "IsVisible",
+            "description": "Reports whether or not the Form window is visible."
+        },
+        "Size_Get": {
+            "name": "Size_Get",
+            "description": "Gets window size (\"Mimimized\",\"Maximized\" or \"<width>x<<height>\")."
+        },
+        "Enable": {
+            "name": "Enable",
+            "description": "Enables the Form window."
+        },
+        "Disable": {
+            "name": "Disable",
+            "description": "Disables the Form window."
+        },
+        "Close": {
+            "name": "Close",
+            "description": "Closes the Form window.",
+            "arguments": [
+                {
+                    "name": "no_check",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Next": {
+            "name": "Next",
+            "description": "Moves focus to the next control, as if the user pressed the \"Tab\" key."
+        },
+        "Prev": {
+            "name": "Prev",
+            "description": "Moves focus to the previous control, as if the user pressed the \"Shift-Tab\" key."
+        },
+        "Up": {
+            "name": "Up",
+            "description": "Moves the focus up as if the user pressed the \"Up\" cursor key."
+        },
+        "Down": {
+            "name": "Down",
+            "description": "Moves the focus down, as if the user pressed the \"Down\" cursor key."
+        },
+        "Tab_Order": {
+            "name": "Tab_Order",
+            "description": "Get/Set the order of the tabbed objects.  Flags supported - 'S' for structured format.",
+            "arguments": [
+                {
+                    "name": "new_order",
+                    "optional": true
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Left": {
+            "name": "left"
+        },
+        "Right": {
+            "name": "Right",
+            "description": "Moves the focus to the object to the right,  as if the user pressed the \"Right\" cursor key."
+        },
+        "Commit": {
+            "name": "Commit",
+            "description": "Saves the current record."
+        },
+        "Cancel": {
+            "name": "Cancel",
+            "description": "Cancels changes to the current record.",
+            "arguments": [
+                {
+                    "name": "warn",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Fetch_Next": {
+            "name": "Fetch_Next",
+            "description": "Fetches the next record.",
+            "arguments": [
+                {
+                    "name": "table",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Fetch_Prev": {
+            "name": "Fetch_Prev",
+            "description": "Fetches the previous record.",
+            "arguments": [
+                {
+                    "name": "table",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Fetch_Last": {
+            "name": "Fetch_Last",
+            "description": "Fetches the last record in the current selection of records.",
+            "arguments": [
+                {
+                    "name": "table",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Fetch_First": {
+            "name": "Fetch_First",
+            "description": "Fetches the first record in the current selection of records.",
+            "arguments": [
+                {
+                    "name": "table",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Allow_Change": {
+            "name": "Allow_Change",
+            "description": "Specifies if data can be edited.",
+            "arguments": [
+                {
+                    "name": "Allow",
+                    "type": "L"
+                }
+            ]
+        },
+        "Load_Low": {
+            "name": "Load_Low",
+            "description": "Low level Form load.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "Style",
+                    "optional": true
+                },
+                {
+                    "name": "windowname",
+                    "optional": true
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "EventArgs",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Printer_override": {
+            "name": "Printer_override",
+            "description": "Override the Form printer.",
+            "arguments": [
+                {
+                    "name": "printername"
+                },
+                {
+                    "name": "printeroptions",
+                    "optional": true
+                },
+                {
+                    "name": "saveoldoptions",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Output_File_Override": {
+            "name": "Output_File_Override",
+            "description": "Override the Form printer output file.",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "View_Low": {
+            "name": "View_Low",
+            "description": "Load and show a Form.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "Style",
+                    "optional": true
+                },
+                {
+                    "name": "windowname",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Delete": {
+            "name": "Delete",
+            "description": "Delete a Form.",
+            "arguments": [
+                {
+                    "name": "layoutname",
+                    "type": "C"
+                }
+            ]
+        },
+        "Dialog_Low": {
+            "name": "Dialog_Low",
+            "description": "Load and show a Form as a dialog.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "windowname",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Dial_Phone": {
+            "name": "Dial_Phone",
+            "description": "Dials the phone number in the control.",
+            "arguments": [
+                {
+                    "name": "PhoneNumber",
+                    "type": "C"
+                }
+            ]
+        },
+        "Show_Memo": {
+            "name": "Show_Memo",
+            "description": "Opens the memo editor."
+        },
+        "Quick_Search": {
+            "name": "Quick_Search",
+            "description": "Runs the Quick Search command."
+        },
+        "Quick_Sort": {
+            "name": "Quick_Sort",
+            "description": "Runs the Quick Sort command.",
+            "arguments": [
+                {
+                    "name": "ascending",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Show_All": {
+            "name": "Show_All",
+            "description": "Turns off the current query and shows all records (subject to any base filter that was specified)."
+        },
+        "Last_Pressed": {
+            "name": "Last_Pressed",
+            "description": "Returns the name of the last button pressed when a form is opened as a dialog."
+        },
+        "Mode_Get": {
+            "name": "Mode_Get",
+            "description": "Returns the mode (VIEW, CHANGE, ENTER, QUERY, FIND) of the current window."
+        },
+        "Active": {
+            "name": "Active",
+            "description": "Returns the name of the control that has focus.",
+            "arguments": [
+                {
+                    "name": "fullname",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Active_Drilldown": {
+            "name": "Active_Drilldown",
+            "description": "Returns the name of the deepest control that has focus.",
+            "arguments": [
+                {
+                    "name": "force_active_children",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "GetActiveObjParent": {
+            "name": "GetActiveObjParent",
+            "description": "Returns a pointer to the object with focus's container."
+        },
+        "Active_Prev": {
+            "name": "Active_Prev",
+            "description": "Returns the name of the control that previously had focus.",
+            "arguments": [
+                {
+                    "name": "fullname",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "New_Record": {
+            "name": "New_Record",
+            "description": "Enters a new record.",
+            "arguments": [
+                {
+                    "name": "table",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Query_By_Form": {
+            "name": "Query_By_Form",
+            "description": "Puts the form into Query-by-Form mode."
+        },
+        "Query_Run": {
+            "name": "Query_Run",
+            "description": "Runs the query specified in the Query-by-Form window."
+        },
+        "Query_Exit": {
+            "name": "Query_Exit",
+            "description": "Exits from Query-by-Form mode."
+        },
+        "Query_Clear": {
+            "name": "Query_Clear",
+            "description": "Clears entries from the Query-by-Form mode form."
+        },
+        "Query_Mode": {
+            "name": "Query_Mode",
+            "description": "Switches the Query_by_Form form to either \"Filter\" or \"Order\" mode.",
+            "arguments": [
+                {
+                    "name": "Mode",
+                    "type": "C"
+                }
+            ]
+        },
+        "Name": {
+            "name": "Name",
+            "description": "Returns the name of the Form object (I.e. \"Form\").",
+            "arguments": [
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Children": {
+            "name": "Children",
+            "description": "Returns the number of objects contained by the object."
+        },
+        "Child": {
+            "name": "Child",
+            "description": "Returns a pointer to the specified child object contained by the object.",
+            "arguments": [
+                {
+                    "name": "num",
+                    "type": "N"
+                }
+            ]
+        },
+        "Class": {
+            "name": "Class",
+            "description": "Returns the class of the object."
+        },
+        "KindOf": {
+            "name": "KindOf",
+            "description": "Returns the kind of object."
+        },
+        "Eval": {
+            "name": "Eval",
+            "description": "Evaluate an expression in the context of an object.",
+            "arguments": [
+                {
+                    "name": "expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "Reference_Expression_Get": {
+            "name": "Reference_Expression_Get",
+            "description": "Return the reference expression to reconstruct a reference to the object."
+        },
+        "Has_Method": {
+            "name": "Has_Method",
+            "description": "Returns True if the Form object has the specified method.",
+            "arguments": [
+                {
+                    "name": "method_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Type": {
+            "name": "Type"
+        },
+        "Resynch": {
+            "name": "Resynch",
+            "description": "refetches the data for the current record and repaints the window - optionally limit resynch to a table.",
+            "arguments": [
+                {
+                    "name": "tablename",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "SessionHandle": {
+            "name": "SessionHandle",
+            "description": "Returns the session handle of the Form window."
+        },
+        "Variables": {
+            "name": "Variables",
+            "description": "Returns a pointer to the variables defined at the Form level - optional flag for 'local,shared and global'.",
+            "arguments": [
+                {
+                    "name": "variable_frame_context",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Locate": {
+            "name": "Locate",
+            "description": "Displays the Locate dialog."
+        },
+        "Locate_Next": {
+            "name": "Locate_Next",
+            "description": "Finds the next record with a value matching Value. Searches all fields unless Fieldname is specified.",
+            "arguments": [
+                {
+                    "name": "value"
+                },
+                {
+                    "name": "fieldname",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Locate_Prev": {
+            "name": "Locate_Prev",
+            "description": "Finds the previous record with a value matching Value. Searches all fields unless Fieldname is specified.",
+            "arguments": [
+                {
+                    "name": "value"
+                },
+                {
+                    "name": "fieldname",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Find_By_Form": {
+            "name": "Find_By_Form",
+            "description": "Puts the form into Find_by_Form mode."
+        },
+        "Find_Run": {
+            "name": "Find_Run",
+            "description": "Runs the find specified in the Find_by_Form window."
+        },
+        "Find_Exit": {
+            "name": "Find_Exit",
+            "description": "Cancels Find_by_Form mode."
+        },
+        "Find_Next": {
+            "name": "Find_Next",
+            "description": "Repeats Find_by_Form, finding the next record."
+        },
+        "Find_Prev": {
+            "name": "Find_Prev",
+            "description": "Repeats Find_by_Form, finding the previous record."
+        },
+        "Find_Clear": {
+            "name": "Find_Clear",
+            "description": "Clears entries from the Find_by_Form mode form."
+        },
+        "Delete_Record": {
+            "name": "Delete_Record",
+            "description": "Deletes the current record.",
+            "arguments": [
+                {
+                    "name": "noConfirm",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Browse_View": {
+            "name": "Browse_View",
+            "description": "Toggles the form window to Browse view."
+        },
+        "Child_Enum": {
+            "name": "Child_Enum",
+            "description": "Return a CR-LF separated list of child objects.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true
+                },
+                {
+                    "name": "classmap",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Is_On_Last_Object": {
+            "name": "Is_On_Last_Object",
+            "description": "Returns .T. if the object is the last object on the form, as specified in the form's prompt order."
+        },
+        "Property_Add": {
+            "name": "Property_Add",
+            "description": "Adds a property if one doesn't already exists, sets property to value.",
+            "arguments": [
+                {
+                    "name": "property"
+                },
+                {
+                    "name": "value",
+                    "optional": true,
+                    "type": "A"
+                }
+            ]
+        },
+        "Property_Drop": {
+            "name": "Property_Drop",
+            "description": "Drop property if it exists.",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Exists": {
+            "name": "Property_Exists",
+            "description": "Returns TRUE if property exists.",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Instance_Exists": {
+            "name": "Property_Instance_Exists",
+            "description": "Returns TRUE if property has been instanced for the object (not just is valid for object).",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Selected_Records": {
+            "name": "Selected_Records",
+            "description": "Return selected browse records.",
+            "arguments": [
+                {
+                    "name": "parent_only|C",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Set_Dirty": {
+            "name": "Set_Dirty",
+            "description": "Indicate that layout needs to be saved."
+        },
+        "Icon_Get": {
+            "name": "Icon_Get",
+            "description": "Get an icon."
+        },
+        "Command": {
+            "name": "Command",
+            "description": "Send a command notification to an object that excepts commands.",
+            "arguments": [
+                {
+                    "name": "command",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Control_Create": {
+            "name": "Control_Create",
+            "description": "Creates new controls in a layout.",
+            "arguments": [
+                {
+                    "name": "x",
+                    "type": "N"
+                },
+                {
+                    "name": "y",
+                    "type": "N"
+                },
+                {
+                    "name": "format"
+                },
+                {
+                    "name": "style",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Create": {
+            "name": "Create",
+            "description": "Creates on-the-fly layout from a definition for the table/set named.",
+            "arguments": [
+                {
+                    "name": "table_or_set",
+                    "type": "C"
+                },
+                {
+                    "name": "format"
+                },
+                {
+                    "name": "style",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Create_Design": {
+            "name": "Create_Design",
+            "description": "Creates a new unnamed layout for the table/set named and invoke the editor.",
+            "arguments": [
+                {
+                    "name": "table_or_set",
+                    "type": "C"
+                },
+                {
+                    "name": "format"
+                },
+                {
+                    "name": "style",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Create_Saved": {
+            "name": "Create_Saved",
+            "description": "Creates a new saved layout for the table/set named.",
+            "arguments": [
+                {
+                    "name": "table_or_set",
+                    "type": "C"
+                },
+                {
+                    "name": "layout_name",
+                    "type": "C"
+                },
+                {
+                    "name": "format"
+                },
+                {
+                    "name": "style",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Get_Width": {
+            "name": "Get_Width",
+            "description": "Get width of a layout format.",
+            "arguments": [
+                {
+                    "name": "format"
+                },
+                {
+                    "name": "style",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Get_Height": {
+            "name": "Get_Height",
+            "description": "Get height of a layout format.",
+            "arguments": [
+                {
+                    "name": "format"
+                },
+                {
+                    "name": "style",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Get_Row_Positions": {
+            "name": "Get_Row_Positions",
+            "description": "Get list of row heights - cr-lf delimited string of row ending positions in inches.",
+            "arguments": [
+                {
+                    "name": "format"
+                },
+                {
+                    "name": "style",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Repaint": {
+            "name": "Repaint",
+            "description": "force a repaint of the control or window."
+        },
+        "Remember_Initial": {
+            "name": "Remember_Initial",
+            "description": "Remember position/size information into initial property list(s)."
+        },
+        "Recalc_Layout": {
+            "name": "Recalc_Layout",
+            "description": "Recalc anchored object positions.",
+            "arguments": [
+                {
+                    "name": "dx",
+                    "type": "N"
+                },
+                {
+                    "name": "dy",
+                    "type": "N"
+                }
+            ]
+        },
+        "Reset_Anchors": {
+            "name": "Reset_Anchors",
+            "description": "Reset the anchors on objects based on x & y split (x/y less than one if axis ommitted).",
+            "arguments": [
+                {
+                    "name": "xsplit",
+                    "type": "N"
+                },
+                {
+                    "name": "ysplit",
+                    "type": "N"
+                }
+            ]
+        },
+        "ZOrder": {
+            "name": "ZOrder",
+            "description": "Change the Z-Order of a window i.e. Back,Front.",
+            "arguments": [
+                {
+                    "name": "placement",
+                    "type": "C"
+                }
+            ]
+        },
+        "Block_Get": {
+            "name": "Block_Get",
+            "description": "Return block for layout."
+        },
+        "Fields_Enum": {
+            "name": "Fields_Enum",
+            "description": "Returns a list of fully qualified fields names that are used by an object (or its children).",
+            "arguments": [
+                {
+                    "name": "recurseCalcs",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Get_Field_Objects": {
+            "name": "Get_Field_Objects",
+            "description": "Returns a list of objects names under an named object that are bound to the field.",
+            "arguments": [
+                {
+                    "name": "fieldname",
+                    "type": "c"
+                }
+            ]
+        },
+        "to_xml": {
+            "name": "to_xml",
+            "description": "Save objects to xml, flags used to save element like 'Style'.",
+            "arguments": [
+                {
+                    "name": "mlElement",
+                    "type": "p"
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "from_xml": {
+            "name": "from_xml",
+            "description": "Load objects from xml, flags used to save element like 'Style'.",
+            "arguments": [
+                {
+                    "name": "mlElement",
+                    "type": "p"
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "visual_order_get": {
+            "name": "visual_order_get",
+            "description": "Return the visual order of the objects.",
+            "arguments": [
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "visual_order_set": {
+            "name": "visual_order_set",
+            "description": "Change the visual (rendering) order of the objects.",
+            "arguments": [
+                {
+                    "name": "objects",
+                    "type": "c"
+                }
+            ]
+        },
+        "window_position": {
+            "name": "window_position",
+            "description": "Centers a window in the client area.",
+            "arguments": [
+                {
+                    "name": "_position",
+                    "optional": true,
+                    "type": "c"
+                },
+                {
+                    "name": "y_position",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Preview_Get": {
+            "name": "Preview_Get",
+            "description": "Get preview object."
+        },
+        "Units_Get": {
+            "name": "Units_Get",
+            "description": "Get the units objects properties are expressed in."
+        },
+        "Record_At_Start": {
+            "name": "Record_At_Start",
+            "description": "Return true if record is at start of view.",
+            "arguments": [
+                {
+                    "name": "table",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Record_At_End": {
+            "name": "Record_At_End",
+            "description": "Return true if record is at end of view.",
+            "arguments": [
+                {
+                    "name": "table",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Active_Navigation": {
+            "name": "Active_Navigation",
+            "description": "Return the navigation level at which the active field changes."
+        },
+        "oncreate": {
+            "name": "oncreate",
+            "description": "Called in design mode when the user places a new embedded form on a form.",
+            "arguments": [
+                {
+                    "name": "xmlDef",
+                    "type": "P"
+                }
+            ]
+        },
+        "InitActive": {
+            "name": "InitActive",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "menuname",
+                    "type": "C"
+                }
+            ]
+        },
+        "AllowChangeStatus": {
+            "name": "AllowChangeStatus",
+            "description": "Returns .t. if the layout allows editing"
+        },
+        "Archive": {
+            "name": "Archive",
+            "description": "Create a archived copy of a form printout in Adobe Acrobat .PDF format.",
+            "arguments": [
+                {
+                    "name": "layoutName"
+                },
+                {
+                    "name": "Filter",
+                    "optional": true
+                },
+                {
+                    "name": "Order",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "BaseQueryRun": {
+            "name": "BaseQueryRun",
+            "description": "Sets the base filter/order for a form. ",
+            "arguments": [
+                {
+                    "name": "filter_expression",
+                    "optional": true
+                },
+                {
+                    "name": "order_expression",
+                    "optional": true
+                },
+                {
+                    "name": "DisplayWarning",
+                    "optional": true
+                },
+                {
+                    "name": "tablename",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Change_Mode": {
+            "name": "Change_Mode",
+            "description": "Puts a form layout into Change mode."
+        },
+        "Copy_Prev_Field": {
+            "name": "Copy_Prev_Field",
+            "description": "Copies the field from the previous record. Flag determines previous record - 1=last viewed, 2 = last physical, 3 = last logical.",
+            "arguments": [
+                {
+                    "name": "flag",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Copy_Prev_Record": {
+            "name": "Copy_Prev_Record",
+            "description": "Copies the record that was current immediately before going into Enter mode. Flag determines previous record - 1=last viewed, 2 = last physical, 3 = last logical.",
+            "arguments": [
+                {
+                    "name": "flag",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "cursor_get": {
+            "name": "cursor_get",
+            "description": "Get the insertion point of the cursor in the current field."
+        },
+        "cursor_set": {
+            "name": "cursor_set",
+            "description": "Set the insertion point at the specified position in the active object, if the object supports editing and is not read-only.",
+            "arguments": [
+                {
+                    "name": "position",
+                    "type": "N"
+                }
+            ]
+        },
+        "data_entry_style": {
+            "name": "data_entry_style",
+            "description": "Returns the layout's data entry style. If style is set to \"system\", returns the style as stet in the Registry"
+        },
+        "dialog": {
+            "name": "dialog",
+            "description": " Load and show a Form as a dialog.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "windowname",
+                    "optional": true
+                },
+                {
+                    "name": "filter",
+                    "optional": true
+                },
+                {
+                    "name": "order",
+                    "optional": true
+                },
+                {
+                    "name": "queryFlags",
+                    "optional": true
+                },
+                {
+                    "name": "position_x",
+                    "optional": true
+                },
+                {
+                    "name": "position_y",
+                    "optional": true
+                },
+                {
+                    "name": "ShowNewRecord",
+                    "optional": true
+                },
+                {
+                    "name": "arguments",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "Dictionary_Get": {
+            "name": "Dictionary_Get",
+            "description": "Returns the dictionary in which the layout is stored. Modes: 1=dictionary, 2 = table/set name, 3 = primary table of set",
+            "arguments": [
+                {
+                    "name": "mode",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Duplicate_Record": {
+            "name": "Duplicate_Record",
+            "description": "Duplicates the current record.",
+            "arguments": [
+                {
+                    "name": "flag",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Fax": {
+            "name": "Fax",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "LayoutName"
+                },
+                {
+                    "name": "Filter",
+                    "optional": true
+                },
+                {
+                    "name": "Order",
+                    "optional": true,
+                    "type": "C"
+                },
+                {
+                    "name": "Options",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Filter_get": {
+            "name": "Filter_get",
+            "description": "Returns the filter expression of the current index/query"
+        },
+        "find": {
+            "name": "find",
+            "description": "Finds the closest record matching the specified key value. If an exact match is found, returns \"ExactMatch\", else \"ClosestMatch\".",
+            "arguments": [
+                {
+                    "name": "findwhat",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "FindBy_DefinedKey": {
+            "name": "FindBy_DefinedKey",
+            "description": "Find by key. Type 1 = index name, Type 2 = any expression.",
+            "arguments": [
+                {
+                    "name": "title",
+                    "optional": true
+                },
+                {
+                    "name": "prompt",
+                    "optional": true
+                },
+                {
+                    "name": "type",
+                    "optional": true
+                },
+                {
+                    "name": "expression_or_index_name",
+                    "optional": true
+                },
+                {
+                    "name": "modeless",
+                    "optional": true
+                },
+                {
+                    "name": "imagename",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "find_and_replace": {
+            "name": "find_and_replace",
+            "description": "Displays the Find and Replace dialog box. If layout has Change mode restricted, then only Find tab is shown"
+        },
+        "indexsetdialog": {
+            "name": "indexsetdialog",
+            "description": "Display the standard Index Select dialog"
+        },
+        "Index_Name": {
+            "name": "Index_Name",
+            "description": "Returns the name of the current index/query"
+        },
+        "Index_pointer": {
+            "name": "Index_pointer",
+            "description": "Returns a pointer to the current index/query."
+        },
+        "Index_Set": {
+            "name": "Index_Set",
+            "description": "Sets the primary index of the top level table on a Form.",
+            "arguments": [
+                {
+                    "name": "index_name",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Index_SetExplicit": {
+            "name": "Index_SetExplicit",
+            "description": "Sets primary index. Displays error message if index_name not found.",
+            "arguments": [
+                {
+                    "name": "index_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "load": {
+            "name": "load",
+            "description": " Load a Form.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "style",
+                    "optional": true
+                },
+                {
+                    "name": "windowname",
+                    "optional": true
+                },
+                {
+                    "name": "position_x",
+                    "optional": true
+                },
+                {
+                    "name": "position_y",
+                    "optional": true
+                },
+                {
+                    "name": "arguments",
+                    "optional": true
+                },
+                {
+                    "name": "ops",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "locate_dialog": {
+            "name": "locate_dialog",
+            "description": "Public user defined function."
+        },
+        "mark_record": {
+            "name": "mark_record",
+            "description": "Form records in a Form"
+        },
+        "menuchange": {
+            "name": "menuchange",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "menuname",
+                    "type": "C"
+                }
+            ]
+        },
+        "MenuItemCheck": {
+            "name": "MenuItemCheck",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "MenuItem",
+                    "type": "C"
+                },
+                {
+                    "name": "check_flag",
+                    "type": "L"
+                }
+            ]
+        },
+        "MenuItemEnable": {
+            "name": "MenuItemEnable",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "MenuItem",
+                    "type": "C"
+                },
+                {
+                    "name": "enable_flag",
+                    "type": "L"
+                }
+            ]
+        },
+        "MenuItemReset": {
+            "name": "MenuItemReset",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "MenuItem",
+                    "type": "C"
+                }
+            ]
+        },
+        "multi_select": {
+            "name": "multi_select",
+            "description": "Lets user create a query by selecting records manually"
+        },
+        "Navigator": {
+            "name": "Navigator",
+            "description": "Displays the Object and Fieldname navigator to go to selected objects/fields on the form."
+        },
+        "OnDialogBegin": {
+            "name": "OnDialogBegin"
+        },
+        "OnDialogEnd": {
+            "name": "OnDialogEnd"
+        },
+        "onSwap": {
+            "name": "onSwap",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "cardName",
+                    "type": "C"
+                },
+                {
+                    "name": "objectName",
+                    "type": "C"
+                }
+            ]
+        },
+        "Order_get": {
+            "name": "Order_get",
+            "description": "Returns the order expression of the current index/query"
+        },
+        "preview": {
+            "name": "preview",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "filter",
+                    "optional": true
+                },
+                {
+                    "name": "order",
+                    "optional": true
+                },
+                {
+                    "name": "modal",
+                    "optional": true
+                },
+                {
+                    "name": "session_modal",
+                    "optional": true
+                },
+                {
+                    "name": "arguments",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "print": {
+            "name": "print",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "filter",
+                    "optional": true
+                },
+                {
+                    "name": "order",
+                    "optional": true
+                },
+                {
+                    "name": "arguments",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "QueryRun": {
+            "name": "QueryRun",
+            "description": "Applies a filter and order to the records displayed by a form.",
+            "arguments": [
+                {
+                    "name": "filter_expression",
+                    "optional": true
+                },
+                {
+                    "name": "order_expression",
+                    "optional": true
+                },
+                {
+                    "name": "query_name",
+                    "optional": true
+                },
+                {
+                    "name": "Additive",
+                    "optional": true
+                },
+                {
+                    "name": "Level_name",
+                    "optional": true
+                },
+                {
+                    "name": "DisplayWarning",
+                    "optional": true
+                },
+                {
+                    "name": "query_options",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Query_By_Expn": {
+            "name": "Query_By_Expn",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "filter_expn",
+                    "optional": true
+                },
+                {
+                    "name": "order_expn",
+                    "optional": true
+                },
+                {
+                    "name": "level",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "query_by_table": {
+            "name": "query_by_table",
+            "description": "Public user defined function."
+        },
+        "Query_Genie": {
+            "name": "Query_Genie",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "default_query",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "QuickFilter": {
+            "name": "QuickFilter",
+            "description": "Does a Quick Filter on the current field, finding all records that match the current value"
+        },
+        "QuickSortExplicit": {
+            "name": "QuickSortExplicit",
+            "description": "Sorts the record in a window based on values in a field object",
+            "arguments": [
+                {
+                    "name": "objectname"
+                },
+                {
+                    "name": "direction",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "QuickSortMultiFld": {
+            "name": "QuickSortMultiFld",
+            "description": "Displays the Custom Sort dialog box."
+        },
+        "QuickSrchExplicit": {
+            "name": "QuickSrchExplicit",
+            "description": "Filters the record in a window based on values in a field object",
+            "arguments": [
+                {
+                    "name": "objectname"
+                },
+                {
+                    "name": "exclude",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "QuickSrchMultiFld": {
+            "name": "QuickSrchMultiFld",
+            "description": "Displays the multi-field Quick Filter dialog."
+        },
+        "Quick_Export": {
+            "name": "Quick_Export",
+            "description": "Exports records to Excel. "
+        },
+        "Quick_SearchExcl": {
+            "name": "Quick_SearchExcl",
+            "description": "Does a Quick Filter on the current field, eliminating all records that match the current value"
+        },
+        "Records_Get": {
+            "name": "Records_Get",
+            "description": "Returns the number of records in a form's current query list. "
+        },
+        "Refresh": {
+            "name": "Refresh",
+            "description": "Refreshes all controls on the form."
+        },
+        "refresh_fields": {
+            "name": "refresh_fields",
+            "description": "Executes the .refresh() method on each field object on a form"
+        },
+        "Refresh_Layout": {
+            "name": "Refresh_Layout",
+            "description": "Refreshes the form (same as the Refresh command on the menu)"
+        },
+        "rightclick": {
+            "name": "rightclick",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "obj",
+                    "type": "P"
+                },
+                {
+                    "name": "region",
+                    "type": "C"
+                }
+            ]
+        },
+        "Run_Saved_Query": {
+            "name": "Run_Saved_Query",
+            "description": "Runs a saved query. If query_name is not specified, Alpha Five prompts for name.",
+            "arguments": [
+                {
+                    "name": "query_name",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "SaveAs": {
+            "name": "SaveAs",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "LayoutName"
+                },
+                {
+                    "name": "Saveas_format",
+                    "optional": true
+                },
+                {
+                    "name": "Filter",
+                    "optional": true
+                },
+                {
+                    "name": "Order",
+                    "optional": true
+                },
+                {
+                    "name": "Filename",
+                    "optional": true
+                },
+                {
+                    "name": "OpenOutputFile",
+                    "optional": true
+                },
+                {
+                    "name": "PrintOptions",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "select_text": {
+            "name": "select_text",
+            "description": "Selects text in the current field starting at start_position, and highlighting number of characters specified by length. If length is 0, highlight to end of text.",
+            "arguments": [
+                {
+                    "name": "start_position",
+                    "type": "N"
+                },
+                {
+                    "name": "length",
+                    "type": "N"
+                }
+            ]
+        },
+        "Send": {
+            "name": "Send",
+            "description": "Sends a report printout via email. Format options are PDF, HTML, RTF and TXT. Email_client is 'default' or 'a5'.",
+            "arguments": [
+                {
+                    "name": "LayoutName"
+                },
+                {
+                    "name": "Format",
+                    "optional": true
+                },
+                {
+                    "name": "Filter",
+                    "optional": true
+                },
+                {
+                    "name": "Order",
+                    "optional": true
+                },
+                {
+                    "name": "email_client",
+                    "optional": true
+                },
+                {
+                    "name": "_to",
+                    "optional": true
+                },
+                {
+                    "name": "subject",
+                    "optional": true
+                },
+                {
+                    "name": "message",
+                    "optional": true
+                },
+                {
+                    "name": "cc",
+                    "optional": true
+                },
+                {
+                    "name": "bcc",
+                    "optional": true
+                },
+                {
+                    "name": "PrintOptions",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "ServerSideQueryRun": {
+            "name": "ServerSideQueryRun",
+            "description": "For use with an active-link table. Filters top level table of the form by running a query on the server. Returns records found. If table is not an active-link table, returns -1.",
+            "arguments": [
+                {
+                    "name": "filter"
+                },
+                {
+                    "name": "order",
+                    "optional": true
+                },
+                {
+                    "name": "additive",
+                    "optional": true
+                },
+                {
+                    "name": "queryFlags",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "ServerSideQuery_Retract": {
+            "name": "ServerSideQuery_Retract",
+            "description": "Rolls back the most recent user applied server-side filter on the primary table of a form (assuming that the table is an active-link table)."
+        },
+        "ServerSideQuery_Show_All": {
+            "name": "ServerSideQuery_Show_All",
+            "description": "Removes any user-applied, server-side filters on the primary table of a form (if that table is an active-link table)."
+        },
+        "ServerSideRefreshAll": {
+            "name": "ServerSideRefreshAll",
+            "description": "For use with an active-link table. Refreshes all rows in the active-link table"
+        },
+        "SpecialQueries": {
+            "name": "SpecialQueries",
+            "description": "Displays the Range Dialog and creates a query from the selected range of records"
+        },
+        "Spell_Check": {
+            "name": "Spell_Check",
+            "description": "Check spelling. Scope is \"table\", \"record\" or \"field\".",
+            "arguments": [
+                {
+                    "name": "scope"
+                },
+                {
+                    "name": "object",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Toggle_FormBrowse": {
+            "name": "Toggle_FormBrowse",
+            "description": "Toggles a from to browse mode and vice versa"
+        },
+        "toolbarchange": {
+            "name": "toolbarchange",
+            "description": "Called whenever the <form>.toolbar property is changed (via Xbasic)",
+            "arguments": [
+                {
+                    "name": "new_toolbar",
+                    "type": "C"
+                }
+            ]
+        },
+        "ToolbarControlEnable": {
+            "name": "ToolbarControlEnable",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "index",
+                    "type": "N"
+                },
+                {
+                    "name": "enable",
+                    "type": "L"
+                }
+            ]
+        },
+        "unmark_record": {
+            "name": "unmark_record",
+            "description": "UnMark records in a form"
+        },
+        "view": {
+            "name": "view",
+            "description": " Load and show a form",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "style",
+                    "optional": true
+                },
+                {
+                    "name": "windowname",
+                    "optional": true
+                },
+                {
+                    "name": "position_x",
+                    "optional": true
+                },
+                {
+                    "name": "position_y",
+                    "optional": true
+                },
+                {
+                    "name": "arguments",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "ViewQueried": {
+            "name": "ViewQueried",
+            "description": "Opens a form and applies a filter and/or order expression. Style = \"\" for normal, \"dialog\", \"hidden\" or \"hidden-dialog\". If IsBaseQuery = .t. (default value), use cannot remove the filter expression.",
+            "arguments": [
+                {
+                    "name": "LayoutName"
+                },
+                {
+                    "name": "filter_expn",
+                    "optional": true
+                },
+                {
+                    "name": "order_expn",
+                    "optional": true
+                },
+                {
+                    "name": "style",
+                    "optional": true
+                },
+                {
+                    "name": "x_position",
+                    "optional": true
+                },
+                {
+                    "name": "y_position",
+                    "optional": true
+                },
+                {
+                    "name": "IsBaseQuery",
+                    "optional": true
+                },
+                {
+                    "name": "arguments",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "ActivePrevDrillDown": {
+            "name": "ActivePrevDrillDown",
+            "description": "Returns name of previously active object, drilling down into container objects (embedded forms and browses)"
+        },
+        "ChangeRecordDialog": {
+            "name": "ChangeRecordDialog",
+            "description": "Used in Field Rules, Table Lookup when user selects <New Record>",
+            "arguments": [
+                {
+                    "name": "formname",
+                    "type": "C"
+                },
+                {
+                    "name": "filter",
+                    "type": "C"
+                }
+            ]
+        },
+        "NewRecordDialog": {
+            "name": "NewRecordDialog",
+            "description": "Used in Field Rules, Table Lookup when user selects <New Record>",
+            "arguments": [
+                {
+                    "name": "formname",
+                    "type": "C"
+                },
+                {
+                    "name": "keyreturn",
+                    "type": "C"
+                }
+            ]
+        },
+        "onAliasFields": {
+            "name": "onAliasFields",
+            "description": "Called internally by A5 when opening a form with a sub-form if the subform is bound to an aliased table where the alias does not match the tablename.",
+            "arguments": [
+                {
+                    "name": "obj",
+                    "type": "P"
+                },
+                {
+                    "name": "oldname",
+                    "type": "C"
+                },
+                {
+                    "name": "newname",
+                    "type": "C"
+                }
+            ]
+        },
+        "OnLoadChild": {
+            "name": "OnLoadChild",
+            "description": "Called when Loading a sub-form for a child table. Change shortnames to longnames (in static RTF Objects)",
+            "arguments": [
+                {
+                    "name": "obj",
+                    "type": "P"
+                }
+            ]
+        },
+        "Recno_goto": {
+            "name": "Recno_goto",
+            "description": "Goes to a specified record number",
+            "arguments": [
+                {
+                    "name": "recno",
+                    "type": "N"
+                }
+            ]
+        },
+        "Swap": {
+            "name": "Swap",
+            "description": "Swaps the form displayed in the current window.",
+            "arguments": [
+                {
+                    "name": "formname",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "ViewLinked": {
+            "name": "ViewLinked",
+            "description": "Opens a form and applies a filter and/or order expression. Link fields are automatically set when records are edited, or added. Style = \"\" for normal, \"dialog\", \"hidden\" or \"hidden-dialog\".",
+            "arguments": [
+                {
+                    "name": "LayoutName",
+                    "type": "C"
+                },
+                {
+                    "name": "LinkDefinition"
+                },
+                {
+                    "name": "filter_expn",
+                    "optional": true
+                },
+                {
+                    "name": "order_expn",
+                    "optional": true
+                },
+                {
+                    "name": "style",
+                    "optional": true
+                },
+                {
+                    "name": "x_position",
+                    "optional": true
+                },
+                {
+                    "name": "y_position",
+                    "optional": true
+                },
+                {
+                    "name": "OtherOptions",
+                    "optional": true
+                },
+                {
+                    "name": "arguments",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "Zoom_to_record": {
+            "name": "Zoom_to_record",
+            "description": "Zooms to a form view of the current active record in an embedded browse. Style is \"\" for normal, \"dialog\", or \"existing\"",
+            "arguments": [
+                {
+                    "name": "layoutname",
+                    "optional": true
+                },
+                {
+                    "name": "style",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "code": {
+            "name": "code"
+        },
+        "event": {
+            "name": "event"
+        },
+        "tag": {
+            "name": "tag"
+        },
+        "window_title": {
+            "name": "window_title"
+        },
+        "top": {
+            "name": "top"
+        },
+        "width": {
+            "name": "width"
+        },
+        "height": {
+            "name": "height"
+        }
+    }
+}

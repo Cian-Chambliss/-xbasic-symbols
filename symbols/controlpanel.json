@@ -1,0 +1,357 @@
+{
+    "__name__": "controlpanel",
+    "__functions__": {
+        "Restore": {
+            "name": "Restore",
+            "description": "Restores the ControlPanel window."
+        },
+        "Minimize": {
+            "name": "Minimize",
+            "description": "Minimizes the ControlPanel window."
+        },
+        "Maximize": {
+            "name": "Maximize",
+            "description": "Maximizes the ControlPanel window."
+        },
+        "Activate": {
+            "name": "Activate",
+            "description": "Sets focus to the object, optional flags 'E' - activate & edit cell in browse, 'A' - additive activate in design mode.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "SetFocus": {
+            "name": "SetFocus",
+            "description": "Sets focus to the control panel object.",
+            "arguments": [
+                {
+                    "name": "objectname"
+                },
+                {
+                    "name": "classname",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Hide": {
+            "name": "Hide",
+            "description": "Hides the ControlPanel window."
+        },
+        "Show": {
+            "name": "Show",
+            "description": "Shows the ControlPanel window."
+        },
+        "IsVisible": {
+            "name": "IsVisible",
+            "description": "Reports whether or not the ControlPanel window is visible."
+        },
+        "Size_Get": {
+            "name": "Size_Get",
+            "description": "Gets window size (\"Mimimized\",\"Maximized\" or \"<width>x<<height>\")."
+        },
+        "Active": {
+            "name": "Active",
+            "description": "Returns the name of the control that has focus.",
+            "arguments": [
+                {
+                    "name": "fullname",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Active_Drilldown": {
+            "name": "Active_Drilldown",
+            "description": "Returns the name of the deepest control that has focus.",
+            "arguments": [
+                {
+                    "name": "force_active_children",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Table_Get": {
+            "name": "Table_Get",
+            "description": "Get the table associated with an object."
+        },
+        "Name": {
+            "name": "Name",
+            "description": "Returns the name of the ControlPanel object (I.e. \"ControlPanel\").",
+            "arguments": [
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Children": {
+            "name": "Children",
+            "description": "Returns the number of objects contained by the object."
+        },
+        "Child": {
+            "name": "Child",
+            "description": "Returns a pointer to the specified child object contained by the object.",
+            "arguments": [
+                {
+                    "name": "num",
+                    "type": "N"
+                }
+            ]
+        },
+        "Class": {
+            "name": "Class",
+            "description": "Returns the class of the object."
+        },
+        "KindOf": {
+            "name": "KindOf",
+            "description": "Returns the kind of object."
+        },
+        "Eval": {
+            "name": "Eval",
+            "description": "Evaluate an expression in the context of an object.",
+            "arguments": [
+                {
+                    "name": "expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "Reference_Expression_Get": {
+            "name": "Reference_Expression_Get",
+            "description": "Return the reference expression to reconstruct a reference to the object."
+        },
+        "Has_Method": {
+            "name": "Has_Method",
+            "description": "Returns True if the ControlPanel object has the specified method.",
+            "arguments": [
+                {
+                    "name": "method_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Type": {
+            "name": "Type"
+        },
+        "SessionHandle": {
+            "name": "SessionHandle",
+            "description": "Returns the session handle of the ControlPanel window."
+        },
+        "Variables": {
+            "name": "Variables",
+            "description": "Returns a pointer to the variables defined at the ControlPanel level - optional flag for 'local,shared and global'.",
+            "arguments": [
+                {
+                    "name": "variable_frame_context",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Refresh": {
+            "name": "Refresh",
+            "description": "Force repaint of control."
+        },
+        "Child_Enum": {
+            "name": "Child_Enum",
+            "description": "Return a CR-LF separated list of child objects.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true
+                },
+                {
+                    "name": "classmap",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Add": {
+            "name": "Property_Add",
+            "description": "Adds a property if one doesn't already exists, sets property to value.",
+            "arguments": [
+                {
+                    "name": "property"
+                },
+                {
+                    "name": "value",
+                    "optional": true,
+                    "type": "A"
+                }
+            ]
+        },
+        "Property_Drop": {
+            "name": "Property_Drop",
+            "description": "Drop property if it exists.",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Exists": {
+            "name": "Property_Exists",
+            "description": "Returns TRUE if property exists.",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Instance_Exists": {
+            "name": "Property_Instance_Exists",
+            "description": "Returns TRUE if property has been instanced for the object (not just is valid for object).",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Set_Dirty": {
+            "name": "Set_Dirty",
+            "description": "Indicate that layout needs to be saved."
+        },
+        "Icon_Get": {
+            "name": "Icon_Get",
+            "description": "Get an icon."
+        },
+        "Command": {
+            "name": "Command",
+            "description": "Send a command notification to an object that excepts commands.",
+            "arguments": [
+                {
+                    "name": "command",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Active_Page": {
+            "name": "Active_Page",
+            "description": "Return active page of controlpanel."
+        },
+        "Paste_Layout": {
+            "name": "Paste_Layout",
+            "description": "Paste a layout.",
+            "arguments": [
+                {
+                    "name": "library_name",
+                    "type": "C"
+                },
+                {
+                    "name": "new_layout_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Repaint": {
+            "name": "Repaint",
+            "description": "force a repaint of the control or window."
+        },
+        "ZOrder": {
+            "name": "ZOrder",
+            "description": "Change the Z-Order of a window i.e. Back,Front.",
+            "arguments": [
+                {
+                    "name": "placement",
+                    "type": "C"
+                }
+            ]
+        },
+        "Fields_Enum": {
+            "name": "Fields_Enum",
+            "description": "Returns a list of fully qualified fields names that are used by an object (or its children).",
+            "arguments": [
+                {
+                    "name": "recurseCalcs",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Get_Field_Objects": {
+            "name": "Get_Field_Objects",
+            "description": "Returns a list of objects names under an named object that are bound to the field.",
+            "arguments": [
+                {
+                    "name": "fieldname",
+                    "type": "c"
+                }
+            ]
+        },
+        "to_xml": {
+            "name": "to_xml",
+            "description": "Save objects to xml, flags used to save element like 'Style'.",
+            "arguments": [
+                {
+                    "name": "mlElement",
+                    "type": "p"
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "from_xml": {
+            "name": "from_xml",
+            "description": "Load objects from xml, flags used to save element like 'Style'.",
+            "arguments": [
+                {
+                    "name": "mlElement",
+                    "type": "p"
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "window_position": {
+            "name": "window_position",
+            "description": "Centers a window in the client area.",
+            "arguments": [
+                {
+                    "name": "_position",
+                    "optional": true,
+                    "type": "c"
+                },
+                {
+                    "name": "y_position",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Preview_Get": {
+            "name": "Preview_Get",
+            "description": "Get preview object."
+        },
+        "Units_Get": {
+            "name": "Units_Get",
+            "description": "Get the units objects properties are expressed in."
+        },
+        "code": {
+            "name": "code"
+        },
+        "event": {
+            "name": "event"
+        },
+        "tag": {
+            "name": "tag"
+        }
+    }
+}

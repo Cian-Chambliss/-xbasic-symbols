@@ -1,0 +1,3079 @@
+{
+    "__name__": "dictionary",
+    "__functions__": {
+        "class": {
+            "name": "class",
+            "description": "Get the class name."
+        },
+        "open": {
+            "name": "open",
+            "description": "Open an existing data dictonary.",
+            "arguments": [
+                {
+                    "name": "data_dictionary_name",
+                    "optional": true
+                },
+                {
+                    "name": "file_open_mode",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "create": {
+            "name": "create",
+            "description": "Create a new data dictonary.",
+            "arguments": [
+                {
+                    "name": "data_dictionary_name",
+                    "optional": true
+                },
+                {
+                    "name": "file_open_mode",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "handle_set": {
+            "name": "handle_set",
+            "description": "Given an old style 'handle', set the data dictonary pointer.",
+            "arguments": [
+                {
+                    "name": "handle",
+                    "type": "N"
+                }
+            ]
+        },
+        "update": {
+            "name": "update",
+            "description": "Update a data dictionary.",
+            "arguments": [
+                {
+                    "name": "data_dictionary_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "structure_copy": {
+            "name": "structure_copy",
+            "description": "Copy structure information from one dictionary to another.",
+            "arguments": [
+                {
+                    "name": "source_data_dictionary_name",
+                    "type": "C"
+                },
+                {
+                    "name": "dest_data_dictionary_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "get_object": {
+            "name": "get_object",
+            "description": "Get a dictionary object.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "put_object": {
+            "name": "put_object",
+            "description": "Put a dictionary object.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "contents_c",
+                    "type": "C"
+                },
+                {
+                    "name": "contents_m",
+                    "optional": true
+                },
+                {
+                    "name": "vendor",
+                    "optional": true,
+                    "type": "A"
+                }
+            ]
+        },
+        "drop_object": {
+            "name": "drop_object",
+            "description": "Drop a dictionary object.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "drop_object_family": {
+            "name": "drop_object_family",
+            "description": "Drop all dictionary objects of name and family of type (i.e. type + all subtypes denoted by last character of type).",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "commit_singleton": {
+            "name": "commit_singleton",
+            "description": "Commit dictionary as data record in singleton dictionary.",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                },
+                {
+                    "name": "layoutName",
+                    "type": "C"
+                }
+            ]
+        },
+        "enum_objects": {
+            "name": "enum_objects",
+            "description": "Get objects of optional type/name mask (otherwise, return all objects).",
+            "arguments": [
+                {
+                    "name": "type",
+                    "optional": true,
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "export_filesystem": {
+            "name": "export_filesystem",
+            "description": "Export all the files in a dictionary to a filesystem .ALB shadow.",
+            "arguments": [
+                {
+                    "name": "baseFile",
+                    "type": "C"
+                },
+                {
+                    "name": "ExportLibDef"
+                },
+                {
+                    "name": "PassWordList",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "import_filesystem": {
+            "name": "import_filesystem",
+            "description": "Import all the files in a dictionary to a filesystem .ALB shadow. If permanent flag is set, a library is created.",
+            "arguments": [
+                {
+                    "name": "baseFile",
+                    "type": "C"
+                },
+                {
+                    "name": "ImportLibDef"
+                },
+                {
+                    "name": "permanent",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "update_filesystem_times": {
+            "name": "update_filesystem_times",
+            "description": "Give a list ALBLibList, create or update /remove the .ALB files if the shadow is incorrect or the library list is different.",
+            "arguments": [
+                {
+                    "name": "fileSystemPath",
+                    "type": "C"
+                },
+                {
+                    "name": "ALBLibList",
+                    "type": "C"
+                },
+                {
+                    "name": "removeALBLibList",
+                    "type": "C"
+                }
+            ]
+        },
+        "passwords_validate": {
+            "name": "passwords_validate",
+            "description": "Validate password list against the dictionary, reports back first script/udf that doesn't have a password in the list.",
+            "arguments": [
+                {
+                    "name": "PassWordList"
+                },
+                {
+                    "name": "passwordErrorFormat",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "backup": {
+            "name": "backup",
+            "description": "Save all records of a type to a 'backup' file of specific name.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "fileName",
+                    "type": "C"
+                }
+            ]
+        },
+        "restore": {
+            "name": "restore",
+            "description": "Restore a records of a type from a backup file.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "fileName"
+                },
+                {
+                    "name": "fromZip",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "object_exists": {
+            "name": "object_exists",
+            "description": "Returns TRUE if object of type & name exists.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "data_structure": {
+            "name": "data_structure",
+            "description": "Return structes(s) of all the table(s) associated with a dictionary object."
+        },
+        "saved_data_structure": {
+            "name": "saved_data_structure",
+            "description": "Return structure stored in header of file.",
+            "arguments": [
+                {
+                    "name": "fileName",
+                    "type": "C"
+                }
+            ]
+        },
+        "enumerate_backups": {
+            "name": "enumerate_backups",
+            "description": "Enumerate backups for type & name (using the internal naming).",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "backup_folder": {
+            "name": "backup_folder",
+            "description": "Return folder for backups.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                }
+            ]
+        },
+        "backup_comment_set": {
+            "name": "backup_comment_set",
+            "description": "Sets a comment for a version of a backup.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "version",
+                    "type": "n"
+                },
+                {
+                    "name": "comment",
+                    "type": "C"
+                }
+            ]
+        },
+        "backup_comment_get": {
+            "name": "backup_comment_get",
+            "description": "Gets a comment for a version of a backup.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "version",
+                    "type": "n"
+                }
+            ]
+        },
+        "object_comment_get": {
+            "name": "object_comment_get",
+            "description": "Gets a version and comment  of an object (if comment record exists).",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "object_comment_set": {
+            "name": "object_comment_set",
+            "description": "Sets a comment (and optional version) for a dictionary object.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "comment"
+                },
+                {
+                    "name": "version",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "object_history_get": {
+            "name": "object_history_get",
+            "description": "Gets history for 'type'.",
+            "arguments": [
+                {
+                    "name": "type",
+                    "type": "C"
+                }
+            ]
+        },
+        "object_has_schema": {
+            "name": "object_has_schema",
+            "description": "Returns true if the object is a schema object (i.e. unbound layout).",
+            "arguments": [
+                {
+                    "name": "dictionaryName",
+                    "type": "C"
+                },
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "object_schema_get": {
+            "name": "object_schema_get",
+            "description": "Gets schema for object (if object has a schema record).",
+            "arguments": [
+                {
+                    "name": "dictionaryName",
+                    "type": "C"
+                },
+                {
+                    "name": "type",
+                    "type": "C"
+                },
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "object_schema_enum": {
+            "name": "object_schema_enum",
+            "description": "Find schemas that match pattern - if single line, first line only, else compare all - wildcards allowed on each line (i.e. for name compare only).",
+            "arguments": [
+                {
+                    "name": "dictionaryName",
+                    "type": "C"
+                },
+                {
+                    "name": "type"
+                },
+                {
+                    "name": "pattern",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "RCS_Dirty": {
+            "name": "RCS_Dirty",
+            "description": "Returns TRUE if any RCS transactions need to be done."
+        },
+        "RCS_Changes_Get": {
+            "name": "RCS_Changes_Get",
+            "description": "Returns list of RCS transactions that need to be done."
+        },
+        "RCS_Clear": {
+            "name": "RCS_Clear",
+            "description": "Clears the RCS transaction log."
+        },
+        "get_singleton": {
+            "name": "get_singleton",
+            "description": "Returns the name of the singleto object (Type.Name). Returns blank if this is not a singleton",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "c"
+                }
+            ]
+        },
+        "get_singleton_datasource": {
+            "name": "get_singleton_datasource",
+            "description": "Returns the data source for the singleton (SQLDATASOURCE if contains an ADHOC SQL definiton).",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "c"
+                }
+            ]
+        },
+        "get_singleton_adHocSQL": {
+            "name": "get_singleton_adHocSQL",
+            "description": "Returns the SQL datasource ad-hoc record for the singleton object.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "c"
+                }
+            ]
+        },
+        "local_open": {
+            "name": "local_open",
+            "description": "Open an existing table using a namespace of a table (for opening tables under mappers without name conflicts).",
+            "arguments": [
+                {
+                    "name": "tablename"
+                },
+                {
+                    "name": "args",
+                    "optional": true,
+                    "type": "file_open_mode|SQL::Arguments"
+                },
+                {
+                    "name": "alias",
+                    "optional": true
+                },
+                {
+                    "name": "encryption",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "open_session": {
+            "name": "open_session",
+            "description": "Open an existing table in a new session.",
+            "arguments": [
+                {
+                    "name": "tablename"
+                },
+                {
+                    "name": "args",
+                    "optional": true,
+                    "type": "file_open_mode|SQL::Arguments"
+                },
+                {
+                    "name": "alias",
+                    "optional": true
+                },
+                {
+                    "name": "encryption",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "is_valid": {
+            "name": "is_valid",
+            "description": "Is the current table valid."
+        },
+        "close": {
+            "name": "close",
+            "description": "Close an open table."
+        },
+        "define_events": {
+            "name": "define_events",
+            "description": "Define an event handler, pass in optional inst variables pointer.",
+            "arguments": [
+                {
+                    "name": "event_code"
+                },
+                {
+                    "name": "variables",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "events_template": {
+            "name": "events_template",
+            "description": "Return a template of all the definable table events."
+        },
+        "attach_change_auditor": {
+            "name": "attach_change_auditor",
+            "description": "Define a table to audit the initial record values of the table object - structure must match + audit table needs an extra field at the end called __RECNO__.",
+            "arguments": [
+                {
+                    "name": "audit_table",
+                    "type": "P"
+                }
+            ]
+        },
+        "backend_populate_method": {
+            "name": "backend_populate_method",
+            "description": "Return or Change the backend populate method (Bulk/Bulk_Only/Incremental/None).",
+            "arguments": [
+                {
+                    "name": "new_setting",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "backend_cleanup": {
+            "name": "backend_cleanup",
+            "description": "If true, table actual files are deleted when the table is closed.",
+            "arguments": [
+                {
+                    "name": "new_setting",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "backend_key": {
+            "name": "backend_key",
+            "description": "Get/Set the unqiue backend table key expression (used to identify records).",
+            "arguments": [
+                {
+                    "name": "new_key_expresssion",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "handle": {
+            "name": "handle",
+            "description": "Get the tables old style 'handle'."
+        },
+        "handle_raw": {
+            "name": "handle_raw",
+            "description": "Return the 'raw' table handle (if mapped table)."
+        },
+        "handles_in_use": {
+            "name": "handles_in_use",
+            "description": "Get a crlf-delimited string of table handles in use.",
+            "arguments": [
+                {
+                    "name": "Handles",
+                    "type": "P"
+                }
+            ]
+        },
+        "From_handle": {
+            "name": "From_handle",
+            "description": "Given an old style 'handle', return the table pointer.",
+            "arguments": [
+                {
+                    "name": "handle",
+                    "type": "N"
+                }
+            ]
+        },
+        "get": {
+            "name": "get",
+            "description": "Returns table of name.",
+            "arguments": [
+                {
+                    "name": "table_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "batch_begin": {
+            "name": "batch_begin",
+            "description": "Lock database file for batched changes."
+        },
+        "batch_end": {
+            "name": "batch_end",
+            "description": "Unlocks database file after batched changes."
+        },
+        "change_begin": {
+            "name": "change_begin",
+            "description": "Begin changes to tables current record.",
+            "arguments": [
+                {
+                    "name": "honor_field_rules",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "change_end": {
+            "name": "change_end",
+            "description": "End changes to tables current record.",
+            "arguments": [
+                {
+                    "name": "commit",
+                    "optional": true
+                },
+                {
+                    "name": "updateUI",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "enter_begin": {
+            "name": "enter_begin",
+            "description": "Begin a new record for the tables.",
+            "arguments": [
+                {
+                    "name": "honor_field_rules",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "enter_end": {
+            "name": "enter_end",
+            "description": "End a new record enter.",
+            "arguments": [
+                {
+                    "name": "commit",
+                    "optional": true
+                },
+                {
+                    "name": "updateUI",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "field_blank": {
+            "name": "field_blank",
+            "description": "Places a blank value in the field specified.",
+            "arguments": [
+                {
+                    "name": "fieldname",
+                    "type": "C"
+                }
+            ]
+        },
+        "duplicate": {
+            "name": "duplicate",
+            "description": "Create a copy of the table, with all records and layouts.",
+            "arguments": [
+                {
+                    "name": "tablename"
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "create_clone": {
+            "name": "create_clone",
+            "description": "Create an empty copy of the table.",
+            "arguments": [
+                {
+                    "name": "ilename"
+                },
+                {
+                    "name": "flags",
+                    "optional": true
+                }
+            ]
+        },
+        "mode_get": {
+            "name": "mode_get",
+            "description": "Get the data entry mode for the table."
+        },
+        "name_get": {
+            "name": "name_get",
+            "description": "Get the name or alias of the table."
+        },
+        "pack": {
+            "name": "pack",
+            "description": "Removes all the records that are marked for deletion."
+        },
+        "record_clone": {
+            "name": "record_clone",
+            "description": "Create a new record using the fields from a similar table.",
+            "arguments": [
+                {
+                    "name": "source_table",
+                    "type": "P"
+                }
+            ]
+        },
+        "records_get": {
+            "name": "records_get",
+            "description": "Returns the number of records in the table."
+        },
+        "rename": {
+            "name": "rename",
+            "description": "Renames the table.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "fetch_eof": {
+            "name": "fetch_eof",
+            "description": "returns TRUE if the last record was fetched."
+        },
+        "fetch_find": {
+            "name": "fetch_find",
+            "description": "Using the current index, find specified key value, return record number.",
+            "arguments": [
+                {
+                    "name": "key",
+                    "type": "A"
+                }
+            ]
+        },
+        "fetch_first": {
+            "name": "fetch_first",
+            "description": "Fetch the first record in the table/set. returns TRUE if record found.",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": true,
+                    "type": "fetch"
+                }
+            ]
+        },
+        "fetch_goto": {
+            "name": "fetch_goto",
+            "description": "Goto a specific record number in the table, returns positive if record found, else negitive record number.",
+            "arguments": [
+                {
+                    "name": "record_number",
+                    "type": "N"
+                }
+            ]
+        },
+        "fetch_last": {
+            "name": "fetch_last",
+            "description": "Fetch the last record in the table/set. returns TRUE if record found.",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": true,
+                    "type": "fetch"
+                }
+            ]
+        },
+        "fetch_next": {
+            "name": "fetch_next",
+            "description": "Fetch the next record in the table/set. returns TRUE if record found.",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": true,
+                    "type": "fetch"
+                }
+            ]
+        },
+        "fetch_prev": {
+            "name": "fetch_prev",
+            "description": "Fetch the previous record in the table/set. returns TRUE if record found.",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": true,
+                    "type": "fetch"
+                }
+            ]
+        },
+        "fetch_loc_next": {
+            "name": "fetch_loc_next",
+            "description": "Locate the next value/pattern if the field specified.",
+            "arguments": [
+                {
+                    "name": "pattern",
+                    "type": "C"
+                },
+                {
+                    "name": "fieldname",
+                    "type": "C"
+                }
+            ]
+        },
+        "fetch_loc_prev": {
+            "name": "fetch_loc_prev",
+            "description": "Locate the previos value/pattern if the field specified.",
+            "arguments": [
+                {
+                    "name": "pattern",
+                    "type": "C"
+                },
+                {
+                    "name": "fieldname",
+                    "type": "C"
+                }
+            ]
+        },
+        "row_state_get": {
+            "name": "row_state_get",
+            "description": "Get cursor state(s) can set fetch level or get a count - flags 'F'irst 'L'ast '+<#>' '-<#>' for offset '<' for attempt to fetch a minimum of count minus 1, '=' attempt to fetch minimum of count.",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": true
+                },
+                {
+                    "name": "count",
+                    "optional": true
+                },
+                {
+                    "name": "flags",
+                    "optional": true
+                },
+                {
+                    "name": "firstrowstate",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "row_state_range_get": {
+            "name": "row_state_range_get",
+            "description": "Get cursor state(s) between (including) the provided rowstates.",
+            "arguments": [
+                {
+                    "name": "level",
+                    "type": "N"
+                },
+                {
+                    "name": "row_state1",
+                    "type": "C"
+                },
+                {
+                    "name": "row_state2",
+                    "type": "C"
+                }
+            ]
+        },
+        "row_state_compare": {
+            "name": "row_state_compare",
+            "description": "Compare two cursor states.",
+            "arguments": [
+                {
+                    "name": "row_state1",
+                    "type": "C"
+                },
+                {
+                    "name": "row_state2",
+                    "type": "C"
+                }
+            ]
+        },
+        "row_state_put": {
+            "name": "row_state_put",
+            "description": "Restore a cursor state that was returned by cursor_state_get.",
+            "arguments": [
+                {
+                    "name": "row_state",
+                    "type": "C"
+                }
+            ]
+        },
+        "row_content_get": {
+            "name": "row_content_get",
+            "description": "Evaluate content expression for cursor states.",
+            "arguments": [
+                {
+                    "name": "content_expression",
+                    "type": "C"
+                },
+                {
+                    "name": "cursor_state",
+                    "type": "C"
+                }
+            ]
+        },
+        "row_position_get": {
+            "name": "row_position_get",
+            "description": "Get the sequential record position of the current record (or row state if one is provided).",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": true
+                },
+                {
+                    "name": "row_state",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "row_position_extent": {
+            "name": "row_position_extent",
+            "description": "Get the sequential record extent.",
+            "arguments": [
+                {
+                    "name": "level",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "row_position_set": {
+            "name": "row_position_set",
+            "description": "Get the row state given a position.",
+            "arguments": [
+                {
+                    "name": "Position"
+                },
+                {
+                    "name": "level",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "index_primary_put": {
+            "name": "index_primary_put",
+            "description": "Set the primary index for the table, using either name or Index object.",
+            "arguments": [
+                {
+                    "name": "tagname|P",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "index_primary_get": {
+            "name": "index_primary_get",
+            "description": "Get the primary index for the table."
+        },
+        "range_add": {
+            "name": "range_add",
+            "description": "Add a range filter to the table.",
+            "arguments": [
+                {
+                    "name": "first_key",
+                    "optional": true
+                },
+                {
+                    "name": "Last_Key",
+                    "optional": true,
+                    "type": "A"
+                }
+            ]
+        },
+        "range_drop": {
+            "name": "range_drop",
+            "description": "Drop the current range from the table."
+        },
+        "set_create": {
+            "name": "set_create",
+            "description": "Use the current table to define a new set of provided filename.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "field_get": {
+            "name": "field_get",
+            "description": "Get a field given a name or index into current Table.",
+            "arguments": [
+                {
+                    "name": "Fieldname|N",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "recno": {
+            "name": "recno",
+            "description": "Return the current record for the table."
+        },
+        "eval": {
+            "name": "eval",
+            "description": "Evaluate an expression in the context of the table.",
+            "arguments": [
+                {
+                    "name": "expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "eval_valid": {
+            "name": "eval_valid",
+            "description": "Returns TRUE if expression is valid in the context of the table.",
+            "arguments": [
+                {
+                    "name": "expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "zap": {
+            "name": "zap",
+            "description": "Delete all the records in the table if safety is TRUE.",
+            "arguments": [
+                {
+                    "name": "safety",
+                    "type": "L"
+                }
+            ]
+        },
+        "erase": {
+            "name": "erase",
+            "description": "Delete the table if safety is TRUE.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "safety",
+                    "type": "L"
+                }
+            ]
+        },
+        "mark": {
+            "name": "mark",
+            "description": "Mark the current record."
+        },
+        "unmark": {
+            "name": "unmark",
+            "description": "Unmarks the current record."
+        },
+        "delete": {
+            "name": "delete",
+            "description": "Mark the current record for deletion."
+        },
+        "compact": {
+            "name": "compact",
+            "description": "Compact DBF,SET,DDD,ALB files.",
+            "arguments": [
+                {
+                    "name": "file",
+                    "type": "C"
+                }
+            ]
+        },
+        "in_use": {
+            "name": "in_use",
+            "description": "Returns true if the named table/library is in use (does exclusive open test).",
+            "arguments": [
+                {
+                    "name": "file"
+                },
+                {
+                    "name": "physical_file_only",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "create_begin": {
+            "name": "create_begin",
+            "description": "Start defining a new Table, defines the first field.",
+            "arguments": [
+                {
+                    "name": "Fieldname",
+                    "type": "C"
+                },
+                {
+                    "name": "Fieldtype"
+                },
+                {
+                    "name": "Field_Width",
+                    "optional": true
+                },
+                {
+                    "name": "Field_Decimal",
+                    "optional": true
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "field_add": {
+            "name": "field_add",
+            "description": "Define the next field in a table.",
+            "arguments": [
+                {
+                    "name": "Fieldname",
+                    "type": "C"
+                },
+                {
+                    "name": "Fieldtype"
+                },
+                {
+                    "name": "Field_Width",
+                    "optional": true
+                },
+                {
+                    "name": "Field_Decimal",
+                    "optional": true
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "create_end": {
+            "name": "create_end",
+            "description": "Complete definition of a new table.",
+            "arguments": [
+                {
+                    "name": "Filename"
+                },
+                {
+                    "name": "file_open_mode",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "create_end_extended": {
+            "name": "create_end_extended",
+            "description": "Creates a new format .DBF table with extra information embedded in the header.",
+            "arguments": [
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "extra"
+                },
+                {
+                    "name": "file_open_mode",
+                    "optional": true
+                },
+                {
+                    "name": "Alias",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "create_table": {
+            "name": "create_table",
+            "description": "Create a DBF using a cr-lf ascii list that defines the columns, optional fileMap is crlf delimited list of alias=filename.",
+            "arguments": [
+                {
+                    "name": "columnDefinitions",
+                    "type": "C"
+                },
+                {
+                    "name": "Filename",
+                    "type": "C"
+                },
+                {
+                    "name": "extra",
+                    "optional": true
+                },
+                {
+                    "name": "file_open_mode",
+                    "optional": true
+                },
+                {
+                    "name": "Alias",
+                    "optional": true
+                },
+                {
+                    "name": "fileMap",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "index_record_get": {
+            "name": "index_record_get",
+            "description": "Get the record number order index object for a table."
+        },
+        "index_tag_add": {
+            "name": "index_tag_add",
+            "description": "Add a tag to the production index for the database.",
+            "arguments": [
+                {
+                    "name": "Tagname",
+                    "type": "C"
+                },
+                {
+                    "name": "Order_expression"
+                },
+                {
+                    "name": "Filter_expression",
+                    "optional": true
+                },
+                {
+                    "name": "Index_Type",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "is_marked": {
+            "name": "is_marked",
+            "description": "Is the current record Marked."
+        },
+        "is_unmarked": {
+            "name": "is_unmarked",
+            "description": "Is the current record Unmarked."
+        },
+        "is_deleted": {
+            "name": "is_deleted",
+            "description": "Is the current record Deleted."
+        },
+        "index_get": {
+            "name": "index_get",
+            "description": "Returns an index given a name.",
+            "arguments": [
+                {
+                    "name": "tagname",
+                    "type": "C"
+                }
+            ]
+        },
+        "index_name_get": {
+            "name": "index_name_get",
+            "description": "Retrieve open index tag names (from 1 to n) - if parameter ommitted, report ALL names.",
+            "arguments": [
+                {
+                    "name": "index",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "external_index_name_get": {
+            "name": "external_index_name_get",
+            "description": "Retrieve external tables index tag names in a cr-lf separated list.",
+            "arguments": [
+                {
+                    "name": "tablename",
+                    "type": "C"
+                }
+            ]
+        },
+        "external_index_def_from_name_get": {
+            "name": "external_index_def_from_name_get",
+            "description": "Retrieve a external tag information given a table or setname and description - format E=Error P=Filename O=order,F=filter,X=all flags, U=Unique, D=escending, I=Insensitive T=Type.",
+            "arguments": [
+                {
+                    "name": "tablename",
+                    "type": "C"
+                },
+                {
+                    "name": "description",
+                    "type": "C"
+                },
+                {
+                    "name": "format",
+                    "type": "C"
+                }
+            ]
+        },
+        "external_index_def_enum": {
+            "name": "external_index_def_enum",
+            "description": "Retrieve all tags a table or setname and description - format A=Active E=Error N=Name P=Filename O=order,F=filter,X=all flags, U=nique, D=escending, I=Insensitive T=Type.",
+            "arguments": [
+                {
+                    "name": "tablename",
+                    "type": "C"
+                },
+                {
+                    "name": "format",
+                    "type": "C"
+                }
+            ]
+        },
+        "field_name_get": {
+            "name": "field_name_get",
+            "description": "Retrieve field names in a cr-lf separated list."
+        },
+        "external_field_name_get": {
+            "name": "external_field_name_get",
+            "description": "Retrieve external tables field names (and other optional info) in a cr-lf separated list.\r\nn - field name \r\nN - uppercased field name\r\nt - simple field type\r\nT - full field type\r\nW - field width\r\nD - field decimal\r\nR - field rule (INCREMENT/CALCULATED=<EXPRESSION>)\r\n",
+            "arguments": [
+                {
+                    "name": "tablename"
+                },
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "external_field_info_get": {
+            "name": "external_field_info_get",
+            "description": "Retrieve external tables field names (and other optional info) in a cr-lf separated list.\r\nformat same as External_Field_Name_Get().",
+            "arguments": [
+                {
+                    "name": "fieldName"
+                },
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "external_record_content_get": {
+            "name": "external_record_content_get",
+            "description": "Retrieve external tables records in a cr-lf separated list.",
+            "arguments": [
+                {
+                    "name": "tablename",
+                    "type": "C"
+                },
+                {
+                    "name": "content_expression"
+                },
+                {
+                    "name": "order",
+                    "optional": true
+                },
+                {
+                    "name": "filter",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "external_record_content_from_key_get": {
+            "name": "external_record_content_from_key_get",
+            "description": "Retrieve external tables records in a cr-lf separated list given a list of records or keys.",
+            "arguments": [
+                {
+                    "name": "tablename",
+                    "type": "C"
+                },
+                {
+                    "name": "content_expression",
+                    "type": "C"
+                },
+                {
+                    "name": "records"
+                },
+                {
+                    "name": "key_expression",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "record_content_get": {
+            "name": "record_content_get",
+            "description": "Retrieve record data in a cr-lf separated list.",
+            "arguments": [
+                {
+                    "name": "content_expression"
+                },
+                {
+                    "name": "order",
+                    "optional": true
+                },
+                {
+                    "name": "filter",
+                    "optional": true
+                },
+                {
+                    "name": "fetchLevel",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "file_mode_get": {
+            "name": "file_mode_get",
+            "description": "Get the sharing mode of the file the table."
+        },
+        "filename_get": {
+            "name": "filename_get",
+            "description": "Get the filename of the table, if name specified, returns full path to provided database name.",
+            "arguments": [
+                {
+                    "name": "tablename",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "actual_filename_get": {
+            "name": "actual_filename_get",
+            "description": "Get the physical (master) filename of the table, if name specified, returns full path to provided database name.",
+            "arguments": [
+                {
+                    "name": "tablename",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "query_primary_put": {
+            "name": "query_primary_put",
+            "description": "Returns existing query if already run, else runs and returns saved query.",
+            "arguments": [
+                {
+                    "name": "query_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "query_create": {
+            "name": "query_create",
+            "description": "Create a new query - flags (N)ot remembered - if optional order and filter expressions are specified, then the query variable is ignored.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true
+                },
+                {
+                    "name": "Filter_expression",
+                    "optional": true
+                },
+                {
+                    "name": "Order_Expression",
+                    "optional": true
+                },
+                {
+                    "name": "args",
+                    "optional": true,
+                    "type": "p"
+                }
+            ]
+        },
+        "query_from_range": {
+            "name": "query_from_range",
+            "description": "Create a query from the current range, if one is in effect - returns .T. if new query created."
+        },
+        "query_detach": {
+            "name": "query_detach",
+            "description": "Detach current query (or named query if specified).",
+            "arguments": [
+                {
+                    "name": "name",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "query_detach_all": {
+            "name": "query_detach_all",
+            "description": "Detach all queries."
+        },
+        "queries_reopen": {
+            "name": "queries_reopen",
+            "description": "Reopen the queries in a session."
+        },
+        "crosstab": {
+            "name": "crosstab",
+            "description": "Cross tabulate records of database into result database."
+        },
+        "post": {
+            "name": "post",
+            "description": "Replace, add, or subtract fields values in the table using fields from a transaction database."
+        },
+        "join": {
+            "name": "join",
+            "description": "Create a new table by merging the records from the table with a secondary table."
+        },
+        "append": {
+            "name": "append",
+            "description": "Append the records of one table to another, optional argument provides a quick way to append records of exact same table structure.",
+            "arguments": [
+                {
+                    "name": "source_tablename",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "copy": {
+            "name": "copy",
+            "description": "Copy all or some of the fields from the table to another table or set."
+        },
+        "update_production_index": {
+            "name": "update_production_index",
+            "description": "Update the production index associated with the table."
+        },
+        "subtract": {
+            "name": "subtract",
+            "description": "Create a new table of records not common to table and secondary table."
+        },
+        "intersect": {
+            "name": "intersect",
+            "description": "Create a new table that is the intersection between the table and a secondary table."
+        },
+        "mark_range": {
+            "name": "mark_range",
+            "description": "Mark a range of records in the table.",
+            "arguments": [
+                {
+                    "name": "Filter_Expr",
+                    "type": "C"
+                }
+            ]
+        },
+        "unmark_range": {
+            "name": "unmark_range",
+            "description": "Unmark a range of records in the table.",
+            "arguments": [
+                {
+                    "name": "Filter_Expr",
+                    "type": "C"
+                }
+            ]
+        },
+        "delete_range": {
+            "name": "delete_range",
+            "description": "Delete a range of records in the table.",
+            "arguments": [
+                {
+                    "name": "Filter_Expr",
+                    "type": "C"
+                }
+            ]
+        },
+        "mark_dups": {
+            "name": "mark_dups",
+            "description": "Marks the duplicate records in the table.",
+            "arguments": [
+                {
+                    "name": "Dup_Key_Expression",
+                    "type": "C"
+                },
+                {
+                    "name": "Filter_Expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "mark_dups2": {
+            "name": "mark_dups2",
+            "description": "Marks the duplicate records in the table, including the original record.",
+            "arguments": [
+                {
+                    "name": "Dup_Key_Expression",
+                    "type": "C"
+                },
+                {
+                    "name": "Filter_Expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "unmark_dups": {
+            "name": "unmark_dups",
+            "description": "Unmarks the duplicate records in the table.",
+            "arguments": [
+                {
+                    "name": "Dup_Key_Expression",
+                    "type": "C"
+                },
+                {
+                    "name": "Filter_Expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "delete_dups": {
+            "name": "delete_dups",
+            "description": "Deletes the duplicate records in the table.",
+            "arguments": [
+                {
+                    "name": "Dup_Key_Expression",
+                    "type": "C"
+                },
+                {
+                    "name": "Filter_Expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "export": {
+            "name": "export",
+            "description": "Export records in table to specified output file."
+        },
+        "import": {
+            "name": "import",
+            "description": "Import records from specified input file to the table."
+        },
+        "summarize": {
+            "name": "summarize",
+            "description": "Summarize the records of the table into a specified output table."
+        },
+        "fields_get": {
+            "name": "fields_get",
+            "description": "Get the number of fields in the table."
+        },
+        "index_open": {
+            "name": "index_open",
+            "description": "Open an index file for the database.",
+            "arguments": [
+                {
+                    "name": "index_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "records_deleted": {
+            "name": "records_deleted",
+            "description": "Returns a count of the records deleted."
+        },
+        "index_create_begin": {
+            "name": "index_create_begin",
+            "description": "Begin creation of a new index, add the first tag.",
+            "arguments": [
+                {
+                    "name": "Tagname",
+                    "type": "C"
+                },
+                {
+                    "name": "Order_expression"
+                },
+                {
+                    "name": "Filter_expression",
+                    "optional": true
+                },
+                {
+                    "name": "Index_Type",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "index_add": {
+            "name": "index_add",
+            "description": "Add the next tag.",
+            "arguments": [
+                {
+                    "name": "Tagname",
+                    "type": "C"
+                },
+                {
+                    "name": "Order_expression"
+                },
+                {
+                    "name": "Filter_expression",
+                    "optional": true
+                },
+                {
+                    "name": "Index_Type",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "index_create_end": {
+            "name": "index_create_end",
+            "description": "Complete creation of an index.",
+            "arguments": [
+                {
+                    "name": "Indexname",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "isopen": {
+            "name": "isopen",
+            "description": "Test if a table is open - return .T. if table is currently open.",
+            "arguments": [
+                {
+                    "name": "Tablename",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "record_data_get": {
+            "name": "record_data_get",
+            "description": "Return the all the data from the current records field as a blob.",
+            "arguments": [
+                {
+                    "name": "record_number",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "record_data_set": {
+            "name": "record_data_set",
+            "description": "Set all the feilds int the current record using data from a blob.",
+            "arguments": [
+                {
+                    "name": "Data",
+                    "type": "B"
+                }
+            ]
+        },
+        "relation_add_mapped": {
+            "name": "relation_add_mapped",
+            "description": "Add an internal relation to a mapped table.",
+            "arguments": [
+                {
+                    "name": "Table",
+                    "type": "P"
+                }
+            ]
+        },
+        "relation_change": {
+            "name": "relation_change",
+            "description": "Change a relation's settings."
+        },
+        "eof": {
+            "name": "eof",
+            "description": "Returns TRUE if we are on the last record of the specified (or current) search order.",
+            "arguments": [
+                {
+                    "name": "tagname",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "bof": {
+            "name": "bof",
+            "description": "Returns TRUE if we are on the first record of the specified (or current) search order.",
+            "arguments": [
+                {
+                    "name": "tagname",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "persist": {
+            "name": "persist",
+            "description": "Flags opened table to not be closed automatically on termination of script."
+        },
+        "encrypt": {
+            "name": "encrypt",
+            "description": "Encrypt a database file."
+        },
+        "decrypt": {
+            "name": "decrypt",
+            "description": "Decrypt a database file."
+        },
+        "encrypted": {
+            "name": "encrypted",
+            "description": "Returns TRUE if table is encrypted."
+        },
+        "sql_exec": {
+            "name": "sql_exec",
+            "description": "Execute a SQL statement (for ODBC tables) - returns error string if error occured.",
+            "arguments": [
+                {
+                    "name": "statement"
+                },
+                {
+                    "name": "options",
+                    "optional": true
+                },
+                {
+                    "name": "fields",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "enum_capability": {
+            "name": "enum_capability",
+            "description": "Enumerate capabilities (ODBC data sources) - returns parameter name.",
+            "arguments": [
+                {
+                    "name": "index",
+                    "type": "N"
+                }
+            ]
+        },
+        "get_capability": {
+            "name": "get_capability",
+            "description": "Get a capability (if defined) for a table.",
+            "arguments": [
+                {
+                    "name": "Parameter",
+                    "type": "C"
+                }
+            ]
+        },
+        "enum_syntax": {
+            "name": "enum_syntax",
+            "description": "Enumerate ODBC driver syntax elements.",
+            "arguments": [
+                {
+                    "name": "index",
+                    "type": "N"
+                }
+            ]
+        },
+        "get_syntax": {
+            "name": "get_syntax",
+            "description": "Get syntax for an ODBC setting.",
+            "arguments": [
+                {
+                    "name": "parameter",
+                    "type": "C"
+                }
+            ]
+        },
+        "get_memo_extension": {
+            "name": "get_memo_extension",
+            "description": "Returns the Memo file extension that would be associated with the passed in Table extension.",
+            "arguments": [
+                {
+                    "name": "Table_Extension",
+                    "type": "C"
+                }
+            ]
+        },
+        "get_index_extension": {
+            "name": "get_index_extension",
+            "description": "Returns the Index file extension that would be associated with the passed in Table extension.",
+            "arguments": [
+                {
+                    "name": "Table_Extension",
+                    "type": "C"
+                }
+            ]
+        },
+        "get_source_type": {
+            "name": "get_source_type",
+            "description": "Returns the type of source the table is - Native, ODBC , Native-Encrypted.",
+            "arguments": [
+                {
+                    "name": "Filename"
+                },
+                {
+                    "name": "getLocation",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "create_shadow": {
+            "name": "create_shadow",
+            "description": "Create a shadow table - the shadowfilename is the table created, it points to the actualfilename.",
+            "arguments": [
+                {
+                    "name": "Shadowfilename",
+                    "type": "C"
+                },
+                {
+                    "name": "ActualFilename"
+                },
+                {
+                    "name": "shadow_associated_files",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "create_backend_loader": {
+            "name": "create_backend_loader",
+            "description": "Create a shadow table for a backend - causes the backend loaded to be invoked with the filename.",
+            "arguments": [
+                {
+                    "name": "Shadowfilename",
+                    "type": "C"
+                }
+            ]
+        },
+        "create_mapping_loader": {
+            "name": "create_mapping_loader",
+            "description": "Create a shadow table for a table re-mapper (alternate names for a table or tables).",
+            "arguments": [
+                {
+                    "name": "Shadowfilename",
+                    "type": "C"
+                }
+            ]
+        },
+        "create_filesystem_library": {
+            "name": "create_filesystem_library",
+            "description": "Create a shadow table for a file-system library, can have an optional path (which can be relative to shadow location).",
+            "arguments": [
+                {
+                    "name": "Shadowfilename"
+                },
+                {
+                    "name": "alternatePath",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "create_json_loader": {
+            "name": "create_json_loader",
+            "description": "Create a shadow table for a json file of the same name (with a json extension).",
+            "arguments": [
+                {
+                    "name": "Shadowfilename",
+                    "type": "C"
+                }
+            ]
+        },
+        "create_bson_loader": {
+            "name": "create_bson_loader",
+            "description": "Create a shadow table for a bson file of the same name (with a bson extension).",
+            "arguments": [
+                {
+                    "name": "Shadowfilename",
+                    "type": "C"
+                }
+            ]
+        },
+        "get_group_name": {
+            "name": "get_group_name",
+            "description": "Returns name of associated groups (table or report level if defined).",
+            "arguments": [
+                {
+                    "name": "index",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "previous_record": {
+            "name": "previous_record",
+            "description": "Returns the previous record data entry was performed on."
+        },
+        "is_record_locked": {
+            "name": "is_record_locked",
+            "description": "return TRUE if the record is locked."
+        },
+        "child_get": {
+            "name": "child_get",
+            "description": "Returns names of children of table [or a single child if number is provided].",
+            "arguments": [
+                {
+                    "name": "child_number",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "parent_get": {
+            "name": "parent_get",
+            "description": "Returns name of the parent table."
+        },
+        "parent_link_expr_get": {
+            "name": "parent_link_expr_get",
+            "description": "Returns the parent linking expression."
+        },
+        "link_expr_get": {
+            "name": "link_expr_get",
+            "description": "Returns the linking key expression."
+        },
+        "link_filter_expr_get": {
+            "name": "link_filter_expr_get",
+            "description": "Returns the link filter expression."
+        },
+        "link_index_flags_get": {
+            "name": "link_index_flags_get",
+            "description": "Returns the link index flags."
+        },
+        "relation_get": {
+            "name": "relation_get",
+            "description": "Returns the tables relation type (Single/Many)."
+        },
+        "relation_key_expression": {
+            "name": "relation_key_expression",
+            "description": "If table is a child table, get the key expression part of the index order."
+        },
+        "relation_order_expression": {
+            "name": "relation_order_expression",
+            "description": "If table is a child table, get the order expression part of the index order."
+        },
+        "relation_tag": {
+            "name": "relation_tag",
+            "description": "Builds and Returns an index handle for the relation_change and relation_add commands.",
+            "arguments": [
+                {
+                    "name": "expression"
+                },
+                {
+                    "name": "Filter",
+                    "optional": true
+                },
+                {
+                    "name": "Flags",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "refresh": {
+            "name": "refresh",
+            "description": "Perform network refresh, return True if changed."
+        },
+        "need_refresh": {
+            "name": "need_refresh",
+            "description": "Return True if table data in memory is out of date."
+        },
+        "field_statistics": {
+            "name": "field_statistics",
+            "description": "Collects statistics for passed in expression/field.",
+            "arguments": [
+                {
+                    "name": "Expr",
+                    "type": "C"
+                },
+                {
+                    "name": "stats",
+                    "type": "P"
+                }
+            ]
+        },
+        "temporary_open": {
+            "name": "temporary_open",
+            "description": "Opens temporary tables for caching (named tables stay in memory till temporary close).",
+            "arguments": [
+                {
+                    "name": "table_name_list",
+                    "type": "C"
+                }
+            ]
+        },
+        "temporary_close": {
+            "name": "temporary_close",
+            "description": "Close temporary tables (ignores non-cached tables).",
+            "arguments": [
+                {
+                    "name": "table_name_list",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "sessionhandle": {
+            "name": "sessionhandle",
+            "description": "Return the session that the table is opened under."
+        },
+        "related_tables_get": {
+            "name": "related_tables_get",
+            "description": "Return the tables in a set that can be represented with a lookup expression to the table.",
+            "arguments": [
+                {
+                    "name": "tablename",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "external_variables_get": {
+            "name": "external_variables_get",
+            "description": "Get externally defined variables.",
+            "arguments": [
+                {
+                    "name": "tablename"
+                },
+                {
+                    "name": "format",
+                    "optional": true
+                },
+                {
+                    "name": "variable_context",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "external_calcs_get": {
+            "name": "external_calcs_get",
+            "description": "Get externally defined calc fields.",
+            "arguments": [
+                {
+                    "name": "tablename"
+                },
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "reference_expression_get": {
+            "name": "reference_expression_get",
+            "description": "Get the expression needed to reconstruct a pointer."
+        },
+        "name_normalize": {
+            "name": "name_normalize",
+            "description": "Normalize a table name.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "fieldname_change": {
+            "name": "fieldname_change",
+            "description": "Change the names of fields in a table without restructuring the table.",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                },
+                {
+                    "name": "fieldnames_old",
+                    "type": "C"
+                },
+                {
+                    "name": "fieldnames_new",
+                    "type": "C"
+                }
+            ]
+        },
+        "keylist_exclude": {
+            "name": "keylist_exclude",
+            "description": "Returns a list of key values to exclude for the result fieldname - not including the current record.",
+            "arguments": [
+                {
+                    "name": "fieldname",
+                    "type": "C"
+                },
+                {
+                    "name": "unique_expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "row_position_override_add": {
+            "name": "row_position_override_add",
+            "description": "Sets override for presented row state position(s).",
+            "arguments": [
+                {
+                    "name": "row_state",
+                    "type": "C"
+                },
+                {
+                    "name": "relative_row_states",
+                    "type": "C"
+                }
+            ]
+        },
+        "row_position_override_drop": {
+            "name": "row_position_override_drop",
+            "description": "Remove one (or all) row state position overrides from a table.",
+            "arguments": [
+                {
+                    "name": "row_state",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "row_state_unmark": {
+            "name": "row_state_unmark",
+            "description": "Unmark all the rows in the list.",
+            "arguments": [
+                {
+                    "name": "row_states",
+                    "type": "C"
+                }
+            ]
+        },
+        "row_state_mark": {
+            "name": "row_state_mark",
+            "description": "Mark all the rows in the list.",
+            "arguments": [
+                {
+                    "name": "row_states",
+                    "type": "C"
+                }
+            ]
+        },
+        "row_state_delete": {
+            "name": "row_state_delete",
+            "description": "Delete all the rows in the list.",
+            "arguments": [
+                {
+                    "name": "row_states",
+                    "type": "C"
+                }
+            ]
+        },
+        "relation_link_manual": {
+            "name": "relation_link_manual",
+            "description": "Turn the automatic refresh of links off.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "relation_link_automatic": {
+            "name": "relation_link_automatic",
+            "description": "Turn the automatic refresh of links back on.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "relation_link_query_info": {
+            "name": "relation_link_query_info",
+            "description": "Get relation query info - O-rder F-ilter X-flags.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "relation_partitions": {
+            "name": "relation_partitions",
+            "description": "Return all the partitions in a manually partitioned set."
+        },
+        "populate_from_string": {
+            "name": "populate_from_string",
+            "description": "Populate a table from a string.",
+            "arguments": [
+                {
+                    "name": "record_format",
+                    "type": "C"
+                },
+                {
+                    "name": "record_sep",
+                    "type": "C"
+                },
+                {
+                    "name": "record_data",
+                    "type": "C"
+                }
+            ]
+        },
+        "extended_interface": {
+            "name": "extended_interface",
+            "description": "Get pointer to properties and methods specfic to the table (internals)."
+        },
+        "mapper_create": {
+            "name": "mapper_create",
+            "description": "Create a mapping table.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "mapping"
+                },
+                {
+                    "name": "tbl",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "mapper_change": {
+            "name": "mapper_change",
+            "description": "Change a mapping tables field maps (keeps same structure of table).",
+            "arguments": [
+                {
+                    "name": "mapping"
+                },
+                {
+                    "name": "tbl",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "backend_create": {
+            "name": "backend_create",
+            "description": "Create a backend table (with optional provided cache - which can be provided later by the backend_cache_change).",
+            "arguments": [
+                {
+                    "name": "unqiue_key"
+                },
+                {
+                    "name": "page_size",
+                    "optional": true
+                },
+                {
+                    "name": "tbl",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "backend_cache_change": {
+            "name": "backend_cache_change",
+            "description": "Change the backend table for a created backend.",
+            "arguments": [
+                {
+                    "name": "tbl",
+                    "type": "P"
+                }
+            ]
+        },
+        "context": {
+            "name": "context",
+            "description": "Get any context information for the table as it was opened."
+        },
+        "populate_grid": {
+            "name": "populate_grid",
+            "description": "Populate via arrays a grid - use $row$ and $column$ as placeholders for the row/column index.\r\nB - don't resize the array to be bigger\r\nS - don't resize the array to be smaller\r\nF - fill (letover) empty fields in array with blanks\r\nD - include the deleted/marked/unmarked psuedofield in the list of fields (as field #1)\r\nR+# - start rows at +# position\r\nC+# - start column at +# position",
+            "arguments": [
+                {
+                    "name": "expression_template"
+                },
+                {
+                    "name": "start_row_state",
+                    "optional": true
+                },
+                {
+                    "name": "end_row_state",
+                    "optional": true
+                },
+                {
+                    "name": "flags",
+                    "optional": true
+                },
+                {
+                    "name": "variable_frame",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "table_restructure": {
+            "name": "table_restructure",
+            "description": "field_definitions is a cr-lf delimited list of <fieldname>,<type>,<width>,<dec>.\r\n",
+            "arguments": [
+                {
+                    "name": "field_definitions",
+                    "type": "C"
+                }
+            ]
+        },
+        "table_create": {
+            "name": "table_create",
+            "description": "field_definitions is a cr-lf delimited list of <fieldname>,<type>,<width>,<dec>.\r\n",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                },
+                {
+                    "name": "field_definitions",
+                    "type": "C"
+                }
+            ]
+        },
+        "paged_records_create": {
+            "name": "paged_records_create",
+            "description": "Adds a number of paged records to a table.",
+            "arguments": [
+                {
+                    "name": "records",
+                    "type": "N"
+                }
+            ]
+        },
+        "extra_info": {
+            "name": "extra_info",
+            "description": "Gets raw extra information embedded in a DBF header.",
+            "arguments": [
+                {
+                    "name": "records",
+                    "type": "N"
+                }
+            ]
+        },
+        "memo_check": {
+            "name": "memo_check",
+            "description": "Validate the structure of a memo file flags (v-alidate,f-ilemapping,fs-file mapping with sample,r=# - start at record).",
+            "arguments": [
+                {
+                    "name": "options"
+                },
+                {
+                    "name": "Repair",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "enum_open": {
+            "name": "enum_open",
+            "description": "Enumerate all open tables.",
+            "arguments": [
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "enum_session_open": {
+            "name": "enum_session_open",
+            "description": "Enumerate all open tables in the current session.",
+            "arguments": [
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "field_space_usage": {
+            "name": "field_space_usage",
+            "description": "Visits all records and dumps field name + space used."
+        },
+        "generate_sample_definition": {
+            "name": "generate_sample_definition",
+            "description": "Generates samples for records in the format of <fullname> = <value expression>."
+        },
+        "suggest": {
+            "name": "suggest",
+            "description": "Suggest a list of possible values given a sample value (to drive auto-complete).",
+            "arguments": [
+                {
+                    "name": "expr",
+                    "type": "c"
+                },
+                {
+                    "name": "value",
+                    "type": "c"
+                },
+                {
+                    "name": "limit",
+                    "type": "n"
+                },
+                {
+                    "name": "moreText",
+                    "type": "c"
+                },
+                {
+                    "name": "filter",
+                    "type": "c"
+                }
+            ]
+        },
+        "external_suggest": {
+            "name": "external_suggest",
+            "description": "Suggest a list of possible values given a sample value (to drive auto-complete).",
+            "arguments": [
+                {
+                    "name": "tableOrSet",
+                    "type": "c"
+                },
+                {
+                    "name": "expr",
+                    "type": "c"
+                },
+                {
+                    "name": "value",
+                    "type": "c"
+                },
+                {
+                    "name": "limit",
+                    "type": "n"
+                },
+                {
+                    "name": "moreText",
+                    "type": "c"
+                },
+                {
+                    "name": "filter",
+                    "type": "c"
+                }
+            ]
+        },
+        "to_sql_expression": {
+            "name": "to_sql_expression",
+            "description": "If convertable to a SQL level expression, return than expression.",
+            "arguments": [
+                {
+                    "name": "expr",
+                    "type": "c"
+                }
+            ]
+        },
+        "to_sql_columns_format": {
+            "name": "to_sql_columns_format",
+            "description": "Extract SQL field references + a format transform expression.",
+            "arguments": [
+                {
+                    "name": "expr",
+                    "type": "c"
+                }
+            ]
+        },
+        "to_sql_order": {
+            "name": "to_sql_order",
+            "description": "If expression can be converted in whole OR partically to a SQL filter, return the SQL portion, or both portions if a separator is provided.",
+            "arguments": [
+                {
+                    "name": "xpr",
+                    "type": "c"
+                },
+                {
+                    "name": "sep",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "to_sql_filter": {
+            "name": "to_sql_filter",
+            "description": "If expression can be converted in whole OR partically to a SQL order, return the SQL portion, or both portions if a separator is provided.",
+            "arguments": [
+                {
+                    "name": "xpr",
+                    "type": "c"
+                },
+                {
+                    "name": "sep",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "external_to_sql_expression": {
+            "name": "external_to_sql_expression",
+            "description": "If convertable to a SQL level expression, return than expression.",
+            "arguments": [
+                {
+                    "name": "columnNameMap",
+                    "type": "c"
+                },
+                {
+                    "name": "expr",
+                    "type": "c"
+                }
+            ]
+        },
+        "external_to_sql_columns_format": {
+            "name": "external_to_sql_columns_format",
+            "description": "Extract SQL field references + a format transform expression.",
+            "arguments": [
+                {
+                    "name": "columnNameMap",
+                    "type": "c"
+                },
+                {
+                    "name": "expr",
+                    "type": "c"
+                }
+            ]
+        },
+        "external_to_sql_order": {
+            "name": "external_to_sql_order",
+            "description": "If expression can be converted in whole OR partically to a SQL filter, return the SQL portion, or both portions if a separator is provided.",
+            "arguments": [
+                {
+                    "name": "columnNameMap",
+                    "type": "c"
+                },
+                {
+                    "name": "xpr",
+                    "type": "c"
+                },
+                {
+                    "name": "sep",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "external_to_sql_filter": {
+            "name": "external_to_sql_filter",
+            "description": "If expression can be converted in whole OR partically to a SQL order, return the SQL portion, or both portions if a separator is provided.",
+            "arguments": [
+                {
+                    "name": "columnNameMap",
+                    "type": "c"
+                },
+                {
+                    "name": "xpr",
+                    "type": "c"
+                },
+                {
+                    "name": "sep",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "sql_fetch_behind": {
+            "name": "sql_fetch_behind",
+            "description": "Start populating table (if not already populated) returns .t. if already populated.",
+            "arguments": [
+                {
+                    "name": "position",
+                    "type": "n"
+                },
+                {
+                    "name": "flags",
+                    "type": "c"
+                },
+                {
+                    "name": "onComplete",
+                    "type": "c"
+                },
+                {
+                    "name": "onAbort",
+                    "type": "c"
+                }
+            ]
+        },
+        "sql_fetch_cutoff": {
+            "name": "sql_fetch_cutoff",
+            "description": "Return the number of records that have already been fetched for the table."
+        },
+        "background_locate": {
+            "name": "background_locate",
+            "description": "Search sequentially through a table (by record order) for record that matches criteria.",
+            "arguments": [
+                {
+                    "name": "expr",
+                    "type": "c"
+                },
+                {
+                    "name": "flags",
+                    "type": "c"
+                },
+                {
+                    "name": "onComplete",
+                    "type": "c"
+                },
+                {
+                    "name": "onAbort",
+                    "type": "c"
+                },
+                {
+                    "name": "statusMessage",
+                    "type": "c"
+                }
+            ]
+        },
+        "background_locate_busy": {
+            "name": "background_locate_busy",
+            "description": "Returns true if locate is still going on.",
+            "arguments": [
+                {
+                    "name": "expr",
+                    "type": "c"
+                }
+            ]
+        },
+        "background_locate_result": {
+            "name": "background_locate_result",
+            "description": "Returns the locate record number result (0 if not found or busy).",
+            "arguments": [
+                {
+                    "name": "expr",
+                    "type": "c"
+                }
+            ]
+        },
+        "external_eval_typeof": {
+            "name": "external_eval_typeof",
+            "description": "Returns 'sample' data given a column map (to glean type and size information).",
+            "arguments": [
+                {
+                    "name": "columnDefinitions",
+                    "type": "c"
+                },
+                {
+                    "name": "expr",
+                    "type": "c"
+                }
+            ]
+        },
+        "mapping_list_get": {
+            "name": "mapping_list_get",
+            "description": "For a low level table representing multiple logic table, get the multiple table definitions."
+        },
+        "ui_enabled": {
+            "name": "ui_enabled",
+            "description": "Returns if UI enabled flag is set for the table, setting topMost means ignore ui_disable blocks.",
+            "arguments": [
+                {
+                    "name": "topMost"
+                }
+            ]
+        },
+        "ui_enabled_set": {
+            "name": "ui_enabled_set",
+            "description": "Set the top ui enabled flag.",
+            "arguments": [
+                {
+                    "name": "enabled"
+                }
+            ]
+        },
+        "ui_disable_begin": {
+            "name": "ui_disable_begin",
+            "description": "Disable UI for table for operation within block."
+        },
+        "ui_disable_end": {
+            "name": "ui_disable_end",
+            "description": "End a disabled UI block."
+        },
+        "get_cursor": {
+            "name": "get_cursor",
+            "description": "Returns 'cursor' for table (keeps own position)."
+        },
+        "get_navigation": {
+            "name": "get_navigation",
+            "description": "Returns a named navigation object bound to the table.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "c"
+                }
+            ]
+        },
+        "has_navigation": {
+            "name": "has_navigation",
+            "description": "Returns if the named navigation object exists for a table.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "c"
+                }
+            ]
+        },
+        "enum_navigation": {
+            "name": "enum_navigation",
+            "description": "Returns the navigation objects attached to the table (N=name,V=viewport size,I=child#,T=tablename which shows children too)).",
+            "arguments": [
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "nextrow": {
+            "name": "nextrow",
+            "description": "Get the first or next row - return true if the row was found."
+        },
+        "Data": {
+            "name": "Data",
+            "description": "Get data for a named field.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "c"
+                }
+            ]
+        },
+        "column_order": {
+            "name": "column_order",
+            "description": "Return 'A', 'D' or '' for column order status.",
+            "arguments": [
+                {
+                    "name": "columnName",
+                    "type": "c"
+                }
+            ]
+        },
+        "dataentry_get": {
+            "name": "dataentry_get",
+            "description": "Returns a field rules 'data entry object' for table."
+        },
+        "validate_record": {
+            "name": "validate_record",
+            "description": "Returns field rule validation of the current record - format has placeholders $(field), $(error) and  $(errorhtml).",
+            "arguments": [
+                {
+                    "name": "format",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "change_record": {
+            "name": "change_record",
+            "description": "Change current record, honoring field rules, returns an error object - record not changed if any errors occurred.",
+            "arguments": [
+                {
+                    "name": "fieldValues",
+                    "type": "p"
+                }
+            ]
+        },
+        "enter_record": {
+            "name": "enter_record",
+            "description": "Enter a new record, honoring field rules, returns an error object - record not changed if any errors occurred.",
+            "arguments": [
+                {
+                    "name": "fieldValues",
+                    "type": "p"
+                }
+            ]
+        },
+        "delete_record": {
+            "name": "delete_record",
+            "description": "Delete current record, honoring field rules, returns an error object - record not deleted if any errors occurred."
+        },
+        "get_record": {
+            "name": "get_record",
+            "description": "Populate field values with record content.",
+            "arguments": [
+                {
+                    "name": "fieldValues",
+                    "type": "p"
+                }
+            ]
+        },
+        "sql_open_arguments": {
+            "name": "sql_open_arguments",
+            "description": "Get open arguments for an open active link table.",
+            "arguments": [
+                {
+                    "name": "fieldValues",
+                    "type": "p"
+                }
+            ]
+        },
+        "activeLink": {
+            "name": "activeLink",
+            "description": "Retrieves active link automation api - (always returns an api - for non-activelink tables, returns appropriate values)."
+        },
+        "record_identity": {
+            "name": "record_identity",
+            "description": "Express the current record as a filter expression (based on key expression), if no expression passed, uses default record identity (based on definition of table).",
+            "arguments": [
+                {
+                    "name": "expression",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "invoke_event": {
+            "name": "invoke_event",
+            "description": "Invoke a low-level field rule record event (i.e. enter,change,mark,unmark,delete, canenter, canchange etc).",
+            "arguments": [
+                {
+                    "name": "eventType",
+                    "type": "c"
+                }
+            ]
+        },
+        "sql_open": {
+            "name": "sql_open",
+            "description": "Open a just-in-time SQL as a table.",
+            "arguments": [
+                {
+                    "name": "connection",
+                    "type": "C"
+                },
+                {
+                    "name": "selectStatement"
+                },
+                {
+                    "name": "portable",
+                    "optional": true
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "overrideDefinitions",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "sql_named_open": {
+            "name": "sql_named_open",
+            "description": "Open a just-in-time named SQL as a table.",
+            "arguments": [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "overrideDefinitions",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "sql_reset": {
+            "name": "sql_reset",
+            "description": "Open a just-in-time SQL as the primary table.",
+            "arguments": [
+                {
+                    "name": "connection",
+                    "type": "C"
+                },
+                {
+                    "name": "selectStatement"
+                },
+                {
+                    "name": "portable",
+                    "optional": true
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "overrideDefinitions",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "sql_named_reset": {
+            "name": "sql_named_reset",
+            "description": "Open a just-in-time named SQL as the primary table.",
+            "arguments": [
+                {
+                    "name": "named"
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "dictionary",
+                    "optional": true
+                },
+                {
+                    "name": "overrideDefinitions",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "flush_indexes": {
+            "name": "flush_indexes",
+            "description": "Force indexes to be reloaded."
+        },
+        "define_extra_fields": {
+            "name": "define_extra_fields",
+            "description": "Define mapping of crlf delimited (flatname|field name|json path).",
+            "arguments": [
+                {
+                    "name": "fields"
+                }
+            ]
+        },
+        "get_extra_fields": {
+            "name": "get_extra_fields",
+            "description": "Get the extra JSON fields associated with the table."
+        },
+        "pending_query_order": {
+            "name": "pending_query_order"
+        },
+        "recno_list_create": {
+            "name": "recno_list_create"
+        },
+        "recno_list_destroy": {
+            "name": "recno_list_destroy"
+        },
+        "recno_list": {
+            "name": "recno_list"
+        },
+        "tojson": {
+            "name": "tojson"
+        }
+    }
+}

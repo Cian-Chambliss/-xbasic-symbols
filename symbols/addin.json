@@ -1,0 +1,752 @@
+{
+    "__name__": "addin",
+    "__functions__": {
+        "class": {
+            "name": "class",
+            "description": "Get the class name."
+        },
+        "create": {
+            "name": "create",
+            "description": "Create (or find/replace) an addin.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_context": {
+            "name": "set_context",
+            "description": "Set the context to apply commands to (starts with default inherited).",
+            "arguments": [
+                {
+                    "name": "menu_context",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_menu": {
+            "name": "set_menu",
+            "description": "Sets the menu + where to place the menu.",
+            "arguments": [
+                {
+                    "name": "menu_entry",
+                    "type": "C"
+                },
+                {
+                    "name": "prompt",
+                    "type": "C"
+                },
+                {
+                    "name": "position",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_menu_description": {
+            "name": "set_menu_description",
+            "description": "Sets the menu description.",
+            "arguments": [
+                {
+                    "name": "menu_description",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_menu_items": {
+            "name": "set_menu_items",
+            "description": "Set many menu items at once - useful for menu branches that are exclusively addin.",
+            "arguments": [
+                {
+                    "name": "menu_context",
+                    "type": "C"
+                },
+                {
+                    "name": "position",
+                    "type": "C"
+                },
+                {
+                    "name": "submenu",
+                    "type": "C"
+                },
+                {
+                    "name": "menu_data",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_code": {
+            "name": "set_code",
+            "description": "Set the code template (xbasic to run at menu command).",
+            "arguments": [
+                {
+                    "name": "code_template",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_conditional": {
+            "name": "set_conditional",
+            "description": "Set the expression to enable/disable the command.",
+            "arguments": [
+                {
+                    "name": "condition_template",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_check": {
+            "name": "set_check",
+            "description": "Set the expression to check/uncheck the command.",
+            "arguments": [
+                {
+                    "name": "check_template",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_follow": {
+            "name": "set_follow",
+            "description": "Set template to generate recorder high-level commands.",
+            "arguments": [
+                {
+                    "name": "code",
+                    "type": "C"
+                }
+            ]
+        },
+        "execute": {
+            "name": "execute",
+            "description": "Cause a registered command to execute.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "menu_context",
+                    "type": "C"
+                }
+            ]
+        },
+        "add_action": {
+            "name": "add_action",
+            "description": "Add an action entry.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "description",
+                    "type": "C"
+                },
+                {
+                    "name": "bitmap"
+                },
+                {
+                    "name": "catagories",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "add_action_generate": {
+            "name": "add_action_generate",
+            "description": "Add an action generation script.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "generate",
+                    "type": "C"
+                }
+            ]
+        },
+        "add_action_initialize": {
+            "name": "add_action_initialize",
+            "description": "Add an action generation script.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "initialize",
+                    "type": "C"
+                }
+            ]
+        },
+        "add_action_defaults": {
+            "name": "add_action_defaults",
+            "description": "Add an action generation script.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "new",
+                    "type": "C"
+                }
+            ]
+        },
+        "add_action_pane": {
+            "name": "add_action_pane",
+            "description": "Add a pane to the action editor (new custom or existing standard).",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "title"
+                },
+                {
+                    "name": "dialog",
+                    "optional": true
+                },
+                {
+                    "name": "Code",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "toolbar_bitmap": {
+            "name": "toolbar_bitmap",
+            "description": "Set toolbar bitmap to use for command.",
+            "arguments": [
+                {
+                    "name": "name"
+                },
+                {
+                    "name": "On",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "toolbar_tips": {
+            "name": "toolbar_tips",
+            "description": "Set toolbar tooltips for command.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "toolbar_add": {
+            "name": "toolbar_add",
+            "description": "Add item to toolbar.",
+            "arguments": [
+                {
+                    "name": "toolbar"
+                },
+                {
+                    "name": "pos|C",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "quickkey_set": {
+            "name": "quickkey_set",
+            "description": "Set quickkey for menu item.",
+            "arguments": [
+                {
+                    "name": "key",
+                    "type": "C"
+                }
+            ]
+        },
+        "variables": {
+            "name": "variables",
+            "description": "Returns reference to the addin variable frame."
+        },
+        "session_variables": {
+            "name": "session_variables",
+            "description": "Returns session variables for addins.",
+            "arguments": [
+                {
+                    "name": "session_handle",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "run": {
+            "name": "run",
+            "description": "Runs a script from the addins library - used for overlay scripts, optional session handle allows specification of a different session.",
+            "arguments": [
+                {
+                    "name": "Addin_Script"
+                },
+                {
+                    "name": "session_handle",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "run_local": {
+            "name": "run_local",
+            "description": "Runs a script from the addins library, using the local variable stack.",
+            "arguments": [
+                {
+                    "name": "Addin_Script"
+                },
+                {
+                    "name": "session_handle",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "load_compiled": {
+            "name": "load_compiled",
+            "description": "Creates a pointer to some compiled addin script code.",
+            "arguments": [
+                {
+                    "name": "Addin_Script",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_flyover_arrive": {
+            "name": "set_flyover_arrive",
+            "description": "Set the flyover arrive template (xbasic to run on highlight of toolbar).",
+            "arguments": [
+                {
+                    "name": "flyover_arrive_template",
+                    "type": "C"
+                }
+            ]
+        },
+        "set_flyover_leave": {
+            "name": "set_flyover_leave",
+            "description": "Set the flyover leave template (xbasic to cleanup highlight of toolbar).",
+            "arguments": [
+                {
+                    "name": "flyover_leave_template",
+                    "type": "C"
+                }
+            ]
+        },
+        "script_enum": {
+            "name": "script_enum",
+            "description": "Enumerates Addin scripts for us (with optional prefix to filter scripts).",
+            "arguments": [
+                {
+                    "name": "Prefix",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "udf_enum": {
+            "name": "udf_enum",
+            "description": "Enumerates Addin udfs for us (with optional prefix to filter functions).",
+            "arguments": [
+                {
+                    "name": "Prefix",
+                    "optional": true
+                },
+                {
+                    "name": "slot",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "class_enum": {
+            "name": "class_enum",
+            "description": "Enumerates Addin class.",
+            "arguments": [
+                {
+                    "name": "Prefix",
+                    "optional": true
+                },
+                {
+                    "name": "slot",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "system_constant_add": {
+            "name": "system_constant_add",
+            "description": "Create a system constant (visible to all) - returns TRUE is succeeded in setting.",
+            "arguments": [
+                {
+                    "name": "Name",
+                    "type": "C"
+                },
+                {
+                    "name": "Value",
+                    "type": "A"
+                }
+            ]
+        },
+        "script_load": {
+            "name": "script_load",
+            "description": "Load an addin script (if not password protected - or not initialized).",
+            "arguments": [
+                {
+                    "name": "Script",
+                    "type": "C"
+                }
+            ]
+        },
+        "script_save": {
+            "name": "script_save",
+            "description": "Save an addin script.",
+            "arguments": [
+                {
+                    "name": "Script",
+                    "type": "C"
+                },
+                {
+                    "name": "script_code"
+                },
+                {
+                    "name": "password",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "script_drop": {
+            "name": "script_drop",
+            "description": "Drop an addin script.",
+            "arguments": [
+                {
+                    "name": "Script"
+                },
+                {
+                    "name": "password",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "script_rename": {
+            "name": "script_rename",
+            "description": "Rename an addin script.",
+            "arguments": [
+                {
+                    "name": "Script",
+                    "type": "C"
+                },
+                {
+                    "name": "NewName"
+                },
+                {
+                    "name": "password",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "function_argument_help": {
+            "name": "function_argument_help",
+            "description": "Provides syntax help for defining function arguments.",
+            "arguments": [
+                {
+                    "name": "arghelp_argument",
+                    "type": "C"
+                },
+                {
+                    "name": "arghelp_description",
+                    "type": "C"
+                },
+                {
+                    "name": "arghelp_expression",
+                    "type": "C"
+                },
+                {
+                    "name": "arghelp_flags",
+                    "type": "C"
+                },
+                {
+                    "name": "arghelp_format",
+                    "type": "C"
+                }
+            ]
+        },
+        "function_argument_help_init": {
+            "name": "function_argument_help_init",
+            "description": "Initialize syntax help for addin functions."
+        },
+        "html_autohelp_init": {
+            "name": "html_autohelp_init",
+            "description": "Initialize syntax help for HTML."
+        },
+        "property_help": {
+            "name": "property_help",
+            "description": "Provides context help for assigning values to properties.",
+            "arguments": [
+                {
+                    "name": "propertyhelp_argument",
+                    "type": "C"
+                },
+                {
+                    "name": "propertyhelp_description",
+                    "type": "C"
+                },
+                {
+                    "name": "propertyhelp_expression",
+                    "type": "C"
+                },
+                {
+                    "name": "propertyhelp_flags",
+                    "type": "C"
+                },
+                {
+                    "name": "propertyhelp_format",
+                    "type": "C"
+                }
+            ]
+        },
+        "function_argument_help_reset": {
+            "name": "function_argument_help_reset",
+            "description": "Re-initialize all argument help."
+        },
+        "html_tag_add": {
+            "name": "html_tag_add",
+            "description": "Add and HTML tag for autocompletion, attributes in order they should appear by default.\n Flags supported:U\tUnpaired tag (no endtag).\nL\ttag/endtag on separate lines.\nI\tindent contents of tag.\nA\tCarat place After tag.\nC\tAdd a comment inside the tag.\n",
+            "arguments": [
+                {
+                    "name": "HTMLTag",
+                    "type": "C"
+                },
+                {
+                    "name": "Description",
+                    "type": "C"
+                },
+                {
+                    "name": "flags",
+                    "type": "C"
+                },
+                {
+                    "name": "attributes",
+                    "type": "C"
+                }
+            ]
+        },
+        "html_attribute_add": {
+            "name": "html_attribute_add",
+            "description": "Add an html editor with a handler for returning attributes.",
+            "arguments": [
+                {
+                    "name": "HTMLAttribute",
+                    "type": "C"
+                },
+                {
+                    "name": "Description"
+                },
+                {
+                    "name": "flags",
+                    "optional": true
+                },
+                {
+                    "name": "attributeSettings",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "html_style_element_add": {
+            "name": "html_style_element_add",
+            "description": "Add an html editor with a handler for returning elements of a css style.",
+            "arguments": [
+                {
+                    "name": "HTMLAttribute",
+                    "type": "C"
+                },
+                {
+                    "name": "Description"
+                },
+                {
+                    "name": "flags",
+                    "optional": true
+                },
+                {
+                    "name": "elementSettings",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "html_style_rule_add": {
+            "name": "html_style_rule_add",
+            "description": "Add a handler to normalize an html style.",
+            "arguments": [
+                {
+                    "name": "HTMLAttribute",
+                    "type": "C"
+                },
+                {
+                    "name": "NormalAttribute",
+                    "type": "C"
+                },
+                {
+                    "name": "pattern",
+                    "type": "C"
+                }
+            ]
+        },
+        "html_setting": {
+            "name": "html_setting",
+            "description": "Set an html setting (or return a setting, of list of settings).",
+            "arguments": [
+                {
+                    "name": "setting",
+                    "optional": true,
+                    "type": "C"
+                },
+                {
+                    "name": "Value",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "html_reset": {
+            "name": "html_reset",
+            "description": "Clears HTML tags & attributes."
+        },
+        "system_calc_add": {
+            "name": "system_calc_add",
+            "description": "Adds a system level calculated field.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "Expression"
+                },
+                {
+                    "name": "width",
+                    "optional": true
+                },
+                {
+                    "name": "decimal",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "menu_definition_modify": {
+            "name": "menu_definition_modify",
+            "description": "Modify the Menu Definition to include addins.",
+            "arguments": [
+                {
+                    "name": "menu_definition",
+                    "type": "C"
+                },
+                {
+                    "name": "menu_context",
+                    "type": "C"
+                }
+            ]
+        },
+        "startup_log_write": {
+            "name": "startup_log_write",
+            "description": "Write text to the startup log (if logging).",
+            "arguments": [
+                {
+                    "name": "text",
+                    "type": "C"
+                }
+            ]
+        },
+        "startup_log_enabled": {
+            "name": "startup_log_enabled",
+            "description": "Returns true if startup logging is enabled."
+        },
+        "startup_log_indent": {
+            "name": "startup_log_indent",
+            "description": "Relatively adjust (+/-) the indentation by an amount, returns current indentation.",
+            "arguments": [
+                {
+                    "name": "indentAmount",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "startup_log_complete": {
+            "name": "startup_log_complete",
+            "description": "Disables further startup logging."
+        },
+        "schedule_set": {
+            "name": "schedule_set",
+            "description": "Set the time for a scheduled script or function call (function calls done if parameters are included) - If 'more' flag is set, then multuple times can be scheduled.",
+            "arguments": [
+                {
+                    "name": "addinScript",
+                    "type": "C"
+                },
+                {
+                    "name": "time"
+                },
+                {
+                    "name": "more",
+                    "optional": true,
+                    "type": "l"
+                }
+            ]
+        },
+        "schedule_drop": {
+            "name": "schedule_drop",
+            "description": "Drop an addin script(s) from the schedule.",
+            "arguments": [
+                {
+                    "name": "addinScript",
+                    "type": "C"
+                }
+            ]
+        },
+        "schedule_dump": {
+            "name": "schedule_dump",
+            "description": "Dump scheduled system scripts + times."
+        },
+        "internal_commandname_get": {
+            "name": "internal_commandname_get"
+        },
+        "internal_menu_exec": {
+            "name": "internal_menu_exec"
+        },
+        "internal_menu_contexts": {
+            "name": "internal_menu_contexts"
+        },
+        "internal_names": {
+            "name": "internal_names"
+        },
+        "script_exist": {
+            "name": "script_exist",
+            "description": "Returns true if a script of name exists in addins.",
+            "arguments": [
+                {
+                    "name": "Addin_Script?",
+                    "type": "C"
+                }
+            ]
+        },
+        "metadata_get": {
+            "name": "metadata_get",
+            "description": "Returns metadata stored in addins.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        }
+    }
+}

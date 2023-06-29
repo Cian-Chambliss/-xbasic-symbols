@@ -1,0 +1,992 @@
+{
+    "__name__": "a5",
+    "__functions__": {
+        "Restore": {
+            "name": "Restore",
+            "description": "Restores the main Alpha Five program window."
+        },
+        "Minimize": {
+            "name": "Minimize",
+            "description": "Minimizes the main Alpha Five program window."
+        },
+        "Maximize": {
+            "name": "Maximize",
+            "description": "Maximizes the main Alpha Five program window."
+        },
+        "Hide": {
+            "name": "Hide",
+            "description": "Hides the main Alpha Five program window."
+        },
+        "Show": {
+            "name": "Show",
+            "description": "Shows the main Alpha Five program window."
+        },
+        "Size_Get": {
+            "name": "Size_Get",
+            "description": "Gets window size (\"Mimimized\",\"Maximized\" or \"<width>x<<height>\")."
+        },
+        "Enable": {
+            "name": "Enable",
+            "description": "Enables the main Alpha Five program window."
+        },
+        "Disable": {
+            "name": "Disable",
+            "description": "Disables the main Alpha Five program window."
+        },
+        "Close": {
+            "name": "Close",
+            "description": "Closes the main Alpha Five program window.",
+            "arguments": [
+                {
+                    "name": "no_check",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Load": {
+            "name": "Load",
+            "description": "Load a main Alpha Five program.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "Style",
+                    "optional": true
+                },
+                {
+                    "name": "windowname",
+                    "optional": true
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Load_Low": {
+            "name": "Load_Low",
+            "description": "Low level main Alpha Five program load.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "Style",
+                    "optional": true
+                },
+                {
+                    "name": "windowname",
+                    "optional": true
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "EventArgs",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Active": {
+            "name": "Active",
+            "description": "Returns the name of the control that has focus.",
+            "arguments": [
+                {
+                    "name": "fullname",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Active_Drilldown": {
+            "name": "Active_Drilldown",
+            "description": "Returns the name of the deepest control that has focus.",
+            "arguments": [
+                {
+                    "name": "force_active_children",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Table_Get": {
+            "name": "Table_Get",
+            "description": "Get the table associated with an object."
+        },
+        "Name": {
+            "name": "Name",
+            "description": "Returns the name of the A5 object (I.e. \"A5\").",
+            "arguments": [
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Children": {
+            "name": "Children",
+            "description": "Returns the number of objects contained by the object."
+        },
+        "Child": {
+            "name": "Child",
+            "description": "Returns a pointer to the specified child object contained by the object.",
+            "arguments": [
+                {
+                    "name": "num",
+                    "type": "N"
+                }
+            ]
+        },
+        "Class": {
+            "name": "Class",
+            "description": "Returns the class of the object."
+        },
+        "KindOf": {
+            "name": "KindOf",
+            "description": "Returns the kind of object."
+        },
+        "Eval": {
+            "name": "Eval",
+            "description": "Evaluate an expression in the context of an object.",
+            "arguments": [
+                {
+                    "name": "expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "Reference_Expression_Get": {
+            "name": "Reference_Expression_Get",
+            "description": "Return the reference expression to reconstruct a reference to the object."
+        },
+        "Transaction_Counter": {
+            "name": "Transaction_Counter",
+            "description": "Returns event transaction count (all for an object if unspecified, else specific flags).",
+            "arguments": [
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Has_Method": {
+            "name": "Has_Method",
+            "description": "Returns True if the A5 object has the specified method.",
+            "arguments": [
+                {
+                    "name": "method_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Type": {
+            "name": "Type"
+        },
+        "SessionHandle": {
+            "name": "SessionHandle",
+            "description": "Returns the session handle of the main Alpha Five program window."
+        },
+        "Variables": {
+            "name": "Variables",
+            "description": "Returns a pointer to the variables defined at the A5 level - optional flag for 'local,shared and global'.",
+            "arguments": [
+                {
+                    "name": "variable_frame_context",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Get_Path": {
+            "name": "Get_Path",
+            "description": "Returns the path of the current database (.adb file)."
+        },
+        "Get_Master_Path": {
+            "name": "Get_Master_Path",
+            "description": "Returns the path of the Master database, or null if current database is not Network Optimized."
+        },
+        "Get_Master_Name": {
+            "name": "Get_Master_Name",
+            "description": "Returns the Master database, or null if current database is not Network Optimized."
+        },
+        "Get_Shared_Path": {
+            "name": "Get_Shared_Path",
+            "description": "Returns the current Shared path."
+        },
+        "Get_Private_Path": {
+            "name": "Get_Private_Path",
+            "description": "Returns the current Private path."
+        },
+        "Get_Exe_Path": {
+            "name": "Get_Exe_Path",
+            "description": "Returns the path in which the main <+PRODUCT_NAME-> executable is stored."
+        },
+        "Get_Exe_Name": {
+            "name": "Get_Exe_Name",
+            "description": "Returns the name of the running executable."
+        },
+        "Compact": {
+            "name": "Compact",
+            "description": "Compresses all of the tables and dictionaries in the current database."
+        },
+        "Database_Close": {
+            "name": "Database_Close",
+            "description": "Closes the current <+PRODUCT_NAME-> database (.adb file)."
+        },
+        "Have_Permission": {
+            "name": "Have_Permission",
+            "description": ".Have_Permission(C Object,C Type,C Verb)",
+            "arguments": [
+                {
+                    "name": "Object",
+                    "type": "C"
+                },
+                {
+                    "name": "Type",
+                    "type": "C"
+                },
+                {
+                    "name": "Verb",
+                    "type": "C"
+                }
+            ]
+        },
+        "Get_Name": {
+            "name": "Get_Name",
+            "description": "Returns the filename of the current database (.adb file)."
+        },
+        "Table_Enum": {
+            "name": "Table_Enum",
+            "description": "Returns the name of the next Table in the current database.",
+            "arguments": [
+                {
+                    "name": "lastname"
+                },
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Set_Enum": {
+            "name": "Set_Enum",
+            "description": "Returns the name of the next saved Set definition.",
+            "arguments": [
+                {
+                    "name": "lastname"
+                },
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Library_Enum": {
+            "name": "Library_Enum",
+            "description": "Returns the name of the next attached Library.",
+            "arguments": [
+                {
+                    "name": "lastname"
+                },
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Form_Enum": {
+            "name": "Form_Enum",
+            "description": "Returns the name of the next saved Form layout.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Browse_Enum": {
+            "name": "Browse_Enum",
+            "description": "Returns name of next saved Browse operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Report_Enum": {
+            "name": "Report_Enum",
+            "description": "Returns the name of the next saved Report layout.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Label_Enum": {
+            "name": "Label_Enum",
+            "description": "Returns the name of the next saved Label layout.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Letter_Enum": {
+            "name": "Letter_Enum",
+            "description": "Returns the name of the next saved Letter layout.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Child_Enum": {
+            "name": "Child_Enum",
+            "description": "Return a CR-LF separated list of child objects.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true
+                },
+                {
+                    "name": "classmap",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Summarize_Enum": {
+            "name": "Summarize_Enum",
+            "description": "Returns the name of the next saved Summary operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Xtab_Enum": {
+            "name": "Xtab_Enum",
+            "description": "Returns the name of the next saved Crosstab operation in the current database.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Append_Enum": {
+            "name": "Append_Enum",
+            "description": "Returns name of next saved Append operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Copy_Enum": {
+            "name": "Copy_Enum",
+            "description": "Returns the name of the next saved Copy operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Export_Enum": {
+            "name": "Export_Enum",
+            "description": "Returns the name of the next saved Export operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Import_Enum": {
+            "name": "Import_Enum",
+            "description": "Returns the name of the next saved Import operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Join_Enum": {
+            "name": "Join_Enum",
+            "description": "Returns the name of the next saved Join operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Mark_Enum": {
+            "name": "Mark_Enum",
+            "description": "Returns the name of the next saved Mark operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Post_Enum": {
+            "name": "Post_Enum",
+            "description": "Returns the name of the next saved Post operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Update_Enum": {
+            "name": "Update_Enum",
+            "description": "Returns the name of the next saved Update operation.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Script_Enum": {
+            "name": "Script_Enum",
+            "description": "Returns the name of the next saved Global Script.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Udf_Enum": {
+            "name": "Udf_Enum",
+            "description": "Returns the name of the next saved Global Function in the current database.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Class_Enum": {
+            "name": "Class_Enum",
+            "description": "Returns the name of the next saved Global Class in the current database.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Enumeration_Enum": {
+            "name": "Enumeration_Enum",
+            "description": "Returns the name of the next saved Global Enumeration in the current database.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Menu_Enum": {
+            "name": "Menu_Enum",
+            "description": "Returns the name of the next saved Custom Menu definition.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Toolbar_Enum": {
+            "name": "Toolbar_Enum",
+            "description": "Returns the name of the next saved Custom Toolbar definition in the current database.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Bitmap_Enum": {
+            "name": "Bitmap_Enum",
+            "description": "Returns the name of the next saved Custom Bitmap in the current database.",
+            "arguments": [
+                {
+                    "name": "lastname|N",
+                    "type": "C"
+                }
+            ]
+        },
+        "Form_Location": {
+            "name": "Form_Location",
+            "description": "method",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Browse_Location": {
+            "name": "Browse_Location",
+            "description": "method",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Report_Location": {
+            "name": "Report_Location",
+            "description": "method",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Label_Location": {
+            "name": "Label_Location",
+            "description": "method",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Letter_Location": {
+            "name": "Letter_Location",
+            "description": "method",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Save_Settings": {
+            "name": "Save_Settings",
+            "description": "Saves dot variables in the <+PRODUCT_NAME-> library file or other specified library.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "settings",
+                    "type": "P"
+                }
+            ]
+        },
+        "Load_Settings": {
+            "name": "Load_Settings",
+            "description": "Loads variables from the <+PRODUCT_NAME-> library file or other specified library.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "settings",
+                    "type": "P"
+                }
+            ]
+        },
+        "Drop_Settings": {
+            "name": "Drop_Settings",
+            "description": "Delete variables from the <+PRODUCT_NAME-> library file or other specified library.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Write_Setting": {
+            "name": "Write_Setting",
+            "description": "Write a setting to the data dictionary.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                },
+                {
+                    "name": "value",
+                    "type": "A"
+                }
+            ]
+        },
+        "Read_Setting": {
+            "name": "Read_Setting",
+            "description": "Read a setting from the data dictionary.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Save_User_Colors": {
+            "name": "Save_User_Colors",
+            "description": "Saves custom color definitions.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "c"
+                },
+                {
+                    "name": "color_info",
+                    "type": "p"
+                }
+            ]
+        },
+        "Load_User_Colors": {
+            "name": "Load_User_Colors",
+            "description": "Loads custom color definitions into variables.",
+            "arguments": [
+                {
+                    "name": "name",
+                    "type": "c"
+                },
+                {
+                    "name": "color_info",
+                    "type": "p"
+                }
+            ]
+        },
+        "System_Font_Set": {
+            "name": "System_Font_Set",
+            "description": "Set a system defined font.",
+            "arguments": [
+                {
+                    "name": "systemfontname",
+                    "type": "c"
+                },
+                {
+                    "name": "font",
+                    "type": "c"
+                }
+            ]
+        },
+        "System_Fonts_Get": {
+            "name": "System_Fonts_Get",
+            "description": ".System_Fonts_Get()"
+        },
+        "System_Font_Get": {
+            "name": "System_Font_Get",
+            "description": "Get Definition for a system font.",
+            "arguments": [
+                {
+                    "name": "systemfontname",
+                    "type": "C"
+                }
+            ]
+        },
+        "System_Color_Set": {
+            "name": "System_Color_Set",
+            "description": "Set a system defined color.",
+            "arguments": [
+                {
+                    "name": "systemcolorname",
+                    "type": "c"
+                },
+                {
+                    "name": "color"
+                },
+                {
+                    "name": "refresh",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "System_Color_Get": {
+            "name": "System_Color_Get",
+            "description": "Get a system defined color.",
+            "arguments": [
+                {
+                    "name": "systemcolorname",
+                    "type": "c"
+                }
+            ]
+        },
+        "System_Mode_Set": {
+            "name": "System_Mode_Set",
+            "description": "Set a system mode (i.e. data_entry_style).",
+            "arguments": [
+                {
+                    "name": "system_mode",
+                    "type": "C"
+                },
+                {
+                    "name": "system_setting",
+                    "type": "C"
+                }
+            ]
+        },
+        "System_Mode_Get": {
+            "name": "System_Mode_Get",
+            "description": "Get a system mode.",
+            "arguments": [
+                {
+                    "name": "system_mode",
+                    "type": "C"
+                }
+            ]
+        },
+        "System_Colors_Get": {
+            "name": "System_Colors_Get",
+            "description": "Get the settable system color names."
+        },
+        "Property_Add": {
+            "name": "Property_Add",
+            "description": "Adds a property if one doesn't already exists, sets property to value.",
+            "arguments": [
+                {
+                    "name": "property"
+                },
+                {
+                    "name": "value",
+                    "optional": true,
+                    "type": "A"
+                }
+            ]
+        },
+        "Property_Drop": {
+            "name": "Property_Drop",
+            "description": "Drop property if it exists.",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Exists": {
+            "name": "Property_Exists",
+            "description": "Returns TRUE if property exists.",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Instance_Exists": {
+            "name": "Property_Instance_Exists",
+            "description": "Returns TRUE if property has been instanced for the object (not just is valid for object).",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Color_Enum": {
+            "name": "Color_Enum",
+            "description": "Returns names of colors."
+        },
+        "Font_Enum": {
+            "name": "Font_Enum",
+            "description": "Returns names of fonts.",
+            "arguments": [
+                {
+                    "name": "font_type_code",
+                    "optional": true,
+                    "type": "allow_raster|N"
+                },
+                {
+                    "name": "reloadFonts",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "FontSize_Enum": {
+            "name": "FontSize_Enum",
+            "description": "Returns sizes for a font.",
+            "arguments": [
+                {
+                    "name": "Fontname",
+                    "type": "C"
+                }
+            ]
+        },
+        "Set_Dirty": {
+            "name": "Set_Dirty",
+            "description": "Indicate that layout needs to be saved."
+        },
+        "Icon_Get": {
+            "name": "Icon_Get",
+            "description": "Get an icon."
+        },
+        "Command": {
+            "name": "Command",
+            "description": "Send a command notification to an object that excepts commands.",
+            "arguments": [
+                {
+                    "name": "command",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Repaint": {
+            "name": "Repaint",
+            "description": "force a repaint of the control or window."
+        },
+        "ZOrder": {
+            "name": "ZOrder",
+            "description": "Change the Z-Order of a window i.e. Back,Front.",
+            "arguments": [
+                {
+                    "name": "placement",
+                    "type": "C"
+                }
+            ]
+        },
+        "Activating": {
+            "name": "Activating",
+            "description": "Return name of object that is being activated (if known)."
+        },
+        "DeActivating": {
+            "name": "DeActivating",
+            "description": "Return name of object that is being deactivated (if known)."
+        },
+        "Fields_Enum": {
+            "name": "Fields_Enum",
+            "description": "Returns a list of fully qualified fields names that are used by an object (or its children).",
+            "arguments": [
+                {
+                    "name": "recurseCalcs",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Get_Field_Objects": {
+            "name": "Get_Field_Objects",
+            "description": "Returns a list of objects names under an named object that are bound to the field.",
+            "arguments": [
+                {
+                    "name": "fieldname",
+                    "type": "c"
+                }
+            ]
+        },
+        "to_xml": {
+            "name": "to_xml",
+            "description": "Save objects to xml, flags used to save element like 'Style'.",
+            "arguments": [
+                {
+                    "name": "mlElement",
+                    "type": "p"
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "from_xml": {
+            "name": "from_xml",
+            "description": "Load objects from xml, flags used to save element like 'Style'.",
+            "arguments": [
+                {
+                    "name": "mlElement",
+                    "type": "p"
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "window_position": {
+            "name": "window_position",
+            "description": "Centers a window in the client area.",
+            "arguments": [
+                {
+                    "name": "_position",
+                    "optional": true,
+                    "type": "c"
+                },
+                {
+                    "name": "y_position",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Preview_Get": {
+            "name": "Preview_Get",
+            "description": "Get preview object."
+        },
+        "Units_Get": {
+            "name": "Units_Get",
+            "description": "Get the units objects properties are expressed in."
+        },
+        "Get_Session_Path": {
+            "name": "Get_Session_Path",
+            "description": "Returns the current session path (temp folder with lifetime of session).",
+            "arguments": [
+                {
+                    "name": "SessionHandle",
+                    "optional": true,
+                    "type": "n"
+                }
+            ]
+        },
+        "code": {
+            "name": "code"
+        },
+        "event": {
+            "name": "event"
+        },
+        "tag": {
+            "name": "tag"
+        },
+        "window_title": {
+            "name": "window_title"
+        },
+        "left": {
+            "name": "left"
+        },
+        "top": {
+            "name": "top"
+        },
+        "width": {
+            "name": "width"
+        },
+        "height": {
+            "name": "height"
+        }
+    }
+}

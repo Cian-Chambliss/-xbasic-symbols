@@ -1,0 +1,520 @@
+{
+    "assemblyresolver": {
+        "__functions__": {
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "setlogger": {
+                "name": "SetLogger",
+                "description": "SetLogger",
+                "arguments": [
+                    {
+                        "name": "logger",
+                        "type": "WindowsServices::LogMessage"
+                    }
+                ]
+            },
+            "setpath": {
+                "name": "SetPath",
+                "description": "SetPath",
+                "arguments": [
+                    {
+                        "name": "binpath",
+                        "type": "C"
+                    }
+                ]
+            },
+            "usexbasicerrorlogger": {
+                "name": "UseXBasicErrorLogger",
+                "description": "UseXBasicErrorLogger"
+            }
+        },
+        "__methods__": {
+            "assemblyresolver": {
+                "name": "AssemblyResolver",
+                "description": "Public Constructor"
+            },
+            "assemblyresolver": {
+                "name": "AssemblyResolver",
+                "description": "Public Constructor"
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "AssemblyResolver"
+    },
+    "logmessage": {
+        "__functions__": {
+            "combine": {
+                "name": "Combine",
+                "description": "Combine",
+                "arguments": [
+                    {
+                        "name": "delegates",
+                        "type": "P"
+                    }
+                ]
+            },
+            "combine": {
+                "name": "Combine",
+                "description": "Combine",
+                "arguments": [
+                    {
+                        "name": "a",
+                        "type": "System::Delegate"
+                    },
+                    {
+                        "name": "b",
+                        "type": "System::Delegate"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "target",
+                        "type": "A"
+                    },
+                    {
+                        "name": "method",
+                        "type": "C"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "target",
+                        "type": "A"
+                    },
+                    {
+                        "name": "method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "ignorecase",
+                        "type": "L"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "target",
+                        "type": "A"
+                    },
+                    {
+                        "name": "method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "ignorecase",
+                        "type": "L"
+                    },
+                    {
+                        "name": "throwonbindfailure",
+                        "type": "L"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "firstargument",
+                        "type": "A"
+                    },
+                    {
+                        "name": "method",
+                        "type": "System::Reflection::MethodInfo"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "firstargument",
+                        "type": "A"
+                    },
+                    {
+                        "name": "method",
+                        "type": "System::Reflection::MethodInfo"
+                    },
+                    {
+                        "name": "throwonbindfailure",
+                        "type": "L"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "method",
+                        "type": "System::Reflection::MethodInfo"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "target",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "method",
+                        "type": "C"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "target",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "ignorecase",
+                        "type": "L"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "target",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "method",
+                        "type": "C"
+                    },
+                    {
+                        "name": "ignorecase",
+                        "type": "L"
+                    },
+                    {
+                        "name": "throwonbindfailure",
+                        "type": "L"
+                    }
+                ]
+            },
+            "createdelegate": {
+                "name": "CreateDelegate",
+                "description": "CreateDelegate",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Type"
+                    },
+                    {
+                        "name": "method",
+                        "type": "System::Reflection::MethodInfo"
+                    },
+                    {
+                        "name": "throwonbindfailure",
+                        "type": "L"
+                    }
+                ]
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "referenceequals": {
+                "name": "ReferenceEquals",
+                "description": "ReferenceEquals",
+                "arguments": [
+                    {
+                        "name": "obja",
+                        "type": "A"
+                    },
+                    {
+                        "name": "objb",
+                        "type": "A"
+                    }
+                ]
+            },
+            "remove": {
+                "name": "Remove",
+                "description": "Remove",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "System::Delegate"
+                    },
+                    {
+                        "name": "value",
+                        "type": "System::Delegate"
+                    }
+                ]
+            },
+            "removeall": {
+                "name": "RemoveAll",
+                "description": "RemoveAll",
+                "arguments": [
+                    {
+                        "name": "source",
+                        "type": "System::Delegate"
+                    },
+                    {
+                        "name": "value",
+                        "type": "System::Delegate"
+                    }
+                ]
+            }
+        },
+        "__methods__": {
+            "logmessage": {
+                "name": "LogMessage",
+                "description": "Constructor",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "A"
+                    },
+                    {
+                        "name": "method",
+                        "type": "System::IntPtr"
+                    }
+                ]
+            },
+            "logmessage": {
+                "name": "LogMessage",
+                "description": "Constructor",
+                "arguments": [
+                    {
+                        "name": "object",
+                        "type": "A"
+                    },
+                    {
+                        "name": "method",
+                        "type": "System::IntPtr"
+                    }
+                ]
+            },
+            "begininvoke": {
+                "name": "BeginInvoke",
+                "description": "BeginInvoke",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Diagnostics::TraceEventType"
+                    },
+                    {
+                        "name": "message",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assemblyloadexception",
+                        "type": "L"
+                    },
+                    {
+                        "name": "callback",
+                        "type": "System::AsyncCallback"
+                    },
+                    {
+                        "name": "object",
+                        "type": "A"
+                    }
+                ]
+            },
+            "clone": {
+                "name": "Clone",
+                "description": "Clone"
+            },
+            "dynamicinvoke": {
+                "name": "DynamicInvoke",
+                "description": "DynamicInvoke",
+                "arguments": [
+                    {
+                        "name": "args",
+                        "type": "P"
+                    }
+                ]
+            },
+            "endinvoke": {
+                "name": "EndInvoke",
+                "description": "EndInvoke",
+                "arguments": [
+                    {
+                        "name": "result",
+                        "type": "System::IAsyncResult"
+                    }
+                ]
+            },
+            "equals": {
+                "name": "Equals",
+                "description": "Equals",
+                "arguments": [
+                    {
+                        "name": "obj",
+                        "type": "A"
+                    }
+                ]
+            },
+            "gethashcode": {
+                "name": "GetHashCode",
+                "description": "GetHashCode"
+            },
+            "getinvocationlist": {
+                "name": "GetInvocationList",
+                "description": "GetInvocationList"
+            },
+            "getobjectdata": {
+                "name": "GetObjectData",
+                "description": "GetObjectData",
+                "arguments": [
+                    {
+                        "name": "info",
+                        "type": "System::Runtime::Serialization::SerializationInfo"
+                    },
+                    {
+                        "name": "context",
+                        "type": "System::Runtime::Serialization::StreamingContext"
+                    }
+                ]
+            },
+            "gettype": {
+                "name": "GetType",
+                "description": "GetType"
+            },
+            "invoke": {
+                "name": "Invoke",
+                "description": "Invoke",
+                "arguments": [
+                    {
+                        "name": "type",
+                        "type": "System::Diagnostics::TraceEventType"
+                    },
+                    {
+                        "name": "message",
+                        "type": "C"
+                    },
+                    {
+                        "name": "assemblyloadexception",
+                        "type": "L",
+                        "optional": true
+                    }
+                ]
+            },
+            "tostring": {
+                "name": "ToString",
+                "description": "ToString"
+            }
+        },
+        "__name__": "LogMessage"
+    },
+    "__name__": "WindowsServices"
+}

@@ -1,0 +1,34 @@
+{
+    "exportbuilder": {
+        "__enumeration__": [
+            "RecordSeperator",
+            "FieldSeperator",
+            "EscapeNewlinesAndTabs",
+            "DisableEscapement",
+            "StripLeadingBlanks",
+            "StripTrailingBlanks",
+            "QuoteCharacters",
+            "SuppressTrailingSeparators",
+            "TableFieldSpacing",
+            "FilterRules"
+        ],
+        "__name__": "ExportBuilder"
+    },
+    "importbuilder": {
+        "__enumeration__": [
+            "RecordSeperator",
+            "FieldSeperator",
+            "TextQualifier",
+            "EscapeNewlinesAndTabs",
+            "StripLeadingBlanks",
+            "SkipHeaderBytes",
+            "SkipHeaderLines",
+            "Overwrite",
+            "ResultExisting",
+            "FileEncoding",
+            "ExampleFilename"
+        ],
+        "__name__": "ImportBuilder"
+    },
+    "__name__": "Operations"
+}

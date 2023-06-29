@@ -41,5 +41,16 @@
     "visualstyle": "VisualStyle",
     "sql": "SQL",
     "xdialog": "XDialog",
-    "alpha5": "Alpha5"
+    "alpha5": "Alpha5",
+    "file": "file",
+    "addin": "addin",
+    "controlpanel": "controlpanel",
+    "a5": "a5",
+    "table": "table",
+    "dictionary": "dictionary",
+    "form": "form",
+    "browse": "browse",
+    "report": "report",
+    "letter": "letter",
+    "label": "label"
 }

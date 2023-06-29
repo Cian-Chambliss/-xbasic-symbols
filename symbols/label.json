@@ -1,0 +1,438 @@
+{
+    "__name__": "label",
+    "__functions__": {
+        "Load_Low": {
+            "name": "Load_Low",
+            "description": "Low level Label load.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "Style",
+                    "optional": true
+                },
+                {
+                    "name": "windowname",
+                    "optional": true
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "EventArgs",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Printer_override": {
+            "name": "Printer_override",
+            "description": "Override the Label printer.",
+            "arguments": [
+                {
+                    "name": "printername"
+                },
+                {
+                    "name": "printeroptions",
+                    "optional": true
+                },
+                {
+                    "name": "saveoldoptions",
+                    "optional": true,
+                    "type": "P"
+                }
+            ]
+        },
+        "Output_File_Override": {
+            "name": "Output_File_Override",
+            "description": "Override the Label printer output file.",
+            "arguments": [
+                {
+                    "name": "filename",
+                    "type": "C"
+                }
+            ]
+        },
+        "Delete": {
+            "name": "Delete",
+            "description": "Delete a Label.",
+            "arguments": [
+                {
+                    "name": "layoutname",
+                    "type": "C"
+                }
+            ]
+        },
+        "Name": {
+            "name": "Name",
+            "description": "Returns the name of the Label object (I.e. \"Label\").",
+            "arguments": [
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "N"
+                }
+            ]
+        },
+        "Children": {
+            "name": "Children",
+            "description": "Returns the number of objects contained by the object."
+        },
+        "Child": {
+            "name": "Child",
+            "description": "Returns a pointer to the specified child object contained by the object.",
+            "arguments": [
+                {
+                    "name": "num",
+                    "type": "N"
+                }
+            ]
+        },
+        "Class": {
+            "name": "Class",
+            "description": "Returns the class of the object."
+        },
+        "KindOf": {
+            "name": "KindOf",
+            "description": "Returns the kind of object."
+        },
+        "Eval": {
+            "name": "Eval",
+            "description": "Evaluate an expression in the context of an object.",
+            "arguments": [
+                {
+                    "name": "expression",
+                    "type": "C"
+                }
+            ]
+        },
+        "Reference_Expression_Get": {
+            "name": "Reference_Expression_Get",
+            "description": "Return the reference expression to reconstruct a reference to the object."
+        },
+        "Has_Method": {
+            "name": "Has_Method",
+            "description": "Returns True if the Label object has the specified method.",
+            "arguments": [
+                {
+                    "name": "method_name",
+                    "type": "C"
+                }
+            ]
+        },
+        "Type": {
+            "name": "Type"
+        },
+        "SessionHandle": {
+            "name": "SessionHandle",
+            "description": "Returns the session handle of the Label window."
+        },
+        "Child_Enum": {
+            "name": "Child_Enum",
+            "description": "Return a CR-LF separated list of child objects.",
+            "arguments": [
+                {
+                    "name": "flags",
+                    "optional": true
+                },
+                {
+                    "name": "classmap",
+                    "optional": true,
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Add": {
+            "name": "Property_Add",
+            "description": "Adds a property if one doesn't already exists, sets property to value.",
+            "arguments": [
+                {
+                    "name": "property"
+                },
+                {
+                    "name": "value",
+                    "optional": true,
+                    "type": "A"
+                }
+            ]
+        },
+        "Property_Drop": {
+            "name": "Property_Drop",
+            "description": "Drop property if it exists.",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Exists": {
+            "name": "Property_Exists",
+            "description": "Returns TRUE if property exists.",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Property_Instance_Exists": {
+            "name": "Property_Instance_Exists",
+            "description": "Returns TRUE if property has been instanced for the object (not just is valid for object).",
+            "arguments": [
+                {
+                    "name": "property",
+                    "type": "C"
+                }
+            ]
+        },
+        "Fields_Enum": {
+            "name": "Fields_Enum",
+            "description": "Returns a list of fully qualified fields names that are used by an object (or its children).",
+            "arguments": [
+                {
+                    "name": "recurseCalcs",
+                    "optional": true,
+                    "type": "L"
+                }
+            ]
+        },
+        "Get_Field_Objects": {
+            "name": "Get_Field_Objects",
+            "description": "Returns a list of objects names under an named object that are bound to the field.",
+            "arguments": [
+                {
+                    "name": "fieldname",
+                    "type": "c"
+                }
+            ]
+        },
+        "to_xml": {
+            "name": "to_xml",
+            "description": "Save objects to xml, flags used to save element like 'Style'.",
+            "arguments": [
+                {
+                    "name": "mlElement",
+                    "type": "p"
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "from_xml": {
+            "name": "from_xml",
+            "description": "Load objects from xml, flags used to save element like 'Style'.",
+            "arguments": [
+                {
+                    "name": "mlElement",
+                    "type": "p"
+                },
+                {
+                    "name": "flags",
+                    "optional": true,
+                    "type": "c"
+                }
+            ]
+        },
+        "Archive": {
+            "name": "Archive",
+            "description": "Create a archived copy of a label printout in Adobe Acrobat .PDF format.",
+            "arguments": [
+                {
+                    "name": "layoutName"
+                },
+                {
+                    "name": "Filter",
+                    "optional": true
+                },
+                {
+                    "name": "Order",
+                    "optional": true
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "Options",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "preview": {
+            "name": "preview",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "filter",
+                    "optional": true
+                },
+                {
+                    "name": "order",
+                    "optional": true
+                },
+                {
+                    "name": "modal",
+                    "optional": true
+                },
+                {
+                    "name": "session_modal",
+                    "optional": true
+                },
+                {
+                    "name": "arguments",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "print": {
+            "name": "print",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "layoutname"
+                },
+                {
+                    "name": "filter",
+                    "optional": true
+                },
+                {
+                    "name": "order",
+                    "optional": true
+                },
+                {
+                    "name": "arguments",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "SaveAs": {
+            "name": "SaveAs",
+            "description": "Public user defined function.",
+            "arguments": [
+                {
+                    "name": "LayoutName"
+                },
+                {
+                    "name": "Saveas_format",
+                    "optional": true
+                },
+                {
+                    "name": "Filter",
+                    "optional": true
+                },
+                {
+                    "name": "Order",
+                    "optional": true
+                },
+                {
+                    "name": "Filename",
+                    "optional": true
+                },
+                {
+                    "name": "OpenOutputFile",
+                    "optional": true
+                },
+                {
+                    "name": "PrintOptionsIn",
+                    "optional": true
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "OptionsIn",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "Send": {
+            "name": "Send",
+            "description": "Sends a report printout via email. Format options are PDF, HTML, RTF and TXT. Email_client is 'default' or 'a5'.",
+            "arguments": [
+                {
+                    "name": "LayoutName"
+                },
+                {
+                    "name": "Format",
+                    "optional": true
+                },
+                {
+                    "name": "Filter",
+                    "optional": true
+                },
+                {
+                    "name": "Order",
+                    "optional": true
+                },
+                {
+                    "name": "email_client",
+                    "optional": true
+                },
+                {
+                    "name": "_to",
+                    "optional": true
+                },
+                {
+                    "name": "subject",
+                    "optional": true
+                },
+                {
+                    "name": "message",
+                    "optional": true
+                },
+                {
+                    "name": "cc",
+                    "optional": true
+                },
+                {
+                    "name": "bcc",
+                    "optional": true
+                },
+                {
+                    "name": "PrintOptions",
+                    "optional": true
+                },
+                {
+                    "name": "Arguments",
+                    "optional": true
+                },
+                {
+                    "name": "Options",
+                    "optional": true,
+                    "type": "*"
+                }
+            ]
+        },
+        "code": {
+            "name": "code"
+        },
+        "event": {
+            "name": "event"
+        },
+        "tag": {
+            "name": "tag"
+        }
+    }
+}
